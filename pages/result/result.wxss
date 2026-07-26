@@ -1,13 +1,12 @@
-/* 结果页面样式 - 多彩现代风格 */
+/* 结果页面样式 - 手绘笔记风格 */
 
 .page {
   min-height: 100vh;
-  padding: 32rpx 24rpx;
   box-sizing: border-box;
 }
 
 /* 加载状态 */
-.loading-container {
+.loading-doodle {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -15,15 +14,30 @@
   padding: 160rpx 0;
 }
 
-.loading-subtitle {
-  font-size: 24rpx;
-  color: #A0A0B8;
-  margin-top: 8rpx;
+.loading-pencil {
+  font-size: 80rpx;
+  animation: pencil-write 0.8s ease-in-out infinite;
+}
+
+@keyframes pencil-write {
+  0%, 100% { transform: rotate(-5deg) translateX(0); }
+  50% { transform: rotate(5deg) translateX(20rpx); }
 }
 
 /* 结果内容 */
 .result-content {
-  animation: fadeInUp 0.5s ease;
+  animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20rpx);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* 术语标题 */
@@ -34,50 +48,28 @@
   margin-bottom: 36rpx;
 }
 
-.term-info {
-  display: flex;
-  flex-direction: column;
-  gap: 12rpx;
-}
-
-.term-title {
-  font-size: 48rpx;
-  font-weight: 800;
-  color: #1A1A2E;
-  letter-spacing: -1rpx;
-}
-
-.term-tag {
-  align-self: flex-start;
-  font-size: 22rpx;
-  padding: 8rpx 16rpx;
-  border-radius: 8rpx;
-}
-
 .term-actions {
   display: flex;
   gap: 12rpx;
+  margin-top: 8rpx;
 }
 
 .action-btn {
-  width: 68rpx;
-  height: 68rpx;
-  background: #F5F5FA;
-  border-radius: 14rpx;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 28rpx;
   transition: all 0.2s ease;
 }
 
 .action-btn:active {
-  transform: scale(0.92);
-  background: #EBEBF0;
+  transform: scale(0.9);
 }
 
 .action-btn.favorited {
-  background: rgba(255, 107, 107, 0.15);
+  animation: heartBeat 0.3s ease;
+}
+
+@keyframes heartBeat {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
 }
 
 /* 内容区块 */
@@ -86,36 +78,19 @@
 }
 
 .section-header {
-  display: flex;
-  align-items: center;
-  gap: 12rpx;
   margin-bottom: 16rpx;
-}
-
-.section-icon-box {
-  width: 48rpx;
-  height: 48rpx;
-  border-radius: 12rpx;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 24rpx;
-}
-
-.section-label {
-  font-size: 28rpx;
-  color: #1A1A2E;
-  font-weight: 700;
 }
 
 /* 解释卡片 */
 .explanation-card {
   padding: 28rpx;
+  position: relative;
+  transform: rotate(-0.3deg);
 }
 
 .explanation-text {
-  font-size: 30rpx;
-  color: #3A3A5A;
+  font-size: 28rpx;
+  color: #2D2D2D;
   line-height: 1.7;
   font-weight: 400;
 }
@@ -123,13 +98,22 @@
 /* 类比卡片 */
 .analogy-card {
   padding: 28rpx;
-  background: linear-gradient(135deg, rgba(78, 205, 196, 0.08) 0%, rgba(68, 160, 141, 0.05) 100%);
-  border-color: rgba(78, 205, 196, 0.2);
+  display: flex;
+  align-items: flex-start;
+  gap: 16rpx;
+  transform: rotate(0.5deg);
+}
+
+.analogy-icon {
+  font-size: 36rpx;
+  flex-shrink: 0;
+  margin-top: 4rpx;
 }
 
 .analogy-text {
-  font-size: 28rpx;
-  color: #2EAEA5;
+  flex: 1;
+  font-size: 26rpx;
+  color: #1B5E20;
   line-height: 1.6;
   font-style: italic;
   font-weight: 500;
@@ -137,37 +121,36 @@
 
 /* 例子卡片 */
 .examples-card {
-  padding: 8rpx 0;
+  padding: 20rpx 0;
+  position: relative;
+  transform: rotate(-0.5deg);
 }
 
 .example-item {
   display: flex;
   align-items: flex-start;
-  padding: 20rpx 28rpx;
+  padding: 16rpx 28rpx;
   gap: 16rpx;
-}
-
-.example-item + .example-item {
-  border-top: 1rpx solid #F5F5FA;
 }
 
 .example-number {
   width: 40rpx;
   height: 40rpx;
-  border-radius: 10rpx;
+  background: rgba(3, 169, 244, 0.3);
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 22rpx;
-  color: #FFFFFF;
+  color: #01579B;
   font-weight: 700;
   flex-shrink: 0;
 }
 
 .example-text {
   flex: 1;
-  font-size: 28rpx;
-  color: #4A4A68;
+  font-size: 26rpx;
+  color: #2D2D2D;
   line-height: 1.6;
 }
 
@@ -179,9 +162,8 @@
 }
 
 .related-tag {
-  padding: 14rpx 22rpx;
+  padding: 10rpx 20rpx;
   font-size: 24rpx;
-  border-radius: 12rpx;
   transition: all 0.2s ease;
 }
 

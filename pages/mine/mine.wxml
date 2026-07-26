@@ -1,15 +1,16 @@
-<!--pages/mine/mine.wxml - 多彩现代风格 -->
-<view class="page">
+<!--pages/mine/mine.wxml - 手绘笔记风格 -->
+<view class="page page-content">
   <!-- 用户信息卡片 -->
-  <view class="profile-card card">
-    <view class="avatar-wrapper">
+  <view class="profile-card sticky-note sticky-yellow">
+    <view class="tape tape-top"></view>
+    <view class="avatar-wrapper icon-sticker icon-pink">
       <text class="avatar-emoji">🧑‍💻</text>
     </view>
     <view class="profile-info">
-      <text class="username">AI学习达人</text>
+      <text class="username">AI学习笔记</text>
       <view class="level-info">
-        <text class="level-badge">Lv.8</text>
-        <text class="level-name">探索者</text>
+        <text class="level-badge tag tag-green">Lv.8</text>
+        <text class="level-name">学习探索者</text>
       </view>
     </view>
     <view class="streak-badge">
@@ -20,51 +21,43 @@
 
   <!-- 学习统计卡片 -->
   <view class="stats-section">
-    <view class="stats-card card">
-      <view class="stats-row">
-        <view class="stat-item">
-          <view class="stat-icon-wrapper" style="background: linear-gradient(135deg, #FF6B6B 0%, #FF8E53 100%);">
-            <text class="stat-icon">📖</text>
-          </view>
-          <text class="stat-value">128</text>
-          <text class="stat-label">已学习</text>
-        </view>
-        <view class="stat-item">
-          <view class="stat-icon-wrapper" style="background: linear-gradient(135deg, #4ECDC4 0%, #44A08D 100%);">
-            <text class="stat-icon">⭐</text>
-          </view>
-          <text class="stat-value">42</text>
-          <text class="stat-label">已收藏</text>
-        </view>
-        <view class="stat-item">
-          <view class="stat-icon-wrapper" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
-            <text class="stat-icon">🎯</text>
-          </view>
-          <text class="stat-value">56</text>
-          <text class="stat-label">搜索次数</text>
-        </view>
+    <view class="stats-grid">
+      <view class="stat-card sticky-note sticky-green">
+        <text class="stat-icon">📚</text>
+        <text class="stat-value">128</text>
+        <text class="stat-label">已学习</text>
       </view>
-      
-      <!-- 进度条 -->
-      <view class="progress-wrapper">
-        <view class="progress-header">
-          <text class="progress-label">升级进度</text>
-          <text class="progress-value">68%</text>
-        </view>
-        <view class="progress-bar">
-          <view class="progress-fill" style="width: 68%;"></view>
-        </view>
-        <text class="progress-hint">再学习32个词汇升级到 Lv.9 🎉</text>
+      <view class="stat-card sticky-note sticky-pink">
+        <text class="stat-icon">⭐</text>
+        <text class="stat-value">42</text>
+        <text class="stat-label">已收藏</text>
       </view>
+      <view class="stat-card sticky-note sticky-blue">
+        <text class="stat-icon">🎯</text>
+        <text class="stat-value">56</text>
+        <text class="stat-label">搜索次数</text>
+      </view>
+    </view>
+    
+    <!-- 进度条 -->
+    <view class="progress-card sticky-note sticky-purple">
+      <view class="progress-header">
+        <text class="progress-label">升级进度</text>
+        <text class="progress-value">68%</text>
+      </view>
+      <view class="progress-bar">
+        <view class="progress-fill" style="width: 68%;"></view>
+      </view>
+      <text class="progress-hint">再学习32个词汇升级到 Lv.9 🎉</text>
     </view>
   </view>
 
   <!-- 我的成就 -->
   <view class="achievements-section">
     <view class="section-header">
-      <text class="section-title">🏆 我的成就</text>
+      <text class="section-title">🏆 成就徽章</text>
     </view>
-    <view class="achievements-card card">
+    <view class="achievements-card sticky-note sticky-yellow">
       <view class="achievement-item" wx:for="{{achievements}}" wx:key="id">
         <view class="achievement-icon" style="background: {{item.bgColor}};">
           {{item.icon}}
@@ -73,8 +66,8 @@
           <text class="achievement-name">{{item.name}}</text>
           <text class="achievement-desc">{{item.desc}}</text>
         </view>
-        <view class="achievement-status {{item.unlocked ? 'unlocked' : 'locked'}}">
-          {{item.unlocked ? '✓' : '🔒'}}
+        <view class="achievement-status">
+          {{item.unlocked ? '✅' : '🔒'}}
         </view>
       </view>
     </view>
@@ -85,29 +78,29 @@
     <view class="section-header">
       <text class="section-title">⚙️ 更多功能</text>
     </view>
-    <view class="menu-card card">
+    <view class="menu-card sticky-note sticky-green">
       <view class="menu-item" bindtap="onGoFavorites">
-        <view class="menu-icon icon-box icon-box-red">⭐</view>
+        <text class="menu-icon">⭐</text>
         <text class="menu-text">我的收藏</text>
-        <text class="menu-count tag tag-red">{{favoriteCount}}</text>
+        <text class="menu-count tag tag-pink">42</text>
         <text class="menu-arrow">›</text>
       </view>
       <view class="menu-divider"></view>
       <view class="menu-item" bindtap="onGoHistory">
-        <view class="menu-icon icon-box icon-box-purple">🕐</view>
+        <text class="menu-icon">🕐</text>
         <text class="menu-text">搜索历史</text>
-        <text class="menu-count tag tag-purple">{{historyCount}}</text>
+        <text class="menu-count tag tag-blue">56</text>
         <text class="menu-arrow">›</text>
       </view>
       <view class="menu-divider"></view>
       <view class="menu-item" bindtap="onShare">
-        <view class="menu-icon icon-box icon-box-teal">📤</view>
+        <text class="menu-icon">📤</text>
         <text class="menu-text">分享给朋友</text>
         <text class="menu-arrow">›</text>
       </view>
       <view class="menu-divider"></view>
       <view class="menu-item" bindtap="onFeedback">
-        <view class="menu-icon icon-box icon-box-pink">💬</view>
+        <text class="menu-icon">💬</text>
         <text class="menu-text">意见反馈</text>
         <text class="menu-arrow">›</text>
       </view>
@@ -117,6 +110,6 @@
   <!-- 底部版本 -->
   <view class="footer">
     <text class="version-text">AI大白话 v1.0.0</text>
-    <text class="made-with-love">Made with 💖 让AI不再难懂</text>
+    <text class="made-with-love">✏️ 用笔记的方式，搞定AI术语</text>
   </view>
 </view>

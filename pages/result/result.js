@@ -1,11 +1,11 @@
-// pages/result/result.js - Apple Style
+// pages/result/result.js - 手绘笔记风格
 Page({
   data: {
     term: '',
     isLoading: true,
     resultData: null,
     isFavorite: false,
-    relatedTerms: ['大模型', 'GPT', 'Prompt', 'API', '训练']
+    relatedTerms: ['大模型', 'GPT', 'Prompt', 'API', '训练', '微调']
   },
 
   onLoad(options) {
@@ -23,7 +23,7 @@ Page({
         resultData: mockData,
         isLoading: false
       })
-    }, 1200)
+    }, 1000)
   },
 
   // 获取模拟解释数据
@@ -84,6 +84,17 @@ Page({
           'Agent比普通AI更能完成复杂任务'
         ]
       },
+      'agi': {
+        term: 'AGI',
+        explanation: 'AGI就是"真正的人工智能"。现在的AI虽然看起来很厉害，但其实都是"偏科生"——只能做它训练过的事情。而AGI是指那种和人一样聪明的AI，什么都能学，什么都能做，有自己的理解和判断。',
+        analogy: '现在的AI像是只会做练习题的学生，而AGI是能独立思考的成年人。',
+        analogyIcon: '🧠',
+        examples: [
+          '现在的AI还不是AGI',
+          'AGI能像人一样思考和学习',
+          '有人说AGI会在未来10年内出现'
+        ]
+      },
       'default': {
         term: term,
         explanation: `${term}是AI领域的一个重要概念。简单来说，它指的是在人工智能技术中相关的技术术语。随着AI技术的发展，越来越多的专业词汇进入了我们的日常工作和生活，理解这些词汇可以帮助我们更好地了解和使用AI工具。`,
@@ -107,7 +118,7 @@ Page({
     this.setData({ isFavorite: newState })
     
     wx.showToast({
-      title: newState ? '已收藏' : '已取消收藏',
+      title: newState ? '已加入笔记' : '已取消收藏',
       icon: newState ? 'success' : 'none',
       duration: 1500
     })

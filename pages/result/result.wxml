@@ -1,39 +1,31 @@
-<!--pages/result/result.wxml - 多彩现代风格 -->
-<view class="page">
+<!--pages/result/result.wxml - 手绘笔记风格 -->
+<view class="page page-content">
   <!-- 加载状态 -->
-  <view class="loading-container" wx:if="{{isLoading}}">
-    <view class="loading-dots">
-      <view class="loading-dot"></view>
-      <view class="loading-dot"></view>
-      <view class="loading-dot"></view>
-    </view>
-    <text class="loading-text">正在用大白话翻译...</text>
-    <text class="loading-subtitle">稍等一下下哦~</text>
+  <view class="loading-doodle" wx:if="{{isLoading}}">
+    <text class="loading-pencil">✏️</text>
+    <text class="loading-text">正在写笔记...</text>
   </view>
 
   <!-- 结果内容 -->
   <view class="result-content" wx:if="{{!isLoading && resultData}}">
     <!-- 术语标题 -->
     <view class="term-header">
-      <view class="term-info">
-        <text class="term-title">{{resultData.term}}</text>
-        <view class="term-tag tag tag-teal">AI术语</view>
-      </view>
+      <text class="marker-title">{{resultData.term}}</text>
       <view class="term-actions">
-        <view class="action-btn {{isFavorite ? 'favorited' : ''}}" bindtap="onFavoriteTap">
+        <view class="action-btn icon-sticker icon-yellow {{isFavorite ? 'favorited' : ''}}" bindtap="onFavoriteTap">
           {{isFavorite ? '❤️' : '🤍'}}
         </view>
-        <view class="action-btn" bindtap="onCopyTap">📋</view>
+        <view class="action-btn icon-sticker icon-blue" bindtap="onCopyTap">📋</view>
       </view>
     </view>
 
     <!-- 大白话解释 -->
     <view class="section">
       <view class="section-header">
-        <view class="section-icon-box icon-box-red">💡</view>
-        <text class="section-label">大白话解释</text>
+        <text class="section-title">💡 大白话解释</text>
       </view>
-      <view class="explanation-card card">
+      <view class="explanation-card sticky-note sticky-yellow">
+        <view class="tape tape-corner"></view>
         <text class="explanation-text">{{resultData.explanation}}</text>
       </view>
     </view>
@@ -41,10 +33,10 @@
     <!-- 类比说明 -->
     <view class="section">
       <view class="section-header">
-        <view class="section-icon-box icon-box-teal">🎯</view>
-        <text class="section-label">打个比方</text>
+        <text class="section-title">🎯 打个比方</text>
       </view>
-      <view class="analogy-card card">
+      <view class="analogy-card sticky-note sticky-green">
+        <text class="analogy-icon">{{resultData.analogyIcon}}</text>
         <text class="analogy-text">{{resultData.analogy}}</text>
       </view>
     </view>
@@ -52,16 +44,16 @@
     <!-- 举例子 -->
     <view class="section" wx:if="{{resultData.examples && resultData.examples.length > 0}}">
       <view class="section-header">
-        <view class="section-icon-box icon-box-purple">📝</view>
-        <text class="section-label">举个例子</text>
+        <text class="section-title">📝 举个栗子</text>
       </view>
-      <view class="examples-card card">
+      <view class="examples-card sticky-note sticky-blue">
+        <view class="tape tape-top"></view>
         <view 
           class="example-item" 
           wx:for="{{resultData.examples}}" 
           wx:key="*this"
         >
-          <view class="example-number" style="background: {{item.color || '#667eea'}};">{{index + 1}}</view>
+          <view class="example-number">{{index + 1}}</view>
           <text class="example-text">{{item}}</text>
         </view>
       </view>
@@ -70,12 +62,11 @@
     <!-- 相关词汇 -->
     <view class="section">
       <view class="section-header">
-        <view class="section-icon-box icon-box-pink">🔗</view>
-        <text class="section-label">相关词汇</text>
+        <text class="section-title">🔗 相关笔记</text>
       </view>
       <view class="related-tags">
         <view 
-          class="related-tag tag tag-purple" 
+          class="tag tag-pink" 
           wx:for="{{relatedTerms}}" 
           wx:key="*this"
           bindtap="onRelatedTap"

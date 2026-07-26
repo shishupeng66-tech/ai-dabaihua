@@ -1,14 +1,16 @@
-// pages/index/index.js - Apple Style
+// pages/index/index.js - 手绘笔记风格
 Page({
   data: {
     searchText: '',
     autoFocus: false,
-    hotTerms: ['Token', 'API', '大模型', '微调', 'Prompt', 'Agent'],
-    suggestions: ['机器学习', '神经网络', '深度学习', '自然语言处理', '计算机视觉'],
+    hotTerms: ['Token', 'API', '大模型', '微调', 'Prompt', 'Agent', 'Embedding', 'RAG'],
     dailyWord: {
       term: 'AGI',
-      shortDesc: '通用人工智能 - 像人类一样思考的AI'
-    }
+      shortDesc: '通用人工智能 - 像人一样思考和学习的AI'
+    },
+    dictCount: 28,
+    historyCount: 56,
+    learnPercent: 68
   },
 
   onLoad() {
@@ -72,15 +74,6 @@ Page({
   onGoMine() {
     wx.switchTab({
       url: '/pages/mine/mine'
-    })
-  },
-
-  // 分类点击
-  onCategoryTap(e) {
-    const category = e.currentTarget.dataset.cat
-    wx.showToast({
-      title: `浏览${category}分类`,
-      icon: 'none'
     })
   }
 })
