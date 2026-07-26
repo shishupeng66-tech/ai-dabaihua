@@ -1,0 +1,35 @@
+# 微信小程序
+node_modules/
+dist/
+build/
+*.log
+.DS_Store
+Thumbs.db
+
+# 小程序编译产物
+miniprogram_npm/
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# IDE配置
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# 微信开发者工具配置
+.project
+.project.config.json
+project.private.config.json
+settings.json
+
+# 临时文件
+*.tmp
+*.temp
+*.bak
+
+# 图片资源（如果太大）
+# images/*.png
+# images/*.jpg

@@ -1,0 +1,38 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/dictionary/dictionary",
+    "pages/mine/mine",
+    "pages/result/result"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#FFFFFF",
+    "navigationBarTitleText": "AI大白话",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#FAFAFA"
+  },
+  "tabBar": {
+    "color": "#A0A0B8",
+    "selectedColor": "#FF6B6B",
+    "backgroundColor": "#FFFFFF",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "🔍 搜索"
+      },
+      {
+        "pagePath": "pages/dictionary/dictionary",
+        "text": "📚 词典"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "👤 我的"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents"
+}

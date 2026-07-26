@@ -1,0 +1,78 @@
+<!--pages/dictionary/dictionary.wxml - 多彩现代风格 -->
+<view class="page">
+  <!-- 头部 -->
+  <view class="header">
+    <text class="large-title">📚 我的词典</text>
+    <text class="subtitle">已收集 <span class="count">{{wordList.length}}</span> 个词汇</text>
+  </view>
+
+  <!-- 搜索框 -->
+  <view class="search-section">
+    <view class="search-box card">
+      <text class="search-icon">🔍</text>
+      <input 
+        class="search-input" 
+        placeholder="搜索词汇..."
+        value="{{filterText}}"
+        bindinput="onFilterInput"
+      />
+    </view>
+  </view>
+
+  <!-- 分类标签 -->
+  <view class="category-section">
+    <scroll-view scroll-x="{{true}}" show-scrollbar="{{false}}" class="tabs-scroll">
+      <view class="tabs-wrapper">
+        <view 
+          class="tab-item {{selectedCategory === item.id ? 'active' : ''}}"
+          wx:for="{{categories}}" 
+          wx:key="id"
+          data-id="{{item.id}}"
+          bindtap="onCategorySelect"
+        >
+          <text class="tab-icon">{{item.icon}}</text>
+          <text class="tab-name">{{item.name}}</text>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+
+  <!-- 词汇列表 -->
+  <view class="word-list" wx:if="{{filteredList.length > 0}}">
+    <view 
+      class="word-card card" 
+      wx:for="{{filteredList}}" 
+      wx:key="id"
+      bindtap="onWordTap"
+      data-word="{{item}}"
+    >
+      <view class="word-color-bar" style="background: {{item.color}};"></view>
+      <view class="word-content">
+        <view class="word-header">
+          <text class="word-name">{{item.word}}</text>
+          <view class="word-tag tag tag-gray">{{item.category}}</view>
+        </view>
+        <view class="word-preview">
+          <text class="preview-text">{{item.explanation}}</text>
+        </view>
+        <view class="word-footer">
+          <text class="word-date">{{item.date}}</text>
+          <view class="word-progress">
+            <view class="progress-fill" style="width: {{item.progress}}%; background: {{item.color}};"></view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 空状态 -->
+  <view class="empty-state" wx:if="{{filteredList.length === 0 && !isLoading}}">
+    <text class="empty-icon">📚</text>
+    <text class="empty-title">你的词典是空的</text>
+    <text class="empty-subtitle">搜索词汇并收藏，开始构建你的专属AI词典吧</text>
+    <button class="empty-btn btn-primary" bindtap="onGoSearch">去搜索词汇</button>
+  </view>
+
+  <!-- 底部留白 -->
+  <view class="bottom-spacer"></view>
+</view>

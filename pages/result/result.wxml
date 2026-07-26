@@ -1,0 +1,92 @@
+<!--pages/result/result.wxml - 多彩现代风格 -->
+<view class="page">
+  <!-- 加载状态 -->
+  <view class="loading-container" wx:if="{{isLoading}}">
+    <view class="loading-dots">
+      <view class="loading-dot"></view>
+      <view class="loading-dot"></view>
+      <view class="loading-dot"></view>
+    </view>
+    <text class="loading-text">正在用大白话翻译...</text>
+    <text class="loading-subtitle">稍等一下下哦~</text>
+  </view>
+
+  <!-- 结果内容 -->
+  <view class="result-content" wx:if="{{!isLoading && resultData}}">
+    <!-- 术语标题 -->
+    <view class="term-header">
+      <view class="term-info">
+        <text class="term-title">{{resultData.term}}</text>
+        <view class="term-tag tag tag-teal">AI术语</view>
+      </view>
+      <view class="term-actions">
+        <view class="action-btn {{isFavorite ? 'favorited' : ''}}" bindtap="onFavoriteTap">
+          {{isFavorite ? '❤️' : '🤍'}}
+        </view>
+        <view class="action-btn" bindtap="onCopyTap">📋</view>
+      </view>
+    </view>
+
+    <!-- 大白话解释 -->
+    <view class="section">
+      <view class="section-header">
+        <view class="section-icon-box icon-box-red">💡</view>
+        <text class="section-label">大白话解释</text>
+      </view>
+      <view class="explanation-card card">
+        <text class="explanation-text">{{resultData.explanation}}</text>
+      </view>
+    </view>
+
+    <!-- 类比说明 -->
+    <view class="section">
+      <view class="section-header">
+        <view class="section-icon-box icon-box-teal">🎯</view>
+        <text class="section-label">打个比方</text>
+      </view>
+      <view class="analogy-card card">
+        <text class="analogy-text">{{resultData.analogy}}</text>
+      </view>
+    </view>
+
+    <!-- 举例子 -->
+    <view class="section" wx:if="{{resultData.examples && resultData.examples.length > 0}}">
+      <view class="section-header">
+        <view class="section-icon-box icon-box-purple">📝</view>
+        <text class="section-label">举个例子</text>
+      </view>
+      <view class="examples-card card">
+        <view 
+          class="example-item" 
+          wx:for="{{resultData.examples}}" 
+          wx:key="*this"
+        >
+          <view class="example-number" style="background: {{item.color || '#667eea'}};">{{index + 1}}</view>
+          <text class="example-text">{{item}}</text>
+        </view>
+      </view>
+    </view>
+
+    <!-- 相关词汇 -->
+    <view class="section">
+      <view class="section-header">
+        <view class="section-icon-box icon-box-pink">🔗</view>
+        <text class="section-label">相关词汇</text>
+      </view>
+      <view class="related-tags">
+        <view 
+          class="related-tag tag tag-purple" 
+          wx:for="{{relatedTerms}}" 
+          wx:key="*this"
+          bindtap="onRelatedTap"
+          data-term="{{item}}"
+        >
+          {{item}}
+        </view>
+      </view>
+    </view>
+
+    <!-- 底部留白 -->
+    <view class="bottom-spacer"></view>
+  </view>
+</view>

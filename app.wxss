@@ -1,0 +1,356 @@
+/* app.wxss - 多彩现代风格 */
+
+page {
+  background: #FAFAFA;
+  min-height: 100vh;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 
+               'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 
+               sans-serif;
+  color: #1A1A2E;
+}
+
+/* 全局容器 */
+.container {
+  padding: 0 24rpx;
+}
+
+/* 卡片基础样式 - 多彩风格 */
+.card {
+  background: #FFFFFF;
+  border-radius: 20rpx;
+  border: 2rpx solid #F0F0F5;
+  overflow: hidden;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card:active {
+  transform: scale(0.98);
+  border-color: #E5E5ED;
+}
+
+/* 主按钮样式 */
+.btn-primary {
+  background: linear-gradient(135deg, #FF6B6B 0%, #FF8E53 100%);
+  color: #FFFFFF;
+  border: none;
+  border-radius: 16rpx;
+  font-weight: 600;
+  font-size: 28rpx;
+  padding: 24rpx 40rpx;
+  box-shadow: 0 8rpx 24rpx rgba(255, 107, 107, 0.35);
+  transition: all 0.3s ease;
+}
+
+.btn-primary:active {
+  transform: scale(0.96);
+  box-shadow: 0 4rpx 16rpx rgba(255, 107, 107, 0.4);
+}
+
+/* 次按钮样式 */
+.btn-secondary {
+  background: #F5F5FA;
+  color: #4A4A68;
+  border: none;
+  border-radius: 16rpx;
+  font-weight: 600;
+  font-size: 26rpx;
+  padding: 20rpx 32rpx;
+  transition: all 0.2s ease;
+}
+
+.btn-secondary:active {
+  background: #EBEBF0;
+}
+
+/* 输入框样式 */
+.input-field {
+  background: #F8F8FC;
+  border: 2rpx solid #EBEBF0;
+  border-radius: 16rpx;
+  padding: 24rpx 28rpx;
+  font-size: 28rpx;
+  color: #1A1A2E;
+  transition: all 0.25s ease;
+}
+
+.input-field:focus {
+  border-color: #FF6B6B;
+  background: #FFFFFF;
+  box-shadow: 0 0 0 8rpx rgba(255, 107, 107, 0.08);
+}
+
+.input-field::placeholder {
+  color: #A0A0B8;
+}
+
+/* 大标题样式 */
+.large-title {
+  font-size: 56rpx;
+  font-weight: 800;
+  color: #1A1A2E;
+  letter-spacing: -1.5rpx;
+  line-height: 1.15;
+}
+
+/* 中标题 */
+.title {
+  font-size: 40rpx;
+  font-weight: 700;
+  color: #1A1A2E;
+  letter-spacing: -0.5rpx;
+}
+
+/* 小标题 */
+.subtitle {
+  font-size: 28rpx;
+  color: #6B6B8A;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+/* 章节标题 */
+.section-title {
+  font-size: 30rpx;
+  font-weight: 700;
+  color: #1A1A2E;
+  margin-bottom: 20rpx;
+}
+
+/* 多彩渐变色系 */
+.gradient-1 {
+  background: linear-gradient(135deg, #FF6B6B 0%, #FF8E53 100%); /* 橙红 */
+}
+.gradient-2 {
+  background: linear-gradient(135deg, #4ECDC4 0%, #44A08D 100%); /* 青绿 */
+}
+.gradient-3 {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); /* 蓝紫 */
+}
+.gradient-4 {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); /* 粉紫 */
+}
+.gradient-5 {
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); /* 天蓝 */
+}
+
+/* 多彩标签系统 */
+.tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 12rpx 24rpx;
+  border-radius: 12rpx;
+  font-size: 24rpx;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.tag-red {
+  background: rgba(255, 107, 107, 0.12);
+  color: #FF6B6B;
+}
+.tag-teal {
+  background: rgba(78, 205, 196, 0.15);
+  color: #2EAEA5;
+}
+.tag-purple {
+  background: rgba(102, 126, 234, 0.15);
+  color: #667eea;
+}
+.tag-pink {
+  background: rgba(245, 87, 108, 0.12);
+  color: #f5576c;
+}
+.tag-blue {
+  background: rgba(79, 172, 254, 0.12);
+  color: #4facfe;
+}
+.tag-gray {
+  background: #F5F5FA;
+  color: #6B6B8A;
+}
+
+/* 多彩图标容器 */
+.icon-box {
+  width: 72rpx;
+  height: 72rpx;
+  border-radius: 16rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32rpx;
+}
+
+.icon-box-red {
+  background: linear-gradient(135deg, rgba(255, 107, 107, 0.15) 0%, rgba(255, 142, 83, 0.1) 100%);
+  color: #FF6B6B;
+}
+.icon-box-teal {
+  background: linear-gradient(135deg, rgba(78, 205, 196, 0.15) 0%, rgba(68, 160, 141, 0.1) 100%);
+  color: #2EAEA5;
+}
+.icon-box-purple {
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.15) 0%, rgba(118, 75, 162, 0.1) 100%);
+  color: #667eea;
+}
+.icon-box-pink {
+  background: linear-gradient(135deg, rgba(240, 147, 251, 0.15) 0%, rgba(245, 87, 108, 0.1) 100%);
+  color: #f5576c;
+}
+.icon-box-blue {
+  background: linear-gradient(135deg, rgba(79, 172, 254, 0.15) 0%, rgba(0, 242, 254, 0.1) 100%);
+  color: #4facfe;
+}
+
+/* 分割线 */
+.divider {
+  height: 1rpx;
+  background: #F0F0F5;
+  margin: 24rpx 0;
+}
+
+/* 加载动画 */
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 120rpx 0;
+}
+
+.loading-dots {
+  display: flex;
+  gap: 12rpx;
+  margin-bottom: 24rpx;
+}
+
+.loading-dot {
+  width: 16rpx;
+  height: 16rpx;
+  border-radius: 50%;
+  animation: bounce 1.4s ease-in-out infinite;
+}
+
+.loading-dot:nth-child(1) {
+  background: #FF6B6B;
+  animation-delay: 0s;
+}
+.loading-dot:nth-child(2) {
+  background: #4ECDC4;
+  animation-delay: 0.2s;
+}
+.loading-dot:nth-child(3) {
+  background: #667eea;
+  animation-delay: 0.4s;
+}
+
+@keyframes bounce {
+  0%, 80%, 100% { transform: scale(0.8); opacity: 0.5; }
+  40% { transform: scale(1.2); opacity: 1; }
+}
+
+.loading-text {
+  font-size: 28rpx;
+  color: #6B6B8A;
+  font-weight: 500;
+}
+
+/* 空状态 */
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 100rpx 40rpx;
+  text-align: center;
+}
+
+.empty-icon {
+  font-size: 100rpx;
+  margin-bottom: 24rpx;
+}
+
+.empty-title {
+  font-size: 32rpx;
+  color: #1A1A2E;
+  font-weight: 700;
+  margin-bottom: 12rpx;
+}
+
+.empty-subtitle {
+  font-size: 26rpx;
+  color: #8A8AAA;
+  line-height: 1.5;
+}
+
+/* 列表项 */
+.list-item {
+  display: flex;
+  align-items: center;
+  padding: 24rpx 0;
+  border-bottom: 1rpx solid #F5F5FA;
+}
+
+.list-item:last-child {
+  border-bottom: none;
+}
+
+/* 文字颜色系统 */
+.text-primary {
+  color: #1A1A2E;
+}
+.text-secondary {
+  color: #6B6B8A;
+}
+.text-tertiary {
+  color: #A0A0B8;
+}
+.text-accent {
+  color: #FF6B6B;
+}
+.text-success {
+  color: #2EAEA5;
+}
+.text-warning {
+  color: #FF8E53;
+}
+.text-error {
+  color: #FF6B6B;
+}
+
+/* 底部安全区 */
+.safe-bottom {
+  padding-bottom: 40rpx;
+}
+
+/* 页面通用间距 */
+.page {
+  min-height: 100vh;
+  padding: 32rpx 24rpx;
+  box-sizing: border-box;
+}
+
+/* 淡入动画 */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(24rpx);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeInUp 0.5s ease;
+}
+
+/* 浮动装饰 */
+.float-decoration {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.4;
+  filter: blur(40rpx);
+  z-index: 0;
+  pointer-events: none;
+}

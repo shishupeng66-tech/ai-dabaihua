@@ -1,0 +1,142 @@
+<!--pages/index/index.wxml - 多彩现代风格 -->
+<view class="page">
+  <!-- 浮动装饰 -->
+  <view class="decoration-circle-1 float-decoration"></view>
+  <view class="decoration-circle-2 float-decoration"></view>
+
+  <!-- 头部欢迎区域 -->
+  <view class="header">
+    <view class="welcome-row">
+      <text class="greeting">👋 你好！</text>
+      <text class="date">今天想学点什么</text>
+    </view>
+    <text class="large-title">AI术语<span class="highlight">大白话</span></text>
+  </view>
+
+  <!-- 搜索框 -->
+  <view class="search-section">
+    <view class="search-card card">
+      <view class="search-icon-box">
+        <text class="search-icon">🔍</text>
+      </view>
+      <input 
+        class="search-input" 
+        placeholder="搜索不懂的AI词汇..."
+        value="{{searchText}}"
+        bindinput="onSearchInput"
+        bindconfirm="onSearch"
+        confirm-type="search"
+        focus="{{autoFocus}}"
+      />
+      <button 
+        class="search-btn" 
+        wx:if="{{searchText.length > 0}}"
+        bindtap="onSearch"
+      >
+        搜索
+      </button>
+    </view>
+  </view>
+
+  <!-- 快速搜索按钮 -->
+  <view class="quick-search" wx:if="{{searchText.length > 0}}">
+    <button class="quick-search-btn btn-primary" bindtap="onSearch">
+      ✨ 开始翻译
+    </button>
+  </view>
+
+  <!-- 每日一词 - 特色卡片 -->
+  <view class="featured-section" wx:if="{{searchText.length === 0}}">
+    <view class="featured-card" bindtap="onDailyWordTap">
+      <view class="featured-badge">
+        <text class="badge-dot"></text>
+        <text class="badge-text">今日推荐</text>
+      </view>
+      <text class="featured-word">{{dailyWord.term}}</text>
+      <text class="featured-desc">{{dailyWord.shortDesc}}</text>
+      <view class="featured-footer">
+        <text class="featured-action">点击了解详情</text>
+        <text class="featured-arrow">→</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 热门词汇 -->
+  <view class="hot-section" wx:if="{{searchText.length === 0}}">
+    <view class="section-header">
+      <text class="section-title">🔥 大家都在搜</text>
+    </view>
+    <view class="hot-tags">
+      <view 
+        class="hot-tag tag tag-purple" 
+        wx:for="{{hotTerms}}" 
+        wx:key="*this"
+        bindtap="onHotTermTap"
+        data-term="{{item}}"
+      >
+        {{item}}
+      </view>
+    </view>
+  </view>
+
+  <!-- 功能入口 -->
+  <view class="features-section" wx:if="{{searchText.length === 0}}">
+    <view class="feature-grid">
+      <view class="feature-item card" bindtap="onGoDictionary">
+        <view class="feature-icon icon-box-teal">📚</view>
+        <text class="feature-name">我的词典</text>
+        <text class="feature-desc">收藏的词汇</text>
+      </view>
+      <view class="feature-item card" bindtap="onGoHistory">
+        <view class="feature-icon icon-box-purple">🕐</view>
+        <text class="feature-name">搜索历史</text>
+        <text class="feature-desc">最近搜索</text>
+      </view>
+      <view class="feature-item card" bindtap="onGoMine">
+        <view class="feature-icon icon-box-pink">🏆</view>
+        <text class="feature-name">学习成就</text>
+        <text class="feature-desc">查看进度</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 快速分类 -->
+  <view class="category-section" wx:if="{{searchText.length === 0}}">
+    <view class="section-header">
+      <text class="section-title">📂 分类浏览</text>
+    </view>
+    <view class="category-grid">
+      <view class="category-item card" bindtap="onCategoryTap" data-cat="基础">
+        <view class="category-icon" style="background: linear-gradient(135deg, #FF6B6B 0%, #FF8E53 100%);">
+          🌱
+        </view>
+        <text class="category-name">基础概念</text>
+        <text class="category-count">12 个词汇</text>
+      </view>
+      <view class="category-item card" bindtap="onCategoryTap" data-cat="模型">
+        <view class="category-icon" style="background: linear-gradient(135deg, #4ECDC4 0%, #44A08D 100%);">
+          🤖
+        </view>
+        <text class="category-name">AI模型</text>
+        <text class="category-count">8 个词汇</text>
+      </view>
+      <view class="category-item card" bindtap="onCategoryTap" data-cat="技术">
+        <view class="category-icon" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+          ⚙️
+        </view>
+        <text class="category-name">技术术语</text>
+        <text class="category-count">15 个词汇</text>
+      </view>
+      <view class="category-item card" bindtap="onCategoryTap" data-cat="应用">
+        <view class="category-icon" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+          💡
+        </view>
+        <text class="category-name">应用场景</text>
+        <text class="category-count">10 个词汇</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 底部留白 -->
+  <view class="bottom-spacer"></view>
+</view>

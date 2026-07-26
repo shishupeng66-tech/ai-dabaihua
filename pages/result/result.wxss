@@ -1,0 +1,195 @@
+/* 结果页面样式 - 多彩现代风格 */
+
+.page {
+  min-height: 100vh;
+  padding: 32rpx 24rpx;
+  box-sizing: border-box;
+}
+
+/* 加载状态 */
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 160rpx 0;
+}
+
+.loading-subtitle {
+  font-size: 24rpx;
+  color: #A0A0B8;
+  margin-top: 8rpx;
+}
+
+/* 结果内容 */
+.result-content {
+  animation: fadeInUp 0.5s ease;
+}
+
+/* 术语标题 */
+.term-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 36rpx;
+}
+
+.term-info {
+  display: flex;
+  flex-direction: column;
+  gap: 12rpx;
+}
+
+.term-title {
+  font-size: 48rpx;
+  font-weight: 800;
+  color: #1A1A2E;
+  letter-spacing: -1rpx;
+}
+
+.term-tag {
+  align-self: flex-start;
+  font-size: 22rpx;
+  padding: 8rpx 16rpx;
+  border-radius: 8rpx;
+}
+
+.term-actions {
+  display: flex;
+  gap: 12rpx;
+}
+
+.action-btn {
+  width: 68rpx;
+  height: 68rpx;
+  background: #F5F5FA;
+  border-radius: 14rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28rpx;
+  transition: all 0.2s ease;
+}
+
+.action-btn:active {
+  transform: scale(0.92);
+  background: #EBEBF0;
+}
+
+.action-btn.favorited {
+  background: rgba(255, 107, 107, 0.15);
+}
+
+/* 内容区块 */
+.section {
+  margin-bottom: 28rpx;
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 12rpx;
+  margin-bottom: 16rpx;
+}
+
+.section-icon-box {
+  width: 48rpx;
+  height: 48rpx;
+  border-radius: 12rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24rpx;
+}
+
+.section-label {
+  font-size: 28rpx;
+  color: #1A1A2E;
+  font-weight: 700;
+}
+
+/* 解释卡片 */
+.explanation-card {
+  padding: 28rpx;
+}
+
+.explanation-text {
+  font-size: 30rpx;
+  color: #3A3A5A;
+  line-height: 1.7;
+  font-weight: 400;
+}
+
+/* 类比卡片 */
+.analogy-card {
+  padding: 28rpx;
+  background: linear-gradient(135deg, rgba(78, 205, 196, 0.08) 0%, rgba(68, 160, 141, 0.05) 100%);
+  border-color: rgba(78, 205, 196, 0.2);
+}
+
+.analogy-text {
+  font-size: 28rpx;
+  color: #2EAEA5;
+  line-height: 1.6;
+  font-style: italic;
+  font-weight: 500;
+}
+
+/* 例子卡片 */
+.examples-card {
+  padding: 8rpx 0;
+}
+
+.example-item {
+  display: flex;
+  align-items: flex-start;
+  padding: 20rpx 28rpx;
+  gap: 16rpx;
+}
+
+.example-item + .example-item {
+  border-top: 1rpx solid #F5F5FA;
+}
+
+.example-number {
+  width: 40rpx;
+  height: 40rpx;
+  border-radius: 10rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22rpx;
+  color: #FFFFFF;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.example-text {
+  flex: 1;
+  font-size: 28rpx;
+  color: #4A4A68;
+  line-height: 1.6;
+}
+
+/* 相关词汇 */
+.related-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12rpx;
+}
+
+.related-tag {
+  padding: 14rpx 22rpx;
+  font-size: 24rpx;
+  border-radius: 12rpx;
+  transition: all 0.2s ease;
+}
+
+.related-tag:active {
+  transform: scale(0.95);
+}
+
+/* 底部留白 */
+.bottom-spacer {
+  height: 100rpx;
+}
