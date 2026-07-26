@@ -1,11 +1,15 @@
-<!--pages/result/result.wxml - 清新极简风格 -->
+<!--pages/result/result.wxml - Apple 设计风格 -->
 <view class="page">
+  <!-- 加载状态 -->
   <view class="loading-container" wx:if="{{isLoading}}">
     <view class="loading-spinner"></view>
-    <text class="loading-text">正在翻译...</text>
+    <text class="loading-text">正在翻译中...</text>
   </view>
 
-  <view class="result-content" wx:if="{{!isLoading && resultData}}">
+  <!-- 结果内容 -->
+  <view class="result-content fade-in" wx:if="{{!isLoading && resultData}}">
+    
+    <!-- 术语标题 -->
     <view class="term-header">
       <text class="term-title">{{resultData.term}}</text>
       <view class="term-actions">
@@ -16,39 +20,43 @@
       </view>
     </view>
 
+    <!-- 大白话解释 -->
     <view class="section">
-      <text class="section-title">💡 大白话解释</text>
-      <view class="explanation-card card">
+      <text class="section-title">大白话解释</text>
+      <view class="explanation-card glass-card">
         <text class="explanation-text">{{resultData.explanation}}</text>
       </view>
     </view>
 
+    <!-- 类比 -->
     <view class="section">
-      <text class="section-title">🎯 类比一下</text>
-      <view class="analogy-card card">
+      <text class="section-title">类比一下</text>
+      <view class="analogy-card glass-card">
         <text class="analogy-text">{{resultData.analogy}}</text>
       </view>
     </view>
 
+    <!-- 示例 -->
     <view class="section" wx:if="{{resultData.examples && resultData.examples.length > 0}}">
-      <text class="section-title">📝 举个例子</text>
-      <view class="examples-card card">
+      <text class="section-title">举个例子</text>
+      <view class="examples-card glass-card">
         <view 
           class="example-item" 
           wx:for="{{resultData.examples}}" 
           wx:key="*this"
         >
-          <text class="example-number">{{index + 1}}</text>
+          <view class="example-number">{{index + 1}}</view>
           <text class="example-text">{{item}}</text>
         </view>
       </view>
     </view>
 
+    <!-- 相关词汇 -->
     <view class="section">
-      <text class="section-title">🔗 相关词汇</text>
+      <text class="section-title">相关词汇</text>
       <view class="related-tags">
         <view 
-          class="related-tag tag tag-primary" 
+          class="related-tag tag tag--secondary" 
           wx:for="{{relatedTerms}}" 
           wx:key="*this"
           bindtap="onRelatedTap"
@@ -59,6 +67,7 @@
       </view>
     </view>
 
-    <view class="bottom-spacer"></view>
   </view>
+
+  <view class="bottom-spacer"></view>
 </view>

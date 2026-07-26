@@ -10,11 +10,11 @@
     "navigationBarBackgroundColor": "#FFFFFF",
     "navigationBarTitleText": "AI大白话",
     "navigationBarTextStyle": "black",
-    "backgroundColor": "#F8FAFC"
+    "backgroundColor": "#F5F7FF"
   },
   "tabBar": {
-    "color": "#94A3B8",
-    "selectedColor": "#6366F1",
+    "color": "#86868B",
+    "selectedColor": "#007AFF",
     "backgroundColor": "#FFFFFF",
     "borderStyle": "white",
     "list": [

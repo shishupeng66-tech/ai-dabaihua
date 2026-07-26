@@ -1,27 +1,30 @@
-<!--pages/dictionary/dictionary.wxml - 清新极简风格 -->
-<view class="page">
+<!--pages/dictionary/dictionary.wxml - Apple 设计风格 -->
+<view class="page fade-in">
+  <!-- 头部统计 -->
   <view class="header">
-    <text class="large-title">📚 我的词库</text>
+    <text class="large-title">我的词库</text>
     <text class="subtitle">已收录 {{wordList.length}} 个词汇</text>
   </view>
 
+  <!-- 搜索框 -->
   <view class="search-section">
-    <view class="search-box card">
+    <view class="search-box glass-card">
       <text class="search-icon">🔍</text>
       <input 
         class="search-input" 
-        placeholder="搜索词汇..."
+        placeholder="筛选词汇..."
         value="{{filterText}}"
         bindinput="onFilterInput"
       />
     </view>
   </view>
 
+  <!-- 分类标签 -->
   <view class="category-section">
     <scroll-view scroll-x="{{true}}" show-scrollbar="{{false}}" class="tabs-scroll">
       <view class="tabs-wrapper">
         <view 
-          class="tab-item tag {{selectedCategory === item.id ? 'tag-primary' : 'tag-secondary'}}"
+          class="tab-item tag {{selectedCategory === item.id ? 'tag--primary' : 'tag--secondary'}}"
           wx:for="{{categories}}" 
           wx:key="id"
           data-id="{{item.id}}"
@@ -33,9 +36,10 @@
     </scroll-view>
   </view>
 
+  <!-- 词汇列表 -->
   <view class="word-list" wx:if="{{filteredList.length > 0}}">
     <view 
-      class="word-card card" 
+      class="word-card glass-card" 
       wx:for="{{filteredList}}" 
       wx:key="id"
       bindtap="onWordTap"
@@ -43,19 +47,18 @@
     >
       <view class="word-header">
         <text class="word-name">{{item.word}}</text>
-        <text class="word-category tag tag-secondary">{{item.category}}</text>
+        <text class="word-category tag tag--secondary">{{item.category}}</text>
       </view>
-      <view class="word-preview">
-        <text class="preview-text">{{item.explanation}}</text>
-      </view>
+      <text class="word-preview">{{item.explanation}}</text>
     </view>
   </view>
 
+  <!-- 空状态 -->
   <view class="empty-state" wx:if="{{filteredList.length === 0 && !isLoading}}">
     <text class="empty-icon">📚</text>
     <text class="empty-title">还没有收藏的词汇</text>
     <text class="empty-subtitle">搜索词汇并点击收藏，就会出现在这里</text>
-    <button class="empty-btn btn-primary" bindtap="onGoSearch">去搜索</button>
+    <button class="btn-primary" bindtap="onGoSearch">去搜索</button>
   </view>
 
   <view class="bottom-spacer"></view>

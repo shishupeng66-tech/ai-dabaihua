@@ -1,33 +1,32 @@
-/* 个人中心样式 - 清新极简风格 */
+/* 个人中心样式 - Apple 设计风格 */
 
 .page {
   min-height: 100vh;
-  padding: 40rpx 32rpx;
+  padding: 50rpx 40rpx 40rpx;
   box-sizing: border-box;
-  animation: fadeIn 0.4s ease;
 }
 
+/* ============== 用户信息卡片 ============== */
 .profile-card {
   display: flex;
   align-items: center;
-  padding: 28rpx;
+  padding: 36rpx 32rpx;
   margin-bottom: 32rpx;
 }
 
 .avatar-wrapper {
-  width: 96rpx;
-  height: 96rpx;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  border-radius: 24rpx;
+  width: 104rpx;
+  height: 104rpx;
+  background: linear-gradient(135deg, #007AFF15 0%, #5856D615 100%);
+  border-radius: 28rpx;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-right: 20rpx;
-  box-shadow: 0 8rpx 24rpx rgba(102, 126, 234, 0.3);
+  margin-right: 24rpx;
 }
 
 .avatar-emoji {
-  font-size: 44rpx;
+  font-size: 52rpx;
 }
 
 .profile-info {
@@ -36,24 +35,25 @@
 
 .username {
   display: block;
-  font-size: 34rpx;
-  color: #1E293B;
-  font-weight: 700;
+  font-size: 36rpx;
+  font-weight: 600;
+  color: #1D1D1F;
   margin-bottom: 6rpx;
 }
 
 .user-level {
   font-size: 26rpx;
-  color: #6366F1;
+  color: #86868B;
   font-weight: 500;
 }
 
+/* ============== 统计数据 ============== */
 .stats-section {
-  margin-bottom: 32rpx;
+  margin-bottom: 40rpx;
 }
 
 .stats-card {
-  padding: 28rpx;
+  padding: 36rpx 20rpx;
 }
 
 .stats-row {
@@ -69,84 +69,97 @@
 
 .stat-value {
   display: block;
-  font-size: 40rpx;
-  font-weight: 800;
-  background: linear-gradient(135deg, #6366F1 0%, #8B5CF6 100%);
+  font-size: 44rpx;
+  font-weight: 700;
+  background: linear-gradient(135deg, #007AFF 0%, #5856D6 100%);
   -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   background-clip: text;
-  color: transparent;
-  margin-bottom: 4rpx;
+  margin-bottom: 8rpx;
 }
 
 .stat-label {
   display: block;
   font-size: 24rpx;
-  color: #64748B;
+  color: #86868B;
 }
 
 .stat-divider {
   width: 1rpx;
   height: 56rpx;
-  background: #E2E8F0;
+  background: rgba(0, 0, 0, 0.08);
 }
 
+/* ============== 功能菜单 ============== */
 .menu-section {
-  margin-bottom: 32rpx;
+  margin-bottom: 48rpx;
+}
+
+.section-title {
+  display: block;
+  font-size: 34rpx;
+  font-weight: 600;
+  color: #1D1D1F;
+  margin-bottom: 20rpx;
 }
 
 .menu-card {
   padding: 8rpx 0;
+  overflow: hidden;
 }
 
 .menu-item {
   display: flex;
   align-items: center;
-  padding: 24rpx 28rpx;
-  transition: all 0.2s ease;
+  padding: 28rpx 32rpx;
+  transition: background 0.2s ease;
 }
 
 .menu-item:active {
-  background: #F8FAFC;
+  background: rgba(0, 0, 0, 0.03);
 }
 
-.menu-icon {
-  font-size: 28rpx;
+.menu-icon-wrap {
+  width: 56rpx;
+  height: 56rpx;
+  background: rgba(0, 0, 0, 0.03);
+  border-radius: 14rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin-right: 20rpx;
-  width: 36rpx;
-  text-align: center;
+}
+
+.menu-emoji {
+  font-size: 26rpx;
 }
 
 .menu-text {
   flex: 1;
-  font-size: 28rpx;
-  color: #1E293B;
+  font-size: 30rpx;
+  color: #1D1D1F;
   font-weight: 500;
 }
 
 .menu-count {
-  margin-right: 12rpx;
+  margin-right: 16rpx;
   font-size: 22rpx;
-  padding: 6rpx 16rpx;
+  padding: 8rpx 16rpx;
 }
 
 .menu-arrow {
   font-size: 32rpx;
-  color: #CBD5E1;
-  font-weight: 500;
+  color: #C7C7CC;
+  font-weight: 400;
 }
 
-.menu-divider {
-  height: 1rpx;
-  background: #F1F5F9;
-  margin: 0 28rpx;
-}
-
+/* ============== 页脚 ============== */
 .footer {
   text-align: center;
-  padding: 40rpx 0 120rpx;
+  padding: 20rpx 0;
 }
 
 .version-text {
   font-size: 24rpx;
-  color: #94A3B8;
+  color: #C7C7CC;
 }

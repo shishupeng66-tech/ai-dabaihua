@@ -1,172 +1,204 @@
-/* app.wxss - 清新极简风格 */
+/* ========================================
+   AI大白话 - Apple 设计风格
+   ========================================
+   
+   核心设计原则：
+   - 大量留白：呼吸感、层次感
+   - 大圆角：24rpx - 40rpx
+   - 柔和阴影：多层阴影、低不透明度
+   - 毛玻璃质感：backdrop-filter + 半透明
+   - 细腻渐变：微妙的明暗过渡
+   - 轻盈动效：300ms ease-out
+*/
 
 page {
-  background: linear-gradient(180deg, #F8FAFC 0%, #FFFFFF 100%);
-  min-height: 100vh;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
-  color: #1E293B;
+  background: linear-gradient(180deg, #F5F7FF 0%, #FFFFFF 100%);
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', sans-serif;
+  line-height: 1.47059;
+  font-weight: 400;
+  color: #1D1D1F;
 }
 
-/* 全局容器 */
-.container {
-  padding: 0 32rpx;
-  position: relative;
+/* ============== 全局渐变背景 ============== */
+.gradient-bg {
+  background: linear-gradient(135deg, #F5F7FF 0%, #FFFFFF 50%, #F8FAFF 100%);
 }
 
-/* 卡片基础样式 */
-.card {
-  background: #FFFFFF;
-  border-radius: 24rpx;
-  box-shadow: 0 4rpx 24rpx rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04);
-  overflow: hidden;
+/* ============== 毛玻璃卡片 ============== */
+.glass-card {
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(20rpx);
+  -webkit-backdrop-filter: blur(20rpx);
+  border: 1rpx solid rgba(255, 255, 255, 0.5);
+  border-radius: 32rpx;
+  box-shadow: 
+    0 4rpx 24rpx rgba(0, 0, 0, 0.04),
+    0 1rpx 6rpx rgba(0, 0, 0, 0.02);
+}
+
+.glass-card--dark {
+  background: rgba(255, 255, 255, 0.85);
+}
+
+/* ============== 按钮系统 ============== */
+.btn-primary {
+  background: linear-gradient(135deg, #007AFF 0%, #5856D6 100%);
+  color: #FFFFFF;
+  font-size: 30rpx;
+  font-weight: 600;
+  padding: 28rpx 48rpx;
+  border-radius: 40rpx;
+  border: none;
+  box-shadow: 
+    0 8rpx 32rpx rgba(0, 122, 255, 0.25),
+    0 2rpx 8rpx rgba(0, 0, 0, 0.08);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.card:active {
-  transform: translateY(-2rpx);
-  box-shadow: 0 8rpx 32rpx rgba(0, 0, 0, 0.08), 0 2px 8px rgba(0, 0, 0, 0.06);
+.btn-primary:active {
+  transform: scale(0.98);
+  box-shadow: 
+    0 4rpx 16rpx rgba(0, 122, 255, 0.3),
+    0 1rpx 4rpx rgba(0, 0, 0, 0.08);
 }
 
-/* 主按钮样式 */
-.btn-primary {
-  background: linear-gradient(135deg, #6366F1 0%, #8B5CF6 100%);
-  color: #FFFFFF;
-  border: none;
-  border-radius: 20rpx;
-  font-weight: 600;
-  font-size: 30rpx;
-  padding: 24rpx 48rpx;
-  box-shadow: 0 8rpx 24rpx rgba(99, 102, 241, 0.25);
+.btn-secondary {
+  background: rgba(0, 0, 0, 0.03);
+  color: #007AFF;
+  font-size: 28rpx;
+  font-weight: 500;
+  padding: 24rpx 40rpx;
+  border-radius: 32rpx;
+  border: 1rpx solid rgba(0, 0, 0, 0.06);
   transition: all 0.3s ease;
 }
 
-.btn-primary:active {
-  transform: scale(0.96);
-  box-shadow: 0 4rpx 16rpx rgba(99, 102, 241, 0.3);
-}
-
-/* 次按钮样式 */
-.btn-secondary {
-  background: #F1F5F9;
-  color: #475569;
-  border: none;
-  border-radius: 20rpx;
-  font-weight: 500;
-  font-size: 26rpx;
-  padding: 20rpx 32rpx;
-  transition: all 0.2s ease;
-}
-
 .btn-secondary:active {
-  background: #E2E8F0;
+  background: rgba(0, 0, 0, 0.06);
 }
 
-/* 输入框样式 */
-.input-field {
-  background: #F8FAFC;
-  border: 2rpx solid #E2E8F0;
-  border-radius: 16rpx;
-  padding: 24rpx 28rpx;
-  font-size: 28rpx;
-  color: #1E293B;
-  transition: all 0.25s ease;
-}
-
-.input-field:focus {
-  border-color: #6366F1;
-  background: #FFFFFF;
-  box-shadow: 0 0 0 6rpx rgba(99, 102, 241, 0.1);
-}
-
-.input-field::placeholder {
-  color: #94A3B8;
-}
-
-/* 大标题样式 */
+/* ============== 大标题系统 ============== */
 .large-title {
   font-size: 56rpx;
-  font-weight: 800;
-  color: #1E293B;
-  letter-spacing: -1rpx;
-  line-height: 1.15;
-}
-
-/* 中标题 */
-.title {
-  font-size: 40rpx;
   font-weight: 700;
-  color: #1E293B;
+  color: #1D1D1F;
   letter-spacing: -0.5rpx;
+  line-height: 1.2;
 }
 
-/* 小标题 */
+.section-title {
+  font-size: 36rpx;
+  font-weight: 600;
+  color: #1D1D1F;
+  letter-spacing: -0.3rpx;
+  margin-bottom: 24rpx;
+}
+
 .subtitle {
   font-size: 28rpx;
-  color: #64748B;
+  color: #86868B;
   font-weight: 400;
-  line-height: 1.5;
+  line-height: 1.4;
 }
 
-/* 章节标题 */
-.section-title {
-  font-size: 30rpx;
-  font-weight: 700;
-  color: #1E293B;
-  margin-bottom: 20rpx;
-}
-
-/* 渐变文字 */
-.gradient-text {
-  background: linear-gradient(135deg, #6366F1 0%, #8B5CF6 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-}
-
-/* 标签样式 */
-.tag {
-  display: inline-flex;
-  align-items: center;
-  padding: 12rpx 24rpx;
-  border-radius: 50rpx;
+.caption {
   font-size: 24rpx;
-  font-weight: 600;
-  transition: all 0.2s ease;
+  color: #86868B;
+  font-weight: 400;
 }
 
-.tag-primary {
-  background: rgba(99, 102, 241, 0.12);
-  color: #6366F1;
+/* ============== 渐变文字 ============== */
+.gradient-text {
+  background: linear-gradient(135deg, #007AFF 0%, #5856D6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
-.tag-secondary {
-  background: #F1F5F9;
-  color: #64748B;
+/* ============== 标签系统 ============== */
+.tag {
+  display: inline-block;
+  padding: 12rpx 28rpx;
+  font-size: 24rpx;
+  font-weight: 500;
+  border-radius: 100rpx;
+  transition: all 0.3s ease;
 }
 
-/* 图标容器 */
-.icon-box {
-  width: 72rpx;
-  height: 72rpx;
-  border-radius: 18rpx;
+.tag--primary {
+  background: rgba(0, 122, 255, 0.12);
+  color: #007AFF;
+}
+
+.tag--secondary {
+  background: rgba(0, 0, 0, 0.04);
+  color: #1D1D1F;
+}
+
+.tag--accent {
+  background: linear-gradient(135deg, #FF3B30 0%, #FF2D55 100%);
+  color: #FFFFFF;
+}
+
+/* ============== 图标容器 ============== */
+.icon-circle {
+  width: 88rpx;
+  height: 88rpx;
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 32rpx;
+  font-size: 36rpx;
 }
 
-.icon-box-primary {
-  background: linear-gradient(135deg, rgba(99, 102, 241, 0.12) 0%, rgba(139, 92, 246, 0.1) 100%);
+.icon-circle--blue {
+  background: linear-gradient(135deg, #007AFF15 0%, #5856D615 100%);
 }
 
-/* 分割线 */
+.icon-circle--green {
+  background: linear-gradient(135deg, #34C75915 0%, #30D15815 100%);
+}
+
+.icon-circle--orange {
+  background: linear-gradient(135deg, #FF950015 0%, #FF3B3015 100%);
+}
+
+.icon-circle--purple {
+  background: linear-gradient(135deg, #AF52DE15 0%, #5856D615 100%);
+}
+
+/* ============== 分隔线 ============== */
 .divider {
   height: 1rpx;
-  background: linear-gradient(90deg, transparent, #E2E8F0, transparent);
-  margin: 24rpx 0;
+  background: rgba(0, 0, 0, 0.08);
+  margin: 0 32rpx;
 }
 
-/* 加载动画 */
+/* ============== 动画系统 ============== */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20rpx); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes pulseSoft {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+.fade-in {
+  animation: fadeIn 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.scale-in {
+  animation: scaleIn 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ============== 加载动画 - Apple 风格 ============== */
 .loading-container {
   display: flex;
   flex-direction: column;
@@ -176,10 +208,10 @@ page {
 }
 
 .loading-spinner {
-  width: 60rpx;
-  height: 60rpx;
-  border: 4rpx solid #E2E8F0;
-  border-top-color: #6366F1;
+  width: 64rpx;
+  height: 64rpx;
+  border: 4rpx solid rgba(0, 0, 0, 0.06);
+  border-top-color: #007AFF;
   border-radius: 50%;
   animation: spin 0.8s linear infinite;
 }
@@ -190,90 +222,80 @@ page {
 
 .loading-text {
   margin-top: 24rpx;
-  font-size: 28rpx;
-  color: #64748B;
-  font-weight: 500;
-}
-
-/* 空状态 */
-.empty-state {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 100rpx 40rpx;
-  text-align: center;
-}
-
-.empty-icon {
-  font-size: 100rpx;
-  margin-bottom: 24rpx;
-  opacity: 0.6;
-}
-
-.empty-title {
-  font-size: 32rpx;
-  color: #1E293B;
-  font-weight: 600;
-  margin-bottom: 12rpx;
-}
-
-.empty-subtitle {
   font-size: 26rpx;
-  color: #94A3B8;
-  line-height: 1.5;
+  color: #86868B;
 }
 
-/* 列表项 */
+/* ============== 毛玻璃输入框 ============== */
+.input-glass {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10rpx);
+  border: 1rpx solid rgba(0, 0, 0, 0.04);
+  border-radius: 24rpx;
+  padding: 24rpx 28rpx;
+  font-size: 28rpx;
+  color: #1D1D1F;
+  width: 100%;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+
+.input-glass:focus {
+  border-color: #007AFF;
+  box-shadow: 0 0 0 4rpx rgba(0, 122, 255, 0.1);
+  background: rgba(255, 255, 255, 0.95);
+}
+
+.input-glass::placeholder {
+  color: #C7C7CC;
+}
+
+/* ============== 列表项 ============== */
 .list-item {
   display: flex;
   align-items: center;
-  padding: 24rpx 0;
-  border-bottom: 1rpx solid #F1F5F9;
+  padding: 24rpx 32rpx;
+  background: #FFFFFF;
+  transition: background 0.2s ease;
 }
 
-.list-item:last-child {
-  border-bottom: none;
+.list-item:active {
+  background: #F2F2F7;
 }
 
-/* 文字颜色系统 */
-.text-primary {
-  color: #1E293B;
-}
-.text-secondary {
-  color: #64748B;
-}
-.text-tertiary {
-  color: #94A3B8;
-}
-.text-accent {
-  color: #6366F1;
+.list-item-icon {
+  width: 64rpx;
+  height: 64rpx;
+  border-radius: 16rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20rpx;
+  font-size: 28rpx;
 }
 
-/* 底部安全区 */
-.safe-bottom {
-  padding-bottom: 40rpx;
+.list-item-content {
+  flex: 1;
 }
 
-/* 页面通用间距 */
-.page {
-  min-height: 100vh;
-  padding: 40rpx 32rpx;
-  box-sizing: border-box;
+.list-item-title {
+  font-size: 30rpx;
+  color: #1D1D1F;
+  font-weight: 500;
+  margin-bottom: 4rpx;
 }
 
-/* 淡入动画 */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20rpx);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.list-item-subtitle {
+  font-size: 24rpx;
+  color: #86868B;
 }
 
-.fade-in {
-  animation: fadeIn 0.4s ease;
+.list-item-arrow {
+  font-size: 24rpx;
+  color: #C7C7CC;
+}
+
+/* ============== 底部安全区域 ============== */
+.safe-area-bottom {
+  padding-bottom: 68rpx;
 }

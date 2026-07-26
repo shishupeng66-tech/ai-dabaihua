@@ -1,6 +1,7 @@
-<!--pages/mine/mine.wxml - 清新极简风格 -->
-<view class="page">
-  <view class="profile-card card">
+<!--pages/mine/mine.wxml - Apple 设计风格 -->
+<view class="page fade-in">
+  <!-- 用户信息卡片 -->
+  <view class="profile-card glass-card">
     <view class="avatar-wrapper">
       <text class="avatar-emoji">🤖</text>
     </view>
@@ -10,51 +11,60 @@
     </view>
   </view>
 
+  <!-- 统计数据 -->
   <view class="stats-section">
-    <view class="stats-card card">
+    <view class="stats-card glass-card">
       <view class="stats-row">
-      <view class="stat-item">
-        <text class="stat-value">128</text>
-        <text class="stat-label">已学习</text>
+        <view class="stat-item">
+          <text class="stat-value">128</text>
+          <text class="stat-label">已学习</text>
+        </view>
+        <view class="stat-divider"></view>
+        <view class="stat-item">
+          <text class="stat-value">17</text>
+          <text class="stat-label">连续天数</text>
+        </view>
+        <view class="stat-divider"></view>
+        <view class="stat-item">
+          <text class="stat-value">56</text>
+          <text class="stat-label">搜索次数</text>
+        </view>
       </view>
-      <view class="stat-divider"></view>
-      <view class="stat-item">
-        <text class="stat-value">17</text>
-        <text class="stat-label">连续天数</text>
-      </view>
-      <view class="stat-divider"></view>
-      <view class="stat-item">
-        <text class="stat-value">56</text>
-        <text class="stat-label">搜索次数</text>
-      </view>
-    </view>
     </view>
   </view>
 
+  <!-- 功能菜单 -->
   <view class="menu-section">
-    <text class="section-title">⚙️ 更多功能</text>
-    <view class="menu-card card">
+    <text class="section-title">更多功能</text>
+    <view class="menu-card glass-card">
       <view class="menu-item" bindtap="onGoFavorites">
-        <text class="menu-icon">⭐</text>
+        <view class="menu-icon-wrap">
+          <text class="menu-emoji">⭐</text>
+        </view>
         <text class="menu-text">我的收藏</text>
-        <text class="menu-count tag tag-secondary">42</text>
+        <text class="menu-count tag tag--primary">42</text>
         <text class="menu-arrow">›</text>
       </view>
-      <view class="menu-divider"></view>
+      <view class="divider"></view>
       <view class="menu-item" bindtap="onGoHistory">
-        <text class="menu-icon">🕐</text>
+        <view class="menu-icon-wrap">
+          <text class="menu-emoji">🕐</text>
+        </view>
         <text class="menu-text">搜索历史</text>
         <text class="menu-arrow">›</text>
       </view>
-      <view class="menu-divider"></view>
+      <view class="divider"></view>
       <view class="menu-item" bindtap="onFeedback">
-        <text class="menu-icon">💬</text>
+        <view class="menu-icon-wrap">
+          <text class="menu-emoji">💬</text>
+        </view>
         <text class="menu-text">意见反馈</text>
         <text class="menu-arrow">›</text>
       </view>
     </view>
   </view>
 
+  <!-- 页脚 -->
   <view class="footer">
     <text class="version-text">AI大白话 v1.0.0</text>
   </view>
