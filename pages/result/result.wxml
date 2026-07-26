@@ -1,72 +1,54 @@
-<!--pages/result/result.wxml - 手绘笔记风格 -->
-<view class="page page-content">
-  <!-- 加载状态 -->
-  <view class="loading-doodle" wx:if="{{isLoading}}">
-    <text class="loading-pencil">✏️</text>
-    <text class="loading-text">正在写笔记...</text>
+<!--pages/result/result.wxml - 清新极简风格 -->
+<view class="page">
+  <view class="loading-container" wx:if="{{isLoading}}">
+    <view class="loading-spinner"></view>
+    <text class="loading-text">正在翻译...</text>
   </view>
 
-  <!-- 结果内容 -->
   <view class="result-content" wx:if="{{!isLoading && resultData}}">
-    <!-- 术语标题 -->
     <view class="term-header">
-      <text class="marker-title">{{resultData.term}}</text>
+      <text class="term-title">{{resultData.term}}</text>
       <view class="term-actions">
-        <view class="action-btn icon-sticker icon-yellow {{isFavorite ? 'favorited' : ''}}" bindtap="onFavoriteTap">
+        <view class="action-btn btn-secondary" bindtap="onFavoriteTap">
           {{isFavorite ? '❤️' : '🤍'}}
         </view>
-        <view class="action-btn icon-sticker icon-blue" bindtap="onCopyTap">📋</view>
+        <view class="action-btn btn-secondary" bindtap="onCopyTap">📋</view>
       </view>
     </view>
 
-    <!-- 大白话解释 -->
     <view class="section">
-      <view class="section-header">
-        <text class="section-title">💡 大白话解释</text>
-      </view>
-      <view class="explanation-card sticky-note sticky-yellow">
-        <view class="tape tape-corner"></view>
+      <text class="section-title">💡 大白话解释</text>
+      <view class="explanation-card card">
         <text class="explanation-text">{{resultData.explanation}}</text>
       </view>
     </view>
 
-    <!-- 类比说明 -->
     <view class="section">
-      <view class="section-header">
-        <text class="section-title">🎯 打个比方</text>
-      </view>
-      <view class="analogy-card sticky-note sticky-green">
-        <text class="analogy-icon">{{resultData.analogyIcon}}</text>
+      <text class="section-title">🎯 类比一下</text>
+      <view class="analogy-card card">
         <text class="analogy-text">{{resultData.analogy}}</text>
       </view>
     </view>
 
-    <!-- 举例子 -->
     <view class="section" wx:if="{{resultData.examples && resultData.examples.length > 0}}">
-      <view class="section-header">
-        <text class="section-title">📝 举个栗子</text>
-      </view>
-      <view class="examples-card sticky-note sticky-blue">
-        <view class="tape tape-top"></view>
+      <text class="section-title">📝 举个例子</text>
+      <view class="examples-card card">
         <view 
           class="example-item" 
           wx:for="{{resultData.examples}}" 
           wx:key="*this"
         >
-          <view class="example-number">{{index + 1}}</view>
+          <text class="example-number">{{index + 1}}</text>
           <text class="example-text">{{item}}</text>
         </view>
       </view>
     </view>
 
-    <!-- 相关词汇 -->
     <view class="section">
-      <view class="section-header">
-        <text class="section-title">🔗 相关笔记</text>
-      </view>
+      <text class="section-title">🔗 相关词汇</text>
       <view class="related-tags">
         <view 
-          class="tag tag-pink" 
+          class="related-tag tag tag-primary" 
           wx:for="{{relatedTerms}}" 
           wx:key="*this"
           bindtap="onRelatedTap"
@@ -77,7 +59,6 @@
       </view>
     </view>
 
-    <!-- 底部留白 -->
     <view class="bottom-spacer"></view>
   </view>
 </view>

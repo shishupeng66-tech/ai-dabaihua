@@ -1,20 +1,15 @@
-<!--pages/index/index.wxml - 手绘笔记风格 -->
-<view class="page page-content">
-  <!-- 头部标题区域 -->
+<!--pages/index/index.wxml - 清新极简风格 -->
+<view class="page">
   <view class="header">
-    <text class="marker-title">AI大白话</text>
-    <text class="subtitle">用笔记的方式，看懂复杂的AI术语 📝</text>
+    <text class="large-title">AI大白话</text>
+    <text class="subtitle">让复杂的AI术语，变得通俗易懂</text>
   </view>
 
-  <!-- 搜索框 - 笔记本风格 -->
   <view class="search-section">
-    <view class="search-box sticky-note sticky-yellow">
-      <view class="tape tape-top"></view>
-      <view class="search-icon-wrapper">
-        <text class="search-icon">🔍</text>
-      </view>
+    <view class="search-box card">
+      <text class="search-icon">🔍</text>
       <input 
-        class="search-input notebook-input"
+        class="search-input" 
         placeholder="输入不懂的AI术语..."
         value="{{searchText}}"
         bindinput="onSearchInput"
@@ -25,40 +20,26 @@
     </view>
   </view>
 
-  <!-- 搜索按钮 -->
-  <view class="search-btn-wrapper" wx:if="{{searchText.length > 0}}">
-    <button class="btn-marker" bindtap="onSearch">
-      ✏️ 开始翻译
+  <view class="quick-search" wx:if="{{searchText.length > 0}}">
+    <button class="quick-search-btn btn-primary" bindtap="onSearch">
+      开始翻译
     </button>
   </view>
 
-  <!-- 每日一词 - 便签卡片 -->
   <view class="featured-section" wx:if="{{searchText.length === 0}}">
-    <view class="section-header">
-      <text class="section-title">今日一词</text>
-    </view>
-    <view class="featured-card sticky-note sticky-blue" bindtap="onDailyWordTap">
-      <view class="tape tape-corner"></view>
-      <view class="featured-badge">
-        <text class="badge-icon">⭐</text>
-        <text class="badge-text">推荐学习</text>
-      </view>
+    <view class="featured-card card" bindtap="onDailyWordTap">
+      <text class="featured-badge">✨ 今日一词</text>
       <text class="featured-word">{{dailyWord.term}}</text>
       <text class="featured-desc">{{dailyWord.shortDesc}}</text>
-      <view class="featured-footer">
-        <text class="featured-hint">点击查看详细笔记 →</text>
-      </view>
+      <text class="featured-action">点击了解详情 →</text>
     </view>
   </view>
 
-  <!-- 热门词汇 - 标签云 -->
   <view class="hot-section" wx:if="{{searchText.length === 0}}">
-    <view class="section-header">
-      <text class="section-title">大家都在查</text>
-    </view>
+    <text class="section-title">🔥 热门词汇</text>
     <view class="hot-tags">
       <view 
-        class="tag tag-yellow" 
+        class="hot-tag tag tag-primary" 
         wx:for="{{hotTerms}}" 
         wx:key="*this"
         bindtap="onHotTermTap"
@@ -69,30 +50,23 @@
     </view>
   </view>
 
-  <!-- 功能入口 - 便签网格 -->
   <view class="features-section" wx:if="{{searchText.length === 0}}">
-    <view class="section-header">
-      <text class="section-title">我的笔记</text>
-    </view>
+    <text class="section-title">💡 快速入口</text>
     <view class="feature-grid">
-      <view class="feature-item sticky-note sticky-green" bindtap="onGoDictionary">
-        <view class="feature-icon icon-sticker icon-green">📚</view>
+      <view class="feature-item card" bindtap="onGoDictionary">
+        <text class="feature-icon">📚</text>
         <text class="feature-name">我的词库</text>
-        <text class="feature-count">{{dictCount}} 个词汇</text>
       </view>
-      <view class="feature-item sticky-note sticky-pink" bindtap="onGoHistory">
-        <view class="feature-icon icon-sticker icon-pink">🕐</view>
+      <view class="feature-item card" bindtap="onGoHistory">
+        <text class="feature-icon">🕐</text>
         <text class="feature-name">搜索历史</text>
-        <text class="feature-count">{{historyCount}} 次查询</text>
       </view>
-      <view class="feature-item sticky-note sticky-purple" bindtap="onGoMine">
-        <view class="feature-icon icon-sticker icon-purple">📊</view>
+      <view class="feature-item card" bindtap="onGoMine">
+        <text class="feature-icon">📊</text>
         <text class="feature-name">学习进度</text>
-        <text class="feature-count">{{learnPercent}}% 完成</text>
       </view>
     </view>
   </view>
 
-  <!-- 底部留白 -->
   <view class="bottom-spacer"></view>
 </view>

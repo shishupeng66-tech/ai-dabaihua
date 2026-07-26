@@ -1,77 +1,62 @@
-<!--pages/dictionary/dictionary.wxml - 手绘笔记风格 -->
-<view class="page page-content">
-  <!-- 头部 -->
+<!--pages/dictionary/dictionary.wxml - 清新极简风格 -->
+<view class="page">
   <view class="header">
-    <text class="marker-title">我的词库</text>
-    <text class="subtitle">已收录 {{wordList.length}} 个词汇笔记 📚</text>
+    <text class="large-title">📚 我的词库</text>
+    <text class="subtitle">已收录 {{wordList.length}} 个词汇</text>
   </view>
 
-  <!-- 搜索框 -->
   <view class="search-section">
-    <view class="search-box sticky-note sticky-yellow">
+    <view class="search-box card">
       <text class="search-icon">🔍</text>
       <input 
-        class="search-input notebook-input"
-        placeholder="在笔记中搜索..."
+        class="search-input" 
+        placeholder="搜索词汇..."
         value="{{filterText}}"
         bindinput="onFilterInput"
       />
     </view>
   </view>
 
-  <!-- 分类标签 -->
   <view class="category-section">
     <scroll-view scroll-x="{{true}}" show-scrollbar="{{false}}" class="tabs-scroll">
       <view class="tabs-wrapper">
         <view 
-          class="tab-item tag {{selectedCategory === item.id ? (item.color || 'tag-yellow') : 'tag-pink'}}"
+          class="tab-item tag {{selectedCategory === item.id ? 'tag-primary' : 'tag-secondary'}}"
           wx:for="{{categories}}" 
           wx:key="id"
           data-id="{{item.id}}"
           bindtap="onCategorySelect"
         >
-          <text class="tab-icon">{{item.icon}}</text>
-          <text class="tab-name">{{item.name}}</text>
+          {{item.name}}
         </view>
       </view>
     </scroll-view>
   </view>
 
-  <!-- 词汇列表 - 便签卡片 -->
   <view class="word-list" wx:if="{{filteredList.length > 0}}">
     <view 
-      class="word-card sticky-note {{item.color || 'sticky-green'}}" 
+      class="word-card card" 
       wx:for="{{filteredList}}" 
       wx:key="id"
       bindtap="onWordTap"
       data-word="{{item}}"
-      style="transform: rotate({{item.rotate || 0}}deg);"
     >
       <view class="word-header">
         <text class="word-name">{{item.word}}</text>
-        <view class="word-tag tag tag-pink">{{item.category}}</view>
+        <text class="word-category tag tag-secondary">{{item.category}}</text>
       </view>
       <view class="word-preview">
         <text class="preview-text">{{item.explanation}}</text>
       </view>
-      <view class="word-footer">
-        <text class="word-date">{{item.date}}</text>
-        <view class="review-status">
-          <text class="review-icon">{{item.reviewed ? '✅' : '📝'}}</text>
-          <text class="review-text">{{item.reviewed ? '已掌握' : '待复习'}}</text>
-        </view>
-      </view>
     </view>
   </view>
 
-  <!-- 空状态 -->
-  <view class="empty-notebook" wx:if="{{filteredList.length === 0 && !isLoading}}">
-    <text class="empty-icon">📝</text>
-    <text class="empty-title">还没有笔记</text>
-    <text class="empty-subtitle">搜索AI术语，开始记录你的学习笔记吧~</text>
-    <button class="btn-marker empty-btn" bindtap="onGoSearch">去搜索</button>
+  <view class="empty-state" wx:if="{{filteredList.length === 0 && !isLoading}}">
+    <text class="empty-icon">📚</text>
+    <text class="empty-title">还没有收藏的词汇</text>
+    <text class="empty-subtitle">搜索词汇并点击收藏，就会出现在这里</text>
+    <button class="empty-btn btn-primary" bindtap="onGoSearch">去搜索</button>
   </view>
 
-  <!-- 底部留白 -->
   <view class="bottom-spacer"></view>
 </view>

@@ -7,15 +7,15 @@
   ],
   "window": {
     "backgroundTextStyle": "dark",
-    "navigationBarBackgroundColor": "#FFF9E8",
+    "navigationBarBackgroundColor": "#FFFFFF",
     "navigationBarTitleText": "AI大白话",
     "navigationBarTextStyle": "black",
-    "backgroundColor": "#FFF9E8"
+    "backgroundColor": "#F8FAFC"
   },
   "tabBar": {
-    "color": "#BDBDBD",
-    "selectedColor": "#FF7043",
-    "backgroundColor": "#FFFEF8",
+    "color": "#94A3B8",
+    "selectedColor": "#6366F1",
+    "backgroundColor": "#FFFFFF",
     "borderStyle": "white",
     "list": [
       {
