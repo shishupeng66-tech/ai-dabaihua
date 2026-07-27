@@ -1,0 +1,24 @@
+{
+  "version": "1.0.0",
+  "source": "manual_import",
+  "items": [
+    {
+      "keyword": "Token",
+      "mode": "normal",
+      "category": "大模型基础",
+      "level": "入门",
+      "aliases": ["token是什么", "tokens", "Token限制"],
+      "author": "human",
+      "reviewStatus": "pending"
+    },
+    {
+      "keyword": "RAG",
+      "mode": "developer",
+      "category": "大模型应用",
+      "level": "进阶",
+      "aliases": ["检索增强生成", "Retrieval Augmented Generation"],
+      "author": "ai",
+      "reviewStatus": "pending"
+    }
+  ]
+}

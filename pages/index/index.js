@@ -1,8 +1,17 @@
 // pages/index/index.js - 手绘笔记风格
+const knowledge = require('../../utils/knowledge.js')
+
 Page({
   data: {
     searchText: '',
+    suggestions: [],
     autoFocus: false,
+    isSearched: false,
+    resultData: null,
+    relatedTerms: [],
+    showHistory: false,
+    searchHistory: [],
+    isFavorite: false,
     hotTerms: ['Token', 'API', '大模型', '微调', 'Prompt', 'Agent', 'Embedding', 'RAG'],
     dailyWord: {
       term: 'AGI',
@@ -22,12 +31,42 @@ Page({
 
   onShow() {
     // 页面显示时清空搜索
-    this.setData({ searchText: '' })
+    this.setData({
+      searchText: '',
+      suggestions: []
+    })
   },
 
   // 搜索输入
   onSearchInput(e) {
-    this.setData({ searchText: e.detail.value })
+    const searchText = e.detail.value
+    this.setData({
+      searchText,
+      suggestions: this.searchSuggestions(searchText)
+    })
+  },
+
+  searchSuggestions(keyword) {
+    return knowledge.searchSuggestions(keyword)
+  },
+
+  onSuggestionTap(e) {
+    const keyword = e.currentTarget.dataset.keyword
+    this.setData({
+      searchText: keyword,
+      suggestions: []
+    })
+
+    wx.navigateTo({
+      url: `/pages/result/result?term=${encodeURIComponent(keyword)}`
+    })
+  },
+
+  onClear() {
+    this.setData({
+      searchText: '',
+      suggestions: []
+    })
   },
 
   // 执行搜索
@@ -38,6 +77,8 @@ Page({
     wx.navigateTo({
       url: `/pages/result/result?term=${encodeURIComponent(searchText)}`
     })
+
+    this.setData({ suggestions: [] })
   },
 
   // 点击热门词汇
