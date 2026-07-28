@@ -1,28 +1,27 @@
-// pages/index/index.js - SaaS Landing Page
+// pages/index/index.js - SaaS Product Home
 
 Page({
   data: {
     searchText: '',
-    autoFocus: false,
+    inputLength: 0,
     hotTerms: ['Token', 'API', 'Agent', 'RAG', 'Prompt', 'MCP', 'Codex']
   },
 
-  onLoad() {
-    setTimeout(() => {
-      this.setData({ autoFocus: true })
-    }, 300)
-  },
-
   onSearchInput(e) {
+    const searchText = e.detail.value || ''
+
     this.setData({
-      searchText: e.detail.value
+      searchText,
+      inputLength: searchText.length
     })
   },
 
   onHotTermTap(e) {
-    const term = e.currentTarget.dataset.term
+    const term = e.currentTarget.dataset.term || ''
+
     this.setData({
-      searchText: term
+      searchText: term,
+      inputLength: term.length
     })
   },
 

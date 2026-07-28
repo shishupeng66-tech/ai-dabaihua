@@ -1,12 +1,22 @@
-<!--pages/index/index.wxml - SaaS Landing Page -->
+<!--pages/index/index.wxml - SaaS Product Home -->
 <view class="page">
-  <view class="hero">
-    <text class="brand-name">AI大白话</text>
-    <text class="brand-subtitle">用人话解释AI，让每个人都能看懂</text>
+  <view class="hero-section">
+    <view class="hero-copy">
+      <text class="brand-title">AI大白话</text>
+      <text class="brand-subtitle">用人话解释AI，让每个人都能看懂</text>
+    </view>
+
+    <view class="hero-visual">
+      <image class="hero-asset hero-shelf" src="/assets/home/hero-shelf-plant.png" mode="widthFix" />
+      <image class="hero-asset hero-woman" src="/assets/home/hero-woman.png" mode="widthFix" />
+      <image class="hero-asset hero-robot" src="/assets/home/hero-robot.png" mode="widthFix" />
+      <image class="hero-asset hero-bubble-orange" src="/assets/home/hero-bubble-orange.png" mode="widthFix" />
+      <image class="hero-asset hero-coffee" src="/assets/home/hero-coffee.png" mode="widthFix" />
+    </view>
   </view>
 
-  <view class="search-panel">
-    <view class="search-box">
+  <view class="input-card">
+    <view class="textarea-wrap">
       <textarea
         class="term-input"
         placeholder="输入你想了解的AI术语，例如 Token、API、Agent"
@@ -14,16 +24,23 @@
         bindinput="onSearchInput"
         maxlength="120"
         auto-height="{{false}}"
+        show-confirm-bar="{{false}}"
       />
+      <text class="input-count">{{inputLength}}/120</text>
     </view>
 
-    <button class="explain-button" bindtap="onSearch">
-      开始解释
+    <button class="primary-button" bindtap="onSearch">
+      <text>立即解释</text>
+      <text class="button-spark">✦</text>
     </button>
   </view>
 
   <view class="hot-section">
-    <text class="hot-title">大家都在搜索：</text>
+    <view class="hot-title-row">
+      <text class="hot-icon">🔥</text>
+      <text class="hot-title">大家都在搜</text>
+    </view>
+
     <view class="hot-tags">
       <view
         class="hot-tag"
@@ -35,5 +52,10 @@
         {{item}}
       </view>
     </view>
+  </view>
+
+  <view class="footer-note">
+    <text class="footer-dot">◌</text>
+    <text>用人话解释AI，让每个人都能看懂</text>
   </view>
 </view>

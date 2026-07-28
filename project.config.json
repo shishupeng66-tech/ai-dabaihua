@@ -1,7 +1,24 @@
 {
   "description": "AI大白话微信小程序项目配置文件",
   "packOptions": {
-    "ignore": [],
+    "ignore": [
+      {
+        "type": "folder",
+        "value": "AI大白话_首页UI设计资源包"
+      },
+      {
+        "type": "file",
+        "value": "AI大白话_首页UI设计资源包.zip"
+      },
+      {
+        "type": "folder",
+        "value": "AI大白话_Hero插画组件包"
+      },
+      {
+        "type": "file",
+        "value": "AI大白话_Hero插画组件包.zip"
+      }
+    ],
     "include": []
   },
   "setting": {
