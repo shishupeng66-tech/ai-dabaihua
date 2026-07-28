@@ -2,6 +2,7 @@ const fs = require('fs')
 const path = require('path')
 
 const PRODUCTION_PROMPT_DIR = path.join(__dirname, '..', 'prompts', 'production')
+const OPTIMIZED_PROMPT_DIR = path.join(PRODUCTION_PROMPT_DIR, 'optimized')
 
 const SKILL_MAP = {
   term_explain: 'termExplainSkill.md',
@@ -12,15 +13,19 @@ const SKILL_MAP = {
   learning_plan: 'learningPlanSkill.md'
 }
 
-function readPromptFile(filename) {
-  return fs.readFileSync(path.join(PRODUCTION_PROMPT_DIR, filename), 'utf8')
+function getPromptDir(options) {
+  return options && options.optimized ? OPTIMIZED_PROMPT_DIR : PRODUCTION_PROMPT_DIR
 }
 
-function selectSkill(intent) {
+function readPromptFile(filename, options) {
+  return fs.readFileSync(path.join(getPromptDir(options), filename), 'utf8')
+}
+
+function selectSkill(intent, options) {
   const normalizedIntent = String(intent || '').trim()
   const filename = SKILL_MAP[normalizedIntent] || SKILL_MAP.term_explain
-  const basePrompt = readPromptFile('baseSkill.md')
-  const skillPrompt = readPromptFile(filename)
+  const basePrompt = readPromptFile('baseSkill.md', options)
+  const skillPrompt = readPromptFile(filename, options)
 
   return {
     intent: SKILL_MAP[normalizedIntent] ? normalizedIntent : 'term_explain',
