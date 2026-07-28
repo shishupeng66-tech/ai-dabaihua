@@ -231,6 +231,33 @@ function recordInternalMetrics(keyword, mode, promptConfig, result, usage) {
   })
 }
 
+function normalizeTokenUsage(usage) {
+  return {
+    inputTokens: usage && (usage.prompt_tokens || usage.input_tokens) || 0,
+    outputTokens: usage && (usage.completion_tokens || usage.output_tokens) || 0,
+    totalTokens: usage && (usage.total_tokens || usage.totalTokens) || 0
+  }
+}
+
+function explainWithPrompt(input) {
+  const keyword = input && input.keyword ? input.keyword : ''
+  const mode = input && input.mode ? input.mode : 'production_skill'
+  const promptConfig = {
+    name: input && input.promptName ? input.promptName : 'productionSkill',
+    content: input && input.prompt ? input.prompt : ''
+  }
+
+  return performanceService.measure('hunyuan', 'hunyuan.explainWithPrompt', () => (
+    callHunyuanAPI(promptConfig, keyword, mode)
+  )).then(response => ({
+    data: response.data,
+    tokenUsage: normalizeTokenUsage(response.usage),
+    model: env.HUNYUAN_MODEL,
+    provider: 'hunyuan',
+    usedMock: response.usedMock
+  }))
+}
+
 function explain(input) {
   const parsed = explainModeService.parseExplainInput(input)
   const keyword = parsed.keyword
@@ -267,6 +294,7 @@ function explain(input) {
 
 module.exports = {
   explain,
+  explainWithPrompt,
   buildPrompt,
   getPromptConfig,
   resultCache,

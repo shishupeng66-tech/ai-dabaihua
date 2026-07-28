@@ -3,7 +3,7 @@
   <view class="hero-section">
     <view class="hero-copy">
       <text class="brand-title">AI大白话</text>
-      <text class="brand-subtitle">用人话解释AI，让每个人都能看懂</text>
+      <text class="brand-subtitle">让复杂AI知识，变得简单易懂</text>
     </view>
 
     <view class="hero-visual">
@@ -56,6 +56,6 @@
 
   <view class="footer-note">
     <text class="footer-dot">◌</text>
-    <text>用人话解释AI，让每个人都能看懂</text>
+    <text>让复杂AI知识，变得简单易懂</text>
   </view>
 </view>
