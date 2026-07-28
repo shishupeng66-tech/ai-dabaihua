@@ -1,5 +1,4 @@
 // pages/index/index.js - 手绘笔记风格
-const knowledge = require('../../utils/knowledge.js')
 
 Page({
   data: {
@@ -47,7 +46,16 @@ Page({
   },
 
   searchSuggestions(keyword) {
-    return knowledge.searchSuggestions(keyword)
+    const normalizedKeyword = String(keyword || '').trim().toLowerCase()
+    if (!normalizedKeyword) return []
+
+    return this.data.hotTerms
+      .filter(term => String(term).toLowerCase().indexOf(normalizedKeyword) > -1)
+      .slice(0, 5)
+      .map(term => ({
+        keyword: term,
+        term
+      }))
   },
 
   onSuggestionTap(e) {

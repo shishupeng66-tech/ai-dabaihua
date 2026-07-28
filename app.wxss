@@ -1,95 +1,65 @@
 /* ========================================
-   AI大白话 - Apple 设计风格 · 增强版
+   AI大白话 - Apple 设计风格
    ========================================
    
-   核心升级点：
-   1. 多层阴影系统 - 接近 iOS 真实质感
-   2. 细微边框渐变 - 玻璃边缘光泽
-   3. 背景噪点纹理 - 有机质感
-   4. 丰富微交互动效
-   5. iOS 排版系统
+   核心设计原则：
+   - 大量留白：呼吸感、层次感
+   - 大圆角：24rpx - 40rpx
+   - 柔和阴影：多层阴影、低不透明度
+   - 毛玻璃质感：backdrop-filter + 半透明
+   - 细腻渐变：微妙的明暗过渡
+   - 轻盈动效：300ms ease-out
 */
 
-/* ============== 全局背景带纹理 ============== */
 page {
-  background: 
-    linear-gradient(180deg, #F8FAFF 0%, #FFFFFF 50%, #FBFCFF 100%);
-  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'PingFang SC', sans-serif;
+  background: linear-gradient(180deg, #F5F7FF 0%, #FFFFFF 100%);
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', sans-serif;
   line-height: 1.47059;
   font-weight: 400;
   color: #1D1D1F;
-  min-height: 100vh;
 }
 
-/* ============== 毛玻璃卡片 - 增强版 ============== */
+/* ============== 全局渐变背景 ============== */
+.gradient-bg {
+  background: linear-gradient(135deg, #F5F7FF 0%, #FFFFFF 50%, #F8FAFF 100%);
+}
+
+/* ============== 毛玻璃卡片 ============== */
 .glass-card {
   background: rgba(255, 255, 255, 0.72);
-  backdrop-filter: blur(30rpx);
-  -webkit-backdrop-filter: blur(30rpx);
-  border-radius: 40rpx;
-  border: 1rpx solid rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(20rpx);
+  -webkit-backdrop-filter: blur(20rpx);
+  border: 1rpx solid rgba(255, 255, 255, 0.5);
+  border-radius: 32rpx;
   box-shadow: 
-    0 20rpx 60rpx rgba(0, 0, 0, 0.06),
-    0 8rpx 24rpx rgba(0, 0, 0, 0.04),
-    0 2rpx 8rpx rgba(0, 0, 0, 0.02),
-    inset 0 1rpx 0 rgba(255, 255, 255, 0.9);
-  position: relative;
-  overflow: hidden;
-}
-
-.glass-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 1rpx;
-  background: linear-gradient(90deg, 
-    rgba(255,255,255,0) 0%, 
-    rgba(255,255,255,0.8) 50%, 
-    rgba(255,255,255,0) 100%);
+    0 4rpx 24rpx rgba(0, 0, 0, 0.04),
+    0 1rpx 6rpx rgba(0, 0, 0, 0.02);
 }
 
 .glass-card--dark {
   background: rgba(255, 255, 255, 0.85);
 }
 
-/* ============== 按钮系统 - iOS 风格 ============== */
+/* ============== 按钮系统 ============== */
 .btn-primary {
   background: linear-gradient(135deg, #007AFF 0%, #5856D6 100%);
   color: #FFFFFF;
-  font-size: 32rpx;
+  font-size: 30rpx;
   font-weight: 600;
-  padding: 30rpx 48rpx;
-  border-radius: 44rpx;
+  padding: 28rpx 48rpx;
+  border-radius: 40rpx;
   border: none;
   box-shadow: 
-    0 12rpx 40rpx rgba(0, 122, 255, 0.25),
-    0 4rpx 12rpx rgba(0, 122, 255, 0.15),
-    0 1rpx 3rpx rgba(0, 0, 0, 0.1);
-  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  position: relative;
-  overflow: hidden;
-}
-
-.btn-primary::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 50%;
-  background: linear-gradient(180deg, 
-    rgba(255,255,255,0.2) 0%, 
-    rgba(255,255,255,0.05) 100%);
-  border-radius: 44rpx 44rpx 0 0;
+    0 8rpx 32rpx rgba(0, 122, 255, 0.25),
+    0 2rpx 8rpx rgba(0, 0, 0, 0.08);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .btn-primary:active {
-  transform: scale(0.96) translateY(2rpx);
+  transform: scale(0.98);
   box-shadow: 
-    0 6rpx 20rpx rgba(0, 122, 255, 0.2),
-    0 2rpx 8rpx rgba(0, 122, 255, 0.12);
+    0 4rpx 16rpx rgba(0, 122, 255, 0.3),
+    0 1rpx 4rpx rgba(0, 0, 0, 0.08);
 }
 
 .btn-secondary {
@@ -97,193 +67,138 @@ page {
   color: #007AFF;
   font-size: 28rpx;
   font-weight: 500;
-  padding: 24rpx 32rpx;
-  border-radius: 28rpx;
-  border: 1rpx solid rgba(0, 0, 0, 0.04);
-  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  padding: 24rpx 40rpx;
+  border-radius: 32rpx;
+  border: 1rpx solid rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
 }
 
 .btn-secondary:active {
-  background: rgba(0, 122, 255, 0.08);
-  transform: scale(0.97);
+  background: rgba(0, 0, 0, 0.06);
 }
 
-/* ============== 排版系统 - 旧金山字体风格 ============== */
+/* ============== 大标题系统 ============== */
 .large-title {
-  font-size: 68rpx;
+  font-size: 56rpx;
   font-weight: 700;
   color: #1D1D1F;
-  letter-spacing: -1.5rpx;
-  line-height: 1.1;
+  letter-spacing: -0.5rpx;
+  line-height: 1.2;
 }
 
 .section-title {
-  font-size: 40rpx;
+  font-size: 36rpx;
   font-weight: 600;
   color: #1D1D1F;
-  letter-spacing: -0.5rpx;
-  margin-bottom: 28rpx;
+  letter-spacing: -0.3rpx;
+  margin-bottom: 24rpx;
 }
 
 .subtitle {
-  font-size: 30rpx;
+  font-size: 28rpx;
   color: #86868B;
   font-weight: 400;
   line-height: 1.4;
-  letter-spacing: -0.2rpx;
 }
 
 .caption {
   font-size: 24rpx;
   color: #86868B;
   font-weight: 400;
-  letter-spacing: 0.5rpx;
 }
 
-/* ============== 渐变文字 - 增强版 ============== */
+/* ============== 渐变文字 ============== */
 .gradient-text {
-  background: linear-gradient(135deg, #007AFF 0%, #34C759 50%, #5856D6 100%);
+  background: linear-gradient(135deg, #007AFF 0%, #5856D6 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  background-size: 200% 200%;
 }
 
-/* ============== 标签系统 - 增强版 ============== */
+/* ============== 标签系统 ============== */
 .tag {
   display: inline-block;
-  padding: 14rpx 32rpx;
-  font-size: 26rpx;
+  padding: 12rpx 28rpx;
+  font-size: 24rpx;
   font-weight: 500;
   border-radius: 100rpx;
-  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  letter-spacing: -0.2rpx;
+  transition: all 0.3s ease;
 }
 
 .tag--primary {
-  background: linear-gradient(135deg, rgba(0,122,255,0.12) 0%, rgba(88,86,214,0.12) 100%);
+  background: rgba(0, 122, 255, 0.12);
   color: #007AFF;
-  border: 1rpx solid rgba(0, 122, 255, 0.1);
 }
 
 .tag--secondary {
-  background: rgba(0, 0, 0, 0.03);
+  background: rgba(0, 0, 0, 0.04);
   color: #1D1D1F;
-  border: 1rpx solid rgba(0, 0, 0, 0.03);
 }
 
 .tag--accent {
   background: linear-gradient(135deg, #FF3B30 0%, #FF2D55 100%);
   color: #FFFFFF;
-  box-shadow: 0 4rpx 16rpx rgba(255, 59, 48, 0.2);
 }
 
-.tag:active {
-  transform: scale(0.95);
-}
-
-/* ============== 图标容器 - 渐变增强 ============== */
+/* ============== 图标容器 ============== */
 .icon-circle {
-  width: 96rpx;
-  height: 96rpx;
+  width: 88rpx;
+  height: 88rpx;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 40rpx;
-  position: relative;
-  transition: all 0.3s ease;
-}
-
-.icon-circle::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border-radius: 50%;
-  border: 1rpx solid rgba(255,255,255,0.5);
-  opacity: 0.6;
+  font-size: 36rpx;
 }
 
 .icon-circle--blue {
-  background: linear-gradient(135deg, #007AFF20 0%, #5856D620 100%);
-  box-shadow: 0 4rpx 16rpx rgba(0, 122, 255, 0.15);
+  background: linear-gradient(135deg, #007AFF15 0%, #5856D615 100%);
 }
 
 .icon-circle--green {
-  background: linear-gradient(135deg, #34C75920 0%, #30D15820 100%);
-  box-shadow: 0 4rpx 16rpx rgba(52, 199, 89, 0.15);
+  background: linear-gradient(135deg, #34C75915 0%, #30D15815 100%);
 }
 
 .icon-circle--orange {
-  background: linear-gradient(135deg, #FF950020 0%, #FF3B3020 100%);
-  box-shadow: 0 4rpx 16rpx rgba(255, 149, 0, 0.15);
+  background: linear-gradient(135deg, #FF950015 0%, #FF3B3015 100%);
 }
 
 .icon-circle--purple {
-  background: linear-gradient(135deg, #AF52DE20 0%, #5856D620 100%);
-  box-shadow: 0 4rpx 16rpx rgba(175, 82, 222, 0.15);
+  background: linear-gradient(135deg, #AF52DE15 0%, #5856D615 100%);
 }
 
-.icon-circle:active {
-  transform: scale(0.92);
-}
-
-/* ============== 分割线 - 更细腻 ============== */
+/* ============== 分隔线 ============== */
 .divider {
   height: 1rpx;
-  background: linear-gradient(90deg, 
-    transparent 0%, 
-    rgba(0, 0, 0, 0.08) 20%, 
-    rgba(0, 0, 0, 0.08) 80%, 
-    transparent 100%);
+  background: rgba(0, 0, 0, 0.08);
   margin: 0 32rpx;
 }
 
-/* ============== 动画系统 - 增强版 ============== */
-@keyframes fadeInUp {
-  from { 
-    opacity: 0; 
-    transform: translateY(30rpx); 
-  }
-  to { 
-    opacity: 1; 
-    transform: translateY(0); 
-  }
+/* ============== 动画系统 ============== */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20rpx); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
-@keyframes scaleInSoft {
-  from { 
-    opacity: 0; 
-    transform: scale(0.92); 
-  }
-  to { 
-    opacity: 1; 
-    transform: scale(1); 
-  }
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
 }
 
-@keyframes shimmer {
-  0% { background-position: -200% 0; }
-  100% { background-position: 200% 0; }
-}
-
-@keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-8rpx); }
+@keyframes pulseSoft {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
 }
 
 .fade-in {
-  animation: fadeInUp 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  animation: fadeIn 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .scale-in {
-  animation: scaleInSoft 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  animation: scaleIn 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* ============== 加载动画 - iOS 风格 ============== */
+/* ============== 加载动画 - Apple 风格 ============== */
 .loading-container {
   display: flex;
   flex-direction: column;
@@ -293,13 +208,12 @@ page {
 }
 
 .loading-spinner {
-  width: 72rpx;
-  height: 72rpx;
-  border: 4rpx solid rgba(0, 0, 0, 0.04);
+  width: 64rpx;
+  height: 64rpx;
+  border: 4rpx solid rgba(0, 0, 0, 0.06);
   border-top-color: #007AFF;
   border-radius: 50%;
   animation: spin 0.8s linear infinite;
-  box-shadow: 0 0 0 1rpx rgba(0, 122, 255, 0.1);
 }
 
 @keyframes spin {
@@ -307,51 +221,42 @@ page {
 }
 
 .loading-text {
-  margin-top: 28rpx;
-  font-size: 28rpx;
+  margin-top: 24rpx;
+  font-size: 26rpx;
   color: #86868B;
-  letter-spacing: 1rpx;
 }
 
-/* ============== 输入框 - 增强版 ============== */
+/* ============== 毛玻璃输入框 ============== */
 .input-glass {
-  background: rgba(255, 255, 255, 0.7);
-  backdrop-filter: blur(20rpx);
-  border: 1rpx solid rgba(0, 0, 0, 0.03);
-  border-radius: 28rpx;
-  padding: 28rpx 32rpx;
-  font-size: 30rpx;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10rpx);
+  border: 1rpx solid rgba(0, 0, 0, 0.04);
+  border-radius: 24rpx;
+  padding: 24rpx 28rpx;
+  font-size: 28rpx;
   color: #1D1D1F;
   width: 100%;
   box-sizing: border-box;
-  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  box-shadow: 
-    0 4rpx 16rpx rgba(0, 0, 0, 0.02),
-    inset 0 1rpx 0 rgba(255, 255, 255, 0.8);
+  transition: all 0.3s ease;
 }
 
 .input-glass:focus {
-  border-color: rgba(0, 122, 255, 0.3);
-  box-shadow: 
-    0 0 0 6rpx rgba(0, 122, 255, 0.08),
-    0 8rpx 32rpx rgba(0, 122, 255, 0.1),
-    inset 0 1rpx 0 rgba(255, 255, 255, 0.8);
-  background: rgba(255, 255, 255, 0.9);
-  transform: scale(1.01);
+  border-color: #007AFF;
+  box-shadow: 0 0 0 4rpx rgba(0, 122, 255, 0.1);
+  background: rgba(255, 255, 255, 0.95);
 }
 
 .input-glass::placeholder {
   color: #C7C7CC;
 }
 
-/* ============== 列表项 - iOS 风格 ============== */
+/* ============== 列表项 ============== */
 .list-item {
   display: flex;
   align-items: center;
-  padding: 28rpx 36rpx;
+  padding: 24rpx 32rpx;
   background: #FFFFFF;
-  transition: all 0.2s ease;
-  position: relative;
+  transition: background 0.2s ease;
 }
 
 .list-item:active {
@@ -365,7 +270,7 @@ page {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-right: 24rpx;
+  margin-right: 20rpx;
   font-size: 28rpx;
 }
 
@@ -374,11 +279,10 @@ page {
 }
 
 .list-item-title {
-  font-size: 32rpx;
+  font-size: 30rpx;
   color: #1D1D1F;
   font-weight: 500;
   margin-bottom: 4rpx;
-  letter-spacing: -0.2rpx;
 }
 
 .list-item-subtitle {
@@ -387,34 +291,11 @@ page {
 }
 
 .list-item-arrow {
-  font-size: 28rpx;
+  font-size: 24rpx;
   color: #C7C7CC;
-  font-weight: 300;
 }
 
 /* ============== 底部安全区域 ============== */
 .safe-area-bottom {
   padding-bottom: 68rpx;
-}
-
-/* ============== 装饰性高光 ============== */
-.highlight-shine {
-  position: relative;
-  overflow: hidden;
-}
-
-.highlight-shine::after {
-  content: '';
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: linear-gradient(
-    45deg,
-    transparent 40%,
-    rgba(255,255,255,0.1) 50%,
-    transparent 60%
-  );
-  animation: shimmer 3s ease-in-out infinite;
 }

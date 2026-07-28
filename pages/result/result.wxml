@@ -6,19 +6,12 @@
     <text class="loading-text">正在翻译中...</text>
   </view>
 
-  <view class="loading-container" wx:if="{{!isLoading && errorText}}">
-    <text class="loading-text">{{errorText}}</text>
-  </view>
-
   <!-- 结果内容 -->
   <view class="result-content fade-in" wx:if="{{!isLoading && resultData}}">
     
     <!-- 术语标题 -->
     <view class="term-header">
-      <view>
-        <text class="term-title">{{resultData.term}}是什么？</text>
-        <text class="tag tag--secondary">{{sourceText}}</text>
-      </view>
+      <text class="term-title">{{resultData.term}}</text>
       <view class="term-actions">
         <view class="action-btn btn-secondary" bindtap="onFavoriteTap">
           {{isFavorite ? '❤️' : '🤍'}}
@@ -27,17 +20,17 @@
       </view>
     </view>
 
-    <!-- 一句话解释 -->
+    <!-- 大白话解释 -->
     <view class="section">
-      <text class="section-title">一句话</text>
+      <text class="section-title">大白话解释</text>
       <view class="explanation-card glass-card">
-        <text class="explanation-text">{{resultData.summary || resultData.explanation}}</text>
+        <text class="explanation-text">{{resultData.explanation}}</text>
       </view>
     </view>
 
-    <!-- 生活例子 -->
+    <!-- 类比 -->
     <view class="section">
-      <text class="section-title">生活例子</text>
+      <text class="section-title">类比一下</text>
       <view class="analogy-card glass-card">
         <text class="analogy-text">{{resultData.analogy}}</text>
       </view>
@@ -54,26 +47,6 @@
         >
           <view class="example-number">{{index + 1}}</view>
           <text class="example-text">{{item}}</text>
-        </view>
-      </view>
-    </view>
-
-    <!-- 为什么重要 -->
-    <view class="section" wx:if="{{resultData.usage}}">
-      <text class="section-title">为什么重要</text>
-      <view class="explanation-card glass-card">
-        <text class="explanation-text">{{resultData.usage}}</text>
-      </view>
-    </view>
-
-    <!-- 反馈 -->
-    <view class="section">
-      <view class="related-tags">
-        <view class="related-tag tag tag--primary" bindtap="onHelpfulTap">
-          👍 解释有帮助
-        </view>
-        <view class="related-tag tag tag--secondary" bindtap="onReExplainTap">
-          🔄 重新解释
         </view>
       </view>
     </view>

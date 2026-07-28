@@ -1,58 +1,44 @@
-<!--pages/index/index.wxml - 单页面 SaaS 版本-->
+<!--pages/index/index.wxml - Apple 设计风格 -->
 <view class="page">
+  <!-- 顶部标题区 -->
+  <view class="header">
+    <text class="large-title">AI大白话</text>
+    <text class="subtitle">用大白话，讲清 AI 术语</text>
+  </view>
 
-  <!-- 顶部固定搜索栏 -->
-  <view class="search-header {{isSearched ? 'searched' : ''}}">
+  <!-- 搜索框 -->
+  <view class="search-section">
     <view class="search-box glass-card">
       <text class="search-icon">🔍</text>
       <input 
         class="search-input" 
-        placeholder="输入你不懂的AI黑话，例如 Token、API、Agent"
+        placeholder="搜索术语..."
         value="{{searchText}}"
         bindinput="onSearchInput"
         bindconfirm="onSearch"
         confirm-type="search"
         focus="{{autoFocus}}"
       />
-      <view class="clear-btn" wx:if="{{searchText.length > 0}}" bindtap="onClear">
-        <text class="clear-icon">×</text>
-      </view>
-    </view>
-
-    <view class="hot-tags" wx:if="{{suggestions.length > 0}}">
-      <view
-        class="hot-tag tag tag--secondary"
-        wx:for="{{suggestions}}"
-        wx:key="keyword"
-        bindtap="onSuggestionTap"
-        data-keyword="{{item.keyword}}"
-      >
-        {{item.keyword}}
-      </view>
     </view>
   </view>
 
-  <!-- 滚动内容区 -->
-  <scroll-view 
-    class="content-scroll" 
-    scroll-y="{{true}}" 
-    enhanced="{{true}}"
-    show-scrollbar="{{false}}"
-    style="padding-top: {{isSearched ? '140rpx' : '40rpx'}}"
-  >
+  <!-- 搜索按钮 -->
+  <view class="search-btn-container" wx:if="{{searchText.length > 0}}">
+    <button class="btn-primary" bindtap="onSearch">
+      开始翻译
+    </button>
+  </view>
 
-    <!-- 搜索前：欢迎和推荐 -->
-    <view class="welcome-section" wx:if="{{!isSearched}}">
-      <view class="title-wrap">
-        <text class="main-title">AI大白话</text>
-        <text class="subtitle">用大白话，讲清复杂术语</text>
-      </view>
+  <!-- 内容区域 -->
+  <view class="content-area" wx:if="{{searchText.length === 0}}">
 
-      <!-- 每日一词 -->
+    <!-- 每日一词 -->
+    <view class="featured-section">
+      <text class="section-title">每日一词</text>
       <view class="featured-card glass-card" bindtap="onDailyWordTap">
         <view class="featured-badge">
           <text class="badge-icon">✨</text>
-          <text class="badge-text">今日一词</text>
+          <text class="badge-text">今天推荐</text>
         </view>
         <text class="featured-word">{{dailyWord.term}}</text>
         <text class="featured-desc">{{dailyWord.shortDesc}}</text>
@@ -61,136 +47,50 @@
           <text class="featured-arrow">→</text>
         </view>
       </view>
+    </view>
 
-      <!-- 热门搜索 -->
-      <view class="hot-section">
-        <text class="section-title">热门搜索</text>
-        <view class="hot-tags">
-          <view 
-            class="hot-tag tag tag--primary" 
-            wx:for="{{hotTerms}}" 
-            wx:key="*this"
-            bindtap="onHotTermTap"
-            data-term="{{item}}"
-          >
-            {{item}}
+    <!-- 热门词汇 -->
+    <view class="hot-section">
+      <text class="section-title">热门词汇</text>
+      <view class="hot-tags">
+        <view
+          class="hot-tag tag tag--primary"
+          wx:for="{{hotTerms}}"
+          wx:key="*this"
+          bindtap="onHotTermTap"
+          data-term="{{item}}"
+        >
+          {{item}}
+        </view>
+      </view>
+    </view>
+
+    <!-- 功能入口 -->
+    <view class="features-section">
+      <text class="section-title">快速入口</text>
+      <view class="feature-grid">
+        <view class="feature-item glass-card" bindtap="onGoDictionary">
+          <view class="feature-icon icon-circle icon-circle--blue">
+            📚
           </view>
+          <text class="feature-name">我的词库</text>
         </view>
-      </view>
-    </view>
-
-    <!-- 搜索后：结果展示 -->
-    <view class="result-section" wx:if="{{isSearched && resultData}}">
-
-      <!-- 术语标题 -->
-      <view class="term-header">
-        <text class="term-title">{{resultData.term}}</text>
-      </view>
-
-      <!-- 大白话解释 -->
-      <view class="explanation-card glass-card">
-        <view class="card-header">
-          <text class="card-icon">💡</text>
-          <text class="card-title">大白话解释</text>
-        </view>
-        <text class="explanation-text">{{resultData.explanation}}</text>
-      </view>
-
-      <!-- 类比说明 -->
-      <view class="analogy-card glass-card">
-        <view class="card-header">
-          <text class="card-icon">🎯</text>
-          <text class="card-title">类比一下</text>
-        </view>
-        <text class="analogy-text">{{resultData.analogy}}</text>
-      </view>
-
-      <!-- 示例列表 -->
-      <view class="examples-card glass-card" wx:if="{{resultData.examples && resultData.examples.length > 0}}">
-        <view class="card-header">
-          <text class="card-icon">📝</text>
-          <text class="card-title">举个例子</text>
-        </view>
-        <view class="examples-list">
-          <view class="example-item" wx:for="{{resultData.examples}}" wx:key="*this">
-            <view class="example-number">{{index + 1}}</view>
-            <text class="example-text">{{item}}</text>
+        <view class="feature-item glass-card" bindtap="onGoHistory">
+          <view class="feature-icon icon-circle icon-circle--green">
+            🕐
           </view>
+          <text class="feature-name">搜索历史</text>
         </view>
-      </view>
-
-      <!-- 相关词汇 -->
-      <view class="related-section">
-        <text class="section-title">相关词汇</text>
-        <view class="related-tags">
-          <view 
-            class="related-tag tag tag--secondary" 
-            wx:for="{{relatedTerms}}" 
-            wx:key="*this"
-            bindtap="onRelatedTap"
-            data-term="{{item}}"
-          >
-            {{item}}
+        <view class="feature-item glass-card" bindtap="onGoMine">
+          <view class="feature-icon icon-circle icon-circle--purple">
+            📊
           </view>
+          <text class="feature-name">学习进度</text>
         </view>
       </view>
-
-      <!-- 底部留白 -->
-      <view class="result-bottom-spacer"></view>
     </view>
 
-  </scroll-view>
-
-  <!-- 底部快捷操作栏 -->
-  <view class="bottom-bar" wx:if="{{isSearched && resultData}}">
-    <view class="bar-item" bindtap="onFavorite">
-      <text class="bar-icon">{{isFavorite ? '❤️' : '🤍'}}</text>
-      <text class="bar-label">{{isFavorite ? '已收藏' : '收藏'}}</text>
-    </view>
-    <view class="bar-divider"></view>
-    <view class="bar-item" bindtap="onCopy">
-      <text class="bar-icon">📋</text>
-      <text class="bar-label">复制</text>
-    </view>
-    <view class="bar-divider"></view>
-    <view class="bar-item" bindtap="onShowHistory">
-      <text class="bar-icon">🕐</text>
-      <text class="bar-label">历史</text>
-    </view>
-    <view class="bar-divider"></view>
-    <view class="bar-item" bindtap="onShare">
-      <text class="bar-icon">📤</text>
-      <text class="bar-label">分享</text>
-    </view>
   </view>
 
-  <!-- 历史记录弹窗 -->
-  <view class="modal-overlay" wx:if="{{showHistory}}" bindtap="onHideHistory">
-    <view class="modal-content glass-card" catchtap="stopPropagation">
-      <view class="modal-header">
-        <text class="modal-title">搜索历史</text>
-        <view class="modal-close" bindtap="onHideHistory">
-          <text class="close-icon">×</text>
-        </view>
-      </view>
-      <view class="modal-body">
-        <view class="history-list" wx:if="{{searchHistory.length > 0}}">
-          <view 
-            class="history-item" 
-            wx:for="{{searchHistory}}" 
-            wx:key="*this"
-            bindtap="onHistoryItemTap"
-            data-term="{{item}}"
-          >
-            <text class="history-icon">🕐</text>
-            <text class="history-text">{{item}}</text>
-          </view>
-        </view>
-        <view class="empty-history" wx:else>
-          <text class="empty-text">暂无搜索记录</text>
-        </view>
-      </view>
-    </view>
-  </view>
-
+  <view class="bottom-spacer"></view>
 </view>
