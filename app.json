@@ -13,26 +13,6 @@
     "navigationBarTextStyle": "black",
     "backgroundColor": "#F5F7FF"
   },
-  "tabBar": {
-    "color": "#86868B",
-    "selectedColor": "#007AFF",
-    "backgroundColor": "#FFFFFF",
-    "borderStyle": "white",
-    "list": [
-      {
-        "pagePath": "pages/index/index",
-        "text": "搜索"
-      },
-      {
-        "pagePath": "pages/dictionary/dictionary",
-        "text": "词库"
-      },
-      {
-        "pagePath": "pages/mine/mine",
-        "text": "我的"
-      }
-    ]
-  },
   "style": "v2",
   "sitemapLocation": "sitemap.json",
   "lazyCodeLoading": "requiredComponents"

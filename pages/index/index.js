@@ -1,128 +1,44 @@
-// pages/index/index.js - 手绘笔记风格
+// pages/index/index.js - SaaS Landing Page
 
 Page({
   data: {
     searchText: '',
-    suggestions: [],
     autoFocus: false,
-    isSearched: false,
-    resultData: null,
-    relatedTerms: [],
-    showHistory: false,
-    searchHistory: [],
-    isFavorite: false,
-    hotTerms: ['Token', 'API', '大模型', '微调', 'Prompt', 'Agent', 'Embedding', 'RAG'],
-    dailyWord: {
-      term: 'AGI',
-      shortDesc: '通用人工智能 - 像人一样思考和学习的AI'
-    },
-    dictCount: 28,
-    historyCount: 56,
-    learnPercent: 68
+    hotTerms: ['Token', 'API', 'Agent', 'RAG', 'Prompt', 'MCP', 'Codex']
   },
 
   onLoad() {
-    // 自动获取焦点
     setTimeout(() => {
       this.setData({ autoFocus: true })
     }, 300)
   },
 
-  onShow() {
-    // 页面显示时清空搜索
-    this.setData({
-      searchText: '',
-      suggestions: []
-    })
-  },
-
-  // 搜索输入
   onSearchInput(e) {
-    const searchText = e.detail.value
     this.setData({
-      searchText,
-      suggestions: this.searchSuggestions(searchText)
+      searchText: e.detail.value
     })
   },
 
-  searchSuggestions(keyword) {
-    const normalizedKeyword = String(keyword || '').trim().toLowerCase()
-    if (!normalizedKeyword) return []
-
-    return this.data.hotTerms
-      .filter(term => String(term).toLowerCase().indexOf(normalizedKeyword) > -1)
-      .slice(0, 5)
-      .map(term => ({
-        keyword: term,
-        term
-      }))
-  },
-
-  onSuggestionTap(e) {
-    const keyword = e.currentTarget.dataset.keyword
+  onHotTermTap(e) {
+    const term = e.currentTarget.dataset.term
     this.setData({
-      searchText: keyword,
-      suggestions: []
-    })
-
-    wx.navigateTo({
-      url: `/pages/result/result?term=${encodeURIComponent(keyword)}`
+      searchText: term
     })
   },
 
-  onClear() {
-    this.setData({
-      searchText: '',
-      suggestions: []
-    })
-  },
-
-  // 执行搜索
   onSearch() {
     const searchText = this.data.searchText.trim()
-    if (!searchText) return
+
+    if (!searchText) {
+      wx.showToast({
+        title: '请输入要解释的AI术语',
+        icon: 'none'
+      })
+      return
+    }
 
     wx.navigateTo({
       url: `/pages/result/result?term=${encodeURIComponent(searchText)}`
-    })
-
-    this.setData({ suggestions: [] })
-  },
-
-  // 点击热门词汇
-  onHotTermTap(e) {
-    const term = e.currentTarget.dataset.term
-    wx.navigateTo({
-      url: `/pages/result/result?term=${encodeURIComponent(term)}`
-    })
-  },
-
-  // 点击每日一词
-  onDailyWordTap() {
-    wx.navigateTo({
-      url: `/pages/result/result?term=${encodeURIComponent(this.data.dailyWord.term)}`
-    })
-  },
-
-  // 跳转到词典页面
-  onGoDictionary() {
-    wx.switchTab({
-      url: '/pages/dictionary/dictionary'
-    })
-  },
-
-  // 跳转到搜索历史
-  onGoHistory() {
-    wx.showToast({
-      title: '搜索历史功能开发中',
-      icon: 'none'
-    })
-  },
-
-  // 跳转到个人中心
-  onGoMine() {
-    wx.switchTab({
-      url: '/pages/mine/mine'
     })
   }
 })

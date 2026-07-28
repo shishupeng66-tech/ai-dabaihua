@@ -1,96 +1,39 @@
-<!--pages/index/index.wxml - Apple 设计风格 -->
+<!--pages/index/index.wxml - SaaS Landing Page -->
 <view class="page">
-  <!-- 顶部标题区 -->
-  <view class="header">
-    <text class="large-title">AI大白话</text>
-    <text class="subtitle">用大白话，讲清 AI 术语</text>
+  <view class="hero">
+    <text class="brand-name">AI大白话</text>
+    <text class="brand-subtitle">用人话解释AI，让每个人都能看懂</text>
   </view>
 
-  <!-- 搜索框 -->
-  <view class="search-section">
-    <view class="search-box glass-card">
-      <text class="search-icon">🔍</text>
-      <input 
-        class="search-input" 
-        placeholder="搜索术语..."
+  <view class="search-panel">
+    <view class="search-box">
+      <textarea
+        class="term-input"
+        placeholder="输入你想了解的AI术语，例如 Token、API、Agent"
         value="{{searchText}}"
         bindinput="onSearchInput"
-        bindconfirm="onSearch"
-        confirm-type="search"
-        focus="{{autoFocus}}"
+        maxlength="120"
+        auto-height="{{false}}"
       />
     </view>
-  </view>
 
-  <!-- 搜索按钮 -->
-  <view class="search-btn-container" wx:if="{{searchText.length > 0}}">
-    <button class="btn-primary" bindtap="onSearch">
-      开始翻译
+    <button class="explain-button" bindtap="onSearch">
+      开始解释
     </button>
   </view>
 
-  <!-- 内容区域 -->
-  <view class="content-area" wx:if="{{searchText.length === 0}}">
-
-    <!-- 每日一词 -->
-    <view class="featured-section">
-      <text class="section-title">每日一词</text>
-      <view class="featured-card glass-card" bindtap="onDailyWordTap">
-        <view class="featured-badge">
-          <text class="badge-icon">✨</text>
-          <text class="badge-text">今天推荐</text>
-        </view>
-        <text class="featured-word">{{dailyWord.term}}</text>
-        <text class="featured-desc">{{dailyWord.shortDesc}}</text>
-        <view class="featured-footer">
-          <text class="featured-action">点击查看详情</text>
-          <text class="featured-arrow">→</text>
-        </view>
+  <view class="hot-section">
+    <text class="hot-title">大家都在搜索：</text>
+    <view class="hot-tags">
+      <view
+        class="hot-tag"
+        wx:for="{{hotTerms}}"
+        wx:key="*this"
+        bindtap="onHotTermTap"
+        data-term="{{item}}"
+      >
+        {{item}}
       </view>
     </view>
-
-    <!-- 热门词汇 -->
-    <view class="hot-section">
-      <text class="section-title">热门词汇</text>
-      <view class="hot-tags">
-        <view
-          class="hot-tag tag tag--primary"
-          wx:for="{{hotTerms}}"
-          wx:key="*this"
-          bindtap="onHotTermTap"
-          data-term="{{item}}"
-        >
-          {{item}}
-        </view>
-      </view>
-    </view>
-
-    <!-- 功能入口 -->
-    <view class="features-section">
-      <text class="section-title">快速入口</text>
-      <view class="feature-grid">
-        <view class="feature-item glass-card" bindtap="onGoDictionary">
-          <view class="feature-icon icon-circle icon-circle--blue">
-            📚
-          </view>
-          <text class="feature-name">我的词库</text>
-        </view>
-        <view class="feature-item glass-card" bindtap="onGoHistory">
-          <view class="feature-icon icon-circle icon-circle--green">
-            🕐
-          </view>
-          <text class="feature-name">搜索历史</text>
-        </view>
-        <view class="feature-item glass-card" bindtap="onGoMine">
-          <view class="feature-icon icon-circle icon-circle--purple">
-            📊
-          </view>
-          <text class="feature-name">学习进度</text>
-        </view>
-      </view>
-    </view>
-
   </view>
-
-  <view class="bottom-spacer"></view>
 </view>
