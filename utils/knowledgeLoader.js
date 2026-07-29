@@ -1,5 +1,5 @@
-const knowledgeData = require('../data/knowledge.json')
-const versionData = require('../data/version.json')
+const knowledgeData = require('../data/knowledge/terms.json')
+const versionData = require('../data/knowledge/version.json')
 
 function loadKnowledge() {
   return knowledgeData

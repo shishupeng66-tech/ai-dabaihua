@@ -1,4 +1,4 @@
-const pendingSeed = require('../data/pending.json')
+const pendingSeed = require('../data/knowledge/pending.json')
 const contentGenerator = require('./contentGenerator.js')
 
 const STORAGE_KEY = 'pending_keywords'
