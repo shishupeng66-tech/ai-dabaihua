@@ -1,9 +1,41 @@
 // pages/result/result.js
 const api = require('../../utils/api.js')
-const favorite = require('../../utils/favorite.js')
-const analytics = require('../../utils/analytics.js')
 
 const DEFAULT_RELATED_TERMS = ['大模型', 'GPT', 'Prompt', 'API', '训练', '微调']
+
+const FAVORITES_KEY = 'favorite_terms'
+const FEEDBACK_KEY = 'local_feedback'
+
+function getStoredList(key) {
+  const list = wx.getStorageSync(key)
+  return Array.isArray(list) ? list : []
+}
+
+function isFavoriteTerm(term) {
+  return getStoredList(FAVORITES_KEY).indexOf(term) > -1
+}
+
+function addFavoriteTerm(term) {
+  const list = getStoredList(FAVORITES_KEY)
+  if (list.indexOf(term) === -1) {
+    list.unshift(term)
+    wx.setStorageSync(FAVORITES_KEY, list)
+  }
+}
+
+function removeFavoriteTerm(term) {
+  wx.setStorageSync(FAVORITES_KEY, getStoredList(FAVORITES_KEY).filter(item => item !== term))
+}
+
+function recordFeedback(action, term) {
+  const list = getStoredList(FEEDBACK_KEY)
+  list.unshift({
+    action,
+    term: term || '',
+    time: new Date().toISOString()
+  })
+  wx.setStorageSync(FEEDBACK_KEY, list)
+}
 
 function compactList(items) {
   return Array.isArray(items)
@@ -43,7 +75,18 @@ function createSection(key, title, value, sectionType) {
 }
 
 function createTermSections(data, content) {
+  const translationText = data.translation
+    ? compactList([data.translation.english, data.translation.chinese]).join(' / ')
+    : ''
+  const lifeExampleText = data.lifeExample
+    ? compactList([data.lifeExample.title, data.lifeExample.content]).join('：')
+    : ''
+
   return compactList([
+    createSection('translation', '中英文含义', translationText),
+    createSection('professionalExplanation', '专业解释', firstText(data.professionalExplanation, content.oneSentence, data.summary, data.explanation)),
+    createSection('lifeExample', '生活例子', firstText(lifeExampleText, content.analogy, data.analogy)),
+    createSection('aiExample', 'AI场景', firstText(data.aiExample)),
     createSection('oneSentence', '一句话理解', firstText(content.oneSentence, data.summary, data.explanation)),
     createSection('analogy', '类比一下', firstText(content.analogy, data.analogy)),
     createSection('howItWorks', '工作方式', firstText(content.howItWorks)),
@@ -114,6 +157,7 @@ function normalizeResultData(apiResult, query) {
   const summary = firstText(
     data.summary,
     data.explanation,
+    data.professionalExplanation,
     content.oneSentence,
     content.coreAnswer,
     content.oneSentenceDifference,
@@ -122,9 +166,12 @@ function normalizeResultData(apiResult, query) {
   )
   const relatedTerms = compactList(data.relatedTerms || content.relatedConcepts || DEFAULT_RELATED_TERMS)
   const sections = createSections(type, data, content)
-  const analogy = firstText(content.analogy, data.analogy)
-  const examples = compactList(content.examples || data.examples)
-  const usage = firstText(content.importance, data.usage)
+  const lifeExampleText = data.lifeExample
+    ? compactList([data.lifeExample.title, data.lifeExample.content]).join('：')
+    : ''
+  const analogy = firstText(content.analogy, data.analogy, lifeExampleText)
+  const examples = compactList(content.examples || data.examples || [data.aiExample])
+  const usage = firstText(content.importance, data.usage, data.aiExample)
 
   return {
     type,
@@ -140,6 +187,10 @@ function normalizeResultData(apiResult, query) {
     analogy,
     examples,
     usage,
+    translation: data.translation || null,
+    professionalExplanation: data.professionalExplanation || '',
+    lifeExample: data.lifeExample || null,
+    aiExample: data.aiExample || '',
     content,
     meta: data.meta || {}
   }
@@ -236,7 +287,7 @@ Page({
           source: res.source,
           sourceText,
           relatedTerms: viewModel.relatedTerms.length ? viewModel.relatedTerms : this.data.relatedTerms,
-          isFavorite: favorite.isFavorite(viewModel.favoriteKey),
+          isFavorite: isFavoriteTerm(viewModel.favoriteKey),
           isLoading: false
         })
       })
@@ -262,9 +313,9 @@ Page({
     const favoriteKey = resultData.favoriteKey || resultData.term
     const newState = !this.data.isFavorite
     if (newState) {
-      favorite.addFavorite(favoriteKey)
+      addFavoriteTerm(favoriteKey)
     } else {
-      favorite.removeFavorite(favoriteKey)
+      removeFavoriteTerm(favoriteKey)
     }
 
     this.setData({ isFavorite: newState })
@@ -294,7 +345,7 @@ Page({
 
   onHelpfulTap() {
     const { resultData } = this.data
-    analytics.recordFeedback('helpful', resultData && resultData.favoriteKey)
+    recordFeedback('helpful', resultData && resultData.favoriteKey)
 
     wx.showToast({
       title: '已收到反馈',
@@ -305,7 +356,7 @@ Page({
 
   onReExplainTap() {
     const { term, resultData } = this.data
-    analytics.recordFeedback('re_explain', resultData && resultData.favoriteKey)
+    recordFeedback('re_explain', resultData && resultData.favoriteKey)
     this.loadExplanation(term)
   },
 

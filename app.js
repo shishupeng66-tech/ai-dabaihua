@@ -46,11 +46,6 @@ App({
     if (!unknownKeywords) {
       wx.setStorageSync('unknown_keywords', [])
     }
-
-    const pendingKeywords = wx.getStorageSync('pending_keywords')
-    if (!pendingKeywords) {
-      wx.setStorageSync('pending_keywords', [])
-    }
   },
 
   // 全局数据

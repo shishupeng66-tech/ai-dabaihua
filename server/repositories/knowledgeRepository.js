@@ -21,6 +21,9 @@ function searchSuggestions(keyword) {
 }
 
 function findByTerm(term) {
+  const result = searchKnowledge(term)
+  if (result.hit) return result.data
+
   return loadKnowledge().concat(publishedTerms).find(item => item.term === term)
 }
 

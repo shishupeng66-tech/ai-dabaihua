@@ -1,5 +1,4 @@
 const env = require('../../config/env.js')
-const performanceService = require('../services/performanceService.js')
 
 let client = null
 
@@ -20,9 +19,7 @@ function query(sql, params) {
     return Promise.reject(new Error('数据库客户端未配置'))
   }
 
-  return performanceService.measure('database', 'database.query', () => (
-    client.query(sql, params || [])
-  ))
+  return client.query(sql, params || [])
 }
 
 module.exports = {

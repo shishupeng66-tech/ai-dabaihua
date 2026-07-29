@@ -14,10 +14,32 @@ function normalizeKeyword(keyword) {
 }
 
 function normalizeEntry(entry) {
+  const term = entry.term || entry.name
+  const professionalExplanation = entry.professionalExplanation || entry.summary || entry.explanation || ''
+  const lifeExample = entry.lifeExample && typeof entry.lifeExample === 'object'
+    ? entry.lifeExample
+    : null
+  const lifeExampleText = lifeExample
+    ? [lifeExample.title, lifeExample.content].filter(Boolean).join('：')
+    : entry.analogy || ''
+  const examples = []
+
+  if (lifeExampleText) examples.push(lifeExampleText)
+  if (entry.aiExample) examples.push(entry.aiExample)
+
   return Object.assign({}, entry, {
-    term: entry.term || entry.name,
-    summary: entry.summary || entry.explanation,
-    explanation: entry.summary || entry.explanation
+    term,
+    aliases: entry.aliases || [],
+    translation: entry.translation || null,
+    professionalExplanation,
+    lifeExample,
+    aiExample: entry.aiExample || '',
+    relatedTerms: entry.relatedTerms || [],
+    summary: entry.summary || professionalExplanation,
+    explanation: entry.explanation || professionalExplanation,
+    analogy: entry.analogy || lifeExampleText,
+    examples: entry.examples || examples,
+    usage: entry.usage || entry.aiExample || ''
   })
 }
 

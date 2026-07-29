@@ -1,22 +1,15 @@
 const knowledgeRepository = require('../repositories/knowledgeRepository.js')
-const performanceService = require('./performanceService.js')
 
 function searchKnowledge(keyword) {
-  return performanceService.measure('knowledge', 'knowledge.search', () => (
-    knowledgeRepository.searchKnowledge(keyword)
-  ))
+  return knowledgeRepository.searchKnowledge(keyword)
 }
 
 function getTerm(term) {
-  return performanceService.measure('knowledge', 'knowledge.getTerm', () => (
-    knowledgeRepository.searchKnowledge(term)
-  ))
+  return knowledgeRepository.searchKnowledge(term)
 }
 
 function searchSuggestions(keyword) {
-  return performanceService.measure('knowledge', 'knowledge.suggestions', () => (
-    knowledgeRepository.searchSuggestions(keyword)
-  ))
+  return knowledgeRepository.searchSuggestions(keyword)
 }
 
 function getVersion() {

@@ -1,0 +1,1352 @@
+﻿[
+  {
+    "id": "101",
+    "term": "RLHF",
+    "aliases": ["基于人类反馈的强化学习", "人类反馈强化学习"],
+    "category": "AI基础概念",
+    "translation": {
+      "english": "Reinforcement Learning from Human Feedback",
+      "chinese": "基于人类反馈的强化学习"
+    },
+    "professionalExplanation": "RLHF是让AI对齐人类偏好的技术，先让人给AI回答打分，再用打分结果训练模型，让AI输出更符合人类喜好。",
+    "lifeExamples": [
+      {
+        "title": "学生考试老师批改打分",
+        "content": "学生写完试卷，老师逐题打分，告诉学生哪题对、哪题错、怎么答更好。学生根据反馈不断改进，下次考得更好。RLHF就是让AI根据人类的“打分反馈”越变越好。总结：RLHF就像老师给AI批改作业，让AI的回答越来越符合人类的预期。"
+      },
+      {
+        "title": "服务员根据顾客评价改进服务",
+        "content": "餐厅服务员接待顾客后，顾客打分评价，服务员根据好评和差评调整说话方式和服务流程，慢慢变得更受欢迎。AI也是根据人类反馈不断调整输出风格。总结：RLHF通过人类的好坏评价来训练AI，让它的回答更让人满意。"
+      },
+      {
+        "title": "训狗用奖励纠正行为",
+        "content": "训狗的时候，做对了就给零食奖励，做错了就纠正，时间长了狗狗就知道怎么做是对的。RLHF里的奖励机制和这个原理类似。总结：RLHF用奖励机制引导AI朝着人类认可的方向优化，提升回答质量。"
+      }
+    ],
+    "aiExample": "主流大模型在基础训练完成后，都会用RLHF做进一步优化，让回答更通顺、更安全、更符合人类的使用习惯。",
+    "relatedTerms": ["Alignment", "Fine-tuning", "LLM", "Pre-training"]
+  },
+  {
+    "id": "102",
+    "term": "Temperature",
+    "aliases": ["温度值", "模型温度", "采样温度"],
+    "category": "AI基础概念",
+    "translation": {
+      "english": "Temperature",
+      "chinese": "温度参数"
+    },
+    "professionalExplanation": "Temperature是控制AI创造力的参数，值越高回答越发散有创意，值越低回答越稳定保守、越容易说固定答案。",
+    "lifeExamples": [
+      {
+        "title": "做菜的放盐量",
+        "content": "做菜放盐少，味道清淡稳定；放盐多，味道重、变化大，但也容易翻车。Temperature就像AI的“放盐量”，控制输出的发散程度。总结：温度值越低，AI回答越严谨固定；温度越高，创意性越强但也更容易出错。"
+      },
+      {
+        "title": "开车的油门大小",
+        "content": "油门踩得小，车速稳、安全，不会有意外；油门踩得大，速度快、刺激，但也更容易出危险。温度值就像AI的油门，控制输出的奔放程度。总结：Temperature调节AI的发散度，写文案可以调高，查事实建议调低。"
+      },
+      {
+        "title": "学生答题的开放程度",
+        "content": "标准化考试要求答案唯一、严谨，就像低温；开放性作文鼓励发挥创意，就像高温。不同场景需要不同的开放度。总结：不同任务要设置不同的Temperature， factual类问题用低温，创作类用高温。"
+      }
+    ],
+    "aiExample": "调用大模型API时可以设置Temperature参数，写诗歌、编故事调高，写代码、查资料调低，获得更好的效果。",
+    "relatedTerms": ["Top-p", "LLM", "Inference", "Prompt"]
+  },
+  {
+    "id": "103",
+    "term": "Top-p",
+    "aliases": ["核采样", "核采样参数", "累积概率采样"],
+    "category": "AI基础概念",
+    "translation": {
+      "english": "Top-p Sampling",
+      "chinese": "核采样参数"
+    },
+    "professionalExplanation": "Top-p是控制AI选词范围的参数，值越小AI只选概率最高的几个词，值越大可选词越多，回答越丰富多样。",
+    "lifeExamples": [
+      {
+        "title": "餐厅的菜单范围",
+        "content": "小菜单只有几样招牌菜，出品稳定不容易踩雷；大菜单选择多，能吃到不同口味，但也可能点到不好吃的。Top-p就像菜单大小，决定AI选词的范围。总结：Top-p越小，可选词越少，回答越稳定；越大则越多样。"
+      },
+      {
+        "title": "抽奖的奖池范围",
+        "content": "奖池里奖品少，大概率抽到常见的；奖池大，能抽到稀有奖品，但也可能抽到没用的。Top-p就像奖池的大小。总结：Top-p控制AI下一个字的候选范围，影响输出的多样性和稳定性。"
+      },
+      {
+        "title": "选课的可选范围",
+        "content": "必修课只能选指定的几门，结果很固定；选修课范围大，可以选各种感兴趣的，但质量参差不齐。总结：Top-p和Temperature配合使用，可以精细控制AI输出的风格。"
+      }
+    ],
+    "aiExample": "实际使用中通常会把Top-p和Temperature配合调节，来平衡AI回答的稳定性和创造性。",
+    "relatedTerms": ["Temperature", "LLM", "Inference", "采样参数"]
+  },
+  {
+    "id": "104",
+    "term": "Attention",
+    "aliases": ["注意力机制", "自注意力", "Self-Attention"],
+    "category": "AI基础概念",
+    "translation": {
+      "english": "Attention Mechanism",
+      "chinese": "注意力机制"
+    },
+    "professionalExplanation": "注意力机制让AI能重点关注内容里的关键部分，就像人读文章会重点看关键词，是Transformer的核心技术。",
+    "lifeExamples": [
+      {
+        "title": "看书时抓重点句子",
+        "content": "读一篇长文章，人不会每个字都同等关注，会自动把注意力放在关键词和中心句上，快速理解意思。注意力机制就是让AI也具备这种抓重点的能力。总结：注意力机制能让AI重点关注输入内容里的关键信息，提升理解准确度。"
+      },
+      {
+        "title": "听人说话抓关键词",
+        "content": "嘈杂环境里和人聊天，你会自动忽略背景噪音，把注意力放在对方的说话内容上，听清关键信息。总结：注意力机制让AI可以有侧重地处理信息，重点关注和当前任务相关的部分。"
+      },
+      {
+        "title": "看照片先看人脸",
+        "content": "看一张集体照，人会自动先注意到人脸，再看周围环境。AI的注意力机制也会自动给重要的内容更高的权重。总结：注意力机制是大模型能理解上下文关联的核心原因。"
+      }
+    ],
+    "aiExample": "Transformer架构的核心就是自注意力机制，它让模型能同时关注上下文各个位置的关联，理解长文本语义。",
+    "relatedTerms": ["Transformer", "Deep Learning", "LLM", "Neural Network"]
+  },
+  {
+    "id": "105",
+    "term": "Tokenizer",
+    "aliases": ["分词器", "令牌生成器", "分词工具"],
+    "category": "AI基础概念",
+    "translation": {
+      "english": "Tokenizer",
+      "chinese": "分词器 / 令牌生成器"
+    },
+    "professionalExplanation": "Tokenizer是把文字拆分成Token的工具，先把句子切成一个个最小单元，AI才能看懂和处理这些文字。",
+    "lifeExamples": [
+      {
+        "title": "切菜的厨师",
+        "content": "整颗菜不能直接下锅，厨师要先把菜切成小块，锅才能炒、人才能吃。Tokenizer就像切菜的，把文字切成AI能处理的小单元。总结：Tokenizer负责把自然语言拆分成Token，是AI处理文字的第一步。"
+      },
+      {
+        "title": "分拣快递的工人",
+        "content": "整车的快递要先按地区、大小分拣成一个个包裹，才能进入后续配送环节。Tokenizer就是把文本拆分成一个个Token。总结：Tokenizer是大模型的前置处理工具，文字先分词才能输入模型。"
+      },
+      {
+        "title": "拼乐高的分件步骤",
+        "content": "拼乐高前要先把一大堆零件按种类分开，才能一步步拼搭。Tokenizer就是把文本拆分成模型可用的基础单元。总结：不同模型的Tokenizer拆分规则不同，所以同样的文字Token数量可能不一样。"
+      }
+    ],
+    "aiExample": "每个大模型都有对应的Tokenizer，输入文字后先由它转成Token编号，再送入模型进行推理计算。",
+    "relatedTerms": ["Token", "LLM", "Transformer", "Embedding"]
+  },
+  {
+    "id": "106",
+    "term": "讯飞星火",
+    "aliases": ["星火大模型", "科大讯飞星火", "Spark Desk"],
+    "category": "AI工具和产品",
+    "translation": {
+      "english": "Spark Desk",
+      "chinese": "讯飞星火大模型"
+    },
+    "professionalExplanation": "讯飞星火是科大讯飞推出的中文大模型，语音能力突出，支持多轮对话、代码、多模态，适合办公和学习使用。",
+    "lifeExamples": [
+      {
+        "title": "语音转写会议记录",
+        "content": "开会不用专人记笔记，用讯飞星火的语音功能，实时把所有人的发言转成文字，还能自动整理成会议纪要。总结：讯飞星火依托讯飞的语音技术优势，语音相关的AI能力表现突出。"
+      },
+      {
+        "title": "学生AI家教辅导",
+      "content": "孩子做作业碰到不会的题，对着星火大模型说题目，它就能一步步讲解，还能出练习题巩固知识点。总结：讯飞星火在教育、学习场景有很多优化，适合学生用来辅助学习。"
+      },
+      {
+        "title": "职场办公助手",
+      "content": "写方案、做PPT大纲、分析数据，都可以让讯飞星火帮忙，快速生成初稿，自己再调整细节，提升效率。总结：讯飞星火提供丰富的办公模板，适合国内职场用户日常使用。"
+      }
+    ],
+    "aiExample": "讯飞星火支持多端使用，在语音交互、教育、办公等垂直场景有深度优化，是国内主流大模型之一。",
+    "relatedTerms": ["文心一言", "通义千问", "豆包", "LLM"]
+  },
+  {
+    "id": "107",
+    "term": "智谱清言",
+    "aliases": ["智谱AI", "GLM", "ChatGLM"],
+    "category": "AI工具和产品",
+    "translation": {
+      "english": "ChatGLM",
+      "chinese": "智谱清言大模型"
+    },
+    "professionalExplanation": "智谱清言是智谱AI推出的大模型产品，同时有开源版本和商用版本，技术自研，适合企业和开发者使用。",
+    "lifeExamples": [
+      {
+        "title": "企业定制内部AI助手",
+        "content": "公司想做自己的内部AI客服，不用从零训练模型，用智谱的开源版本微调一下，就能快速上线专属AI助手。总结：智谱既有在线产品也有开源模型，企业可以灵活选择使用方式。"
+      },
+      {
+        "title": "科研学术辅助工具",
+      "content": "科研人员读英文文献、写论文、分析数据，可以用智谱清言帮忙翻译、总结、润色，提升科研效率。总结：智谱在学术、科研场景有较多优化，适合知识密集型工作使用。"
+      },
+      {
+        "title": "开发者做AI应用",
+      "content": "开发者想做一个AI小程序，调用智谱的API接口，就能快速接入大模型能力，不用自己训练模型。总结：智谱提供完善的开发者服务，适合做AI应用的二次开发。"
+      }
+    ],
+    "aiExample": "智谱的GLM系列模型完全自研，既有云端API也有开源可部署版本，覆盖个人、开发者和企业多种需求。",
+    "relatedTerms": ["通义千问", "Llama", "Qwen", "开源模型"]
+  },
+  {
+    "id": "108",
+    "term": "DeepSeek",
+    "aliases": ["深度求索", "DeepSeek大模型"],
+    "category": "AI工具和产品",
+    "translation": {
+      "english": "DeepSeek",
+      "chinese": "DeepSeek深度求索大模型"
+    },
+    "professionalExplanation": "DeepSeek是深度求索推出的大模型，代码能力和长上下文能力突出，同时提供开源版本和低价API。",
+    "lifeExamples": [
+      {
+        "title": "程序员写代码辅助",
+        "content": "程序员写项目碰到难题，把代码和问题发给DeepSeek，它能快速定位bug、给出优化方案，还能生成完整功能。总结：DeepSeek的代码模型能力很强，适合开发者用来辅助编程。"
+      },
+      {
+        "title": "一次性分析整份报告",
+      "content": "拿到一份上百页的行业报告，直接上传给DeepSeek，它能一次性读完，还能回答任意细节问题，不用拆分。总结：DeepSeek支持很长的上下文，处理长文档、大项目很方便。"
+      },
+      {
+        "title": "低成本做AI应用",
+      "content": "创业者想做AI产品，用DeepSeek的API价格很低，能大幅降低成本，同时效果也能满足大部分场景需求。总结：DeepSeek API性价比高，适合预算有限的开发者和创业团队。"
+      }
+    ],
+    "aiExample": "DeepSeek在代码、推理、长文本场景表现突出，开源版本和API都很有竞争力，是开发者常用的模型之一。",
+    "relatedTerms": ["Claude Code", "Cursor", "Llama", "开源模型"]
+  },
+  {
+    "id": "109",
+    "term": "Suno",
+    "aliases": ["Suno AI", "Suno音乐生成"],
+    "category": "AI工具和产品",
+    "translation": {
+      "english": "Suno",
+      "chinese": "Suno AI音乐生成工具"
+    },
+    "professionalExplanation": "Suno是一款AI音乐生成工具，输入文字描述就能生成带歌词、有人声的完整歌曲，支持多种音乐风格。",
+    "lifeExamples": [
+      {
+        "title": "给生日做专属祝福歌",
+        "content": "朋友过生日，想送一首专属的祝福歌，不用找专业音乐人，在Suno里输入歌词和风格，几分钟就能生成一首完整的歌。总结：Suno可以快速生成定制歌曲，普通人也能创作自己的音乐。"
+      },
+      {
+        "title": "短视频配原创BGM",
+      "content": "做短视频找不到合适的背景音乐，用Suno描述想要的风格和时长，就能生成专属原创音乐，不用担心版权问题。总结：Suno能生成无版权的原创音乐，适合短视频创作者使用。"
+      },
+      {
+        "title": "写歌词自动谱曲演唱",
+      "content": "自己写了歌词但不会作曲唱歌，把歌词放进Suno，选一个风格，它就能自动作曲编曲，还能生成人声演唱。总结：Suno降低了音乐创作门槛，普通人也能做出完整的歌曲。"
+      }
+    ],
+    "aiExample": "Suno可以生成带人声、编曲、和声的完整歌曲，支持流行、摇滚、民谣等多种风格，是AI音乐领域的代表工具。",
+    "relatedTerms": ["Udio", "AI配音", "TTS", "AIGC"]
+  },
+  {
+    "id": "110",
+    "term": "Udio",
+    "aliases": ["Udio AI", "Udio音乐生成"],
+    "category": "AI工具和产品",
+    "translation": {
+      "english": "Udio",
+      "chinese": "Udio AI音乐生成工具"
+    },
+    "professionalExplanation": "Udio是一款高品质AI音乐生成工具，生成的歌曲音质高、结构完整，支持延长歌曲、风格融合等功能。",
+    "lifeExamples": [
+      {
+        "title": "做一首完整的原创单曲",
+        "content": "想做一首能发平台的原创歌曲，用Udio生成的音乐音质很高，结构完整，有主歌副歌，接近专业制作水平。总结：Udio生成的音乐品质较高，适合对音质有要求的创作者。"
+      },
+      {
+        "title": "把短歌延长成完整版",
+      "content": "生成了一段好听的副歌，想把它延长成一首完整的歌，用Udio的延长功能就能继续生成前后段落，保持风格统一。总结：Udio支持歌曲延长、续写，方便制作完整的音乐作品。"
+      },
+      {
+        "title": "混合两种音乐风格",
+      "content": "想听听京剧加摇滚是什么效果，在Udio里描述两种风格融合，就能生成创意独特的混合风格歌曲。总结：Udio创意性强，可以生成各种融合风格的音乐作品。"
+      }
+    ],
+    "aiExample": "Udio在音乐质感和完整性上表现优异，是目前高品质AI音乐生成的代表性工具之一。",
+    "relatedTerms": ["Suno", "AI配音", "TTS", "AIGC"]
+  },
+  {
+    "id": "111",
+    "term": "HeyGen",
+    "aliases": ["HeyGen数字人", "HeyGen视频生成"],
+    "category": "AI工具和产品",
+    "translation": {
+      "english": "HeyGen",
+      "chinese": "HeyGen AI数字人工具"
+    },
+    "professionalExplanation": "HeyGen是AI数字人视频工具，输入文字就能让数字人口播视频，还能换脸、翻译配音，不用真人拍摄。",
+    "lifeExamples": [
+      {
+        "title": "做口播知识视频",
+        "content": "想做知识讲解视频但不想露脸，用HeyGen选一个数字人形象，输入文案，就能生成真人一样的口播视频。总结：HeyGen不用真人出镜、不用拍摄，文字就能生成数字人口播视频。"
+      },
+      {
+        "title": "把视频翻译成外语",
+      "content": "做了一个中文视频想发到海外，用HeyGen可以自动翻译成外语，还能让人物口型和外语对应上，很自然。总结：HeyGen的视频翻译功能很强大，支持多语言口型同步。"
+      },
+      {
+        "title": "批量做产品介绍视频",
+      "content": "公司有几十款产品要做介绍视频，不用一个个拍，用HeyGen批量生成数字人讲解视频，成本低速度快。总结：HeyGen适合批量制作口播类视频，大幅降低视频制作成本。"
+      }
+    ],
+    "aiExample": "HeyGen支持数百种数字人形象和多种语言，是目前最主流的AI数字人视频生成工具之一。",
+    "relatedTerms": ["数字人", "AI视频", "Sora", "Runway"]
+  },
+  {
+    "id": "112",
+    "term": "剪映AI",
+    "aliases": ["剪映人工智能", "剪映AI功能"],
+    "category": "AI工具和产品",
+    "translation": {
+      "english": "CapCut AI",
+      "chinese": "剪映AI剪辑工具"
+    },
+    "professionalExplanation": "剪映AI是剪辑软件剪映内置的AI功能，能自动剪辑、加字幕、生成文案、做特效，普通人也能剪好视频。",
+    "lifeExamples": [
+      {
+        "title": "旅行vlog自动剪辑",
+        "content": "旅行拍了一大堆素材，懒得自己剪，用剪映的AI一键成片，自动选精彩片段、配音乐加字幕，很快出成片。总结：剪映AI降低了剪辑门槛，新手也能快速做出好看的视频。"
+      },
+      {
+        "title": "自动加字幕",
+      "content": "录了一段口播视频，手动打字幕太麻烦，用剪映AI自动识别语音生成字幕，还能自动对齐，稍微改改就行。总结：剪映的AI字幕功能准确率高，是短视频创作者最常用的功能之一。"
+      },
+      {
+        "title": "AI生成文案和脚本",
+      "content": "不知道拍什么视频，剪映AI能帮你想选题、写脚本，还能根据文案自动匹配画面，一站式完成制作。总结：剪映AI覆盖了从脚本到剪辑的全流程，适合普通短视频创作者。"
+      }
+    ],
+    "aiExample": "剪映AI功能丰富、操作简单，是国内普通用户做短视频剪辑的首选工具，手机和电脑端都能用。",
+    "relatedTerms": ["AI视频", "FFmpeg", "Runway", "AI配音"]
+  },
+  {
+    "id": "113",
+    "term": "WPS AI",
+    "aliases": ["WPS人工智能", "金山办公AI"],
+    "category": "AI工具和产品",
+    "translation": {
+      "english": "WPS AI",
+      "chinese": "WPS AI办公助手"
+    },
+    "professionalExplanation": "WPS AI是金山办公内置的AI功能，能帮写文档、做表格、生成PPT、总结内容，深度融入办公场景。",
+    "lifeExamples": [
+      {
+        "title": "一键生成PPT",
+        "content": "要做工作汇报PPT，把大纲输入WPS AI，它就能自动生成完整的PPT，还配好版式和图片，自己微调就行。总结：WPS AI和办公软件深度结合，做PPT、写文档都特别方便。"
+      },
+      {
+        "title": "表格数据自动分析",
+      "content": "有一大堆销售数据不知道怎么分析，选中表格让WPS AI分析，它就能自动生成图表和分析结论。总结：WPS AI能直接处理表格数据，不用再把数据复制到别的AI工具里。"
+      },
+      {
+        "title": "长文档快速总结",
+      "content": "收到几十页的合同和方案，让WPS AI一键总结重点，几分钟就能掌握核心内容，不用逐页读。总结：WPS AI直接在文档里就能用，处理办公文档效率很高。"
+      }
+    ],
+    "aiExample": "WPS AI深度集成在文字、表格、演示组件中，贴合国内办公习惯，是职场人常用的AI办公工具。",
+    "relatedTerms": ["AI办公", "Notion AI", "Copilot", "AI写作"]
+  },
+  {
+    "id": "114",
+    "term": "Microsoft Copilot",
+    "aliases": ["微软Copilot", "微软AI助手", "Copilot"],
+    "category": "AI工具和产品",
+    "translation": {
+      "english": "Microsoft Copilot",
+      "chinese": "微软Copilot AI助手"
+    },
+    "professionalExplanation": "Microsoft Copilot是微软推出的AI助手，深度集成在Windows、Office、Edge里，系统级辅助办公和上网。",
+    "lifeExamples": [
+      {
+        "title": "办公软件里的AI助手",
+        "content": "用Word写报告、Excel做数据、PPT做演示的时候，Copilot就在侧边栏，随时能帮你写内容、分析数据、做幻灯片。总结：Copilot深度嵌入微软办公套件，办公时不用切换软件就能用AI。"
+      },
+      {
+        "title": "电脑系统级助手",
+      "content": "用Windows电脑时，直接跟Copilot说需求，它就能帮你调设置、整理文件、总结屏幕上的内容，很方便。总结：Copilot是系统级的AI助手，在电脑各个地方都能调用。"
+      },
+      {
+        "title": "浏览器里的AI助手",
+      "content": "用Edge浏览器看网页，Copilot能自动总结页面内容、翻译长文、回答网页里的问题，不用自己复制粘贴。总结：Copilot和微软生态深度打通，覆盖办公、系统、浏览等多个场景。"
+      }
+    ],
+    "aiExample": "Microsoft Copilot整合了GPT等大模型能力，全面融入微软的产品生态，是办公场景的主流AI工具。",
+    "relatedTerms": ["GitHub Copilot", "WPS AI", "AI办公", "ChatGPT"]
+  },
+  {
+    "id": "115",
+    "term": "Pinecone",
+    "aliases": ["Pinecone向量数据库", "松果向量数据库"],
+    "category": "AI开发技术",
+    "translation": {
+      "english": "Pinecone",
+      "chinese": "Pinecone向量数据库"
+    },
+    "professionalExplanation": "Pinecone是一款云端向量数据库服务，开箱即用，不用自己部署维护，适合快速搭建RAG和语义搜索应用。",
+    "lifeExamples": [
+      {
+        "title": "托管式智能仓库",
+        "content": "自己建仓库要租地、盖房、雇人，很麻烦；托管式仓库你只管放货取货，其它都由商家打理。Pinecone就像托管式向量仓库。总结：Pinecone是云端托管服务，不用自己部署维护向量数据库，直接用就行。"
+      },
+      {
+        "title": "自助储物柜",
+        "content": "你不用自己买柜子，商场的自助储物柜直接用，存东西取东西都很方便，按使用付费。Pinecone就是类似的模式。总结：Pinecone按用量付费，适合中小型项目快速上线RAG功能。"
+      },
+      {
+        "title": "云盘存文件",
+        "content": "不用自己买硬盘存文件，用云盘方便又安全，还能随时扩容。Pinecone就像向量数据的云盘。总结：Pinecone是最流行的云端向量数据库之一，开发者用得很多。"
+      }
+    ],
+    "aiExample": "做轻量级RAG应用时，直接调用Pinecone的API存向量，不用自己搭建和维护数据库，开发速度很快。",
+    "relatedTerms": ["Vector Database", "Milvus", "RAG", "Embedding"]
+  },
+  {
+    "id": "116",
+    "term": "Milvus",
+    "aliases": ["Milvus向量数据库", "开源向量数据库"],
+    "category": "AI开发技术",
+    "translation": {
+      "english": "Milvus",
+      "chinese": "Milvus开源向量数据库"
+    },
+    "professionalExplanation": "Milvus是开源的向量数据库，可以自己部署，功能全、扩展性强，适合企业做大规模向量检索场景。",
+    "lifeExamples": [
+      {
+        "title": "自建大型仓库",
+        "content": "生意规模大了，托管仓库不够用也不够灵活，就自己建仓库，想怎么规划就怎么规划，容量也能无限扩展。Milvus就像自建的向量仓库。总结：Milvus是开源的，可以自己部署定制，适合大规模企业级场景。"
+      },
+      {
+        "title": "自己组装的电脑",
+        "content": "品牌机省事但不能改，组装机可以按需选配件，性能更强，还能随时升级。Milvus就像向量数据库里的组装机。总结：Milvus功能丰富、可定制性强，适合有技术团队的企业使用。"
+      },
+      {
+        "title": "自营物流体系",
+        "content": "第三方快递便宜但可控性差，大公司会自建物流，效率和服务都能自己把控。Milvus适合自建向量检索体系。总结：Milvus是最主流的开源向量数据库，支持大规模分布式部署。"
+      }
+    ],
+    "aiExample": "企业级大规模知识库、语义搜索项目，常用Milvus做向量存储，性能稳定、扩展性好，完全自主可控。",
+    "relatedTerms": ["Vector Database", "Pinecone", "RAG", "Embedding"]
+  },
+  {
+    "id": "117",
+    "term": "Chroma",
+    "aliases": ["Chroma向量数据库", "轻量向量数据库"],
+    "category": "AI开发技术",
+    "translation": {
+      "english": "Chroma",
+      "chinese": "Chroma轻量向量数据库"
+    },
+    "professionalExplanation": "Chroma是轻量级开源向量数据库，部署简单，上手快，适合做原型、小项目和学习开发使用。",
+    "lifeExamples": [
+      {
+        "title": "家用小收纳柜",
+        "content": "家里东西不多，买个小收纳柜就够用，便宜、占地小、摆放灵活，不用做大型衣柜。Chroma就像小型向量收纳柜。总结：Chroma轻量简单，几行代码就能跑起来，适合小项目和原型开发。"
+      },
+      {
+        "title": "便携工具箱",
+        "content": "简单维修不用带大型工具箱，便携小工具箱就够用，方便携带，常用工具都有。Chroma就像向量数据库里的便携工具箱。总结：Chroma上手门槛低，学习RAG和做小型项目特别合适。"
+      },
+      {
+        "title": "迷你仓库",
+        "content": "存少量东西用迷你仓就够，价格便宜、使用灵活，不用租大仓库。Chroma适合小规模的向量数据存储。总结：Chroma是入门级向量数据库，适合开发者学习和小型项目使用。"
+      }
+    ],
+    "aiExample": "学习RAG开发、做小型Demo项目时，Chroma是最常用的轻量向量数据库，安装简单，API友好。",
+    "relatedTerms": ["Vector Database", "Milvus", "RAG", "LangChain"]
+  },
+  {
+    "id": "118",
+    "term": "Semantic Kernel",
+    "aliases": ["语义内核", "SK", "微软Semantic Kernel"],
+    "category": "AI开发技术",
+    "translation": {
+      "english": "Semantic Kernel",
+      "chinese": "Semantic Kernel语义内核"
+    },
+    "professionalExplanation": "Semantic Kernel是微软推出的AI应用开发框架，能方便地把大模型集成到现有软件系统里，适合企业级开发。",
+    "lifeExamples": [
+      {
+        "title": "电器的智能升级套件",
+        "content": "老式电器不能联网，买个智能升级套件装上，就能变成智能电器，用手机控制。Semantic Kernel就像给老系统装AI的升级套件。总结：Semantic Kernel方便把AI能力集成到现有企业系统中，不用全部重构。"
+      },
+      {
+        "title": "工厂的自动化改造方案",
+        "content": "老工厂生产线不用全拆，用自动化改造方案升级，就能实现智能化生产，成本低见效快。总结：Semantic Kernel适合企业在现有系统基础上做AI升级，兼容性好。"
+      },
+      {
+        "title": "手机的外挂镜头",
+        "content": "手机本身拍照一般，加个外挂镜头就能大幅提升拍照效果，不用换手机。Semantic Kernel就像给系统加AI外挂。总结：Semantic Kernel和微软生态结合紧密，适合.NET、Java等企业技术栈。"
+      }
+    ],
+    "aiExample": "企业用Semantic Kernel可以快速把大模型能力融入现有业务系统，搭建企业级AI助手和自动化流程。",
+    "relatedTerms": ["LangChain", "Agent", "RAG", "企业AI"]
+  },
+  {
+    "id": "119",
+    "term": "Function Calling",
+    "aliases": ["函数调用", "工具调用", "函数调用能力"],
+    "category": "AI开发技术",
+    "translation": {
+      "english": "Function Calling",
+      "chinese": "函数调用 / 工具调用"
+    },
+    "professionalExplanation": "Function Calling让大模型能主动调用外部工具和函数，比如查天气、查数据库，是实现Agent能力的基础。",
+    "lifeExamples": [
+      {
+        "title": "助理帮你打电话查信息",
+        "content": "你问助理明天天气怎么样，助理不会瞎猜，而是自己打电话去气象台查询，查到了再告诉你结果。函数调用就是让AI自己去调用工具查信息。总结：Function Calling让AI可以主动调用外部工具，获取实时或专业的数据。"
+      },
+      {
+        "title": "服务员帮你去厨房催菜",
+        "content": "你问服务员菜什么时候好，服务员不会随便说时间，而是自己去厨房问一下，回来再告诉你准确时间。总结：AI通过函数调用去执行具体操作，而不是只靠脑子里的知识回答。"
+      },
+      {
+        "title": "学生不会就查课本",
+        "content": "好学生碰到不会的问题不会瞎蒙，而是翻课本查资料，确认了再给出答案。函数调用就让AI具备了“查资料”的能力。总结：Function Calling是AI从聊天工具变成智能助手的关键能力。"
+      }
+    ],
+    "aiExample": "主流大模型基本都支持Function Calling，开发者可以自定义函数，让AI实现查数据、发消息、操作软件等能力。",
+    "relatedTerms": ["Agent", "MCP", "RAG", "LLM"]
+  },
+  {
+    "id": "120",
+    "term": "Embedding Model",
+    "aliases": ["嵌入模型", "向量模型", "向量化模型"],
+    "category": "AI开发技术",
+    "translation": {
+      "english": "Embedding Model",
+      "chinese": "嵌入模型 / 向量化模型"
+    },
+    "professionalExplanation": "嵌入模型专门用来把文字、图片转成向量数据，转换效果越好，语义搜索和匹配的准确度就越高。",
+    "lifeExamples": [
+      {
+        "title": "货物的分类贴标员",
+        "content": "仓库里的货物各式各样，贴标员给每件货物贴上分类标签和特征标签，后续查找和分拣就很方便。嵌入模型就是给内容打数字标签的。总结：嵌入模型负责把文字、图片转换成带语义特征的向量数据。"
+      },
+      {
+        "title": "图书的分类编目员",
+        "content": "图书馆的编目员给每本书做分类、标主题、写摘要，读者才能按主题快速找到相关的书。嵌入模型做的就是类似编目的工作。总结：嵌入模型的质量直接决定了语义搜索和RAG的准确率。"
+      },
+      {
+        "title": "人脸录入员",
+        "content": "门禁系统录入人脸时，提取每个人的面部特征存起来，后续刷脸时比对特征就能认出人。嵌入模型提取的就是内容的特征。总结：嵌入模型把内容转换成特征向量，方便后续做相似度匹配。"
+      }
+    ],
+    "aiExample": "做RAG和语义搜索时，需要先用嵌入模型把文档和查询转成向量，再存入向量数据库做相似度检索。",
+    "relatedTerms": ["Embedding", "Vector Database", "RAG", "LLM"]
+  },
+  {
+    "id": "121",
+    "term": "Linux",
+    "aliases": ["Linux系统", "Linux操作系统", "利纳克斯"],
+    "category": "软件开发",
+    "translation": {
+      "english": "Linux",
+      "chinese": "Linux操作系统"
+    },
+    "professionalExplanation": "Linux是开源免费的操作系统，稳定安全，服务器基本都用它，做开发和运维都必须会用。",
+    "lifeExamples": [
+      {
+        "title": "商用大楼的地基",
+        "content": "大楼都要打牢固的地基，上面才能盖各种楼层和房间。Linux就像服务器的地基，上面跑各种软件和服务。总结：Linux是服务器最常用的操作系统，稳定可靠，开源免费。"
+      },
+      {
+        "title": "通用毛坯房",
+        "content": "精装房好看但不能改，毛坯房可以按需装修，想装成什么样都行。Linux就像毛坯系统，可以高度定制。总结：Linux开源可定制，各种服务器、嵌入式设备很多都用它。"
+      },
+      {
+        "title": "公共道路系统",
+        "content": "道路是公共基础设施，各种车都能在上面跑，免费使用，大家都遵守统一规则。Linux就像软件世界的公共道路。总结：Linux是开发者和运维的基础技能，绝大多数后端服务都跑在上面。"
+      }
+    ],
+    "aiExample": "几乎所有的AI大模型服务、云服务器都运行在Linux系统上，做AI开发和部署必须掌握基础的Linux操作。",
+    "relatedTerms": ["Docker", "Nginx", "云原生", "运维"]
+  },
+  {
+    "id": "122",
+    "term": "Nginx",
+    "aliases": ["Nginx服务器", "反向代理服务器", "引擎x"],
+    "category": "软件开发",
+    "translation": {
+      "english": "Nginx",
+      "chinese": "Nginx反向代理服务器"
+    },
+    "professionalExplanation": "Nginx是高性能的网页服务器和反向代理工具，常用来做负载均衡、静态资源服务和接口转发。",
+    "lifeExamples": [
+      {
+        "title": "公司前台接待",
+        "content": "客户来公司办事，先找前台，前台根据要办的事分配给对应的部门，不用客户自己挨个找。Nginx就像服务器的前台。总结：Nginx接收用户请求，再转发给后台对应的服务，还能分担流量压力。"
+      },
+      {
+        "title": "收费站的收费窗口",
+        "content": "车多的时候，多开几个收费窗口，把车流分散开，就不会堵车。Nginx的负载均衡就是把请求分到多台服务器上。总结：Nginx可以做负载均衡，让多台服务器一起扛流量，提升系统稳定性。"
+      },
+      {
+        "title": "小区的门卫",
+        "content": "门卫负责登记外来人员、管控进出，还能代收快递，保护小区安全。Nginx就像服务器的门卫，做入口管控。总结：Nginx性能高、占用资源少，几乎所有网站后端都会用到它。"
+      }
+    ],
+    "aiExample": "AI服务上线时，通常会用Nginx做入口代理，处理请求转发、限流、负载均衡等，保证服务稳定。",
+    "relatedTerms": ["Linux", "Docker", "后端开发", "微服务"]
+  },
+  {
+    "id": "123",
+    "term": "Kubernetes",
+    "aliases": ["K8s", "容器编排", "库伯内特斯"],
+    "category": "软件开发",
+    "translation": {
+      "english": "Kubernetes",
+      "chinese": "Kubernetes容器编排系统"
+    },
+    "professionalExplanation": "Kubernetes是容器编排工具，能自动管理大量Docker容器，自动扩缩容、故障自愈，适合大规模云服务。",
+    "lifeExamples": [
+      {
+        "title": "集装箱码头调度中心",
+        "content": "码头有大量集装箱和货轮，调度中心统一安排装卸、运输、堆放，自动调配资源，高效运转。K8s就像容器的调度中心。总结：Kubernetes统一管理大量容器，自动分配资源、处理故障，提升运维效率。"
+      },
+      {
+        "title": "餐厅的大堂经理",
+        "content": "餐厅客人多的时候，经理自动安排服务员加台、加菜，客人少的时候安排休息，还能顶替请假的员工。K8s就像系统的大堂经理。总结：K8s能根据流量自动扩缩容，服务挂了还能自动重启。"
+      },
+      {
+        "title": "城市交通指挥中心",
+        "content": "交通指挥中心监控全市路况，堵车的地方调绿灯时间，出事故立刻派交警，保障交通顺畅。K8s就是系统的指挥中心。总结：大规模部署AI服务时，通常用K8s来管理容器集群，保障高可用。"
+      }
+    ],
+    "aiExample": "大型AI平台、云服务普遍用Kubernetes管理容器集群，实现自动扩缩容、滚动更新、故障自愈等能力。",
+    "relatedTerms": ["Docker", "云原生", "微服务", "Linux"]
+  },
+  {
+    "id": "124",
+    "term": "微服务",
+    "aliases": ["微服务架构", "Microservices"],
+    "category": "软件开发",
+    "translation": {
+      "english": "Microservices",
+      "chinese": "微服务架构"
+    },
+    "professionalExplanation": "微服务是把一个大软件拆成多个独立小服务，各自运行互不影响，方便团队分开开发和单独升级。",
+    "lifeExamples": [
+      {
+        "title": "餐厅分部门运营",
+        "content": "大餐厅不是所有人都干一样的活，而是分成后厨、前厅、收银、采购等部门，各干各的，哪个部门缺人补哪里。微服务就是把系统拆成多个独立模块。总结：微服务把大系统拆成小服务，各自独立开发部署，灵活度高。"
+      },
+      {
+        "title": "商场的独立店铺",
+        "content": "商场里有很多独立店铺，卖衣服的、吃饭的、玩的各干各的，一家店关门不影响其它店，还能随时换新店。总结：微服务架构里单个服务出问题不会拖垮整个系统，还能单独升级。"
+      },
+      {
+        "title": "组装电脑",
+        "content": "一体电脑坏了要整机修，组装电脑哪个配件坏了换哪个，还能单独升级显卡、内存。微服务就像组装式的系统。总结：微服务架构便于多人协作开发，也方便系统按需扩容和迭代。"
+      }
+    ],
+    "aiExample": "大型AI平台通常采用微服务架构，把对话、画图、语音、用户系统拆成独立服务，分别开发和扩容。",
+    "relatedTerms": ["Docker", "Kubernetes", "云原生", "后端开发"]
+  },
+  {
+    "id": "125",
+    "term": "PostgreSQL",
+    "aliases": ["PG数据库", "Postgres", "关系型数据库"],
+    "category": "数据库和云计算",
+    "translation": {
+      "english": "PostgreSQL",
+      "chinese": "PostgreSQL关系型数据库"
+    },
+    "professionalExplanation": "PostgreSQL是功能强大的开源关系型数据库，支持复杂查询和扩展，适合数据量大、功能复杂的项目。",
+    "lifeExamples": [
+      {
+        "title": "大型综合档案馆",
+        "content": "普通文件柜只能存简单文件，综合档案馆能存各种复杂资料，还支持高级检索、分类管理。PostgreSQL就像数据库里的综合档案馆。总结：PostgreSQL功能丰富，支持复杂的数据类型和查询，适合复杂业务场景。"
+      },
+      {
+        "title": "多功能储物间",
+        "content": "普通柜子只能放普通物品，多功能储物间有各种分区和配件，能存各种形状和类型的东西。总结：PostgreSQL扩展性强，可以装各种插件，实现更多数据库功能。"
+      },
+      {
+        "title": "高级版Excel",
+        "content": "普通Excel处理简单表格，高级表格软件支持复杂公式、宏、多表联动，能处理更复杂的数据。总结：PostgreSQL是最强大的开源关系型数据库，很多AI和数据项目都用它。"
+      }
+    ],
+    "aiExample": "很多AI数据平台、复杂业务系统选用PostgreSQL，它功能强、扩展性好，还支持向量检索插件。",
+    "relatedTerms": ["MySQL", "Database", "Vector Database", "Redis"]
+  },
+  {
+    "id": "126",
+    "term": "腾讯云",
+    "aliases": ["腾讯云计算", "Tencent Cloud"],
+    "category": "数据库和云计算",
+    "translation": {
+      "english": "Tencent Cloud",
+      "chinese": "腾讯云"
+    },
+    "professionalExplanation": "腾讯云是腾讯旗下的云计算平台，提供云服务器、数据库、AI大模型等服务，社交、游戏行业用得多。",
+    "lifeExamples": [
+      {
+        "title": "大型商业综合体",
+        "content": "商业综合体里办公、购物、餐饮、娱乐都有，一站式满足各种需求。腾讯云就像数字世界的商业综合体。总结：腾讯云产品种类全，还有腾讯生态的各种能力可以对接。"
+      },
+      {
+        "title": "配套齐全的产业园",
+        "content": "普通产业园只提供场地，优质产业园还提供配套服务、产业资源、政策扶持。腾讯云有丰富的生态资源。总结：做小程序、社交、游戏相关的项目，用腾讯云对接生态更方便。"
+      },
+      {
+        "title": "连锁商业品牌",
+        "content": "连锁品牌网点多、服务规范，各地都能享受一致的服务。腾讯云在国内节点多，访问速度快。总结：腾讯云是国内主流云厂商之一，在游戏、音视频、社交领域优势明显。"
+      }
+    ],
+    "aiExample": "很多小程序、游戏、音视频类的AI应用都部署在腾讯云上，和微信、QQ生态对接也更方便。",
+    "relatedTerms": ["阿里云", "华为云", "Cloud", "AWS"]
+  },
+  {
+    "id": "127",
+    "term": "华为云",
+    "aliases": ["华为云计算", "HUAWEI CLOUD"],
+    "category": "数据库和云计算",
+    "translation": {
+      "english": "HUAWEI CLOUD",
+      "chinese": "华为云"
+    },
+    "professionalExplanation": "华为云是华为旗下的云计算平台，在政企、国产化、AI算力方面优势突出，适合大型企业和政务项目。",
+    "lifeExamples": [
+      {
+        "title": "国营大型商厦",
+        "content": "国营商厦正规、安全、靠谱，政府和大企业采购都喜欢去，品质和服务有保障。华为云就像云里的国营商厦。总结：华为云在政企、国产化项目中认可度高，安全合规性强。"
+      },
+      {
+        "title": "高端产业园",
+        "content": "高端产业园主打技术和品质，入驻的都是大型企业，配套的技术服务也更专业。华为云偏中大型企业服务。总结：华为云在大模型算力、政企解决方案上实力较强。"
+      },
+      {
+        "title": "自主品牌商场",
+        "content": "全部用国产自主品牌，供应链自主可控，不用担心被卡脖子。华为云主打国产化和自主可控。总结：对安全合规、国产化要求高的企业和政务项目，常选用华为云。"
+      }
+    ],
+    "aiExample": "很多政企AI项目、国产化AI平台都基于华为云建设，它的昇腾AI算力在国产算力中占比很高。",
+    "relatedTerms": ["阿里云", "腾讯云", "Cloud", "AI算力"]
+  },
+  {
+    "id": "128",
+    "term": "Serverless",
+    "aliases": ["无服务器", "无服务器架构", "Serverless架构"],
+    "category": "数据库和云计算",
+    "translation": {
+      "english": "Serverless",
+      "chinese": "无服务器架构"
+    },
+    "professionalExplanation": "Serverless是不用管服务器的云服务模式，写好代码直接上传，有请求才运行、按调用量计费。",
+    "lifeExamples": [
+      {
+        "title": "共享充电宝",
+        "content": "不用自己买充电宝，用的时候扫码借，按使用时长付费，不用管充电和维护。Serverless就像共享式的计算服务。总结：Serverless不用管理服务器，按实际调用量付费，闲置不花钱。"
+      },
+      {
+        "title": "打车出行",
+        "content": "不用自己买车养车，出门叫车，坐多少次付多少次钱，方便又省心。Serverless就是按需使用的计算服务。总结：Serverless不用运维服务器，开发者只需要写业务代码。"
+      },
+      {
+        "title": "自助洗衣机",
+        "content": "不用自己买洗衣机，用的时候投币启动，用完就停，按使用次数收费。Serverless也是有请求才运行。总结：Serverless适合流量波动大、访问量不大的小型AI应用，成本低上线快。"
+      }
+    ],
+    "aiExample": "小型AI工具、小程序后端常用Serverless部署，不用买服务器和运维，按调用量付费，成本很低。",
+    "relatedTerms": ["Cloud", "Docker", "云原生", "后端开发"]
+  },
+  {
+    "id": "129",
+    "term": "对象存储",
+    "aliases": ["OSS", "OBS", "COS", "对象存储服务"],
+    "category": "数据库和云计算",
+    "translation": {
+      "english": "Object Storage",
+      "chinese": "对象存储服务"
+    },
+    "professionalExplanation": "对象存储是云上的文件存储服务，专门存图片、视频、文档等文件，容量无限，便宜还能直接外链访问。",
+    "lifeExamples": [
+      {
+        "title": "大型公共仓库",
+        "content": "家里放不下的大件物品、货物，都可以放公共仓库，想存多少存多少，按占用空间付费，随时能取。对象存储就像云上的文件仓库。总结：对象存储容量几乎无限，价格便宜，适合存大量图片、视频等文件。"
+      },
+      {
+        "title": "网络云盘",
+        "content": "文件存在云盘里，不占本地空间，在哪都能下载，还能生成分享链接发给别人。对象存储就是开发者用的云盘。总结：对象存储可以直接生成访问链接，适合给网站、APP提供文件访问。"
+      },
+      {
+        "title": "快递大仓",
+        "content": "快递大仓能存海量包裹，按件计费，进出都很方便，还能配送到各地。对象存储就是存文件的大仓。总结：AI生成的图片、视频、文档一般都存在对象存储里，便宜又方便。"
+      }
+    ],
+    "aiExample": "AI产品生成的图片、视频、用户上传的文件，一般都存在对象存储里，容量大、成本低、访问方便。",
+    "relatedTerms": ["CDN", "Cloud", "阿里云", "腾讯云"]
+  },
+  {
+    "id": "130",
+    "term": "AI翻译",
+    "aliases": ["人工智能翻译", "机器翻译", "AI自动翻译"],
+    "category": "普通用户AI应用",
+    "translation": {
+      "english": "AI Translation",
+      "chinese": "AI机器翻译"
+    },
+    "professionalExplanation": "AI翻译就是用AI自动把一种语言转换成另一种，支持文字、语音、图片翻译，比传统翻译更准确自然。",
+    "lifeExamples": [
+      {
+        "title": "出国旅游实时对话",
+        "content": "出国旅游听不懂外国人说话，对着翻译软件说中文，立刻就能翻译成外语播放，对方说的话也能译成中文。总结：AI翻译能实现实时语音对话翻译，解决出国语言不通的问题。"
+      },
+      {
+        "title": "看外文文献和网站",
+      "content": "看英文论文、外文网站看不懂，用AI翻译一键全文翻译，通顺又准确，不用逐词查字典。总结：AI翻译能快速翻译长篇文字，阅读外文资料效率提升很多。"
+      },
+      {
+        "title": "拍菜单路牌翻译",
+      "content": "在国外看菜单、路牌看不懂，拍张照AI就能自动识别图片里的文字，翻译成中文显示出来。总结：AI翻译支持图片翻译，出门在外用起来很方便。"
+      }
+    ],
+    "aiExample": "现在的AI翻译基于大模型技术，翻译准确度和自然度大幅提升，支持上百种语言和多种翻译场景。",
+    "relatedTerms": ["NLP", "LLM", "OCR", "Whisper"]
+  },
+  {
+    "id": "131",
+    "term": "AI编程",
+    "aliases": ["人工智能编程", "AI写代码", "AI辅助编程"],
+    "category": "普通用户AI应用",
+    "translation": {
+      "english": "AI Coding",
+      "chinese": "AI辅助编程"
+    },
+    "professionalExplanation": "AI编程就是用AI工具辅助写代码，自动补全、查bug、解释代码，新手也能做简单开发，效率大幅提升。",
+    "lifeExamples": [
+      {
+        "title": "新手写简单小程序",
+        "content": "普通人想做一个简单的打卡小程序，不用系统学编程，跟AI说需求，它就能一步步教你写代码、改bug。总结：AI编程降低了编程门槛，新手也能快速做出简单的程序。"
+      },
+      {
+        "title": "程序员日常写代码",
+      "content": "程序员写项目时，AI自动补全常用代码、帮忙写函数、定位bug，不用每次都从零敲代码，节省大量时间。总结：AI编程能帮程序员减少重复劳动，专注在更有价值的逻辑设计上。"
+      },
+      {
+        "title": "看不懂的代码让AI解释",
+      "content": "拿到一段陌生的代码不知道什么意思，发给AI，它就能用大白话解释清楚，还能告诉你怎么修改。总结：AI编程也适合学习编程，帮助理解代码和知识点。"
+      }
+    ],
+    "aiExample": "现在主流的代码编辑器都有AI编程插件，支持代码生成、补全、重构、查错等，是开发者的标配工具。",
+    "relatedTerms": ["Cursor", "GitHub Copilot", "Claude Code", "Python"]
+  },
+  {
+    "id": "132",
+    "term": "AI数字人",
+    "aliases": ["数字人", "虚拟数字人", "AI虚拟人"],
+    "category": "普通用户AI应用",
+    "translation": {
+      "english": "AI Digital Human",
+      "chinese": "AI数字人"
+    },
+    "professionalExplanation": "AI数字人是用AI生成的虚拟人物形象，能说话、做动作，用来做直播、拍视频、当客服，不用真人出镜。",
+    "lifeExamples": [
+      {
+        "title": "24小时直播带货",
+        "content": "直播间用数字人主播，24小时不停播，不用真人熬夜，也能介绍产品、回答问题，节省人力成本。总结：AI数字人可以全天候工作，适合直播、客服等需要长时间在岗的场景。"
+      },
+      {
+        "title": "企业宣传视频主角",
+      "content": "公司做产品宣传视频，不用找真人演员、租场地，用数字人生成口播视频，成本低速度还快。总结：AI数字人不用拍摄，输入文字就能生成视频，大幅降低视频制作成本。"
+      },
+      {
+        "title": "虚拟偶像和主播",
+      "content": "打造自己的虚拟IP形象，用数字人做短视频和直播，不用露脸也能做内容创作者。总结：AI数字人让普通人也能低成本打造虚拟IP形象。"
+      }
+    ],
+    "aiExample": "AI数字人结合了大语言模型和语音、图像生成技术，能实现实时对话、自然动作和表情变化。",
+    "relatedTerms": ["HeyGen", "AI视频", "数字员工", "AIGC"]
+  },
+  {
+    "id": "133",
+    "term": "AI换脸",
+    "aliases": ["AI人脸替换", "AI换脸技术", "Deepfake"],
+    "category": "普通用户AI应用",
+    "translation": {
+      "english": "AI Face Swap",
+      "chinese": "AI换脸"
+    },
+    "professionalExplanation": "AI换脸就是用AI把视频或图片里的人脸换成另一个人的，效果逼真，主要用于娱乐和创意制作。",
+    "lifeExamples": [
+      {
+        "title": "把自己放进电影片段",
+        "content": "喜欢某个电影片段，用AI换脸把主角换成自己的脸，就能生成自己演电影的搞笑视频，娱乐性很强。总结：AI换脸常用来做创意娱乐视频，增加趣味性。"
+      },
+      {
+        "title": "照片换发型和穿搭",
+      "content": "想知道自己剪短发、穿某件衣服好不好看，用AI换脸/换造型就能提前看到效果，不用真的去试。总结：AI换脸可以用来做形象预览、试妆试衣等生活应用。"
+      },
+      {
+        "title": "视频补拍不用重拍",
+      "content": "视频拍完发现演员不合适，用AI换脸替换，不用全部重拍，节省大量时间和制作成本。总结：AI换脸在影视制作领域也有合法的专业应用场景。"
+      }
+    ],
+    "aiExample": "AI换脸技术发展很快，但使用时需要注意合规，不能用于伪造他人肖像、制作虚假信息等违法用途。",
+    "relatedTerms": ["AI视频", "Deepfake", "数字人", "AI绘画"]
+  },
+  {
+    "id": "134",
+    "term": "AI办公",
+    "aliases": ["人工智能办公", "智能办公", "AI办公助手"],
+    "category": "普通用户AI应用",
+    "translation": {
+      "english": "AI Office",
+      "chinese": "AI智能办公"
+    },
+    "professionalExplanation": "AI办公就是用AI工具辅助日常办公，写文档、做表格、生成PPT、整理纪要，大幅提升办公效率。",
+    "lifeExamples": [
+      {
+        "title": "自动整理会议纪要",
+        "content": "开完几小时的会，不用人工整理录音，AI自动把录音转成文字，还提炼出重点和待办事项。总结：AI办公能把重复耗时的工作自动化，节省职场人的时间。"
+      },
+      {
+        "title": "一键生成工作汇报",
+      "content": "列几条工作内容，AI就能生成完整的周报、月报、汇报PPT，自己调整细节就行，不用从零写起。总结：AI办公能快速产出各类办公文档，提升写材料的效率。"
+      },
+      {
+        "title": "表格数据自动分析",
+      "content": "一堆销售数据不知道怎么看，AI自动生成图表、分析问题、给出建议，不用自己慢慢做公式。总结：AI办公降低了数据分析的门槛，普通人也能做专业的数据分析。"
+      }
+    ],
+    "aiExample": "现在主流的办公软件都内置了AI功能，覆盖写、做表、做PPT、总结等场景，是职场人的效率工具。",
+    "relatedTerms": ["WPS AI", "Microsoft Copilot", "AI写作", "RPA"]
+  },
+  {
+    "id": "135",
+    "term": "AI营销",
+    "aliases": ["人工智能营销", "智能营销", "AI营销工具"],
+    "category": "普通用户AI应用",
+    "translation": {
+      "english": "AI Marketing",
+      "chinese": "AI智能营销"
+    },
+    "professionalExplanation": "AI营销就是用AI做营销工作，写文案、做海报、生成短视频、分析用户数据，降低营销成本，提升效果。",
+    "lifeExamples": [
+      {
+        "title": "批量生成电商商品文案",
+        "content": "网店有上百件商品，每件都要写详情页文案，用AI批量生成，再人工微调，比纯人写快很多。总结：AI营销能批量产出营销内容，提升内容生产效率。"
+      },
+      {
+        "title": "自动生成短视频素材",
+      "content": "做短视频营销需要大量素材，用AI生成图片、视频、配音，快速剪辑成片，不用全部实拍。总结：AI营销大幅降低了内容制作成本，中小商家也能做短视频营销。"
+      },
+      {
+        "title": "用户数据精准投放",
+      "content": "AI分析用户的浏览和购买数据，找出最可能买单的人群，广告只推给他们，不浪费广告费。总结：AI营销能精准定位目标用户，提升广告投放的回报率。"
+      }
+    ],
+    "aiExample": "AI正在改变营销行业，从内容生产到用户分析、投放优化，全流程都有对应的AI工具提升效率。",
+    "relatedTerms": ["AI写作", "AI绘画", "AI视频", "企业AI"]
+  },
+  {
+    "id": "136",
+    "term": "知识库",
+    "aliases": ["企业知识库", "Knowledge Base", "知识管理"],
+    "category": "企业AI",
+    "translation": {
+      "english": "Knowledge Base",
+      "chinese": "知识库"
+    },
+    "professionalExplanation": "知识库就是把企业的文档、资料、经验统一存起来，配上AI问答，员工随时能查，不用反复问人。",
+    "lifeExamples": [
+      {
+        "title": "公司的公共资料库",
+        "content": "新员工入职不知道公司制度、产品知识，不用挨个问老员工，去知识库搜一下就能找到答案。总结：企业知识库把零散的知识集中管理，方便所有人查阅。"
+      },
+      {
+        "title": "客服的标准答案手册",
+      "content": "客服回答客户问题不用凭感觉，查知识库就能找到官方标准答案，回答准确还统一。总结：知识库能保证信息的一致性和准确性，避免各人说法不一。"
+      },
+      {
+        "title": "公司的经验档案库",
+      "content": "老员工的项目经验、解决方案都存进知识库，新人也能快速学到，人走了知识还留在公司。总结：知识库能沉淀企业知识资产，降低人员流动带来的影响。"
+      }
+    ],
+    "aiExample": "结合RAG技术的AI知识库，可以用自然语言提问，自动从文档里找答案，比传统关键词搜索好用很多。",
+    "relatedTerms": ["RAG", "Vector Database", "企业AI", "AI客服"]
+  },
+  {
+    "id": "137",
+    "term": "数字员工",
+    "aliases": ["虚拟员工", "数字人员工", "Digital Employee"],
+    "category": "企业AI",
+    "translation": {
+      "english": "Digital Employee",
+      "chinese": "数字员工"
+    },
+    "professionalExplanation": "数字员工是企业里的AI虚拟员工，能自动完成特定岗位工作，比如客服、催收、数据录入，7x24小时上班。",
+    "lifeExamples": [
+      {
+        "title": "7x24小时在线客服",
+        "content": "客服岗位总要有人值班，数字员工客服半夜也能回复客户咨询，常见问题都能解决，解决不了再转人工。总结：数字员工可以不间断工作，承担重复度高的岗位工作。"
+      },
+      {
+        "title": "自动处理单据的财务助理",
+      "content": "财务每天要审核大量发票单据，数字员工自动识别发票、录入系统、校验合规性，减轻财务工作量。总结：数字员工适合处理规则明确、重复度高的事务性工作。"
+      },
+      {
+        "title": "自动外呼的通知员",
+      "content": "要给很多客户打电话通知事情，数字员工自动外呼，用语音告知客户内容，还能回答简单问题。总结：数字员工可以替代大量重复性的人工岗位，降低企业人力成本。"
+      }
+    ],
+    "aiExample": "数字员工通常结合大模型、语音识别、RPA等技术，能独立完成一整个岗位的大部分工作。",
+    "relatedTerms": ["AI Agent", "RPA", "AI客服", "企业AI"]
+  },
+  {
+    "id": "138",
+    "term": "智能质检",
+    "aliases": ["AI质检", "人工智能质检", "智能质量检测"],
+    "category": "企业AI",
+    "translation": {
+      "english": "AI Quality Inspection",
+      "chinese": "AI智能质检"
+    },
+    "professionalExplanation": "智能质检用AI视觉自动检查产品外观缺陷，比人眼速度快、准确率高，还不会疲劳，工厂用得很多。",
+    "lifeExamples": [
+      {
+        "title": "工厂零件外观检查",
+        "content": "工厂生产零件，以前工人用眼睛看有没有划痕、瑕疵，速度慢还容易看漏。AI质检摄像头扫一下就知道合不合格。总结：AI质检速度快、准确率稳定，不会因为疲劳而出错。"
+      },
+      {
+        "title": "快递包裹安检",
+      "content": "快递站点检查包裹有没有违禁品，以前人工看效率低，AI自动识别X光画面里的违禁品，又快又准。总结：AI视觉质检适合大量重复性的检测工作，效率远高于人工。"
+      },
+      {
+        "title": "食品外观筛选",
+      "content": "水果、零食生产线上，AI自动识别外观不好、有破损的产品，自动分拣出去，保证品质统一。总结：AI质检在制造业、物流、食品行业应用非常广泛。"
+      }
+    ],
+    "aiExample": "AI智能质检基于计算机视觉技术，能识别各种外观缺陷，24小时不间断工作，大幅提升质检效率。",
+    "relatedTerms": ["CV", "计算机视觉", "Automation", "企业AI"]
+  },
+  {
+    "id": "139",
+    "term": "知识图谱",
+    "aliases": ["Knowledge Graph", "知识图谱技术"],
+    "category": "企业AI",
+    "translation": {
+      "english": "Knowledge Graph",
+      "chinese": "知识图谱"
+    },
+    "professionalExplanation": "知识图谱是把知识点和它们之间的关系连成网状结构，让AI能理解事物之间的关联，推理更准确。",
+    "lifeExamples": [
+      {
+        "title": "人物关系图",
+        "content": "看复杂的电视剧，画一张人物关系图，谁和谁是夫妻、谁和谁是敌人，一目了然，就不容易看糊涂。知识图谱就像大型的关系图。总结：知识图谱把事物和它们的关系结构化，方便做关联推理。"
+      },
+      {
+        "title": "百科知识网络",
+        "content": "普通字典只是单个词的解释，百科里每个词条都能点进去看相关的事物，形成知识网络。知识图谱就是结构化的百科网络。总结：知识图谱能清晰表达事物之间的关联关系，提升AI的推理能力。"
+      },
+      {
+        "title": "地图导航系统",
+        "content": "普通地点列表只能看单个地点，地图上能看到地点之间的路线、距离、周边设施。知识图谱就像知识的地图。总结：知识图谱让AI不仅知道单个知识点，还能理解它们之间的联系。"
+      }
+    ],
+    "aiExample": "在医疗、金融、法律等专业领域，知识图谱结合大模型能让AI回答更专业准确，减少幻觉。",
+    "relatedTerms": ["RAG", "LLM", "NLP", "企业AI"]
+  },
+  {
+    "id": "140",
+    "term": "Automation",
+    "aliases": ["自动化", "流程自动化", "业务自动化"],
+    "category": "企业AI",
+    "translation": {
+      "english": "Automation",
+      "chinese": "自动化"
+    },
+    "professionalExplanation": "自动化就是让系统自动完成工作流程，不用人手动操作，AI+自动化能处理更复杂的业务场景。",
+    "lifeExamples": [
+      {
+        "title": "全自动生产线",
+        "content": "以前工厂要很多工人手动干活，自动化生产线机器自动完成所有工序，人只需要看管机器就行。总结：自动化把重复的人工操作变成机器自动执行，提升效率。"
+      },
+      {
+        "title": "自动扣款的水电费",
+      "content": "以前交水电费要跑去营业厅，现在自动代扣，到时间自动从银行卡扣钱，不用人记得去交。总结：生活和工作里很多固定流程都可以自动化，节省人力。"
+      },
+      {
+        "title": "自动回复的消息",
+      "content": "客服收到常见问题，系统自动回复标准答案，不用人工一条条回，节省大量重复劳动。总结：AI让自动化从固定规则升级成能理解自然语言的智能自动化。"
+      }
+    ],
+    "aiExample": "AI和自动化结合，形成智能自动化，能处理更复杂、非结构化的任务，是企业降本增效的重要方向。",
+    "relatedTerms": ["RPA", "AI Agent", "数字员工", "企业AI"]
+  },
+  {
+    "id": "141",
+    "term": "TTS",
+    "aliases": ["语音合成", "文字转语音", "Text-to-Speech"],
+    "category": "音视频工具",
+    "translation": {
+      "english": "Text-to-Speech",
+      "chinese": "文字转语音 / 语音合成"
+    },
+    "professionalExplanation": "TTS是把文字转成语音的技术，输入文字就能生成人声朗读，有多种音色可选，是AI配音的基础。",
+    "lifeExamples": [
+      {
+        "title": "导航软件的语音播报",
+        "content": "开车用导航，软件会实时播报“前方左转”“限速拍照”，不用看屏幕也能知道路线。这个播报声音就是TTS生成的。总结：TTS能把文字变成自然的人声，导航、听书都靠它。"
+      },
+      {
+        "title": "听书APP的朗读",
+      "content": "不想用眼睛看小说，打开听书功能，就能有人声朗读小说内容，很多都是AI合成的声音。总结：TTS技术让文字内容可以用听的方式获取，解放双眼。"
+      },
+      {
+        "title": "电话机器人的声音",
+      "content": "接到通知类电话，对面说话很自然，其实可能是AI合成的语音，不是真人在说话。总结：TTS技术现在已经非常成熟，生成的声音接近真人。"
+      }
+    ],
+    "aiExample": "AI配音、数字人语音、智能客服背后都用到了TTS技术，现在的TTS已经能做到媲美真人的效果。",
+    "relatedTerms": ["Whisper", "STT", "AI配音", "数字人"]
+  },
+  {
+    "id": "142",
+    "term": "STT",
+    "aliases": ["语音转文字", "Speech-to-Text", "语音识别"],
+    "category": "音视频工具",
+    "translation": {
+      "english": "Speech-to-Text",
+      "chinese": "语音转文字 / 语音识别"
+    },
+    "professionalExplanation": "STT是把语音转换成文字的技术，说话就能转成文字稿，是语音转写、智能客服的基础技术。",
+    "lifeExamples": [
+      {
+        "title": "语音输入发消息",
+        "content": "走路不方便打字，按住语音输入说话，自动就转成文字发出去，不用手打字也能聊天。这个功能就是STT实现的。总结：STT能把说话的声音转成文字，解放双手，方便快捷。"
+      },
+      {
+        "title": "会议录音转文字",
+      "content": "开会录了音，会后用STT工具转成文字稿，再整理纪要，比自己听录音打字快很多。总结：STT是会议记录、采访整理的常用工具，大幅提升效率。"
+      },
+      {
+        "title": "字幕自动生成",
+      "content": "做视频加字幕，不用手动逐句打，用STT自动识别语音生成字幕，再微调一下就好。总结：STT是视频加字幕、语音转写的核心技术。"
+      }
+    ],
+    "aiExample": "Whisper就是典型的STT模型，准确率高、支持多语言，是目前最常用的语音识别工具之一。",
+    "relatedTerms": ["Whisper", "TTS", "转录", "音视频工具"]
+  },
+  {
+    "id": "143",
+    "term": "转录",
+    "aliases": ["语音转写", "转文字", "Transcription"],
+    "category": "音视频工具",
+    "translation": {
+      "english": "Transcription",
+      "chinese": "语音转写 / 转录"
+    },
+    "professionalExplanation": "转录就是把音频、视频里的说话内容转换成文字，还可以区分说话人、加时间戳，方便整理内容。",
+    "lifeExamples": [
+      {
+        "title": "采访录音整理成文稿",
+        "content": "记者采访录了一小时音频，用转录工具快速转成文字稿，还能区分记者和受访者的话，方便编辑。总结：转录能快速把语音内容变成可编辑的文字，方便后续整理。"
+      },
+      {
+        "title": "网课生成字幕和讲义",
+      "content": "上网课的视频，转录工具自动生成带时间戳的文字稿，既能当字幕也能当复习讲义。总结：转录可以生成带时间戳的文字，对应到音视频的具体位置。"
+      },
+      {
+        "title": "电话客服质检",
+      "content": "客服和客户的通话，自动转录成文字，用来检查客服服务是否规范，不用一条条听录音。总结：转录是语音内容处理的第一步，后续分析和检索都基于转写结果。"
+      }
+    ],
+    "aiExample": "现在的AI转录工具不仅能转文字，还能区分说话人、识别情绪、自动总结，功能越来越强大。",
+    "relatedTerms": ["Whisper", "STT", "FFmpeg", "字幕"]
+  },
+  {
+    "id": "144",
+    "term": "字幕",
+    "aliases": ["视频字幕", "自动字幕", "Subtitle"],
+    "category": "音视频工具",
+    "translation": {
+      "english": "Subtitle",
+      "chinese": "字幕"
+    },
+    "professionalExplanation": "字幕是视频里同步显示的文字内容，AI可以自动生成、翻译、对齐字幕，不用手动逐句制作。",
+    "lifeExamples": [
+      {
+        "title": "看外国电影的中文字幕",
+        "content": "看外文电影听不懂，有了中文字幕就能看懂剧情，AI可以自动生成翻译字幕，不用等字幕组制作。总结：AI可以快速给视频生成多语言字幕，方便跨语言观看。"
+      },
+      {
+        "title": "短视频的字幕",
+      "content": "很多人刷视频不开声音，有字幕就能看懂内容，AI自动加字幕又快又准，还能选好看的样式。总结：AI自动字幕是短视频创作者的常用功能，提升制作效率。"
+      },
+      {
+        "title": "课程视频的字幕",
+      "content": "学习课程视频有字幕，既能边听边看加深印象，也能静音看课，还能方便搜索内容位置。总结：字幕让视频内容更容易理解和检索，AI让字幕制作成本大幅降低。"
+      }
+    ],
+    "aiExample": "AI自动生成字幕的准确率已经很高，还支持多语言翻译、样式调整，是视频制作的标配功能。",
+    "relatedTerms": ["Whisper", "转录", "FFmpeg", "剪映AI"]
+  },
+  {
+    "id": "145",
+    "term": "AIGC",
+    "aliases": ["生成式AI", "AI生成内容", "人工智能生成内容"],
+    "category": "AI基础概念",
+    "translation": {
+      "english": "Artificial Intelligence Generated Content",
+      "chinese": "人工智能生成内容"
+    },
+    "professionalExplanation": "AIGC就是用AI自动生成文字、图片、音频、视频等内容，是现在AI应用最广泛的领域之一。",
+    "lifeExamples": [
+      {
+        "title": "用AI写文章画图",
+        "content": "以前写文章、画图都要人来做，现在输入描述，AI就能生成文章、图片、甚至视频，速度快成本低。总结：AIGC就是让AI来生产内容，覆盖文字、图片、音视频等多种形式。"
+      },
+      {
+        "title": "自动生产内容的工厂",
+      "content": "传统内容生产靠人工，效率低成本高；AIGC像自动化工厂，批量生成各种内容，效率提升很多倍。总结：AIGC大幅降低了内容生产的门槛和成本，普通人也能做内容创作。"
+      },
+      {
+        "title": "创意辅助工具",
+      "content": "创作者想不出点子的时候，可以让AI先生成几个版本参考，再自己优化，激发创作灵感。总结：AIGC可以作为人类创作者的辅助工具，提升创意效率。"
+      }
+    ],
+    "aiExample": "我们常说的AI写作、AI绘画、AI视频、AI配音都属于AIGC范畴，它正在改变内容生产的方式。",
+    "relatedTerms": ["AI写作", "AI绘画", "AI视频", "生成式AI"]
+  },
+  {
+    "id": "146",
+    "term": "生成式AI",
+    "aliases": ["Generative AI", "生成式人工智能"],
+    "category": "AI基础概念",
+    "translation": {
+      "english": "Generative AI",
+      "chinese": "生成式人工智能"
+    },
+    "professionalExplanation": "生成式AI是能创造新内容的AI类型，不是只分析识别，而是能生成文字、图片、音视频等全新内容。",
+    "lifeExamples": [
+      {
+        "title": "会画画的画家",
+        "content": "普通AI只能认出画里是什么，生成式AI能自己画出全新的画，就像画家创作新作品一样。总结：生成式AI的核心是“创造”，能产出原本不存在的新内容。"
+      },
+      {
+        "title": "会写文章的作家",
+      "content": "分析型AI只能总结现有文章，生成式AI能写出全新的故事、文案、文章，像作家一样创作。总结：生成式AI可以从零开始生成全新的内容，而不只是分析已有内容。"
+      },
+      {
+        "title": "能做饭的厨师",
+      "content": "只会品鉴菜好不好吃的是美食家，能做出新菜品的是厨师。生成式AI就像AI里的厨师，能创造新东西。总结：我们现在常用的聊天、画图、生成视频的AI，都属于生成式AI。"
+      }
+    ],
+    "aiExample": "大语言模型、AI绘画、AI视频都属于生成式AI，是当前AI技术爆发和商业化的核心方向。",
+    "relatedTerms": ["AIGC", "LLM", "AI绘画", "AI视频"]
+  },
+  {
+    "id": "147",
+    "term": "Prompt工程师",
+    "aliases": ["提示词工程师", "提示工程师", "Prompt Engineer"],
+    "category": "企业AI",
+    "translation": {
+      "english": "Prompt Engineer",
+      "chinese": "提示词工程师"
+    },
+    "professionalExplanation": "Prompt工程师专门负责写高质量的AI指令，让AI输出更准确、更符合业务需求的结果，提升AI使用效果。",
+    "lifeExamples": [
+      {
+        "title": "会跟师傅沟通的徒弟",
+        "content": "同样找师傅帮忙，有的人说不清楚需求，做出来的东西不对；有的人会说需求，做出来的就特别合适。提示工程师就是最会跟AI“说需求”的人。总结：Prompt工程师擅长把业务需求转化成AI能听懂的高质量指令。"
+      },
+      {
+        "title": "翻译兼需求顾问",
+      "content": "客户说的是业务语言，技术听不懂；技术说的客户也不懂。中间的人把需求翻译成对方能懂的话。提示工程师就是人和AI之间的需求翻译。总结：好的提示工程师能让AI的产出质量提升一个档次。"
+      },
+      {
+        "title": "导演给演员讲戏",
+      "content": "同样的演员，导演会不会讲戏，拍出来的效果天差地别。提示工程师就像AI的“导演”，引导AI产出好结果。总结：Prompt工程师通过优化提示词，最大化AI在具体业务中的表现。"
+      }
+    ],
+    "aiExample": "随着AI应用普及，Prompt工程师成为热门岗位，负责在业务场景中优化AI指令，提升AI应用效果。",
+    "relatedTerms": ["Prompt", "Prompt Engineering", "AI Agent", "企业AI"]
+  },
+  {
+    "id": "148",
+    "term": "大模型应用开发",
+    "aliases": ["LLM应用开发", "大模型二次开发"],
+    "category": "AI开发技术",
+    "translation": {
+      "english": "LLM Application Development",
+      "chinese": "大模型应用开发"
+    },
+    "professionalExplanation": "大模型应用开发就是基于现成的大模型，结合业务场景做AI产品，不用自己训练大模型，开发快成本低。",
+    "lifeExamples": [
+      {
+        "title": "用预制菜开餐馆",
+        "content": "开餐馆不用自己从种菜开始，买预制菜和调料，加工成菜品卖给顾客。大模型应用开发就像用预制菜做菜。总结：大模型应用开发基于现成的基础大模型，做场景化的产品，不用从零训练模型。"
+      },
+      {
+        "title": "用零件组装产品",
+      "content": "做电子产品不用自己造芯片、造电池，买现成的元器件，组装成成品。大模型就是核心元器件。总结：大模型应用开发门槛不高，懂基础开发就能做出AI产品。"
+      },
+      {
+        "title": "加盟品牌开店",
+      "content": "开店不用从零打造品牌和供应链，加盟成熟品牌，用现成的品牌和产品做自己的生意。总结：大模型应用开发是目前AI创业和企业落地的主流方式。"
+      }
+    ],
+    "aiExample": "大多数企业和开发者做AI产品，都是基于现有大模型API做应用开发，周期短、成本低、见效快。",
+    "relatedTerms": ["LLM", "API", "RAG", "Agent"]
+  },
+  {
+    "id": "149",
+    "term": "私有化部署",
+    "aliases": ["本地部署", "私有部署", "本地化部署"],
+    "category": "企业AI",
+    "translation": {
+      "english": "On-Premise Deployment",
+      "chinese": "私有化部署"
+    },
+    "professionalExplanation": "私有化部署就是把AI模型和系统装在企业自己的服务器上，数据不流出企业，安全可控性高。",
+    "lifeExamples": [
+      {
+        "title": "自建食堂代替外卖",
+        "content": "吃外卖方便但食材不可控，自建食堂食材和卫生都自己管，安全放心。私有化部署就像企业自建AI食堂。总结：私有化部署所有数据都在企业内部，不用担心数据泄露。"
+      },
+      {
+        "title": "自己家里装保险柜",
+      "content": "贵重东西放外面的寄存柜不放心，自己家里装保险柜，钥匙自己管，安全性最高。总结：对数据安全要求高的企业，一般会选择私有化部署AI模型。"
+      },
+      {
+        "title": "内部专线通讯",
+      "content": "普通电话走公网可能被监听，内部专线只在公司内部通，信息不会流到外面，更安全。总结：私有化部署的AI系统，所有交互都在企业内网完成，数据安全有保障。"
+      }
+    ],
+    "aiExample": "政府、金融、医疗等对数据安全要求高的行业，通常会采用大模型私有化部署的方案。",
+    "relatedTerms": ["LLM", "开源模型", "企业AI", "知识库"]
+  },
+  {
+    "id": "150",
+    "term": "模型即服务",
+    "aliases": ["MaaS", "Model as a Service", "大模型服务"],
+    "category": "企业AI",
+    "translation": {
+      "english": "Model as a Service",
+      "chinese": "模型即服务"
+    },
+    "professionalExplanation": "模型即服务就是把大模型做成云端API服务，企业按用量付费调用，不用自己部署和维护模型。",
+    "lifeExamples": [
+      {
+        "title": "水电煤气公用服务",
+        "content": "不用自己建水厂、电厂，打开开关就有水有电，用多少交多少钱，方便又省心。MaaS就像AI模型的公用服务。总结：MaaS模式下企业直接调用API就行，不用管模型怎么训练和维护。"
+      },
+      {
+        "title": "云盘存储服务",
+      "content": "不用自己买硬盘建存储，买云盘服务直接用，容量随时扩，按使用量付费。MaaS就是模型版的云服务。总结：MaaS模式门槛低、成本灵活，中小企业也能用得起大模型。"
+      },
+      {
+        "title": "打车出行服务",
+      "content": "不用自己买车养车，需要的时候叫车，按里程付费，总体成本更低。MaaS就是按需使用的AI模型服务。总结：MaaS是目前大模型商业化的主流模式，大多数AI应用都基于MaaS构建。"
+      }
+    ],
+    "aiExample": "主流大模型厂商都采用MaaS模式，提供API接口，企业和开发者按调用量付费，快速接入AI能力。",
+    "relatedTerms": ["API", "LLM", "私有化部署", "企业AI"]
+  }
+]

@@ -1,0 +1,1352 @@
+﻿[
+  {
+    "id": "1",
+    "term": "AI",
+    "aliases": ["人工智能", "Artificial Intelligence", "智能AI"],
+    "category": "AI基础概念",
+    "translation": {
+      "english": "Artificial Intelligence",
+      "chinese": "人工智能"
+    },
+    "professionalExplanation": "人工智能就是让电脑、机器模仿人类的思考与行动能力，帮人完成原本需要人脑判断、动手才能做好的事情。",
+    "lifeExamples": [
+      {
+        "title": "智能音箱语音开灯",
+        "content": "小学生乐乐放学回家，对着音箱喊一句‘打开卧室灯’，房间的灯立刻就亮了。音箱能听懂人类的语言、执行对应的命令，就像拥有了简单的人类智慧。总结：能听懂指令、自动执行任务的智能设备，就是AI在生活里的常见形态。"
+      },
+      {
+        "title": "外卖APP推荐爱吃的店",
+        "content": "妈妈总在点餐软件上买糖醋里脊，每次打开APP，首页都会优先推附近的家常菜馆。软件记住了她的口味偏好，自动算出她可能喜欢的店铺，不用自己挨个翻找。总结：APP根据你的习惯推荐内容，背后就是AI在做匹配计算。"
+      },
+      {
+        "title": "手机拍照自动识别人脸",
+        "content": "爸爸用手机给全家拍合照，屏幕上会自动跳出方框对准每个人的脸，拍出来的照片人脸都很清晰。手机程序能自动认出画面里的人脸，还能优化对焦和亮度。总结：手机拍照的人脸对焦、美颜修图功能，都是AI在帮忙处理。"
+      }
+    ],
+    "aiExample": "我们日常用的聊天机器人、AI画图工具、语音转文字软件，都属于AI产品，输入文字或语音就能生成对应的内容。",
+    "relatedTerms": ["Machine Learning", "LLM", "GPT", "Agent"]
+  },
+  {
+    "id": "2",
+    "term": "Artificial Intelligence",
+    "aliases": ["AI", "人工智能"],
+    "category": "AI基础概念",
+    "translation": {
+      "english": "Artificial Intelligence",
+      "chinese": "人工智能"
+    },
+    "professionalExplanation": "这是人工智能的英文全称，是一门让机器具备感知、学习、推理等类似人类智能能力的技术学科。",
+    "lifeExamples": [
+      {
+        "title": "停车场自动识别车牌",
+        "content": "小区门口的停车场，车开过去栏杆就自动抬起来，屏幕上还显示了车牌号。摄像头和系统自动认出车牌、判断是不是小区车辆，不用保安手动抬杆。总结：这种让机器自动识别判断的技术，就属于人工智能的应用范畴。"
+      },
+      {
+        "title": "扫地机器人自动绕开障碍物",
+        "content": "家里的扫地机器人在客厅干活，碰到凳子腿会自己绕开，没电了还能自己回去充电。它能感知周围环境、规划走路路线，像个会思考的小清洁工。总结：能自主感知环境、调整行动的机器人，就是人工智能的实物体现。"
+      },
+      {
+        "title": "网课的自动字幕",
+        "content": "爷爷上网课看视频，不用戴耳机也能看懂，视频下方会自动出现说话的文字。系统自动把语音转换成文字，同步显示在屏幕上。总结：语音自动转文字的功能，是人工智能在语音领域的典型应用。"
+      }
+    ],
+    "aiExample": "当下所有的AI聊天、AI生成图片视频的产品，都是基于Artificial Intelligence领域的技术研发出来的。",
+    "relatedTerms": ["AI", "Machine Learning", "Deep Learning"]
+  },
+  {
+    "id": "3",
+    "term": "Machine Learning",
+    "aliases": ["机器学习", "ML"],
+    "category": "AI基础概念",
+    "translation": {
+      "english": "Machine Learning",
+      "chinese": "机器学习"
+    },
+    "professionalExplanation": "机器学习是AI的一个分支，让电脑通过大量数据自己总结规律，不用人写死所有规则，就能越用越聪明。",
+    "lifeExamples": [
+      {
+        "title": "垃圾短信自动拦截",
+        "content": "爸爸的手机总会把中奖、贷款的诈骗短信分到垃圾文件夹里。一开始也会分错，但用久了之后，手机越来越懂哪些是垃圾短信，几乎不会拦错正常消息。总结：手机靠积累的短信数据越变越准，就是机器学习在发挥作用。"
+      },
+      {
+        "title": "输入法猜你想打什么字",
+        "content": "妹妹用手机打字，刚打‘明天’两个字，输入法就自动跳出‘去公园’的选项。它记住了妹妹平时聊天的常用说法，越用越贴合她的说话习惯。总结：输入法越用越懂你的输入习惯，背后就是机器学习在不断学习。"
+      },
+      {
+        "title": "推荐视频越刷越合心意",
+        "content": "奶奶总在短视频APP上看广场舞视频，刷了几天后，首页几乎全是广场舞内容。平台根据她的观看记录，慢慢摸透了她的喜好。总结：短视频APP越推越符合你的口味，就是机器学习在持续学习你的偏好。"
+      }
+    ],
+    "aiExample": "AI模型通过海量文本、图片数据训练后变得更聪明、回答更准确，这个训练学习的过程用的就是机器学习技术。",
+    "relatedTerms": ["Deep Learning", "AI", "Fine-tuning"]
+  },
+  {
+    "id": "4",
+    "term": "Deep Learning",
+    "aliases": ["深度学习", "DL"],
+    "category": "AI基础概念",
+    "translation": {
+      "english": "Deep Learning",
+      "chinese": "深度学习"
+    },
+    "professionalExplanation": "深度学习是机器学习的进阶分支，模仿人脑神经网络的结构，能处理特别复杂的任务，比如看懂图片、听懂人话。",
+    "lifeExamples": [
+      {
+        "title": "手机认出照片里的猫",
+        "content": "姐姐把拍的猫咪照片传到相册，手机自动把它分到‘宠物’相册里，还能认出这是橘猫。手机一层层分析画面里的毛色、耳朵、眼睛，最终判断出这是猫。总结：能精准认出图片里复杂事物的能力，靠的就是深度学习技术。"
+      },
+      {
+        "title": "翻译软件实时翻译外语",
+        "content": "爸爸出国旅游，对着翻译软件说中文，立刻就能说出准确的英文。软件要听懂人话、理解意思、再换成外语说出来，步骤多且复杂。总结：实时语音翻译这种复杂任务，依靠的就是深度学习的多层计算能力。"
+      },
+      {
+        "title": "自动驾驶识别红绿灯",
+        "content": "自动驾驶的汽车开在路上，能看清红灯停下、绿灯前行，还能认出路边的行人。它要快速分辨画面里上百种物体，还要做出正确反应。总结：自动驾驶能看懂复杂路况，核心就是深度学习技术在支撑。"
+      }
+    ],
+    "aiExample": "现在能生成高清图片、长视频的AI工具，底层都是用深度学习的神经网络模型实现的。",
+    "relatedTerms": ["Machine Learning", "Transformer", "Neural Network"]
+  },
+  {
+    "id": "5",
+    "term": "LLM",
+    "aliases": ["大语言模型", "大模型", "Large Language Model"],
+    "category": "AI基础概念",
+    "translation": {
+      "english": "Large Language Model",
+      "chinese": "大语言模型"
+    },
+    "professionalExplanation": "大语言模型是一种学过海量文字的AI模型，能听懂人话、写文章、回答问题，像个读遍天下书的超级学霸。",
+    "lifeExamples": [
+      {
+        "title": "帮孩子写作文提纲",
+        "content": "小学生写作文不知道怎么开头，对着软件说‘帮我列一篇春游作文的提纲’，立刻就能得到清晰的写作思路。这个软件读过无数篇作文和文章，知道怎么写才合理。总结：能陪你聊天、帮你写东西的AI聊天工具，背后就是大语言模型。"
+      },
+      {
+        "title": "给妈妈翻译进口药说明书",
+        "content": "妈妈拿到进口药的英文说明书看不懂，发给AI工具马上就翻译成了通顺的中文，还解释了服用方法。它学过海量中英文资料，能准确理解专业内容。总结：能精准翻译长篇内容的AI工具，核心就是大语言模型。"
+      },
+      {
+        "title": "帮爸爸整理会议纪要",
+        "content": "爸爸开完会有两小时的录音，传给AI后几分钟就整理出了重点纪要，还分好了一二三点。它能听懂长段语音、提炼核心信息。总结：能快速总结长篇内容的AI办公工具，依靠的就是大语言模型。"
+      }
+    ],
+    "aiExample": "我们常用的各类AI聊天助手，本质都是基于LLM开发的，能实现对话、写作、翻译、总结等多种文字能力。",
+    "relatedTerms": ["GPT", "Claude", "Gemini", "Token"]
+  },
+  {
+    "id": "6",
+    "term": "GPT",
+    "aliases": ["GPT模型", "生成式预训练Transformer"],
+    "category": "AI基础概念",
+    "translation": {
+      "english": "Generative Pre-trained Transformer",
+      "chinese": "生成式预训练Transformer模型"
+    },
+    "professionalExplanation": "GPT是OpenAI公司推出的一系列大语言模型，擅长生成通顺的文字内容，是目前最知名的大模型系列之一。",
+    "lifeExamples": [
+      {
+        "title": "给小朋友编睡前故事",
+        "content": "妈妈哄孩子睡觉，在聊天软件里输入‘帮我编一个小兔子摘草莓的睡前故事’，立刻就生成了完整的小故事。这个软件的核心就是GPT模型，能流畅写出各种文字。总结：很多能生成故事、文案的AI工具，用的就是GPT系列模型。"
+      },
+      {
+        "title": "帮上班族写工作邮件",
+        "content": "上班族要给客户写道歉邮件，不知道怎么措辞，输入要求后GPT就能写出礼貌又专业的邮件内容。它学过海量商务文本，懂各种场景的说话方式。总结：帮人写各种正式文案的AI功能，很多都是基于GPT实现的。"
+      },
+      {
+        "title": "给学生讲数学题",
+        "content": "初中生碰到不会的数学题，拍图发给AI，就能一步步讲清楚解题思路。GPT不仅能看懂题目，还能像老师一样讲解。总结：能讲题、辅导学习的AI家教功能，很多底层用的是GPT模型。"
+      }
+    ],
+    "aiExample": "ChatGPT产品就是基于GPT系列模型打造的，从GPT-3.5到GPT-4，版本越高，理解和生成内容的能力越强。",
+    "relatedTerms": ["ChatGPT", "LLM", "Token", "Prompt"]
+  },
+  {
+    "id": "7",
+    "term": "Token",
+    "aliases": ["令牌", "词元"],
+    "category": "AI基础概念",
+    "translation": {
+      "english": "Token",
+      "chinese": "词元 / 令牌"
+    },
+    "professionalExplanation": "Token是AI处理文字的最小单位，大概对应半个到一个中文汉字，AI的输入输出长度、计费都是按Token来算的。",
+    "lifeExamples": [
+      {
+        "title": "奶茶店按颗算珍珠加料",
+        "content": "奶茶店加料珍珠不是按杯算钱，是按颗算钱，加多少颗收多少钱。AI处理文字也一样，不是按整篇文章算，是拆成一个个小单位来计算用量。总结：Token就像奶茶里的珍珠颗数，是AI计算文字用量的最小单位。"
+      },
+      {
+        "title": "作文按格子算字数",
+        "content": "小学生写作文，老师要求写满300格，每个格子写一个字，写完数格子就知道字数。AI不直接数字，而是把文字拆成Token来统计长度。总结：Token就像作文本的格子，用来衡量AI处理内容的长短。"
+      },
+      {
+        "title": "快递按件算运费",
+        "content": "寄快递的时候，运费按包裹件数计算，件数越多费用越高。AI服务的收费也是同理，输入输出的Token越多，成本就越高。总结：Token就像快递的件数，是AI服务计费的基本单位。"
+      }
+    ],
+    "aiExample": "使用AI聊天工具时，你发的问题和AI返回的回答都会折算成Token，很多付费AI产品就是按Token数量来收费的。",
+    "relatedTerms": ["LLM", "Prompt", "Context Window"]
+  },
+  {
+    "id": "8",
+    "term": "Prompt",
+    "aliases": ["提示词", "指令", "提示词工程"],
+    "category": "AI基础概念",
+    "translation": {
+      "english": "Prompt",
+      "chinese": "提示词 / 指令"
+    },
+    "professionalExplanation": "Prompt就是你发给AI的指令和问题，相当于给AI布置的任务，写得越清楚具体，AI给出的结果就越符合你的需求。",
+    "lifeExamples": [
+      {
+        "title": "给服务员点单",
+        "content": "去饭店吃饭，你跟服务员说‘来一碗微辣的牛肉面，多放香菜，不要葱’，服务员就会准确地上菜。如果你只说‘来碗面’，可能端来的不是你想要的。总结：你对AI说的要求就像点单指令，越详细，AI做出来的结果越准。"
+      },
+      {
+        "title": "给孩子布置作业",
+        "content": "家长跟孩子说‘写一篇关于春天的日记，300字，要写公园里的花和燕子’，孩子就知道该怎么写。如果只说‘写日记’，孩子可能不知道写什么。总结：给AI的Prompt就像布置作业，要求越具体，产出越符合预期。"
+      },
+      {
+        "title": "跟理发师说发型",
+        "content": "去剪头发，你跟理发师说‘剪短两厘米，留刘海，发尾打薄’，理发师就能剪出你想要的样子。只说‘剪短一点’很容易剪坏。总结：跟AI说话就像跟理发师沟通，Prompt越细致，结果越不容易出错。"
+      }
+    ],
+    "aiExample": "使用AI聊天、AI画图时，你输入的所有文字内容都是Prompt，好的Prompt能让AI生成质量更高、更贴合需求的内容。",
+    "relatedTerms": ["Prompt Engineering", "Agent", "LLM"]
+  },
+  {
+    "id": "9",
+    "term": "Agent",
+    "aliases": ["智能体", "AI智能体", "AI代理"],
+    "category": "AI基础概念",
+    "translation": {
+      "english": "Agent",
+      "chinese": "智能体 / AI代理"
+    },
+    "professionalExplanation": "Agent是能自己规划步骤、调用工具、主动完成一整件事的AI，不像普通AI只能你问一句它答一句。",
+    "lifeExamples": [
+      {
+        "title": "私人助理安排行程",
+        "content": "老板跟助理说‘帮我安排下周三去上海的出差’，助理就会自己订机票、订酒店、约客户见面，不用老板一步步指挥。普通AI只会回答问题，不会主动做一连串事。总结：AI Agent就像私人助理，接到任务后能自己一步步把整件事做完。"
+      },
+      {
+        "title": "班长组织班会",
+        "content": "老师跟班长说‘周五开一次主题班会’，班长就会自己定主题、找资料、安排同学发言、布置教室，全程不用老师盯着。普通AI只能帮你写班会稿子，不会自己组织全程。总结：能独立完成一整套任务的AI，就叫Agent。"
+      },
+      {
+        "title": "家政阿姨打扫房子",
+        "content": "你跟家政阿姨说‘把家里打扫干净’，阿姨会自己扫地、擦桌子、拖地、倒垃圾，按顺序把所有活干完。普通AI只会告诉你打扫步骤，不会自己动手做。总结：能自主规划并执行完整任务的AI，就是Agent。"
+      }
+    ],
+    "aiExample": "现在很多AI办公助手可以自动帮你查资料、写报告、发邮件，全程不用你分步指挥，这类产品就是AI Agent的应用。",
+    "relatedTerms": ["MCP", "RAG", "LLM"]
+  },
+  {
+    "id": "10",
+    "term": "RAG",
+    "aliases": ["检索增强生成", "检索增强"],
+    "category": "AI基础概念",
+    "translation": {
+      "english": "Retrieval-Augmented Generation",
+      "chinese": "检索增强生成"
+    },
+    "professionalExplanation": "RAG是让AI先去查指定资料，再根据资料回答问题的技术，能避免AI胡说，还能用上你自己的文档。",
+    "lifeExamples": [
+      {
+        "title": "开卷考试查课本答题",
+        "content": "开卷考试的时候，学生可以先翻课本找到对应的知识点，再照着知识点写答案，比闭卷考试答得更准，还不会写错内容。普通AI就像闭卷考试，全靠脑子里记的东西回答。总结：RAG就是让AI开卷考试，先查资料再回答，结果更准确。"
+      },
+      {
+        "title": "做饭时翻菜谱",
+        "content": "妈妈做新菜的时候，会先翻开菜谱看一下用料和步骤，再照着做，不会凭感觉瞎做。这样做出来的菜味道更正宗，也不容易放错调料。总结：AI用RAG就像做饭翻菜谱，先查资料再生成内容，不容易出错。"
+      },
+      {
+        "title": "客服查手册回客户",
+        "content": "客服接到客户的问题，不会随便回答，而是先翻产品手册找到对应的说明，再准确回复客户。这样回答不会出错，也符合公司的规定。总结：RAG能让AI像客服一样，先查官方资料再回答，保证内容准确靠谱。"
+      }
+    ],
+    "aiExample": "很多企业的AI客服、内部知识库问答，都是用RAG技术做的，先检索企业文档再回答，确保答案和官方资料一致。",
+    "relatedTerms": ["Vector Database", "Embedding", "Agent", "Knowledge Base"]
+  },
+  {
+    "id": "11",
+    "term": "MCP",
+    "aliases": ["模型上下文协议", "Model Context Protocol"],
+    "category": "AI基础概念",
+    "translation": {
+      "english": "Model Context Protocol",
+      "chinese": "模型上下文协议"
+    },
+    "professionalExplanation": "MCP是一套统一标准，能让AI模型方便地连接各种工具和数据，不用每个工具单独做适配。",
+    "lifeExamples": [
+      {
+        "title": "万能插座适配各种电器",
+        "content": "家里的墙上插座是统一标准的，不管是手机充电器、台灯还是电饭煲，只要插头符合标准，插上去就能用。不用每个电器单独装专用插座。总结：MCP就像万能插座，让各种工具都能统一接到AI模型上使用。"
+      },
+      {
+        "title": "通用USB接口",
+        "content": "手机的Type-C接口是统一规格，能插充电器、耳机、U盘、鼠标等各种设备。如果每个设备接口都不一样，用起来会特别麻烦。总结：MCP就像通用USB接口，给AI和工具之间提供了统一的连接方式。"
+      },
+      {
+        "title": "快递统一驿站",
+        "content": "小区的快递驿站能收所有快递公司的包裹，不管是中通、圆通还是顺丰，都能放在同一个驿站里。不用每个快递单独设一个取件点。总结：MCP就像统一快递驿站，让不同的工具数据都能接入到AI里。"
+      }
+    ],
+    "aiExample": "支持MCP的AI开发工具，可以快速接入文件读取、数据库查询、代码运行等各种能力，大幅降低AI Agent的开发成本。",
+    "relatedTerms": ["Agent", "LLM", "API", "SDK"]
+  },
+  {
+    "id": "12",
+    "term": "Transformer",
+    "aliases": ["Transformer模型", "Transformer架构"],
+    "category": "AI基础概念",
+    "translation": {
+      "english": "Transformer",
+      "chinese": "Transformer架构 / 变换器模型"
+    },
+    "professionalExplanation": "Transformer是现在主流AI模型的底层架构，擅长理解上下文的关联，是大语言模型、AI画图的核心基础。",
+    "lifeExamples": [
+      {
+        "title": "读书时联系上下文理解意思",
+        "content": "我们读文章的时候，会把前后句子连起来理解意思，不会只看单个字。比如看到‘它’，会往前找指的是猫还是狗。Transformer就擅长做这种关联理解。总结：Transformer就像人读文章的方式，能联系前后内容理解整体含义。"
+      },
+      {
+        "title": "拼图时对照整体找位置",
+        "content": "拼拼图的时候，高手会看整块拼图的整体图案，找到每一块和周围图案的关联，快速拼对位置。以前的AI技术只能看局部，拼起来很慢。总结：Transformer就像会看整体的拼图高手，能同时关注内容之间的关联。"
+      },
+      {
+        "title": "听人说话听懂言外之意",
+        "content": "跟人聊天时，结合对方前面说的话，就能听懂一句话背后的意思，不会断章取义。比如对方先说‘今天下雨’，再说‘出门记得带’，就知道是带伞。总结：Transformer能让AI听懂上下文关联，理解更完整的语义。"
+      }
+    ],
+    "aiExample": "现在几乎所有的主流大语言模型、AI生图模型都是基于Transformer架构开发的，它是当前AI技术爆发的核心基础。",
+    "relatedTerms": ["LLM", "Deep Learning", "Attention机制"]
+  },
+  {
+    "id": "13",
+    "term": "Inference",
+    "aliases": ["推理", "模型推理", "AI推理"],
+    "category": "AI基础概念",
+    "translation": {
+      "english": "Inference",
+      "chinese": "推理 / 模型推理"
+    },
+    "professionalExplanation": "Inference就是训练好的AI模型实际干活的过程，比如输入问题生成回答、输入文字生成图片，都叫推理。",
+    "lifeExamples": [
+      {
+        "title": "学生考试答题",
+        "content": "学生平时上课学习、刷题是在积累知识，考试的时候用学过的知识答题，就是把学到的东西用出来。AI训练就像上学学习，推理就像考试答题。总结：AI模型用训练好的能力处理实际任务，这个过程就叫Inference。"
+      },
+      {
+        "title": "厨师按菜谱做菜",
+        "content": "厨师学徒的时候反复练习菜谱，练熟之后正式上岗给客人做菜，就是把学会的手艺用出来。训练模型就像学做菜，推理就像正式做菜。总结：AI用已经学会的能力生成结果，这个运行过程就是推理。"
+      },
+      {
+        "title": "医生看病诊断",
+        "content": "医生在医学院学了很多年知识，上班后给病人看病，用学到的医学知识判断病情、开药方。训练模型就像学医，推理就像看病诊断。总结：AI模型处理用户的每一次请求，都是在做一次推理。"
+      }
+    ],
+    "aiExample": "你每次给AI发消息、让AI画图，后台都会执行一次模型推理，推理速度决定了AI回复你的快慢。",
+    "relatedTerms": ["Fine-tuning", "LLM", "GPU"]
+  },
+  {
+    "id": "14",
+    "term": "Embedding",
+    "aliases": ["嵌入", "向量嵌入", "向量化"],
+    "category": "AI基础概念",
+    "translation": {
+      "english": "Embedding",
+      "chinese": "嵌入 / 向量化"
+    },
+    "professionalExplanation": "Embedding是把文字、图片变成一串数字向量，让电脑能看懂内容的含义，方便做相似度匹配和搜索。",
+    "lifeExamples": [
+      {
+        "title": "给图书贴分类标签",
+        "content": "图书馆给每本书贴上分类标签，比如‘童话’‘历史’‘科学’，找书的时候按标签就能快速找到同类的书。Embedding就相当于给内容贴数字化的标签。总结：Embedding就是给文字图片打上数字标签，方便电脑区分内容、找到相似内容。"
+      },
+      {
+        "title": "超市商品分类摆放",
+        "content": "超市里把零食放零食区、蔬菜放蔬菜区、日用品放日用品区，同类东西摆在一起，顾客找起来很方便。Embedding会把意思相近的内容放到数字空间里相近的位置。总结：Embedding就像超市分类摆货，让含义相近的内容在数字世界里挨在一起。"
+      },
+      {
+        "title": "按颜色整理衣服",
+        "content": "整理衣柜的时候，把黑色衣服挂一起、白色衣服挂一起、粉色衣服挂一起，想找同色系衣服一找就到。Embedding会按内容的含义把它们归到相近的数字位置。总结：Embedding本质是给内容做数字化归类，方便快速查找相似内容。"
+      }
+    ],
+    "aiExample": "AI语义搜索、RAG检索的第一步就是做Embedding，把文档和问题都转成向量，再匹配最相关的内容。",
+    "relatedTerms": ["Vector Database", "RAG", "LLM"]
+  },
+  {
+    "id": "15",
+    "term": "Fine-tuning",
+    "aliases": ["微调", "模型微调", "精调"],
+    "category": "AI基础概念",
+    "translation": {
+      "english": "Fine-tuning",
+      "chinese": "微调 / 模型微调"
+    },
+    "professionalExplanation": "Fine-tuning是在已经训练好的通用AI模型基础上，用专属数据再训练一下，让它更擅长某个特定领域。",
+    "lifeExamples": [
+      {
+        "title": "全科医生转专科医生",
+        "content": "医生先在医学院学全科技能，毕业工作后再专门学皮肤科，就成了皮肤科专科医生，看皮肤病比全科医生更专业。通用大模型就像全科医生，微调就像学专科。总结：Fine-tuning就是给通用AI补专业课，让它在特定领域更厉害。"
+      },
+      {
+        "title": "普通厨师学做特色菜",
+        "content": "厨师本来会做家常菜，后来专门去学了川菜做法，再做麻婆豆腐、水煮鱼就特别正宗，比普通厨师做得好吃。通用模型就像普通厨师，微调就是学特色菜。总结：用特定数据对模型做微调，能让它在对应领域表现更好。"
+      },
+      {
+        "title": "普通学生参加竞赛培训",
+        "content": "学生平时学各科基础知识，要参加数学竞赛时，再专门上竞赛培训班，做大量竞赛题，解难题能力就变强了。通用训练就像平时上课，微调就像竞赛培训。总结：Fine-tuning就是针对特定任务给模型做专项强化训练。"
+      }
+    ],
+    "aiExample": "企业想要一个专门写法律文书的AI，就可以用法律文档对通用大模型做Fine-tuning，让它写法律内容更专业、更准确。",
+    "relatedTerms": ["LLM", "RAG", "Inference"]
+  },
+  {
+    "id": "16",
+    "term": "ChatGPT",
+    "aliases": ["聊天GPT", "OpenAI聊天机器人"],
+    "category": "AI工具和产品",
+    "translation": {
+      "english": "ChatGPT",
+      "chinese": "ChatGPT聊天机器人"
+    },
+    "professionalExplanation": "ChatGPT是OpenAI公司推出的AI聊天产品，基于GPT大模型，能对话、写作、翻译、写代码，是全球最知名的AI工具之一。",
+    "lifeExamples": [
+      {
+        "title": "帮孩子辅导作业",
+        "content": "小学生做数学题不会，把题目发给ChatGPT，它就能一步步讲清楚解题方法，还能出类似的练习题。就像家里有个随叫随到的家教。总结：ChatGPT可以当学习助手，帮孩子讲解题目、辅导功课。"
+      },
+      {
+        "title": "帮上班族写周报",
+        "content": "上班族周五要写周报，把这周做的事列几点发给ChatGPT，它就能整理成通顺正式的周报，还能分点写得很规范。节省了很多写文案的时间。总结：ChatGPT可以当办公助手，帮人写各类工作文案。"
+      },
+      {
+        "title": "帮游客做旅游攻略",
+        "content": "假期想去西安旅游，跟ChatGPT说预算和天数，它就能做出详细的行程安排，包括景点、美食、交通路线。不用自己到处查攻略。总结：ChatGPT可以当生活助手，帮你做规划、出主意。"
+      }
+    ],
+    "aiExample": "ChatGPT支持文本对话、文件解析、代码生成等功能，还能接入插件扩展能力，是普通用户接触AI最常用的工具之一。",
+    "relatedTerms": ["GPT", "Claude", "Gemini", "Agent"]
+  },
+  {
+    "id": "17",
+    "term": "Claude",
+    "aliases": ["Claude助手", "Anthropic Claude"],
+    "category": "AI工具和产品",
+    "translation": {
+      "english": "Claude",
+      "chinese": "Claude AI助手"
+    },
+    "professionalExplanation": "Claude是Anthropic公司推出的AI聊天产品，特点是能处理特别长的文档，回答严谨稳妥，适合处理长文本工作。",
+    "lifeExamples": [
+      {
+        "title": "帮法务看几十页合同",
+        "content": "公司法务拿到一份几十页的合作合同，直接传给Claude，几分钟就能找出合同里的风险点和关键条款。不用人一页一页慢慢读。总结：Claude擅长处理长篇文档，看长合同、长报告特别方便。"
+      },
+      {
+        "title": "帮编辑整理整本书稿",
+      "content": "作者把整本书的稿子发给Claude，让它帮忙梳理全书结构、检查错别字和逻辑问题，很快就能得到完整的修改建议。总结：Claude能一次性吃下整本书的内容，处理长文本能力很强。"
+      },
+      {
+        "title": "帮运营分析全年数据报告",
+      "content": "运营拿到全年的业务数据报告，上百页的内容，传给Claude就能快速提炼出核心结论和问题，还能给出优化建议。总结：处理超长的报告、文档，用Claude效率很高。"
+      }
+    ],
+    "aiExample": "Claude支持超长上下文，能一次性读取几十万字的文档，适合企业处理合同、财报、书稿等长篇内容场景。",
+    "relatedTerms": ["ChatGPT", "Gemini", "LLM", "Claude Code"]
+  },
+  {
+    "id": "18",
+    "term": "Gemini",
+    "aliases": ["双子座", "谷歌Gemini", "Google Gemini"],
+    "category": "AI工具和产品",
+    "translation": {
+      "english": "Gemini",
+      "chinese": "Gemini多模态AI"
+    },
+    "professionalExplanation": "Gemini是谷歌推出的AI模型系列，支持文字、图片、视频、音频多种形式，多模态能力突出，和谷歌生态结合紧密。",
+    "lifeExamples": [
+      {
+        "title": "拍作业题直接讲解",
+        "content": "学生把不会的数学题拍张照发给Gemini，它能直接看懂图片里的题目，然后一步步讲解解题步骤。不用把题目手打出来。总结：Gemini能直接看懂图片内容，处理图文结合的问题很方便。"
+      },
+      {
+        "title": "上传视频分析内容",
+      "content": "拍了一段做饭的视频发给Gemini，它能看懂视频里的做菜步骤，还能指出哪里做得不对、应该怎么改进。总结：Gemini支持理解视频内容，是多模态能力很强的AI工具。"
+      },
+      {
+        "title": "语音直接对话",
+      "content": "开车的时候不方便打字，直接对着Gemini说话提问，它就能用语音回答你，全程不用动手操作。总结：Gemini支持语音交互，能听懂也能说话，适合不方便打字的场景。"
+      }
+    ],
+    "aiExample": "Gemini原生支持图文音视频多模态输入，在谷歌搜索、安卓手机系统中都有集成，使用场景很广泛。",
+    "relatedTerms": ["ChatGPT", "Claude", "LLM", "多模态"]
+  },
+  {
+    "id": "19",
+    "term": "Codex",
+    "aliases": ["GPT Codex", "代码模型"],
+    "category": "AI工具和产品",
+    "translation": {
+      "english": "Codex",
+      "chinese": "Codex代码模型"
+    },
+    "professionalExplanation": "Codex是OpenAI推出的专门写代码的AI模型，能看懂自然语言指令，自动生成对应功能的程序代码。",
+    "lifeExamples": [
+      {
+        "title": "装修工人按图纸干活",
+        "content": "业主跟设计师说想要一个带书架的书桌，设计师画出图纸，工人照着图纸就能把家具做出来。Codex就像会干活的工人，你说需求它就写出代码。总结：Codex能把人的自然语言需求转换成可运行的程序代码。"
+      },
+      {
+        "title": "翻译把中文转成英文",
+        "content": "不会说英文的人跟翻译说中文，翻译就转成英文讲给外国人听。写代码就像说外语，Codex就像翻译，帮你把人话转成代码语言。总结：Codex相当于人和代码之间的翻译，帮普通人实现编程需求。"
+      },
+      {
+        "title": "厨师按菜谱做菜",
+        "content": "客人说想吃酸甜口的鱼，厨师就按照菜谱和经验做出对应的菜。你跟Codex说想要什么功能，它就写出对应的代码。总结：Codex就像代码厨师，你提需求，它产出对应的代码内容。"
+      }
+    ],
+    "aiExample": "GitHub Copilot代码助手底层就用了Codex模型，能在写代码时自动补全、生成函数，大幅提升编程效率。",
+    "relatedTerms": ["Cursor", "GPT", "GitHub Copilot"]
+  },
+  {
+    "id": "20",
+    "term": "Cursor",
+    "aliases": ["Cursor编辑器", "AI代码编辑器"],
+    "category": "AI工具和产品",
+    "translation": {
+      "english": "Cursor",
+      "chinese": "Cursor AI代码编辑器"
+    },
+    "professionalExplanation": "Cursor是一款集成了AI能力的代码编辑器，能帮你写代码、改bug、解释代码，是程序员常用的AI编程工具。",
+    "lifeExamples": [
+      {
+        "title": "带智能助手的写字板",
+        "content": "普通写字板只能打字，带智能助手的写字板能帮你补全句子、改错别字、润色文章，还能教你怎么写更好。Cursor就是写代码用的智能写字板。总结：Cursor就是给程序员用的智能代码写字板，AI全程辅助写代码。"
+      },
+      {
+        "title": "有师傅在旁边的工作台",
+        "content": "学徒在工作台干活，师傅站在旁边，做错了立刻指出来，不会做就教你怎么做，还能帮你做复杂的部分。用Cursor写代码就像有师傅在旁边指导。总结：Cursor就像旁边站着编程老师，随时帮你解决代码问题。"
+      },
+      {
+        "title": "带自动导航的汽车",
+        "content": "普通汽车要自己认路、自己开，带导航的汽车会告诉你走哪条路，哪里有违章，甚至能辅助驾驶。Cursor写代码就像开带导航的车。总结：Cursor能在写代码时给出提示、修正错误，提升编程的效率和准确率。"
+      }
+    ],
+    "aiExample": "Cursor支持选中代码让AI解释、修改、重构，还能根据需求直接生成整段功能代码，大幅降低编程门槛。",
+    "relatedTerms": ["Codex", "Claude Code", "GitHub Copilot"]
+  },
+  {
+    "id": "21",
+    "term": "Midjourney",
+    "aliases": ["MJ", "Midjourney画图"],
+    "category": "AI工具和产品",
+    "translation": {
+      "english": "Midjourney",
+      "chinese": "Midjourney AI绘画工具"
+    },
+    "professionalExplanation": "Midjourney是一款知名的AI绘画工具，输入文字描述就能生成高质量图片，画风丰富，出图质感偏艺术化。",
+    "lifeExamples": [
+      {
+        "title": "照相馆拍定制写真",
+        "content": "你跟摄影师说想要‘海边日落、穿白裙子、氛围感’的写真，摄影师就按你的要求拍出对应的照片。用Midjourney就像跟摄影师提要求，它直接生成图片。总结：Midjourney就像AI摄影师，你描述画面，它就生成对应的图片。"
+      },
+      {
+        "title": "插画师按需求画插画",
+        "content": "做海报需要一张猫咪喝咖啡的插画，找插画师描述需求，等几天就能拿到画好的图。用Midjourney输入描述，几十秒就能生成。总结：Midjourney相当于秒出图的AI插画师，能快速生成各种风格的画面。"
+      },
+      {
+        "title": "装修设计师出效果图",
+        "content": "装修房子跟设计师说想要‘原木风、客厅带大飘窗’，设计师就做出对应的装修效果图。Midjourney也能根据描述生成场景效果图。总结：Midjourney可以快速生成各种场景的效果图，帮人直观看到想象的画面。"
+      }
+    ],
+    "aiExample": "Midjourney主要通过Discord平台使用，支持多种画风和参数调节，是设计师、运营人员常用的AI生图工具。",
+    "relatedTerms": ["Stable Diffusion", "ComfyUI", "DALL·E", "Prompt"]
+  },
+  {
+    "id": "22",
+    "term": "ComfyUI",
+    "aliases": ["ComfyUI画图", "节点式AI绘画工具"],
+    "category": "AI工具和产品",
+    "translation": {
+      "english": "ComfyUI",
+      "chinese": "ComfyUI节点式绘画界面"
+    },
+    "professionalExplanation": "ComfyUI是一款节点式的AI绘画工具，可以用拖拽节点的方式自定义画图流程，自由度高，适合专业玩家。",
+    "lifeExamples": [
+      {
+        "title": "自助搭配奶茶",
+        "content": "普通奶茶店是固定套餐，自助奶茶店可以自己选茶底、甜度、配料、加多少冰，每一步都自己控制。普通画图工具像固定套餐，ComfyUI像自助奶茶。总结：ComfyUI可以自己控制画图的每一步，自由度比普通AI画图工具高很多。"
+      },
+      {
+        "title": "搭积木做玩具",
+        "content": "成品玩具是固定样子的，积木可以自己一块块拼，想搭房子就搭房子，想搭汽车就搭汽车，还能改细节。ComfyUI的节点就像积木块。总结：ComfyUI用节点拼接的方式做图，像搭积木一样灵活组合功能。"
+      },
+      {
+        "title": "自定义配方做饭",
+        "content": "外卖是做好的成品，自己在家做饭可以选食材、调调料、控制火候，想怎么做就怎么做。ComfyUI就像自己做饭，全程可控。总结：ComfyUI适合想要精细控制画图过程的用户，能实现很多个性化效果。"
+      }
+    ],
+    "aiExample": "ComfyUI支持本地部署，通过拖拽节点搭建生图工作流，可以实现换脸、扩图、分区域生成等复杂效果。",
+    "relatedTerms": ["Midjourney", "Stable Diffusion", "AI绘画"]
+  },
+  {
+    "id": "23",
+    "term": "Sora",
+    "aliases": ["Sora视频", "OpenAI Sora"],
+    "category": "AI工具和产品",
+    "translation": {
+      "english": "Sora",
+      "chinese": "Sora AI视频生成模型"
+    },
+    "professionalExplanation": "Sora是OpenAI推出的AI视频生成模型，输入文字描述就能生成一分钟左右的高清视频，画面连贯性很强。",
+    "lifeExamples": [
+      {
+        "title": "导演拍短片",
+        "content": "导演跟剧组说要拍一个‘猫咪在雪地里追蝴蝶’的短片，剧组要找场地、找演员、拍摄、剪辑，花很久才能做完。Sora输入文字就能直接生成视频。总结：Sora就像AI导演兼剧组，一句话就能生成完整的短片内容。"
+      },
+      {
+        "title": "动画公司做动画",
+        "content": "做一分钟动画，原画师要画很多张画，再连起来播放，工作量很大。Sora输入文字描述，就能自动生成流畅的动画视频。总结：Sora能大幅降低视频制作的门槛，不用专业团队也能做视频。"
+      },
+      {
+        "title": "婚庆拍纪念视频",
+        "content": "婚礼想要一个梦幻场景的纪念视频，以前要找特效团队做，成本很高。用Sora描述想要的场景，就能生成对应的唯美视频。总结：Sora可以低成本生成各种创意视频，满足普通人的视频创作需求。"
+      }
+    ],
+    "aiExample": "Sora可以生成最长60秒的高清视频，能实现复杂的镜头运动和丰富的场景细节，是文生视频领域的代表性模型。",
+    "relatedTerms": ["Runway", "AI视频", "多模态"]
+  },
+  {
+    "id": "24",
+    "term": "Runway",
+    "aliases": ["Runway ML", "Runway视频工具"],
+    "category": "AI工具和产品",
+    "translation": {
+      "english": "Runway",
+      "chinese": "Runway AI视频工具"
+    },
+    "professionalExplanation": "Runway是一款在线AI视频工具，能做文字生成视频、视频换背景、抹除物体、补帧等多种视频处理功能。",
+    "lifeExamples": [
+      {
+        "title": "视频版美图秀秀",
+        "content": "美图秀秀能给照片修图、换背景、去路人。Runway就像给视频用的美图秀秀，能给视频换背景、去掉不想要的东西。总结：Runway就是AI版的视频修图工具，不用专业剪辑软件也能改视频。"
+      },
+      {
+        "title": "视频后期工作室",
+        "content": "以前给视频做特效要找专业后期团队，花很多钱。用Runway上传视频，点几下就能做出各种特效，普通人也能用。总结：Runway把专业视频特效做成了简单的在线工具，降低了视频制作门槛。"
+      },
+      {
+        "title": "在线视频加工厂",
+        "content": "普通加工厂能把原材料加工成成品，Runway就像视频加工厂，上传素材就能加工成想要的视频效果。总结：Runway提供多种AI视频处理功能，是短视频创作者常用的辅助工具。"
+      }
+    ],
+    "aiExample": "Runway的Gen-2模型支持文生视频、图生视频，还有抹除物体、运动跟踪等实用功能，适合短视频创作者使用。",
+    "relatedTerms": ["Sora", "AI视频", "FFmpeg"]
+  },
+  {
+    "id": "25",
+    "term": "Whisper",
+    "aliases": ["Whisper语音识别", "OpenAI Whisper"],
+    "category": "AI工具和产品",
+    "translation": {
+      "english": "Whisper",
+      "chinese": "Whisper语音识别模型"
+    },
+    "professionalExplanation": "Whisper是OpenAI推出的语音识别模型，能把语音转成文字，支持多种语言，准确率高，还能识别方言口音。",
+    "lifeExamples": [
+      {
+        "title": "速记员记会议内容",
+        "content": "开会时速记员要把所有人说的话都记成文字，速度快还不能错。Whisper就像AI速记员，录音传进去很快就转成文字稿。总结：Whisper就是AI速记员，能快速准确地把语音转换成文字。"
+      },
+      {
+        "title": "翻译官做同声传译",
+        "content": "外国人说话，翻译官立刻翻译成中文。Whisper不仅能听懂说话，还能直接把外语语音翻译成中文字幕。总结：Whisper支持多语言语音识别和翻译，适合处理跨语言语音内容。"
+      },
+      {
+        "title": "字幕组做视频字幕",
+        "content": "字幕组给外国剧做字幕，要一句句听译，工作量很大。用Whisper处理视频，很快就能生成字幕文件，再微调就行。总结：Whisper能大幅提升做字幕、整理录音的工作效率。"
+      }
+    ],
+    "aiExample": "很多语音转文字、自动加字幕的工具底层都用了Whisper模型，支持本地部署，免费且准确率高。",
+    "relatedTerms": ["Faster Whisper", "FFmpeg", "yt-dlp"]
+  },
+  {
+    "id": "26",
+    "term": "Claude Code",
+    "aliases": ["Claude代码助手", "Anthropic代码工具"],
+    "category": "AI工具和产品",
+    "translation": {
+      "english": "Claude Code",
+      "chinese": "Claude Code代码助手"
+    },
+    "professionalExplanation": "Claude Code是Anthropic推出的AI编程助手，能理解整个项目代码，帮你改bug、加功能、重构代码。",
+    "lifeExamples": [
+      {
+        "title": "懂整栋楼的维修师傅",
+        "content": "普通维修师傅只会修单个电器，厉害的师傅懂整栋楼的水电结构，哪里出问题都能快速找到，还能整体优化。Claude Code就像懂整个项目的维修师傅。总结：Claude Code能看懂整个代码项目，不是只能改单段代码。"
+      },
+      {
+        "title": "熟悉全书的编辑",
+        "content": "普通编辑只改单篇文章，资深编辑熟悉整本书的结构，能调整章节逻辑、统一全书风格。Claude Code就像熟悉整个项目的编辑。总结：Claude Code可以从整体项目层面帮你优化代码，适配大型开发项目。"
+      },
+      {
+        "title": "全程跟进的项目经理",
+        "content": "普通员工只做自己的活，项目经理知道整个项目的所有模块，能协调各部分完成新功能。Claude Code就像编程项目经理。总结：Claude Code能理解完整项目上下文，适合复杂的软件开发任务。"
+      }
+    ],
+    "aiExample": "Claude Code可以直接读取本地项目文件，支持终端操作，能自主完成从代码修改到运行测试的完整流程。",
+    "relatedTerms": ["Cursor", "Claude", "Codex"]
+  },
+  {
+    "id": "27",
+    "term": "DALL·E",
+    "aliases": ["DALL-E", "OpenAI画图"],
+    "category": "AI工具和产品",
+    "translation": {
+      "english": "DALL·E",
+      "chinese": "DALL·E图像生成模型"
+    },
+    "professionalExplanation": "DALL·E是OpenAI推出的AI画图模型，输入文字就能生成图片，和ChatGPT深度集成，使用简单方便。",
+    "lifeExamples": [
+      {
+        "title": "自动售货机买饮料",
+        "content": "自动售货机操作很简单，选好商品付款就出货，不用跟店员沟通。DALL·E就像画图自动售货机，输入描述就出图，简单好上手。总结：DALL·E使用门槛低，在聊天界面就能直接画图，新手也能快速上手。"
+      },
+      {
+        "title": "照相馆快速快照",
+        "content": "街头快照店立等可取，不用复杂预约，说要什么风格很快就能拿到照片。DALL·E在聊天里就能直接生成图片，速度很快。总结：DALL·E集成在ChatGPT里，聊天的同时就能生成图片，使用很便捷。"
+      },
+      {
+        "title": "便利店买便当",
+        "content": "便利店便当不用等太久，口味稳定，能满足日常需求。DALL·E生成图片速度快、效果稳定，适合日常图文需求。总结：DALL·E适合日常快速出图，满足普通用户的基础AI绘画需求。"
+      }
+    ],
+    "aiExample": "DALL·E目前已经更新到第3代，直接在ChatGPT对话中就能调用，适合快速生成配图、示意图等场景。",
+    "relatedTerms": ["Midjourney", "ChatGPT", "AI绘画"]
+  },
+  {
+    "id": "28",
+    "term": "Stable Diffusion",
+    "aliases": ["SD", "稳定扩散模型"],
+    "category": "AI工具和产品",
+    "translation": {
+      "english": "Stable Diffusion",
+      "chinese": "稳定扩散图像生成模型"
+    },
+    "professionalExplanation": "Stable Diffusion是开源的AI绘画模型，可以免费本地部署，支持自定义模型和插件，自由度非常高。",
+    "lifeExamples": [
+      {
+        "title": "开源食谱自己在家做",
+        "content": "饭店的菜是店家做好卖给你，开源食谱是把配方公开，你自己在家做，还能改配料、调口味。Midjourney像饭店，Stable Diffusion像开源食谱。总结：Stable Diffusion是开源免费的，你可以自己下载到电脑上用，还能改参数。"
+      },
+      {
+        "title": "拼装模型自己改装",
+        "content": "成品玩具不能拆，拼装模型可以自己拼，还能买配件改装成自己想要的样子。Stable Diffusion就像拼装模型，扩展性很强。总结：Stable Diffusion支持装各种插件、换不同风格模型，能玩出很多花样。"
+      },
+      {
+        "title": "毛坯房自己装修",
+        "content": "精装房是装好的直接住，毛坯房可以按自己喜好装修，想装成什么风格都行。Stable Diffusion就像AI绘画里的毛坯房。总结：Stable Diffusion原生功能基础，但扩展性极强，适合喜欢折腾的用户。"
+      }
+    ],
+    "aiExample": "Stable Diffusion是开源模型，可本地运行，衍生出了WebUI、ComfyUI等多种界面，还有海量风格模型可供使用。",
+    "relatedTerms": ["ComfyUI", "Midjourney", "AI绘画"]
+  },
+  {
+    "id": "29",
+    "term": "Perplexity",
+    "aliases": ["Perplexity AI", "AI搜索引擎"],
+    "category": "AI工具和产品",
+    "translation": {
+      "english": "Perplexity",
+      "chinese": "Perplexity AI搜索引擎"
+    },
+    "professionalExplanation": "Perplexity是一款AI搜索引擎，会先搜索全网最新信息，再整理成答案给你，还会标注信息来源。",
+    "lifeExamples": [
+      {
+        "title": "助理帮你查资料整理答案",
+        "content": "你问助理一个问题，助理去翻书、查报纸、找最新消息，整理成清晰的答案给你，还告诉你信息来自哪里。普通搜索引擎只给你一堆网页链接。总结：Perplexity就像AI助理，帮你搜好资料再整理成答案给你。"
+      },
+      {
+        "title": "图书馆管理员帮你找书划重点",
+        "content": "你想了解某个知识，管理员去书架上找出相关的书，把重点内容划出来给你，不用你自己一本本翻。总结：Perplexity会自动检索信息并提炼重点，比传统搜索引擎更省时间。"
+      },
+      {
+        "title": "调研专员做市场调研",
+        "content": "老板想知道行业最新动态，调研专员去查各种新闻、报告，汇总成一份简报。Perplexity就像AI调研专员。总结：Perplexity适合查实时信息、行业动态，能直接给出整理好的结果。"
+      }
+    ],
+    "aiExample": "Perplexity结合了搜索能力和大语言模型，回答会附带来源链接，适合查找最新资讯、事实类问题，避免信息过时。",
+    "relatedTerms": ["ChatGPT", "RAG", "AI搜索"]
+  },
+  {
+    "id": "30",
+    "term": "Notion AI",
+    "aliases": ["Notion人工智能", "笔记AI"],
+    "category": "AI工具和产品",
+    "translation": {
+      "english": "Notion AI",
+      "chinese": "Notion AI写作助手"
+    },
+    "professionalExplanation": "Notion AI是笔记软件Notion内置的AI功能，能帮你写笔记、总结内容、润色文字，和文档场景深度结合。",
+    "lifeExamples": [
+      {
+        "title": "带秘书的笔记本",
+        "content": "普通笔记本只能自己写字，带秘书的笔记本你说想法，秘书帮你整理成通顺的笔记，还能帮你总结重点。Notion AI就像笔记本里的秘书。总结：Notion AI直接在笔记里提供AI能力，写文档做笔记更高效。"
+      },
+      {
+        "title": "开会时的记录员",
+        "content": "开会时记录员会把大家的发言整理成清晰的会议纪要，分好要点。Notion AI就能把零散的想法整理成规范的文档。总结：Notion AI适合把零散内容整理成结构化文档，提升办公效率。"
+      },
+      {
+        "title": "作文辅导老师",
+        "content": "学生写了作文草稿，辅导老师帮忙润色、调整结构、优化表达。Notion AI就能帮你润色文章、改写语气。总结：Notion AI可以在文档里直接做文字优化，不用切换到其他AI工具。"
+      }
+    ],
+    "aiExample": "Notion AI集成在Notion笔记软件中，支持生成内容、总结、翻译、润色等功能，适合做笔记、写文档时使用。",
+    "relatedTerms": ["AI写作", "ChatGPT", "AI办公"]
+  },
+  {
+    "id": "31",
+    "term": "API",
+    "aliases": ["应用程序编程接口", "接口"],
+    "category": "AI开发技术",
+    "translation": {
+      "english": "Application Programming Interface",
+      "chinese": "应用程序编程接口"
+    },
+    "professionalExplanation": "API就是不同软件之间互相调用功能的约定接口，你按规则发请求，对方就返回对应结果，不用管内部怎么实现。",
+    "lifeExamples": [
+      {
+        "title": "餐厅的点餐窗口",
+        "content": "顾客去餐厅吃饭，不用进厨房自己做，只要在点餐窗口报菜名，后厨做好了就从窗口递出来。顾客不用知道菜怎么做的，按规则点单就行。总结：API就像软件之间的点餐窗口，按格式发请求就能拿到想要的功能。"
+      },
+      {
+        "title": "银行的ATM机",
+        "content": "你去ATM机取钱，不用进银行金库自己拿，插卡输密码按金额，机器就会出钱。你不用管银行内部怎么记账，按操作来就行。总结：API就像软件的ATM机，按约定方式调用就能使用对应的服务。"
+      },
+      {
+        "title": "快递驿站取件",
+        "content": "去快递驿站取件，报取件码，工作人员就把对应的包裹给你。你不用管仓库里包裹怎么摆放、怎么管理，报码就行。总结：API就是软件对外提供服务的统一窗口，按规则调用即可。"
+      }
+    ],
+    "aiExample": "很多APP里的AI聊天、AI画图功能，不是自己开发的模型，而是通过调用大模型厂商的API接口实现的。",
+    "relatedTerms": ["SDK", "MCP", "LLM"]
+  },
+  {
+    "id": "32",
+    "term": "SDK",
+    "aliases": ["软件开发工具包", "开发工具包"],
+    "category": "AI开发技术",
+    "translation": {
+      "english": "Software Development Kit",
+      "chinese": "软件开发工具包"
+    },
+    "professionalExplanation": "SDK是一整套开发工具的打包集合，包含接口、代码示例、工具等，帮开发者快速接入某个功能，不用从零写起。",
+    "lifeExamples": [
+      {
+        "title": "拼装家具套装",
+        "content": "自己做家具要先买木材、买工具、画图纸，很麻烦。买拼装家具套装，零件、工具、说明书都配齐了，照着拼就行。SDK就像拼装家具套装。总结：SDK把开发需要的东西都打包好了，开发者照着用就能快速做出功能。"
+      },
+      {
+        "title": "外卖调料包",
+        "content": "自己做菜要买各种调料、配菜，还要掌握火候。用外卖调料包，食材放进去加调料包炒一下就好，味道稳定还省事。SDK就像调料包。总结：SDK把复杂的功能封装好，开发者简单调用就能用，不用自己写底层逻辑。"
+      },
+      {
+        "title": "乐高积木套装",
+        "content": "想拼一个城堡，自己做积木零件几乎不可能。买乐高城堡套装，所有零件、图纸都有，照着拼就能拼出来。SDK就像乐高套装。总结：SDK提供了完整的开发配件和说明，能大幅降低开发难度。"
+      }
+    ],
+    "aiExample": "大模型厂商都会提供官方SDK，开发者引入SDK后，写几行代码就能在自己的软件里接入AI对话、画图等能力。",
+    "relatedTerms": ["API", "Python", "LLM"]
+  },
+  {
+    "id": "33",
+    "term": "Vector Database",
+    "aliases": ["向量数据库", "矢量数据库"],
+    "category": "AI开发技术",
+    "translation": {
+      "english": "Vector Database",
+      "chinese": "向量数据库"
+    },
+    "professionalExplanation": "向量数据库是专门存向量数据的数据库，能快速按相似度查找内容，是做RAG、语义搜索的核心组件。",
+    "lifeExamples": [
+      {
+        "title": "按特征找衣服的衣柜",
+        "content": "普通衣柜只能按位置放衣服，智能衣柜能按颜色、款式、厚度分类，你说‘找一件厚的黑色外套’，很快就能找到。向量数据库就像智能衣柜，按内容特征来找。总结：向量数据库不是按关键词找，是按内容的含义相似度来查找。"
+      },
+      {
+        "title": "人脸识别门禁",
+        "content": "普通门禁按密码或刷卡开门，人脸识别门禁存的是人脸特征，你站过去比对特征相似就开门。向量数据库存的就是这类特征数据。总结：向量数据库存的是内容的特征向量，靠相似度匹配来查询。"
+      },
+      {
+        "title": "书店按内容找书",
+        "content": "普通书店按书名、作者找书，厉害的店员你说大概内容，他就能找到对应的书。向量数据库就像这个厉害的店员。总结：向量数据库能按语义含义查找内容，不用完全匹配关键词。"
+      }
+    ],
+    "aiExample": "做企业知识库问答时，会先把文档转成向量存在向量数据库里，用户提问时，先从库中检索最相关的文档再生成答案。",
+    "relatedTerms": ["Embedding", "RAG", "Database"]
+  },
+  {
+    "id": "34",
+    "term": "Python",
+    "aliases": ["Python语言", "蟒蛇语言"],
+    "category": "软件开发",
+    "translation": {
+      "english": "Python",
+      "chinese": "Python编程语言"
+    },
+    "professionalExplanation": "Python是一种简单易学的编程语言，语法接近自然语言，库特别多，是AI开发、数据分析最常用的编程语言。",
+    "lifeExamples": [
+      {
+        "title": "普通话",
+        "content": "中国有很多方言，普通话大家都听得懂，而且容易学，用的人也最多，各行各业都能用。Python在编程语言里就像普通话。总结：Python语法简单易懂，受众广，是新手学编程最常选的语言。"
+      },
+      {
+        "title": "万能工具箱",
+        "content": "万能工具箱里有各种工具，修家电、拧螺丝、剪东西都能用。Python有海量现成的代码库，做AI、做网站、处理数据都能做。总结：Python功能丰富，能用在很多领域，尤其是AI领域应用最广。"
+      },
+      {
+        "title": "拼装积木",
+        "content": "拼装积木不用自己做零件，直接用现成的块拼出各种东西。Python有大量现成的第三方库，拿来就能用，不用从零写代码。总结：Python的第三方生态非常丰富，开发效率很高。"
+      }
+    ],
+    "aiExample": "几乎所有主流AI框架、大模型工具都支持Python，做AI开发、数据分析、自动化脚本，Python是首选语言。",
+    "relatedTerms": ["JavaScript", "Git", "API"]
+  },
+  {
+    "id": "35",
+    "term": "JavaScript",
+    "aliases": ["JS", "JS脚本语言"],
+    "category": "软件开发",
+    "translation": {
+      "english": "JavaScript",
+      "chinese": "JavaScript脚本语言"
+    },
+    "professionalExplanation": "JavaScript是网页开发的核心语言，能让网页动起来，做交互效果，现在也能用来开发后端、小程序、APP。",
+    "lifeExamples": [
+      {
+        "title": "房子的水电和装修",
+        "content": "HTML是房子的骨架，CSS是装修，JavaScript就是水电和开关，按按钮灯亮、开水龙头出水，让房子能用起来。总结：JavaScript负责网页的交互功能，让页面不只是静态文字图片。"
+      },
+      {
+        "title": "游乐园的设施控制",
+        "content": "游乐园的建筑和装饰是静态的，控制设施运转、响应用户操作的是控制系统。JavaScript就是网页里的控制系统。总结：网页上的弹窗、轮播图、表单验证这些动态效果，都是JavaScript做的。"
+      },
+      {
+        "title": "电视的遥控器",
+        "content": "电视画面是内容，遥控器用来控制换台、调音量、点应用。JavaScript就像网页的遥控器，响应用户的各种操作。总结：用户在网页上点击、输入、滑动的反应，都靠JavaScript来处理。"
+      }
+    ],
+    "aiExample": "很多网页版AI工具、AI聊天界面的前端交互，都是用JavaScript来实现的，保证用户操作流畅顺滑。",
+    "relatedTerms": ["TypeScript", "Node.js", "React", "Vue"]
+  },
+  {
+    "id": "36",
+    "term": "TypeScript",
+    "aliases": ["TS", "TypeScript语言"],
+    "category": "软件开发",
+    "translation": {
+      "english": "TypeScript",
+      "chinese": "TypeScript编程语言"
+    },
+    "professionalExplanation": "TypeScript是JavaScript的升级版，加了类型检查，能提前发现代码错误，适合开发大型项目，更稳定不易出bug。",
+    "lifeExamples": [
+      {
+        "title": "带安检的地铁站",
+        "content": "普通地铁站人直接进，可能带危险品进去。带安检的地铁站进站前先检查，有问题提前拦下，运行更安全。TS就像带安检的JS。总结：TypeScript会在代码运行前做类型检查，提前发现错误，项目更稳定。"
+      },
+      {
+        "title": "带质检的工厂",
+        "content": "小作坊做完货直接发，容易有次品。正规工厂每道工序都有质检，不合格的提前挑出来，成品质量更稳定。总结：TypeScript相当于给代码加了质检环节，大型项目用起来更靠谱。"
+      },
+      {
+        "title": "带导航的汽车",
+        "content": "普通车开错路了才知道，带导航的车提前提示哪里转弯、哪里限行，不容易走错路。TS就像给JS加了导航提示。总结：TypeScript能在写代码时给出提示，减少低级错误，提升大型项目的可维护性。"
+      }
+    ],
+    "aiExample": "现在中大型AI平台、企业级前端项目大多用TypeScript开发，能降低多人协作时的代码出错率。",
+    "relatedTerms": ["JavaScript", "React", "Vue"]
+  },
+  {
+    "id": "37",
+    "term": "Git",
+    "aliases": ["Git版本控制", "版本管理工具"],
+    "category": "软件开发",
+    "translation": {
+      "english": "Git",
+      "chinese": "Git版本控制工具"
+    },
+    "professionalExplanation": "Git是代码版本管理工具，能记录每次代码改动，随时回退旧版本，还能支持多人一起协作写代码。",
+    "lifeExamples": [
+      {
+        "title": "作文的修改草稿本",
+        "content": "写作文时改了一版又一版，每版都保存着，不满意可以退回到上一版，还能对比两版改了哪些地方。Git就像代码的草稿本。总结：Git能保存代码的每个版本，改坏了可以随时退回去。"
+      },
+      {
+        "title": "多人协作的在线文档",
+        "content": "几个人一起写一份文档，每个人改自己的部分，系统会自动合并，还能看到谁改了什么。Git就是代码版的多人协作文档。总结：Git支持多人同时开发代码，自动合并修改，方便团队协作。"
+      },
+      {
+        "title": "游戏的存档功能",
+        "content": "玩游戏打boss前先存档，打输了就读档重来，不用从头开始玩。Git就像代码的存档功能，随时存随时读。总结：Git可以给代码打存档，重要节点存一下，出问题就能回退到存档点。"
+      }
+    ],
+    "aiExample": "AI项目开发中，代码、模型配置、数据集说明都会用Git管理，方便团队协作和版本回溯。",
+    "relatedTerms": ["GitHub", "Docker", "Python"]
+  },
+  {
+    "id": "38",
+    "term": "GitHub",
+    "aliases": ["GayHub", "代码托管平台", "全球最大同性交友网站"],
+    "category": "软件开发",
+    "translation": {
+      "english": "GitHub",
+      "chinese": "GitHub代码托管平台"
+    },
+    "professionalExplanation": "GitHub是全球最大的代码托管平台，基于Git，大家可以把代码放上面，开源共享、协作开发，找开源项目都来这。",
+    "lifeExamples": [
+      {
+        "title": "共享图书馆",
+        "content": "图书馆里有很多人捐的书，大家都能免费看，还能一起参与修订书籍。GitHub就像代码图书馆，大家共享开源代码。总结：GitHub上有大量免费开源的代码项目，任何人都可以查看和使用。"
+      },
+      {
+        "title": "联合办公空间",
+        "content": "不同团队的人可以在联合办公空间一起工作，共享设施，协作完成项目。GitHub就是程序员的线上联合办公空间。总结：开发者可以在GitHub上协作开发项目，一起提交代码、讨论问题。"
+      },
+      {
+        "title": "开源菜谱网站",
+        "content": "美食爱好者把自己的菜谱分享到网站上，其他人可以照着做，还能提出改进建议。GitHub就是代码版的菜谱分享站。总结：GitHub是开源文化的核心平台，很多AI工具、框架都在上面开源发布。"
+      }
+    ],
+    "aiExample": "很多AI开源模型、工具、项目都会发布在GitHub上，是开发者找AI开源资源、学习AI技术的主要平台。",
+    "relatedTerms": ["Git", "Docker", "开源"]
+  },
+  {
+    "id": "39",
+    "term": "Docker",
+    "aliases": ["容器", "Docker容器"],
+    "category": "软件开发",
+    "translation": {
+      "english": "Docker",
+      "chinese": "Docker容器技术"
+    },
+    "professionalExplanation": "Docker是容器技术，能把软件和它依赖的环境打包在一起，在哪都能一键运行，不会出现本地能跑服务器跑不了的问题。",
+    "lifeExamples": [
+      {
+        "title": "集装箱运输",
+        "content": "以前运货，不同货物包装不一样，装卸很麻烦。用集装箱后，不管什么货都装在标准箱子里，船、火车、卡车都能直接运。Docker就像软件的集装箱。总结：Docker把软件打包成标准容器，在任何电脑上都能一样运行。"
+      },
+      {
+        "title": "自热火锅",
+        "content": "普通火锅要准备锅、食材、调料、火，很麻烦。自热火锅把所有东西都打包好了，加水加热就能吃，在哪都一样。Docker就像软件版自热火锅。总结：Docker把程序和依赖都打包好，不用单独装环境，直接就能运行。"
+      },
+      {
+        "title": "移动奶茶店",
+        "content": "开奶茶店要装修、摆设备、进原料，换地方就要重新弄。移动餐车把所有设备材料都装车上，开到哪都能直接营业。Docker就像软件的移动餐车。总结：Docker能保证软件在不同电脑、服务器上运行环境完全一致。"
+      }
+    ],
+    "aiExample": "部署AI服务时，用Docker打包模型和运行环境，就能一键部署到不同服务器，不用重复配置环境，省时又不易出错。",
+    "relatedTerms": ["Git", "Cloud", "AWS"]
+  },
+  {
+    "id": "40",
+    "term": "React",
+    "aliases": ["React.js", "React框架"],
+    "category": "软件开发",
+    "translation": {
+      "english": "React",
+      "chinese": "React前端框架"
+    },
+    "professionalExplanation": "React是Facebook推出的前端开发框架，用来做网页和APP的用户界面，组件化开发，复用性高，大项目很常用。",
+    "lifeExamples": [
+      {
+        "title": "乐高积木搭房子",
+        "content": "搭房子不用每次都自己烧砖做零件，用乐高积木块，一块一块拼，零件还能拆下来用到别的地方。React就像前端的乐高。总结：React用组件化的方式开发界面，组件可以重复使用，开发效率高。"
+      },
+      {
+        "title": "模块化家具",
+        "content": "模块化家具由不同模块组成，柜子、桌子、架子可以自由组合，坏了单个模块可以单独换。React的组件就像家具模块。总结：React把界面拆成独立组件，维护和修改都很方便。"
+      },
+      {
+        "title": "预制菜做饭",
+        "content": "做饭不用从洗菜切菜开始，用预制菜包，加热组合一下就能出一桌菜。React的组件就像预制菜，拿来就能用。总结：React有大量现成组件库，开发界面就像搭积木，快速又规范。"
+      }
+    ],
+    "aiExample": "很多AI产品的网页版界面都是用React开发的，它能很好地处理AI对话、流式输出这类复杂的交互场景。",
+    "relatedTerms": ["Vue", "JavaScript", "TypeScript"]
+  },
+  {
+    "id": "41",
+    "term": "Vue",
+    "aliases": ["Vue.js", "Vue框架"],
+    "category": "软件开发",
+    "translation": {
+      "english": "Vue",
+      "chinese": "Vue前端框架"
+    },
+    "professionalExplanation": "Vue是国产的前端开发框架，简单易学，上手快，文档友好，中小型项目和国内公司用得特别多。",
+    "lifeExamples": [
+      {
+        "title": "傻瓜式拼装家具",
+        "content": "有的拼装家具设计得特别简单，说明书图文并茂，普通人看一遍就会装，不用专业知识。Vue就像这种好上手的拼装家具。总结：Vue学习门槛低，新手容易上手，做中小型项目开发速度很快。"
+      },
+      {
+        "title": "家常菜菜谱",
+        "content": "大厨菜谱步骤复杂、专业术语多，新手看不懂。家常菜菜谱步骤简单、材料常见，普通人照着就能做。Vue就像家常菜菜谱。总结：Vue语法简洁易懂，中文文档完善，国内开发者学习成本很低。"
+      },
+      {
+        "title": "轻便型自行车",
+        "content": "专业山地车配置复杂、重量大，适合专业玩家。轻便自行车简单好骑，日常通勤够用，普通人很容易上手。总结：Vue轻量易用，满足大部分业务需求，是国内前端开发的主流选择之一。"
+      }
+    ],
+    "aiExample": "很多国内的AI工具、管理后台、小程序前端都是用Vue开发的，开发速度快，生态完善，适合快速落地项目。",
+    "relatedTerms": ["React", "JavaScript", "TypeScript"]
+  },
+  {
+    "id": "42",
+    "term": "Node.js",
+    "aliases": ["Node", "Node后端"],
+    "category": "软件开发",
+    "translation": {
+      "english": "Node.js",
+      "chinese": "Node.js运行环境"
+    },
+    "professionalExplanation": "Node.js能让JavaScript跑在服务器上，这样前端工程师不用学新语言也能写后端代码，做全栈开发。",
+    "lifeExamples": [
+      {
+        "title": "会做饭也会端菜的服务员",
+        "content": "以前服务员只管端菜，厨师只管做菜，是分开的。现在有的服务员也会做简单的菜，前后都能搞定。Node.js让JS能前后端都做。总结：Node.js让JavaScript既能做前端页面，也能做后端服务。"
+      },
+      {
+        "title": "两用螺丝刀",
+        "content": "普通螺丝刀只能拧一种螺丝，两用螺丝刀一头一字一头十字，两种螺丝都能拧，不用带两把工具。总结：Node.js让JS成为前后端都能用的语言，一套语言搞定全栈开发。"
+      },
+      {
+        "title": "既能收银又能理货的店员",
+        "content": "小店员工不多，店员既能在前台收银，也能去后面理货，一个人干两个岗位的活，节省成本。总结：用Node.js的前端工程师可以兼顾后端开发，小团队开发效率更高。"
+      }
+    ],
+    "aiExample": "很多轻量级AI工具、管理后台的后端服务用Node.js开发，前端工程师就能独立完成全栈开发，快速上线产品。",
+    "relatedTerms": ["JavaScript", "Python", "API"]
+  },
+  {
+    "id": "43",
+    "term": "Database",
+    "aliases": ["数据库", "数据仓库"],
+    "category": "数据库和云计算",
+    "translation": {
+      "english": "Database",
+      "chinese": "数据库"
+    },
+    "professionalExplanation": "数据库就是专门存数据的软件，能有条理地存大量信息，还能快速查找、修改、统计数据。",
+    "lifeExamples": [
+      {
+        "title": "图书馆的书架",
+        "content": "书随便堆地上找起来很慢，按分类摆到书架上，想找什么书按类别很快就能找到。数据库就像电子书架，专门存数据。总结：数据库把数据按规则组织好存储，查找和管理都很高效。"
+      },
+      {
+        "title": "Excel表格升级版",
+        "content": "Excel存几千行数据就卡了，数据库能存几千万甚至几亿条数据，还能快速查询和统计。总结：数据库就是大容量、高性能的电子表格，适合存海量业务数据。"
+      },
+      {
+        "title": "仓库货架",
+        "content": "货物随便堆仓库里找货很麻烦，放到货架上分门别类摆好，拿货、盘库都很快。数据库就像数字化的仓库货架。总结：数据库用来有序存储业务数据，支持快速的增删改查操作。"
+      }
+    ],
+    "aiExample": "AI产品的用户信息、对话记录、知识库文档都会存在数据库里，需要时快速读取调用。",
+    "relatedTerms": ["SQL", "MySQL", "Vector Database"]
+  },
+  {
+    "id": "44",
+    "term": "SQL",
+    "aliases": ["结构化查询语言", "SQL语句"],
+    "category": "数据库和云计算",
+    "translation": {
+      "english": "Structured Query Language",
+      "chinese": "结构化查询语言"
+    },
+    "professionalExplanation": "SQL是操作数据库的通用语言，用它可以查询、添加、修改、删除数据库里的数据，是数据分析的必备技能。",
+    "lifeExamples": [
+      {
+        "title": "图书馆借书指令",
+        "content": "你跟图书管理员说‘帮我找一下三楼文学区的所有鲁迅的书’，管理员就按你的要求找出来。SQL就是跟数据库说的查询指令。总结：SQL就是人和数据库沟通的语言，告诉数据库你想要什么数据。"
+      },
+      {
+        "title": "超市查库存的话",
+        "content": "你跟仓管说‘查一下可乐还有多少瓶，保质期到什么时候’，仓管就去查库存告诉你结果。SQL就是查数据库时说的话。总结：用SQL可以按条件查询数据库里的数据，做统计和分析。"
+      },
+      {
+        "title": "银行办业务的单据",
+        "content": "你填一张取款单，银行柜员按单据上的信息给你办业务。SQL语句就像给数据库填的业务单据。总结：SQL可以让数据库执行增删改查等各种数据操作。"
+      }
+    ],
+    "aiExample": "做AI数据分析、用户行为统计时，常用SQL从数据库里提取需要的数据，再做进一步分析处理。",
+    "relatedTerms": ["Database", "MySQL", "数据分析"]
+  },
+  {
+    "id": "45",
+    "term": "MySQL",
+    "aliases": ["MySQL数据库"],
+    "category": "数据库和云计算",
+    "translation": {
+      "english": "MySQL",
+      "chinese": "MySQL关系型数据库"
+    },
+    "professionalExplanation": "MySQL是最流行的免费开源关系型数据库，稳定好用，中小型网站、APP基本都用它存业务数据。",
+    "lifeExamples": [
+      {
+        "title": "大众款家用轿车",
+        "content": "家用轿车不用特别高端，省油、耐用、维修方便就行，开的人特别多，配件到处都有。MySQL在数据库里就像大众家用车。总结：MySQL免费、稳定、生态成熟，是最通用的数据库，大部分项目都能用。"
+      },
+      {
+        "title": "常见的铁皮文件柜",
+        "content": "办公室最常用的就是铁皮文件柜，便宜耐用，放普通文件足够用，几乎每个公司都有。MySQL就像数据库里的铁皮文件柜。总结：MySQL是最普及的数据库，学习资料多，遇到问题容易找到解决方案。"
+      },
+      {
+        "title": "家常菜馆",
+        "content": "家常菜馆价格亲民，菜品齐全，味道稳定，日常吃饭都去这里，不用去高端餐厅。MySQL就是数据库里的家常菜馆。总结：MySQL满足绝大多数业务场景的需求，是开发的首选数据库之一。"
+      }
+    ],
+    "aiExample": "大部分AI应用的用户数据、订单数据、基础配置都会存在MySQL里，是业务系统的核心数据存储组件。",
+    "relatedTerms": ["Database", "SQL", "Redis"]
+  },
+  {
+    "id": "46",
+    "term": "Cloud",
+    "aliases": ["云计算", "云服务"],
+    "category": "数据库和云计算",
+    "translation": {
+      "english": "Cloud Computing",
+      "chinese": "云计算 / 云服务"
+    },
+    "professionalExplanation": "云计算就是把服务器、存储、算力都放到网上，你按需租用，不用自己买硬件，随时可以扩容缩容。",
+    "lifeExamples": [
+      {
+        "title": "用电不用自己发电",
+        "content": "以前工厂要自己买发电机发电，现在直接插电网用电就行，用多少交多少电费，不用管电厂怎么建的。云计算就像数字电网。总结：云计算就像用水用电一样，按需使用计算资源，用多少付多少钱。"
+      },
+      {
+        "title": "租仓库代替建仓库",
+        "content": "做生意不用自己买地建仓库，去物流园租仓库，货多就租大的，货少就租小的，灵活又省钱。总结：云计算就是租别人的服务器和存储，不用自己买硬件，弹性调整成本低。"
+      },
+      {
+        "title": "打车代替买车",
+        "content": "买车要花很多钱，还要保养、停车。打车出门，想用就叫，不用就不花钱，短途出行更划算。总结：云计算按需付费，不用一次性投入大量硬件成本，适合创业和业务波动的场景。"
+      }
+    ],
+    "aiExample": "很多AI服务都部署在云上，用户多的时候自动加算力，用户少的时候自动减，不用自己维护大量服务器。",
+    "relatedTerms": ["AWS", "Azure", "Docker"]
+  },
+  {
+    "id": "47",
+    "term": "AWS",
+    "aliases": ["亚马逊云", "亚马逊云科技"],
+    "category": "数据库和云计算",
+    "translation": {
+      "english": "Amazon Web Services",
+      "chinese": "亚马逊云服务"
+    },
+    "professionalExplanation": "AWS是亚马逊旗下的云计算平台，是全球最大的云服务商，服务种类最全，海外业务基本都用它。",
+    "lifeExamples": [
+      {
+        "title": "最大的连锁超市",
+        "content": "最大的连锁超市商品最全，从吃的到用的什么都有，网点多，在哪都能买到。AWS在云服务商里就像最大的连锁超市。总结：AWS云服务种类最丰富，从基础服务器到AI算力应有尽有。"
+      },
+      {
+        "title": "老牌大型商场",
+        "content": "老牌大商场信誉好、品类全，各种档次的商品都有，大家都信得过，去的人也最多。总结：AWS是全球市场份额最高的云平台，技术成熟，稳定性高。"
+      },
+      {
+        "title": "全品类物流公司",
+        "content": "小物流公司只能送同城，大物流公司国内国际、大小件都能送，服务全、网点多。AWS就是云里的全品类物流公司。总结：AWS覆盖全球各地的机房节点，做海外业务首选AWS。"
+      }
+    ],
+    "aiExample": "很多海外AI公司都把服务部署在AWS上，它提供从GPU算力到模型部署的全套AI基础设施。",
+    "relatedTerms": ["Cloud", "Azure", "Docker"]
+  },
+  {
+    "id": "48",
+    "term": "AI写作",
+    "aliases": ["人工智能写作", "AI写文案"],
+    "category": "普通用户AI应用",
+    "translation": {
+      "english": "AI Writing",
+      "chinese": "AI写作"
+    },
+    "professionalExplanation": "AI写作就是用AI工具生成文字内容，比如写文章、文案、邮件、报告，能大幅提升文字工作的效率。",
+    "lifeExamples": [
+      {
+        "title": "写工作总结",
+        "content": "上班族月底写工作总结，把做过的几件事列出来，用AI写作工具就能生成一篇完整规范的工作总结，再改改细节就行。总结：AI写作能帮人快速产出规范的工作文案，节省时间。"
+      },
+      {
+        "title": "写朋友圈文案",
+      "content": "出去玩拍了好看的照片，不知道配什么文字，用AI写作工具描述一下照片和心情，就能生成好几条文艺的朋友圈文案。总结：AI写作可以帮普通人产出各种场景的文案内容。"
+      },
+      {
+        "title": "写孩子的请假条",
+      "content": "孩子生病要给老师写请假条，不知道怎么措辞得体，用AI写作输入原因，就能生成礼貌规范的请假条内容。总结：AI写作能帮人快速写出得体的各类日常文书。"
+      }
+    ],
+    "aiExample": "现在很多办公软件、笔记软件都内置了AI写作功能，支持润色、扩写、缩写、改写语气等多种写作辅助能力。",
+    "relatedTerms": ["LLM", "ChatGPT", "AI办公"]
+  },
+  {
+    "id": "49",
+    "term": "AI绘画",
+    "aliases": ["人工智能绘画", "AI画图", "AI生图"],
+    "category": "普通用户AI应用",
+    "translation": {
+      "english": "AI Painting",
+      "chinese": "AI绘画"
+    },
+    "professionalExplanation": "AI绘画就是输入文字描述，让AI自动生成图片，能做插画、海报、效果图、头像等多种视觉内容。",
+    "lifeExamples": [
+      {
+        "title": "做公众号配图",
+        "content": "运营写公众号文章，需要一张对应的插画，不用找设计师，用AI绘画输入描述，很快就能生成合适的配图。总结：AI绘画能快速生成各类配图，降低设计成本。"
+      },
+      {
+        "title": "生成专属头像",
+      "content": "想要一个独一无二的动漫头像，不用找人约稿，用AI绘画描述自己想要的风格和样子，就能生成专属头像。总结：AI绘画可以低成本生成个性化的图像内容。"
+      },
+      {
+        "title": "看装修效果图",
+      "content": "装修房子想看看原木风是什么效果，不用等设计师出图，用AI绘画描述户型和风格，很快就能看到效果图。总结：AI绘画能快速把想法变成可视化的图片，方便预览效果。"
+      }
+    ],
+    "aiExample": "主流的AI绘画工具支持文生图、图生图、局部修改等功能，设计师、运营、自媒体从业者都在广泛使用。",
+    "relatedTerms": ["Midjourney", "Stable Diffusion", "Prompt"]
+  },
+  {
+    "id": "50",
+    "term": "AI客服",
+    "aliases": ["智能客服", "人工智能客服"],
+    "category": "普通用户AI应用",
+    "translation": {
+      "english": "AI Customer Service",
+      "chinese": "AI智能客服"
+    },
+    "professionalExplanation": "AI客服就是用AI做的自动客服，能24小时回答用户常见问题，解决不了再转人工，节省人力成本。",
+    "lifeExamples": [
+      {
+        "title": "查快递物流",
+        "content": "半夜想查快递到哪了，人工客服下班了，发消息给AI客服，立刻就能查到物流信息，还能解答退换货规则。总结：AI客服24小时在线，常见问题随时都能解答。"
+      },
+      {
+        "title": "查手机话费余额",
+      "content": "打运营商电话查话费，首先是智能语音客服，报号码就能查余额、办套餐，简单业务不用等人工。总结：AI客服能处理大量简单重复的问题，提升办事效率。"
+      },
+      {
+        "title": "网店自动回复售后",
+      "content": "网店咨询的人太多，客服忙不过来，AI客服先自动回答退换货、发货时间这些常见问题，复杂问题再转人工。总结：AI客服能分担大部分常规咨询，减轻人工客服的压力。"
+      }
+    ],
+    "aiExample": "现在的AI客服大多基于大模型+RAG技术，能理解自然语言问题，回答更灵活，比传统按键式智能客服体验好很多。",
+    "relatedTerms": ["RAG", "LLM", "Automation"]
+  }
+]

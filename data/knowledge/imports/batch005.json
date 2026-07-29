@@ -1,0 +1,1352 @@
+﻿[
+  {
+    "id": "201",
+    "term": "SFT",
+    "aliases": ["有监督微调", "监督微调", "Supervised Fine-Tuning"],
+    "category": "AI基础概念",
+    "translation": {
+      "english": "Supervised Fine-Tuning",
+      "chinese": "有监督微调"
+    },
+    "professionalExplanation": "SFT是大模型训练的第二步，用标注好的问答数据继续训练基础模型，让它学会按照人类的对话方式回答问题。",
+    "lifeExamples": [
+      {
+        "title": "大学生岗前培训",
+        "content": "大学生在学校学了通用知识，入职后公司会做岗位培训，教他怎么按公司要求处理工作、回复客户。SFT就像大模型的岗位培训，教它对话的规范和格式。总结：SFT用标注好的对话数据训练模型，让它从什么都懂的“学生”变成会对话的“员工”。"
+      },
+      {
+        "title": "演员背台词练走位",
+        "content": "演员本身有表演基础，正式拍戏前要对着剧本排练，记住台词、语气、站位，按剧本要求来演。SFT就像模型的剧本排练，让它学会按要求输出。总结：SFT通过高质量标注数据，引导模型按照人类期望的格式和风格回答问题。"
+      },
+      {
+        "title": "学徒跟着师傅练手",
+        "content": "学徒已经懂基础原理了，跟着师傅手把手做一遍标准流程，学会正确的操作方法和规范。SFT就是让模型跟着“标准答案”学习正确的输出方式。总结：SFT是大模型对齐的第一步，主要训练模型的对话格式和基础回答能力。"
+      }
+    ],
+    "aiExample": "大模型在预训练完成后，通常会先做SFT有监督微调，让模型学会问答格式，再用RLHF进一步优化效果。",
+    "relatedTerms": ["Fine-tuning", "RLHF", "DPO", "Pre-training"]
+  },
+  {
+    "id": "202",
+    "term": "DPO",
+    "aliases": ["直接偏好优化", "Direct Preference Optimization"],
+    "category": "AI基础概念",
+    "translation": {
+      "english": "Direct Preference Optimization",
+      "chinese": "直接偏好优化"
+    },
+    "professionalExplanation": "DPO是一种更简单的人类对齐技术，直接用人类偏好数据训练模型，不用单独训练奖励模型，比RLHF更简单高效。",
+    "lifeExamples": [
+      {
+        "title": "直接告诉员工哪个方案好",
+        "content": "以前要先给员工定考核标准，再按标准打分奖惩；现在直接拿两个方案告诉员工哪个更好，员工自己就知道该往哪个方向改。DPO就是直接用好坏对比教模型优化。总结：DPO不用单独做奖励模型，直接用偏好对比数据优化模型，更简单高效。"
+      },
+      {
+        "title": "学生对照范文改作文",
+        "content": "不用老师一条条讲评分标准，直接给学生看好作文和差作文的对比，学生自己就能明白怎么写更好。DPO就是用好坏对比教模型进步。总结：DPO通过好坏答案的成对数据，直接优化模型的输出偏好，实现更简单。"
+      },
+      {
+        "title": "买衣服直接选款式",
+        "content": "不用先列一堆审美标准，拿两件衣服让你选更喜欢哪件，选多了商家就知道你的喜好。DPO就是通过选择偏好来对齐模型。总结：DPO是现在很流行的对齐技术，实现简单、效果好，很多开源模型都用它。"
+      }
+    ],
+    "aiExample": "DPO因为实现简单、训练成本低，现在已经成为开源大模型对齐的主流方案，效果接近传统RLHF。",
+    "relatedTerms": ["RLHF", "Alignment", "SFT", "开源模型"]
+  },
+  {
+    "id": "203",
+    "term": "MoE",
+    "aliases": ["混合专家模型", "Mixture of Experts", "专家混合模型"],
+    "category": "AI基础概念",
+    "translation": {
+      "english": "Mixture of Experts",
+      "chinese": "混合专家模型"
+    },
+    "professionalExplanation": "MoE是大模型的一种架构，把大模型拆成多个小专家模型，每次只激活和任务相关的专家，参数大但推理成本低。",
+    "lifeExamples": [
+      {
+        "title": "医院的专科医生",
+        "content": "不是一个医生看所有病，医院有内科、外科、儿科等专科医生，看什么病就找对应科室的专家，效率更高。MoE就像AI里的专科医院，不同任务激活不同专家。总结：MoE把大模型拆成多个专家，每次只用到部分参数，又大又快。"
+      },
+      {
+        "title": "公司的部门分工",
+        "content": "不是所有人干所有活，公司分技术部、市场部、财务部，什么事找什么部门，不用全公司一起动。MoE就是分工协作的模型架构。总结：MoE模型总参数量很大，但每次推理只激活一小部分，速度快、成本低。"
+      },
+      {
+        "title": "餐厅的后厨分工",
+        "content": "不是一个厨师做所有菜，有炒菜师傅、面点师傅、凉菜师傅，点什么菜对应师傅做，出餐更快更专业。总结：MoE架构是大模型发展的重要方向，兼顾大参数能力和低推理成本。"
+      }
+    ],
+    "aiExample": "GPT-4、Gemini等很多主流大模型都采用了MoE混合专家架构，在控制推理成本的同时提升模型能力。",
+    "relatedTerms": ["Parameters", "LLM", "推理成本", "Transformer"]
+  },
+  {
+    "id": "204",
+    "term": "Rerank",
+    "aliases": ["重排序", "重排模型", "精排"],
+    "category": "AI开发技术",
+    "translation": {
+      "english": "Rerank",
+      "chinese": "重排序 / 精排"
+    },
+    "professionalExplanation": "Rerank是对检索结果做二次精细排序的技术，先粗筛出一批相关内容，再精准排序，提升RAG搜索的准确率。",
+    "lifeExamples": [
+      {
+        "title": "招聘初筛加面试",
+        "content": "招聘先看简历粗筛，选出一批符合条件的候选人，再通过面试精细排序，选出最合适的人。Rerank就像面试环节，做二次精准筛选。总结：Rerank对初筛的结果做二次精细打分排序，选出最相关的内容，提升检索准确率。"
+      },
+      {
+        "title": "海选加决赛",
+        "content": "选秀节目先海选选出一大批选手，再决赛逐个打分排名，选出冠亚季军。粗检索是海选，Rerank就是决赛精排。总结：先粗检索快速缩小范围，再用Rerank精准排序，兼顾速度和准确率。"
+      },
+      {
+        "title": "买菜挑拣",
+        "content": "先从菜摊上挑出一堆大概新鲜的菜，再一个个仔细挑，把最好的选出来。Rerank就是第二步仔细挑选的过程。总结：RAG系统加上Rerank重排，能大幅提升答案的相关性和准确度。"
+      }
+    ],
+    "aiExample": "在RAG知识库系统中，通常先用向量数据库粗检索，再用Rerank模型精排，能显著提升搜索的准确率。",
+    "relatedTerms": ["RAG", "Vector Database", "语义搜索", "Embedding"]
+  },
+  {
+    "id": "205",
+    "term": "Midjourney",
+    "aliases": ["MJ", "Midjourney绘画"],
+    "category": "AI工具和产品",
+    "translation": {
+      "english": "Midjourney",
+      "chinese": "Midjourney AI绘画工具"
+    },
+    "professionalExplanation": "Midjourney是最知名的AI绘画工具之一，生成的图片质感高、艺术性强，主要在Discord上使用，适合创意设计和艺术创作。",
+    "lifeExamples": [
+      {
+        "title": "高端艺术照相馆",
+        "content": "普通照相馆拍日常照片，高端艺术照相馆拍出来的作品质感、光影、构图都更有艺术感。Midjourney就像AI绘画里的高端艺术照相馆。总结：Midjourney生成的图片艺术性和质感突出，适合做创意设计、概念图、艺术创作。"
+      },
+      {
+        "title": "专业画师工作室",
+        "content": "普通画手画的比较普通，专业画师工作室出品的作品细节丰富、风格独特，审美水平更高。总结：Midjourney审美在线，出图质量稳定，是设计师和创作者最常用的AI绘画工具之一。"
+      },
+      {
+        "title": "品牌摄影工作室",
+        "content": "随手拍的照片质感一般，品牌工作室拍的商业大片光影、构图、色调都很高级。Midjourney出图就有这种高级质感。总结：Midjourney在画面质感、创意表现上非常出色，是商业设计的热门工具。"
+      }
+    ],
+    "aiExample": "Midjourney是目前商业级AI绘画的代表工具，版本持续迭代，在写实、创意、艺术风格上都表现优异。",
+    "relatedTerms": ["Stable Diffusion", "DALL·E", "AI绘画", "ControlNet"]
+  },
+  {
+    "id": "206",
+    "term": "DALL·E",
+    "aliases": ["DALL-E", "DALL·E 3", "OpenAI绘画"],
+    "category": "AI工具和产品",
+    "translation": {
+      "english": "DALL·E",
+      "chinese": "DALL·E AI绘画工具"
+    },
+    "professionalExplanation": "DALL·E是OpenAI推出的AI绘画工具，和ChatGPT深度集成，对文字描述理解准确，生成的内容贴合提示词。",
+    "lifeExamples": [
+      {
+        "title": "听话的插画师",
+        "content": "有的画师理解能力差，说半天画不对；有的画师一说就懂，画出来的和你描述的几乎一样。DALL·E就像理解能力很强的AI画师。总结：DALL·E对提示词理解准确，你描述什么它就画什么，不容易跑偏。"
+      },
+      {
+        "title": "配套的图文工作室",
+        "content": "写文案和画图是分开的两家，沟通起来很麻烦；同一家工作室文案画图一起做，理解更到位。DALL·E和ChatGPT就是配套的。总结：DALL·E深度集成在ChatGPT里，聊天的时候就能直接画图，使用很方便。"
+      },
+      {
+        "title": "写实派画手",
+        "content": "有的画手擅长抽象艺术，有的擅长写实还原，画出来的东西和真实照片很像。DALL·E偏写实，更贴合文字描述。总结：DALL·E 3在语义理解和真实感上表现很好，适合生成贴合描述的写实图片。"
+      }
+    ],
+    "aiExample": "DALL·E 3内置在ChatGPT中，可以结合对话上下文生成图片，语义理解能力强，生成结果贴合提示词。",
+    "relatedTerms": ["ChatGPT", "Midjourney", "AI绘画", "生成式AI"]
+  },
+  {
+    "id": "207",
+    "term": "Gamma",
+    "aliases": ["Gamma PPT", "Gamma演示工具"],
+    "category": "AI工具和产品",
+    "translation": {
+      "english": "Gamma",
+      "chinese": "Gamma AI演示工具"
+    },
+    "professionalExplanation": "Gamma是AI演示文稿工具，输入主题就能自动生成PPT、网页、文档，排版美观，不用手动调格式，适合快速做演示。",
+    "lifeExamples": [
+      {
+        "title": "一键出稿的设计工作室",
+        "content": "做PPT要自己排版、找图、调格式，很费时间；交给设计工作室，说个主题就能做好完整的演示稿。Gamma就像AI设计工作室。总结：Gamma输入主题就能自动生成美观的演示文稿，不用手动调排版，效率很高。"
+      },
+      {
+        "title": "智能PPT模板",
+        "content": "普通模板要自己填内容、调样式，智能模板你输入内容，它自动帮你排好版、配好图。总结：Gamma生成的PPT设计感强，适合快速做出高质量的演示文稿。"
+      },
+      {
+        "title": "专属演示助理",
+        "content": "有个助理帮你写文案、找配图、排版式，你只需要定主题和调整细节，省心又省力。Gamma就是这样的AI助理。总结：Gamma降低了做演示的门槛，普通人也能快速做出专业美观的PPT。"
+      }
+    ],
+    "aiExample": "Gamma可以快速生成PPT、网页、文档等多种形式的内容，设计美观，是职场人做演示的常用AI工具。",
+    "relatedTerms": ["WPS AI", "Microsoft Copilot", "AI办公", "Tome"]
+  },
+  {
+    "id": "208",
+    "term": "Notion AI",
+    "aliases": ["Notion人工智能", "笔记AI"],
+    "category": "AI工具和产品",
+    "translation": {
+      "english": "Notion AI",
+      "chinese": "Notion AI笔记助手"
+    },
+    "professionalExplanation": "Notion AI是笔记软件Notion内置的AI功能，可以写文案、总结、翻译、头脑风暴，深度融入笔记和知识管理场景。",
+    "lifeExamples": [
+      {
+        "title": "带助理的笔记本",
+        "content": "普通笔记本只能写字，带AI的笔记本能帮你写草稿、总结重点、翻译，还能帮你头脑风暴想点子。总结：Notion AI深度集成在笔记里，写笔记的时候随时能调用AI辅助。"
+      },
+      {
+        "title": "个人写作助理",
+        "content": "写文章卡壳了、想不出大纲、写完想润色，助理都能帮你，就在你写作的旁边随叫随到。总结：Notion AI适合写笔记、做方案、整理知识，提升信息处理效率。"
+      },
+      {
+        "title": "智能文档编辑器",
+        "content": "普通编辑器只能改字，智能编辑器能帮你扩写、缩写、改语气、翻译，还能生成表格和列表。总结：Notion AI是知识工作者常用的效率工具，和笔记场景深度结合。"
+      }
+    ],
+    "aiExample": "Notion AI深度融入笔记和知识库场景，在写文档、整理信息、头脑风暴时都能提供辅助，提升工作效率。",
+    "relatedTerms": ["AI写作", "WPS AI", "知识库", "AI办公"]
+  },
+  {
+    "id": "209",
+    "term": "Perplexity",
+    "aliases": ["Perplexity AI", "Perplexity搜索"],
+    "category": "AI工具和产品",
+    "translation": {
+      "english": "Perplexity",
+      "chinese": "Perplexity AI搜索引擎"
+    },
+    "professionalExplanation": "Perplexity是AI搜索引擎，能联网搜索实时信息，给出带引用来源的答案，适合查资料、做调研、了解最新资讯。",
+    "lifeExamples": [
+      {
+        "title": "带参考文献的研究员",
+        "content": "普通搜索给你一堆网页自己看，AI研究员帮你读完所有网页，整理出答案，还标注每句话来自哪里。总结：Perplexity会联网搜索最新信息，整理成清晰的答案，每一条都标注信息来源。"
+      },
+      {
+        "title": "实时资讯助理",
+        "content": "普通AI知识有截止日期，不知道最新的事；实时助理会去查最新新闻，告诉你当下的情况。总结：Perplexity主打实时联网搜索，适合查最新的新闻、数据、行业资讯。"
+      },
+      {
+        "title": "尽职调查专员",
+        "content": "调研一个问题，专员会去查各种资料，汇总成报告，还附上信息来源，方便你核实和深入了解。总结：Perplexity适合做深度调研和信息查询，答案有来源，可信度更高。"
+      }
+    ],
+    "aiExample": "Perplexity是AI搜索领域的代表产品，主打实时联网、带来源引用，是查资料、做调研的高效工具。",
+    "relatedTerms": ["Bing Copilot", "AI搜索", "ChatGPT", "语义搜索"]
+  },
+  {
+    "id": "210",
+    "term": "GPT-4o",
+    "aliases": ["GPT4o", "GPT-4 omni", "OpenAI GPT-4o"],
+    "category": "AI工具和产品",
+    "translation": {
+      "english": "GPT-4o",
+      "chinese": "GPT-4o 大模型"
+    },
+    "professionalExplanation": "GPT-4o是OpenAI推出的旗舰多模态大模型，支持文字、图片、音频、视频输入，响应速度快，综合能力强。",
+    "lifeExamples": [
+      {
+        "title": "全能型高级助理",
+        "content": "普通助理只能处理文字，高级助理能看图片、听语音、看视频，什么都能处理，反应还很快。GPT-4o就像全能的AI助理。总结：GPT-4o支持多种模态输入，能看、能听、能说，交互更自然。"
+      },
+      {
+        "title": "旗舰款智能手机",
+        "content": "基础款手机功能有限，旗舰款手机拍照、性能、屏幕都是顶级的，体验最好。GPT-4o就是大模型里的旗舰款。总结：GPT-4o综合能力很强，推理、多模态、速度都属于第一梯队。"
+      },
+      {
+        "title": "全科专家医生",
+        "content": "专科医生只懂一个科，全科专家什么都懂，还能看片子、听心音，综合诊断能力很强。总结：GPT-4o是目前综合能力最强的大模型之一，支持多种交互方式。"
+      }
+    ],
+    "aiExample": "GPT-4o是OpenAI的旗舰模型，在推理、多模态、速度上都表现优异，是高端AI应用的首选模型之一。",
+    "relatedTerms": ["ChatGPT", "多模态", "LLM", "Claude 3"]
+  },
+  {
+    "id": "211",
+    "term": "Claude 3",
+    "aliases": ["Claude3", "Anthropic Claude 3", "克劳德3"],
+    "category": "AI工具和产品",
+    "translation": {
+      "english": "Claude 3",
+      "chinese": "Claude 3 大模型"
+    },
+    "professionalExplanation": "Claude 3是Anthropic推出的大模型系列，长文本能力强、安全对齐好，适合处理长文档、代码和复杂推理任务。",
+    "lifeExamples": [
+      {
+        "title": "耐心的长文档专员",
+        "content": "普通助理看几十页文档就记不住了，长文档专员能一口气看完一整本书，还能准确回答细节问题。Claude 3就擅长处理长文本。总结：Claude 3上下文窗口很大，适合处理整本书、长报告、大段代码等长内容。"
+      },
+      {
+        "title": "严谨的法律顾问",
+        "content": "有的助理说话容易出错、乱回答，严谨的法律顾问说话稳妥、准确，不会瞎编，安全性高。总结：Claude 3对齐做得好，输出稳妥，幻觉相对少，适合专业场景。"
+      },
+      {
+        "title": "资深代码工程师",
+        "content": "普通程序员只能写小功能，资深工程师能看懂大项目代码、做复杂重构、解决疑难问题。总结：Claude 3在代码、长文档处理上表现突出，是开发者常用的大模型之一。"
+      }
+    ],
+    "aiExample": "Claude 3系列包含Opus、Sonnet、Haiku三个版本，分别对应高端、均衡、快速场景，长文本能力行业领先。",
+    "relatedTerms": ["GPT-4o", "上下文窗口", "LLM", "Kimi"]
+  },
+  {
+    "id": "212",
+    "term": "ComfyUI",
+    "aliases": ["ComfyUI界面", "节点式AI绘画"],
+    "category": "AI工具和产品",
+    "translation": {
+      "english": "ComfyUI",
+      "chinese": "ComfyUI 节点式绘画工具"
+    },
+    "professionalExplanation": "ComfyUI是节点式的Stable Diffusion界面，用连线的方式搭建生图流程，自由度高、可定制性强，适合专业玩家。",
+    "lifeExamples": [
+      {
+        "title": "模块化积木玩具",
+        "content": "普通玩具是固定造型，积木可以自己拼搭，想做什么造型就拼什么模块，自由度很高。ComfyUI就像AI绘画里的积木。总结：ComfyUI用节点连线的方式构建生图流程，自由度极高，可以实现复杂的生图逻辑。"
+      },
+      {
+        "title": "专业级单反相机",
+        "content": "傻瓜相机按快门就行，单反可以手动调各种参数，能拍出更专业的效果，但需要学习成本。总结：ComfyUI可控性强、效果上限高，适合专业设计师和深度玩家使用。"
+      },
+      {
+        "title": "开放式厨房操作台",
+        "content": "成品菜直接加热就行，开放式厨房可以自己选食材、控制火候、调整步骤，做更定制化的菜品。总结：ComfyUI虽然上手稍难，但灵活度高，能实现很多WebUI做不到的高级效果。"
+      }
+    ],
+    "aiExample": "ComfyUI是专业AI绘画玩家的首选工具，节点式工作流灵活度高，能实现更精细的生图控制和更复杂的效果。",
+    "relatedTerms": ["Stable Diffusion WebUI", "Stable Diffusion", "ControlNet", "LoRA"]
+  },
+  {
+    "id": "213",
+    "term": "ONNX",
+    "aliases": ["ONNX格式", "开放神经网络交换格式"],
+    "category": "AI开发技术",
+    "translation": {
+      "english": "Open Neural Network Exchange",
+      "chinese": "开放神经网络交换格式"
+    },
+    "professionalExplanation": "ONNX是通用的AI模型格式，不同框架训练的模型都可以转成ONNX，在不同设备和推理引擎上都能运行。",
+    "lifeExamples": [
+      {
+        "title": "通用文件格式",
+        "content": "不同软件做的文档格式不兼容，转成PDF格式后，任何设备都能打开看。ONNX就像AI模型界的PDF通用格式。总结：ONNX是统一的模型格式，不同框架训练的模型都能转成它，跨平台部署更方便。"
+      },
+      {
+        "title": "标准集装箱",
+        "content": "不同工厂生产的货物包装不一样，装到标准集装箱里，全球的港口、货车都能运输。ONNX就是AI模型的标准集装箱。总结：ONNX解决了不同框架模型不兼容的问题，让模型部署更灵活。"
+      },
+      {
+        "title": "普通话通用语",
+        "content": "各地说方言互相听不懂，都说普通话就能顺畅交流。ONNX就像AI模型界的普通话，各个框架都支持。总结：ONNX是模型部署的常用中间格式，方便在不同硬件和引擎上推理。"
+      }
+    ],
+    "aiExample": "AI模型部署时，通常会把PyTorch等框架训练的模型转成ONNX格式，再在不同的推理引擎和硬件上运行。",
+    "relatedTerms": ["TensorRT", "推理成本", "Quantization", "模型部署"]
+  },
+  {
+    "id": "214",
+    "term": "LangGraph",
+    "aliases": ["LangGraph框架", "多智能体框架"],
+    "category": "AI开发技术",
+    "translation": {
+      "english": "LangGraph",
+      "chinese": "LangGraph 智能体框架"
+    },
+    "professionalExplanation": "LangGraph是LangChain推出的智能体开发框架，用来搭建有状态、多步骤的AI Agent和多智能体系统，适合做复杂工作流。",
+    "lifeExamples": [
+      {
+        "title": "工作流流程图",
+        "content": "简单任务一步就能做完，复杂任务要分多个步骤、有分支判断、循环执行，画成流程图才清楚。LangGraph就是用来画AI工作流的。总结：LangGraph用图的方式定义AI的工作步骤和分支，适合做复杂的多步智能体任务。"
+      },
+      {
+        "title": "公司部门协作流程",
+        "content": "一个人干不了所有事，多个部门协作，每个部门负责一个环节，按流程一步步推进。LangGraph适合搭建多智能体协作系统。总结：LangGraph支持多智能体、有状态、循环执行，能实现更复杂的AI自动化流程。"
+      },
+      {
+        "title": "流水线生产工序",
+        "content": "产品不是一步做出来的，要经过多道工序，有的工序要反复打磨，合格了才进入下一关。总结：LangGraph是目前开发AI Agent和复杂工作流的主流框架之一。"
+      }
+    ],
+    "aiExample": "开发复杂AI Agent、多智能体系统、自动化工作流时，LangGraph是常用的框架，支持状态管理、循环、分支等复杂逻辑。",
+    "relatedTerms": ["LangChain", "Agent", "Multi-Agent", "RAG"]
+  },
+  {
+    "id": "215",
+    "term": "DSPy",
+    "aliases": ["DSPy框架", "提示词编程框架"],
+    "category": "AI开发技术",
+    "translation": {
+      "english": "DSPy",
+      "chinese": "DSPy 提示编程框架"
+    },
+    "professionalExplanation": "DSPy是用编程方式优化提示词的框架，不用手动调提示词，它会自动优化Prompt和流程，提升AI任务的准确率。",
+    "lifeExamples": [
+      {
+        "title": "自动优化的生产流程",
+        "content": "传统方式靠老师傅手动调参数，自动化系统会自己测试、优化参数，找到最优的生产方案。DSPy就是自动优化AI流程的。总结：DSPy不用人工反复改提示词，它会自动优化提示和流程，找到最优方案。"
+      },
+      {
+        "title": "考试自动刷题提分",
+        "content": "学生自己瞎刷题提升慢，有系统帮你找薄弱点、优化学习方法，分数提升更快。DSPy就是帮AI优化答题方式的。总结：DSPy把提示词工程变成可编程、可优化的程序，效果更稳定，迭代更快。"
+      },
+      {
+        "title": "自动驾驶调校",
+        "content": "手动调车的参数很考验经验，智能调校系统会自动测试不同参数，找到最佳的驾驶配置。总结：DSPy适合做复杂的AI流水线，能自动优化提示词和模块，减少人工调优成本。"
+      }
+    ],
+    "aiExample": "DSPy将提示词工程升级为编程式优化，能自动调优Prompt和管道，适合构建稳定、可迭代的AI应用。",
+    "relatedTerms": ["Prompt Engineering", "LangChain", "RAG", "大模型应用开发"]
+  },
+  {
+    "id": "216",
+    "term": "Kafka",
+    "aliases": ["Kafka消息队列", "消息中间件"],
+    "category": "软件开发",
+    "translation": {
+      "english": "Apache Kafka",
+      "chinese": "Kafka 消息队列"
+    },
+    "professionalExplanation": "Kafka是高吞吐量的消息队列，用来在系统之间传递数据，削峰填谷，适合大数据、高并发的场景。",
+    "lifeExamples": [
+      {
+        "title": "快递中转站",
+        "content": "快递直接从发件人送到收件人，高峰期会堵；先送到中转站，再统一配送，就平稳很多。Kafka就像系统里的数据中转站。总结：Kafka用来缓存和传递消息，缓解高峰期的压力，让系统更稳定。"
+      },
+      {
+        "title": "水库蓄水池",
+        "content": "雨季雨水太大容易涝，水库存起来，旱季慢慢放水，供水就平稳了。Kafka就像系统里的数据蓄水池。总结：Kafka可以削峰填谷，让高并发的数据平稳地被后端系统处理。"
+      },
+      {
+        "title": "广播电视台",
+        "content": "电视台播出节目，所有观众都能收看，不用一个个通知。Kafka支持发布订阅模式，一条消息多个系统都能收到。总结：Kafka是大数据和高并发系统的常用组件，用来做消息传递和流处理。"
+      }
+    ],
+    "aiExample": "大规模AI平台常用Kafka做消息队列，处理用户请求、日志数据、异步任务，保障系统在高并发下稳定运行。",
+    "relatedTerms": ["RabbitMQ", "微服务", "后端开发", "大数据"]
+  },
+  {
+    "id": "217",
+    "term": "RabbitMQ",
+    "aliases": ["RabbitMQ消息队列", "兔子MQ"],
+    "category": "软件开发",
+    "translation": {
+      "english": "RabbitMQ",
+      "chinese": "RabbitMQ 消息队列"
+    },
+    "professionalExplanation": "RabbitMQ是轻量级的消息队列，功能丰富、部署简单，适合做业务系统的异步任务、消息通知。",
+    "lifeExamples": [
+      {
+        "title": "小区快递柜",
+        "content": "快递员直接上门没人在家就白跑，放快递柜里，用户有空了自己取，效率更高。RabbitMQ就像系统里的快递柜。总结：RabbitMQ把不用立刻处理的任务存起来，后台慢慢处理，提升系统响应速度。"
+      },
+      {
+        "title": "餐厅传菜口",
+        "content": "后厨做好菜直接喊服务员，忙的时候容易乱；放传菜口，服务员按顺序取，就井井有条。总结：RabbitMQ适合做业务异步解耦，让前端响应更快，后端平稳处理。"
+      },
+      {
+        "title": "公司内部信箱",
+        "content": "有事直接找人可能不在，放内部信箱里，对方看到了就处理，不用一直等。总结：RabbitMQ部署简单、功能灵活，是中小型业务系统常用的消息中间件。"
+      }
+    ],
+    "aiExample": "普通AI应用的异步任务、通知推送常用RabbitMQ，部署简单、功能完善，满足大部分业务场景需求。",
+    "relatedTerms": ["Kafka", "微服务", "后端开发", "异步任务"]
+  },
+  {
+    "id": "218",
+    "term": "CI/CD",
+    "aliases": ["持续集成持续部署", "CI/CD流水线"],
+    "category": "软件开发",
+    "translation": {
+      "english": "Continuous Integration / Continuous Deployment",
+      "chinese": "持续集成 / 持续部署"
+    },
+    "professionalExplanation": "CI/CD是自动化的软件开发流程，代码提交后自动构建、测试、部署，不用手动操作，提升开发效率。",
+    "lifeExamples": [
+      {
+        "title": "自动化生产线",
+        "content": "以前产品做好要人工检测、包装、发货，现在流水线自动完成，原料放进去，成品直接出来。CI/CD就是软件的自动化生产线。总结：CI/CD让代码提交后自动构建、测试、部署，减少人工操作，提升发布效率。"
+      },
+      {
+        "title": "自助点餐出餐流程",
+        "content": "顾客手机点单，订单自动传到后厨，做好了自动叫号取餐，全程不用服务员录单传话。CI/CD就是类似的自动化流程。总结：CI/CD可以实现软件的快速迭代和安全发布，减少人为失误。"
+      },
+      {
+        "title": "自动装配线",
+        "content": "零件放上去，自动组装、检测、打包，全程自动化，速度快、出错少。CI/CD就是软件的自动装配线。总结：CI/CD是现代软件开发的标配，能大幅提升团队的开发和交付效率。"
+      }
+    ],
+    "aiExample": "AI应用开发也会用CI/CD流水线，实现模型更新、代码变更的自动测试和部署，提升迭代效率和稳定性。",
+    "relatedTerms": ["DevOps", "Docker", "Kubernetes", "后端开发"]
+  },
+  {
+    "id": "219",
+    "term": "DevOps",
+    "aliases": ["开发运维", "运维开发"],
+    "category": "软件开发",
+    "translation": {
+      "english": "DevOps",
+      "chinese": "开发运维一体化"
+    },
+    "professionalExplanation": "DevOps是开发和运维协作的工作模式，用自动化工具提升部署效率，保障系统稳定，让软件发布更快更可靠。",
+    "lifeExamples": [
+      {
+        "title": "餐厅前后台配合",
+        "content": "以前后厨和前厅各干各的，经常配合不好；DevOps就像让前后台协作，统一流程，出餐更快、失误更少。总结：DevOps打通开发和运维，让软件发布更快、系统更稳定。"
+      },
+      {
+        "title": "工厂的精益生产",
+        "content": "生产和维修分开，经常停工修机器；精益生产让两边配合，边生产边维护，效率更高、停机更少。总结：DevOps模式下，开发和运维协同工作，持续优化系统和发布流程。"
+      },
+      {
+        "title": "城市交通管理",
+        "content": "修路的和管交通的各干各的，容易堵车；协同起来，修路时规划好绕行方案，交通就顺畅了。总结：DevOps是现代IT团队的标准工作模式，兼顾效率和稳定性。"
+      }
+    ],
+    "aiExample": "AI平台的运维和发布也遵循DevOps理念，结合容器化和自动化工具，实现模型和服务的快速、稳定迭代。",
+    "relatedTerms": ["CI/CD", "Docker", "Kubernetes", "云原生"]
+  },
+  {
+    "id": "220",
+    "term": "GraphQL",
+    "aliases": ["GraphQL接口", "图查询语言"],
+    "category": "软件开发",
+    "translation": {
+      "english": "GraphQL",
+      "chinese": "GraphQL 查询语言"
+    },
+    "professionalExplanation": "GraphQL是一种API查询语言，前端可以按需请求数据，要什么字段返回什么，不用像REST接口那样返回固定内容。",
+    "lifeExamples": [
+      {
+        "title": "自助选餐 vs 固定套餐",
+        "content": "普通套餐是固定搭配，不想吃的也给你；自助选餐想吃什么拿什么，刚好满足需求。GraphQL就像API里的自助选餐。总结：GraphQL让前端按需取数据，要什么要多少自己定，减少冗余数据。"
+      },
+      {
+        "title": "定制化点餐",
+        "content": "普通餐厅菜单是固定菜品，定制餐厅可以按你的要求搭配食材、调整口味，完全按需求做。总结：GraphQL灵活度高，一次请求可以获取多个资源，适合复杂的前端应用。"
+      },
+      {
+        "title": "图书馆按需借书",
+        "content": "固定礼包会给你一堆用不上的书，按需借书想借哪本借哪本，刚好是你需要的。总结：GraphQL相比REST更灵活，能减少请求次数和数据冗余。"
+      }
+    ],
+    "aiExample": "一些复杂的AI前端应用会用GraphQL做接口，灵活获取数据，提升前端性能和开发效率。",
+    "relatedTerms": ["RESTful API", "后端开发", "前端开发", "gRPC"]
+  },
+  {
+    "id": "221",
+    "term": "gRPC",
+    "aliases": ["gRPC接口", "远程过程调用"],
+    "category": "软件开发",
+    "translation": {
+      "english": "gRPC",
+      "chinese": "gRPC 远程调用框架"
+    },
+    "professionalExplanation": "gRPC是高性能的远程调用框架，传输快、体积小，适合微服务之间的内部高性能通信。",
+    "lifeExamples": [
+      {
+        "title": "专线内部电话",
+        "content": "普通电话走公网，慢还不稳定；内部专线电话速度快、延迟低，专门给内部沟通用。gRPC就像系统内部的专线通信。总结：gRPC性能高、延迟低，适合微服务内部之间的高频通信。"
+      },
+      {
+        "title": "快递加急件",
+        "content": "普通快递便宜但慢，加急件速度快、效率高，适合重要紧急的文件。gRPC就像接口里的加急件，性能更强。总结：gRPC基于HTTP/2和Protobuf，传输效率比普通REST接口高很多。"
+      },
+      {
+        "title": "工厂内部传送带",
+        "content": "外部运输用货车，慢但灵活；车间内部用传送带，速度快、效率高，适合固定点位的运输。总结：gRPC适合高性能的内部服务调用，是微服务架构的常用通信方式。"
+      }
+    ],
+    "aiExample": "AI平台内部的微服务之间常用gRPC通信，性能高、延迟低，适合高频的模型调用和数据传输。",
+    "relatedTerms": ["RESTful API", "微服务", "后端开发", "Kubernetes"]
+  },
+  {
+    "id": "222",
+    "term": "智能审核",
+    "aliases": ["AI审核", "内容审核", "智能内容审核"],
+    "category": "企业AI",
+    "translation": {
+      "english": "AI Content Moderation",
+      "chinese": "AI智能内容审核"
+    },
+    "professionalExplanation": "智能审核用AI自动检查图片、文字、视频内容，识别违规、低俗、违法信息，比人工审核速度快、成本低。",
+    "lifeExamples": [
+      {
+        "title": "车站安检机",
+        "content": "人工开包检查速度慢，安检机扫一下就知道有没有违禁品，速度快还不漏检。智能审核就像内容的安检机。总结：智能审核自动识别违规内容，速度快、成本低，能处理海量内容。"
+      },
+      {
+        "title": "质检员筛查次品",
+        "content": "人工一个个看内容效率低，AI先批量筛查出可疑内容，人工再审重点，效率提升很多倍。总结：智能审核先粗筛，人工再复核，兼顾效率和准确率。"
+      },
+      {
+        "title": "收费站ETC自动扣费",
+        "content": "人工收费车道慢，ETC自动识别扣费，车不用停就能通过，通行效率高很多。总结：智能审核广泛用于社交、视频、电商平台，保障内容合规。"
+      }
+    ],
+    "aiExample": "互联网平台常用AI智能审核来处理海量的用户内容，识别违规信息，降低人工审核成本，提升审核效率。",
+    "relatedTerms": ["CV", "NLP", "内容风控", "企业AI"]
+  },
+  {
+    "id": "223",
+    "term": "内容风控",
+    "aliases": ["内容安全", "风控审核", "内容风险控制"],
+    "category": "企业AI",
+    "translation": {
+      "english": "Content Risk Control",
+      "chinese": "内容风控"
+    },
+    "professionalExplanation": "内容风控是对平台的文字、图片、视频内容做风险管控，识别违规、有害信息，保障平台合规和用户安全。",
+    "lifeExamples": [
+      {
+        "title": "小区安保系统",
+        "content": "小区不能什么人都进，安保要识别可疑人员、危险物品，保障小区居民的安全。内容风控就是平台的安保系统。总结：内容风控识别和拦截违规内容，保障平台合规，保护用户不受不良信息侵害。"
+      },
+      {
+        "title": "食品安全检测",
+        "content": "食品上市前要做安全检测，不合格的不能卖，保障消费者健康。内容风控就是做内容的安全检测。总结：内容风控是互联网平台的必备能力，关系到平台的合规和用户体验。"
+      },
+      {
+        "title": "机场安检体系",
+        "content": "机场有多层安检，从行李到人都要检查，确保没有危险品，保障飞行安全。内容风控也是多层级的风险管控。总结：AI内容风控结合多种模型和策略，实现多维度的内容安全管控。"
+      }
+    ],
+    "aiExample": "内容风控是互联网平台的核心合规能力，AI技术能大幅提升风控的效率和覆盖率，降低违规风险。",
+    "relatedTerms": ["智能审核", "NLP", "CV", "企业AI"]
+  },
+  {
+    "id": "224",
+    "term": "智能外呼",
+    "aliases": ["AI外呼", "智能电话机器人", "AI外呼系统"],
+    "category": "企业AI",
+    "translation": {
+      "english": "AI Outbound Call",
+      "chinese": "智能外呼"
+    },
+    "professionalExplanation": "智能外呼是用AI机器人自动打电话，能和人语音对话，用来做通知、回访、营销，效率比人工高很多。",
+    "lifeExamples": [
+      {
+        "title": "批量通知专员",
+        "content": "要给几百个客户打电话通知，人工打一天都打不完，AI机器人一小时就能打完，还能记录结果。总结：智能外呼可以批量自动打电话，做通知、回访、提醒类工作，效率很高。"
+      },
+      {
+        "title": "初级电销专员",
+        "content": "电销前期筛选客户很费时间，AI机器人先打一遍，筛选出有意向的客户，再交给人工跟进。总结：智能外呼适合做初筛和通知类工作，节省人力，提升效率。"
+      },
+      {
+        "title": "自动回访客服",
+        "content": "服务完要给客户做满意度回访，人工打量太大，AI自动打回访电话，收集意见，统计结果。总结：智能外呼广泛用于客服、营销、政务通知等场景，大幅降低人工成本。"
+      }
+    ],
+    "aiExample": "智能外呼结合ASR、TTS和大模型，能实现自然的人机语音对话，是企业降本增效的常用AI工具。",
+    "relatedTerms": ["TTS", "STT", "数字员工", "AI客服"]
+  },
+  {
+    "id": "225",
+    "term": "AI法律助手",
+    "aliases": ["智能法律助手", "法律AI", "AI法律顾问"],
+    "category": "垂直AI应用",
+    "translation": {
+      "english": "AI Legal Assistant",
+      "chinese": "AI法律助手"
+    },
+    "professionalExplanation": "AI法律助手是垂直法律领域的AI工具，能查法条、写合同、分析案例，辅助律师和法务提高工作效率。",
+    "lifeExamples": [
+      {
+        "title": "法律资料助理",
+        "content": "律师找法条、查案例要翻很多资料，AI助手一秒就能搜到相关法条和判例，还能整理要点。总结：AI法律助手能快速检索法律资料，提升法务工作的效率。"
+      },
+      {
+        "title": "合同模板生成器",
+        "content": "写合同要一条条抠条款，AI助手根据需求自动生成合同初稿，法务再修改审核，节省大量时间。总结：AI法律助手可以起草合同、审查风险，辅助法务人员工作。"
+      },
+      {
+        "title": "法律咨询顾问",
+        "content": "普通人有法律问题不知道怎么办，AI法律助手可以解答基础法律问题，给出初步的建议。总结：AI法律助手主要起辅助作用，正式法律意见还是需要专业律师出具。"
+      }
+    ],
+    "aiExample": "AI法律助手结合法律知识图谱和RAG技术，能精准检索法条和案例，是法务从业者的效率工具。",
+    "relatedTerms": ["RAG", "知识图谱", "企业AI", "垂直大模型"]
+  },
+  {
+    "id": "226",
+    "term": "AI招聘",
+    "aliases": ["智能招聘", "AI招聘助手", "智能HR"],
+    "category": "垂直AI应用",
+    "translation": {
+      "english": "AI Recruiting",
+      "chinese": "AI智能招聘"
+    },
+    "professionalExplanation": "AI招聘是用AI辅助招聘工作，自动筛选简历、初面候选人、分析匹配度，提升HR的招聘效率。",
+    "lifeExamples": [
+      {
+        "title": "简历初筛专员",
+        "content": "招聘收到上千份简历，HR挨个看要很久，AI先按岗位要求筛选出符合条件的，HR再重点看。总结：AI招聘能快速筛选海量简历，提升招聘效率，减轻HR负担。"
+      },
+      {
+        "title": "初面面试官",
+        "content": "第一轮面试都是问基础问题，AI机器人先做视频初面，评估候选人基础能力，再推荐给HR复试。总结：AI招聘可以做初面和基础评估，节省HR的时间。"
+      },
+      {
+        "title": "人岗匹配分析师",
+        "content": "人工判断候选人匹配度比较主观，AI根据岗位要求和候选人经历做客观分析，给出匹配评分。总结：AI招聘能提升招聘效率和客观性，但最终录用还是需要人工决策。"
+      }
+    ],
+    "aiExample": "AI招聘工具可以完成简历筛选、初面、人岗匹配等重复性工作，帮助HR把精力放在更核心的招聘环节。",
+    "relatedTerms": ["NLP", "企业AI", "数字员工", "RPA"]
+  },
+  {
+    "id": "227",
+    "term": "AI写作",
+    "aliases": ["人工智能写作", "智能写作", "AI文案生成"],
+    "category": "普通用户AI应用",
+    "translation": {
+      "english": "AI Writing",
+      "chinese": "AI智能写作"
+    },
+    "professionalExplanation": "AI写作就是用AI生成文字内容，写文章、文案、报告、邮件都可以，能提升写作效率，激发创作灵感。",
+    "lifeExamples": [
+      {
+        "title": "写作助理搭框架",
+        "content": "写文章半天开不了头，AI先帮你写大纲、写初稿，你再修改润色，快很多还不卡壳。总结：AI写作可以帮你快速产出初稿，打破写作瓶颈，提升效率。"
+      },
+      {
+        "title": "多风格文案写手",
+        "content": "写文案要试很多风格，AI可以一次生成正式的、活泼的、文艺的多个版本，你选最合适的。总结：AI写作能快速生成不同风格的内容，帮你拓宽创作思路。"
+      },
+      {
+        "title": "翻译润色专员",
+        "content": "写完的文章想改语气、扩写、缩写、翻译成外语，AI都能快速帮你处理好。总结：AI写作是内容创作者、职场人的常用效率工具，但重要内容需要人工审核。"
+      }
+    ],
+    "aiExample": "AI写作是目前最普及的AI应用之一，覆盖文案、文章、邮件、报告等多种写作场景，大幅提升文字产出效率。",
+    "relatedTerms": ["ChatGPT", "Notion AI", "WPS AI", "AIGC"]
+  },
+  {
+    "id": "228",
+    "term": "音频降噪",
+    "aliases": ["AI降噪", "智能降噪", "音频去噪"],
+    "category": "音视频工具",
+    "translation": {
+      "english": "AI Audio Denoising",
+      "chinese": "AI音频降噪"
+    },
+    "professionalExplanation": "音频降噪用AI去除音频里的背景噪音、回声，保留清晰的人声，让录音、通话的声音更干净。",
+    "lifeExamples": [
+      {
+        "title": "录音棚隔音效果",
+        "content": "普通房间录音有回声和背景噪音，录音棚隔音好，录出来的人声干净清晰。AI降噪就能达到类似的效果。总结：AI降噪可以去掉背景杂音、环境噪音，让人声更清晰干净。"
+      },
+      {
+        "title": "耳机通话降噪",
+        "content": "大街上打电话对方听不清，带降噪的耳机能去掉马路噪音，对方只听到你的说话声。总结：AI降噪广泛用于耳机、会议软件、录音工具，提升语音清晰度。"
+      },
+      {
+        "title": "照片去杂点",
+        "content": "老照片有很多噪点，修复后画面干净清晰。音频降噪就是给声音“去噪点”。总结：AI降噪能有效提升音频质量，是录音、直播、会议的常用功能。"
+      }
+    ],
+    "aiExample": "AI音频降噪技术已经很成熟，会议软件、录音笔、剪辑软件里基本都内置了这个功能，提升语音清晰度。",
+    "relatedTerms": ["TTS", "STT", "Whisper", "音视频工具"]
+  },
+  {
+    "id": "229",
+    "term": "SRT字幕",
+    "aliases": ["SRT文件", "srt字幕格式"],
+    "category": "音视频工具",
+    "translation": {
+      "english": "SubRip Subtitle",
+      "chinese": "SRT 字幕格式"
+    },
+    "professionalExplanation": "SRT是最常用的字幕文件格式，纯文本格式，记录字幕的时间和文字，几乎所有播放器和剪辑软件都支持。",
+    "lifeExamples": [
+      {
+        "title": "通用的台词本",
+        "content": "每个电影都有台词本，SRT就是标准格式的台词本，带时间戳，播放器能自动对应画面显示。总结：SRT是最通用的字幕格式，兼容性好，几乎所有视频工具都支持。"
+      },
+      {
+        "title": "带时间的剧本",
+        "content": "剧本只有台词，带时间的剧本会标清楚第几秒说什么话，SRT就是这样带时间戳的字幕文件。总结：SRT文件记录了每句字幕的开始、结束时间和文字内容，格式简单。"
+      },
+      {
+        "title": "标准的字幕纸条",
+        "content": "不同的字幕格式就像不同规格的纸条，SRT是最通用的规格，所有播放器都能识别。总结：AI转录生成的字幕通常会导出SRT格式，方便导入剪辑软件使用。"
+      }
+    ],
+    "aiExample": "AI自动生成字幕时，最常导出的就是SRT格式，可以直接导入剪映、PR等剪辑软件，也可以用播放器挂载。",
+    "relatedTerms": ["转录", "字幕", "Whisper", "FFmpeg"]
+  },
+  {
+    "id": "230",
+    "term": "向量检索",
+    "aliases": ["向量搜索", "相似度检索", "近似最近邻搜索"],
+    "category": "AI开发技术",
+    "translation": {
+      "english": "Vector Search",
+      "chinese": "向量检索"
+    },
+    "professionalExplanation": "向量检索是通过计算向量相似度来查找相关内容的技术，是语义搜索和RAG的核心基础，能快速找到含义相近的内容。",
+    "lifeExamples": [
+      {
+        "title": "找相似的衣服",
+        "content": "普通搜索只能按关键词找，向量检索能按“风格”“感觉”找，找出和你喜欢的款式相似的衣服。总结：向量检索是按语义相似度搜索，不用关键词完全匹配，也能找到含义相关的内容。"
+      },
+      {
+        "title": "人脸识别找同款",
+        "content": "人脸识别不是比对名字，是比对面部特征相似度，找出最像的人。向量检索就是比对向量的相似度。总结：向量检索计算内容之间的特征相似度，实现语义级别的搜索。"
+      },
+      {
+        "title": "图书馆找同类书",
+        "content": "普通检索按书名找，向量检索能按内容主题找，找出和这本书主题相近的其他书。总结：向量检索是语义搜索、推荐系统、RAG的核心技术基础。"
+      }
+    ],
+    "aiExample": "向量数据库的核心就是向量检索技术，通过近似最近邻算法，在海量向量中快速找到最相似的内容。",
+    "relatedTerms": ["Vector Database", "Embedding", "RAG", "语义搜索"]
+  },
+  {
+    "id": "231",
+    "term": "近似最近邻",
+    "aliases": ["ANN", "Approximate Nearest Neighbor", "ANN检索"],
+    "category": "AI开发技术",
+    "translation": {
+      "english": "Approximate Nearest Neighbor",
+      "chinese": "近似最近邻搜索"
+    },
+    "professionalExplanation": "近似最近邻是向量检索的核心算法，牺牲一点点准确率，换取极快的检索速度，适合海量向量数据的搜索。",
+    "lifeExamples": [
+      {
+        "title": "快速找最近的快递柜",
+        "content": "挨个算所有快递柜的距离太慢，先按片区缩小范围，再在片区里找最近的，快很多，误差也很小。总结：近似最近邻用快速筛选的方法，在海量数据里快速找到相近的结果。"
+      },
+      {
+        "title": "查字典先翻部首",
+        "content": "挨个翻页找字太慢，先按部首或拼音定位到大概位置，再仔细找，速度快很多。总结：ANN算法通过索引结构，大幅提升向量检索的速度，适合大数据量场景。"
+      },
+      {
+        "title": "找邻居先看小区",
+        "content": "全城找人太慢，先确定小区，再在小区里找，速度快很多，也基本不会找错。总结：近似最近邻是向量数据库的核心算法，兼顾速度和准确率。"
+      }
+    ],
+    "aiExample": "主流向量数据库都采用ANN近似最近邻算法，实现亿级向量的毫秒级检索，是RAG系统的性能基础。",
+    "relatedTerms": ["向量检索", "Vector Database", "RAG", "HNSW"]
+  },
+  {
+    "id": "232",
+    "term": "HNSW",
+    "aliases": ["分层导航小世界", "HNSW算法"],
+    "category": "AI开发技术",
+    "translation": {
+      "english": "Hierarchical Navigable Small World",
+      "chinese": "分层导航小世界算法"
+    },
+    "professionalExplanation": "HNSW是目前最流行的ANN算法之一，用多层图结构做向量索引，检索速度快、准确率高，很多向量数据库都在用。",
+    "lifeExamples": [
+      {
+        "title": "高速公路加城市道路",
+        "content": "只有小路开车慢，先跑高速快速到附近，再走小路到具体地点，又快又准。HNSW就是多层级的路径结构。总结：HNSW用多层图结构，从粗到精逐层查找，速度快、准确率高。"
+      },
+      {
+        "title": "从省到市到区的定位",
+        "content": "找地址先找哪个省，再找市、区、街道，逐层缩小范围，比一条条找快很多。总结：HNSW通过分层导航，实现高效的近似最近邻检索。"
+      },
+      {
+        "title": "机场快线转地铁",
+        "content": "从机场到市区先坐快线快速到市中心，再转地铁到具体站点，整体效率最高。总结：HNSW是目前性能最好的向量检索算法之一，被广泛应用在向量数据库中。"
+      }
+    ],
+    "aiExample": "HNSW是当前主流的向量索引算法，Milvus、Pinecone等主流向量数据库都支持HNSW索引，检索性能优异。",
+    "relatedTerms": ["近似最近邻", "向量检索", "Vector Database", "Milvus"]
+  },
+  {
+    "id": "233",
+    "term": "Embedding",
+    "aliases": ["嵌入", "向量嵌入", "向量化"],
+    "category": "AI基础概念",
+    "translation": {
+      "english": "Embedding",
+      "chinese": "嵌入 / 向量化"
+    },
+    "professionalExplanation": "Embedding是把文字、图片等内容转换成一串数字向量，用向量来表示内容的语义特征，方便计算机计算相似度。",
+    "lifeExamples": [
+      {
+        "title": "给人贴特征标签",
+        "content": "描述一个人很麻烦，给他贴“年龄、身高、性格、爱好”等标签，用一组数值代表这个人，就方便比较相似程度。总结：Embedding就是把内容转换成一组数字特征，方便计算机理解和计算相似度。"
+      },
+      {
+        "title": "商品的参数表",
+        "content": "描述一个商品说半天，列成参数表（价格、尺寸、材质、风格）就一目了然，还方便对比相似商品。总结：Embedding向量就像内容的“参数表”，包含了语义特征信息。"
+      },
+      {
+        "title": "坐标定位位置",
+        "content": "描述一个地方在哪说不清楚，用经纬度两个数字就能精确定位，还能算两个地方的距离。总结：Embedding把内容映射到向量空间，相似度可以通过距离计算出来。"
+      }
+    ],
+    "aiExample": "语义搜索、RAG、推荐系统的基础都是Embedding，把内容向量化后才能做相似度计算和语义匹配。",
+    "relatedTerms": ["向量检索", "Embedding Model", "RAG", "语义搜索"]
+  },
+  {
+    "id": "234",
+    "term": "Token",
+    "aliases": ["令牌", "词元", "Token单位"],
+    "category": "AI基础概念",
+    "translation": {
+      "english": "Token",
+      "chinese": "Token / 词元"
+    },
+    "professionalExplanation": "Token是大模型处理文字的最小单位，大概是半个到一个汉字，模型的计费、上下文长度都按Token计算。",
+    "lifeExamples": [
+      {
+        "title": "文字的积木块",
+        "content": "句子不是一个字一个字处理的，而是拆成一个个小积木块，每个积木块就是一个Token。总结：Token是模型处理文字的基本单位，比单个字略大一点。"
+      },
+      {
+        "title": "计费的字数单位",
+        "content": "就像短信按条计费、通话按分钟计费，大模型按Token计费，用多少Token收多少钱。总结：大模型的API调用费用、上下文长度，都是按Token来计算的。"
+      },
+      {
+        "title": "文章的段落碎片",
+        "content": "一篇文章拆成很多小片段，每个片段就是一个Token，模型一个个处理这些片段。总结：通常1个汉字大约对应1.5个Token，英文一个单词大概对应1个Token。"
+      }
+    ],
+    "aiExample": "大模型的输入输出都以Token为单位，上下文窗口大小、API计费都是按Token数量来计算的。",
+    "relatedTerms": ["Tokenizer", "上下文窗口", "推理成本", "LLM"]
+  },
+  {
+    "id": "235",
+    "term": "Transformer",
+    "aliases": ["Transformer架构", "Transformer模型"],
+    "category": "AI基础概念",
+    "translation": {
+      "english": "Transformer",
+      "chinese": "Transformer 架构"
+    },
+    "professionalExplanation": "Transformer是现在大模型的核心基础架构，基于自注意力机制，并行能力强，能很好地处理长文本，是GPT、BERT等模型的基础。",
+    "lifeExamples": [
+      {
+        "title": "大楼的地基结构",
+        "content": "高楼都是用钢筋混凝土框架结构盖的，这种结构稳固、能盖很高。Transformer就是AI模型里的主流框架结构。总结：Transformer是当前大模型的主流基础架构，几乎所有主流大模型都基于它。"
+      },
+      {
+        "title": "汽车的底盘平台",
+        "content": "同一款底盘平台，可以造出不同型号的轿车、SUV，性能都很稳定。Transformer就是AI模型的通用底盘。总结：Transformer架构通用性强、效果好，支撑了NLP、CV、语音等多个AI领域的突破。"
+      },
+      {
+        "title": "工厂的流水线架构",
+        "content": "老式生产线是串行的，慢还容易卡；新的流水线架构并行能力强、效率高，产能大。Transformer就是高效的AI计算架构。总结：Transformer的自注意力机制让模型能更好地理解上下文，并行计算效率也更高。"
+      }
+    ],
+    "aiExample": "Transformer是2017年提出的架构，现在已经成为大语言模型、多模态模型的核心基础，是AI爆发的技术基石。",
+    "relatedTerms": ["Attention", "LLM", "GPT", "BERT"]
+  },
+  {
+    "id": "236",
+    "term": "BERT",
+    "aliases": ["BERT模型", "预训练语言模型"],
+    "category": "AI基础概念",
+    "translation": {
+      "english": "BERT",
+      "chinese": "BERT 预训练模型"
+    },
+    "professionalExplanation": "BERT是经典的预训练语言模型，擅长理解文本含义，常用于分类、搜索、情感分析等理解类任务。",
+    "lifeExamples": [
+      {
+        "title": "阅读理解高手",
+        "content": "有的学生擅长写作文，有的擅长做阅读理解。BERT就像AI里的阅读理解高手，特别懂文字的含义。总结：BERT擅长理解文本语义，适合做分类、检索、情感分析等理解类任务。"
+      },
+      {
+        "title": "语文阅读题老师",
+        "content": "写作老师教写文章，阅读老师帮你分析文章含义、中心思想。BERT就是专门做文本理解的。总结：BERT是早期预训练模型的代表，开启了NLP的预训练时代。"
+      },
+      {
+        "title": "内容审核员",
+        "content": "审核员要读懂文字的意思，判断是正面还是负面、有没有违规。BERT很适合做这类理解判断工作。总结：BERT在文本分类、语义匹配、命名实体识别等任务上表现出色。"
+      }
+    ],
+    "aiExample": "BERT是双向预训练语言模型的代表，在很多NLP理解任务上效果很好，是很多行业NLP应用的基础。",
+    "relatedTerms": ["Transformer", "NLP", "预训练", "GPT"]
+  },
+  {
+    "id": "237",
+    "term": "梯度下降",
+    "aliases": ["Gradient Descent", "梯度下降法"],
+    "category": "AI基础概念",
+    "translation": {
+      "english": "Gradient Descent",
+      "chinese": "梯度下降"
+    },
+    "professionalExplanation": "梯度下降是AI模型训练的核心方法，一步步调整模型参数，让误差越来越小，最终得到效果好的模型。",
+    "lifeExamples": [
+      {
+        "title": "下山找最低点",
+        "content": "蒙着眼下山，每次往最陡的方向走一步，慢慢就能走到山底。梯度下降就是让模型一步步走到误差最小的点。总结：梯度下降每次朝着误差减小的方向调整参数，逐步让模型效果变好。"
+      },
+      {
+        "title": "试错调参数",
+        "content": "调收音机频道，一点点转旋钮，听到声音最清晰的地方就停下。梯度下降就是一点点调参数，找到误差最小的位置。总结：梯度下降是模型训练的基础算法，通过反复迭代优化模型参数。"
+      },
+      {
+        "title": "走迷宫找出口",
+        "content": "每次都往离出口更近的方向走，一步步靠近，最终就能走出迷宫。梯度下降就是往误差更小的方向逐步优化。总结：几乎所有深度学习模型的训练都用到了梯度下降算法。"
+      }
+    ],
+    "aiExample": "梯度下降是深度学习训练的核心算法，通过反向传播计算梯度，逐步更新参数，最小化模型的损失函数。",
+    "relatedTerms": ["反向传播", "损失函数", "Pre-training", "Fine-tuning"]
+  },
+  {
+    "id": "238",
+    "term": "损失函数",
+    "aliases": ["Loss Function", "目标函数", "代价函数"],
+    "category": "AI基础概念",
+    "translation": {
+      "english": "Loss Function",
+      "chinese": "损失函数"
+    },
+    "professionalExplanation": "损失函数是用来衡量模型预测结果和真实结果差多少的公式，数值越小说明模型越准确，是模型训练的指挥棒。",
+    "lifeExamples": [
+      {
+        "title": "考试扣分规则",
+        "content": "考试有评分标准，错多少扣多少分，分数越低说明错得越多。损失函数就是模型的“扣分规则”。总结：损失函数计算模型预测和真实值的差距，告诉模型差了多少、该往哪个方向改。"
+      },
+      {
+        "title": "导航的距离指示",
+        "content": "导航告诉你离目的地还有多远，越走数字越小，就说明走对了。损失函数就是告诉模型离目标还有多远。总结：损失函数是模型训练的目标，优化的方向就是让损失值越来越小。"
+      },
+      {
+        "title": "比赛的计分板",
+        "content": "比赛计分板显示分差，分差越大说明落后越多，要努力追分。损失值就像分差，越小说明模型越好。总结：不同的任务会用不同的损失函数，引导模型朝着目标优化。"
+      }
+    ],
+    "aiExample": "模型训练的目标就是最小化损失函数，通过梯度下降不断优化参数，让损失值逐步降低，模型效果越来越好。",
+    "relatedTerms": ["梯度下降", "反向传播", "Pre-training", "Fine-tuning"]
+  },
+  {
+    "id": "239",
+    "term": "反向传播",
+    "aliases": ["Backpropagation", "BP算法", "反向传播算法"],
+    "category": "AI基础概念",
+    "translation": {
+      "english": "Backpropagation",
+      "chinese": "反向传播算法"
+    },
+    "professionalExplanation": "反向传播是计算梯度的方法，从输出层往回算，求出每个参数对误差的影响，用来更新模型参数。",
+    "lifeExamples": [
+      {
+        "title": "考试后复盘错题",
+        "content": "考完试先看总分，再看哪道题错了，再追溯到哪个知识点没掌握，针对性改进。反向传播就是从结果往回找原因。总结：反向传播从输出误差往回计算，找到每个参数该怎么调整。"
+      },
+      {
+        "title": "生产线逆向追责",
+        "content": "产品出了问题，从成品往回查，是哪道工序出的错、哪个零件的问题，然后整改。总结：反向传播逐层计算误差的贡献，指导参数更新。"
+      },
+      {
+        "title": "迷路后倒推路线",
+        "content": "走错路到达目的地后，倒推是哪一步走错了，下次就知道该怎么走了。总结：反向传播是神经网络训练的核心算法，和梯度下降配合优化模型。"
+      }
+    ],
+    "aiExample": "反向传播是神经网络训练的核心算法，通过链式法则从后往前计算每个参数的梯度，再用梯度下降更新参数。",
+    "relatedTerms": ["梯度下降", "损失函数", "Neural Network", "深度学习"]
+  },
+  {
+    "id": "240",
+    "term": "泛化能力",
+    "aliases": ["Generalization", "模型泛化"],
+    "category": "AI基础概念",
+    "translation": {
+      "english": "Generalization",
+      "chinese": "泛化能力"
+    },
+    "professionalExplanation": "泛化能力是指模型在没见过的新数据上的表现能力，泛化好的模型，在真实场景中也能有好的效果。",
+    "lifeExamples": [
+      {
+        "title": "举一反三的学生",
+        "content": "有的学生只会做课本原题，换个题型就不会；有的学生能举一反三，没见过的题也能做对。后者泛化能力就强。总结：泛化能力强的模型，没见过的新数据也能处理好，不是只会背训练数据。"
+      },
+      {
+        "title": "适应新环境的能力",
+        "content": "有的人在熟悉的地方很能干，换个新环境就手足无措；有的人到哪都能快速适应。后者泛化能力强。总结：泛化能力决定了模型在真实场景中的实际效果。"
+      },
+      {
+        "title": "通用工具 vs 专用工具",
+        "content": "专用工具只能干一件事，通用工具在很多场景都能用，适用范围广。泛化好的模型适用范围更广。总结：泛化能力是衡量模型好坏的重要指标，比训练集上的准确率更重要。"
+      }
+    ],
+    "aiExample": "训练模型不仅要追求训练集上的准确率，更要提升泛化能力，这样在真实使用场景中才能有稳定的效果。",
+    "relatedTerms": ["Overfitting", "Underfitting", "数据增强", "Pre-training"]
+  },
+  {
+    "id": "241",
+    "term": "训练集",
+    "aliases": ["训练数据", "Training Set"],
+    "category": "AI基础概念",
+    "translation": {
+      "english": "Training Set",
+      "chinese": "训练集"
+    },
+    "professionalExplanation": "训练集是用来训练模型的数据，模型通过学习训练集里的数据，掌握规律，调整参数。",
+    "lifeExamples": [
+      {
+        "title": "课本练习题",
+        "content": "学生上课学课本、做练习题，通过这些内容学习知识和解题方法。训练集就是模型的课本和练习题。总结：训练集是模型学习的主要素材，用来让模型掌握规律。"
+      },
+      {
+        "title": "学徒练习用的材料",
+        "content": "学徒学手艺，先用练习材料反复练手，熟练了再做正式产品。训练集就是模型的练习材料。总结：模型在训练集上反复学习，调整参数，逐步提升效果。"
+      },
+      {
+        "title": "驾校练车场",
+        "content": "学车先在练车场练习，熟悉操作和规则。训练集就是模型的练车场，用来学习基础能力。总结：训练集的质量和数量，直接决定了模型的基础能力上限。"
+      }
+    ],
+    "aiExample": "大模型的训练集通常包含海量的文本、图片等数据，模型在训练集上学习知识和规律，形成基础能力。",
+    "relatedTerms": ["测试集", "验证集", "Pre-training", "数据标注"]
+  },
+  {
+    "id": "242",
+    "term": "测试集",
+    "aliases": ["测试数据", "Test Set"],
+    "category": "AI基础概念",
+    "translation": {
+      "english": "Test Set",
+      "chinese": "测试集"
+    },
+    "professionalExplanation": "测试集是用来检验模型最终效果的数据，训练时不会用到，用来模拟真实场景，评估模型的泛化能力。",
+    "lifeExamples": [
+      {
+        "title": "期末考试卷",
+        "content": "平时练习题都是见过的，期末考试用全新的卷子，才能真正考出学生学的怎么样。测试集就是模型的期末考试卷。总结：测试集在训练中完全不用，最后用来测试模型的真实水平。"
+      },
+      {
+        "title": "正式上岗考核",
+        "content": "学徒练习完了，要做正式产品考核，看看能不能达到上岗要求。测试集就是模型的上岗考核题。总结：测试集用来评估模型的泛化能力，反映模型在真实场景中的表现。"
+      },
+      {
+        "title": "驾照科目考试",
+        "content": "练车是在训练场，考试是在考场用全新的路线，才能考出真实的驾驶水平。总结：测试集必须是模型没见过的数据，才能准确评估模型的真实能力。"
+      }
+    ],
+    "aiExample": "模型训练完成后，用测试集评估最终效果，测试集上的表现更能反映模型在真实场景中的效果。",
+    "relatedTerms": ["训练集", "验证集", "泛化能力", "Overfitting"]
+  },
+  {
+    "id": "243",
+    "term": "验证集",
+    "aliases": ["验证数据", "Validation Set"],
+    "category": "AI基础概念",
+    "translation": {
+      "english": "Validation Set",
+      "chinese": "验证集"
+    },
+    "professionalExplanation": "验证集是训练过程中用来调参的数据集，边训练边验证效果，调整超参数，防止过拟合。",
+    "lifeExamples": [
+      {
+        "title": "模拟考试",
+        "content": "正式考试前，先做模拟卷，看看复习得怎么样，哪里薄弱补哪里，调整复习方法。验证集就是模型的模拟考卷。总结：训练过程中用验证集看效果，调整参数，避免模型学偏了。"
+      },
+      {
+        "title": "试生产抽检",
+        "content": "正式量产前，先试生产一批，抽检质量，调整机器参数，确保产品合格。验证集就是试生产的抽检样本。总结：验证集用来训练中调参和选模型，防止过拟合。"
+      },
+      {
+        "title": "彩排演练",
+        "content": "正式演出前先彩排，发现问题及时调整，保证正式演出不出错。验证集就是训练中的彩排。总结：验证集不参与训练，但用来指导训练过程中的参数调整。"
+      }
+    ],
+    "aiExample": "模型训练时通常会把数据分成训练集、验证集、测试集，分别用来训练、调参和最终评估。",
+    "relatedTerms": ["训练集", "测试集", "Fine-tuning", "Overfitting"]
+  },
+  {
+    "id": "244",
+    "term": "超参数",
+    "aliases": ["Hyperparameter", "模型超参"],
+    "category": "AI基础概念",
+    "translation": {
+      "english": "Hyperparameter",
+      "chinese": "超参数"
+    },
+    "professionalExplanation": "超参数是训练前人为设定的参数，比如学习率、批次大小，控制训练过程，影响模型最终效果。",
+    "lifeExamples": [
+      {
+        "title": "烤箱的温度时间",
+        "content": "食材和配方是固定的，烤的温度和时间要人为设定，设得好不好直接影响成品效果。超参数就像烤箱的温度时间设置。总结：超参数是训练前人为设定的，控制模型的训练过程。"
+      },
+      {
+        "title": "学习计划安排",
+        "content": "课本内容是固定的，每天学多少、学多久、复习频率是自己定的，会影响最终学习效果。总结：超参数不是模型自己学出来的，是人工设定的训练规则。"
+      },
+      {
+        "title": "汽车的挡位油门",
+        "content": "汽车本身的性能是固定的，挂几挡、踩多少油门是司机控制的，影响行驶速度和油耗。总结：调优超参数能让模型训练得更快、效果更好。"
+      }
+    ],
+    "aiExample": "学习率、批次大小、训练轮数都是常见的超参数，超参数调优是模型训练中重要的环节，影响最终效果。",
+    "relatedTerms": ["梯度下降", "Fine-tuning", "训练集", "验证集"]
+  },
+  {
+    "id": "245",
+    "term": "学习率",
+    "aliases": ["Learning Rate", "LR"],
+    "category": "AI基础概念",
+    "translation": {
+      "english": "Learning Rate",
+      "chinese": "学习率"
+    },
+    "professionalExplanation": "学习率是控制模型每次参数更新幅度的超参数，太大容易震荡不收敛，太小学习速度太慢。",
+    "lifeExamples": [
+      {
+        "title": "下山的步长",
+        "content": "下山步子太大容易踩空摔倒，步子太小走得慢，合适的步长才能又快又稳地走到山底。学习率就是模型下山的步长。总结：学习率太大模型训练不稳定，太小训练太慢，要选合适的值。"
+      },
+      {
+        "title": "调旋钮的幅度",
+        "content": "调收音机频道，每次转太多容易错过最佳位置，每次转一点又要调很久，合适的幅度最好。总结：学习率决定了每次参数更新的幅度，是最重要的超参数之一。"
+      },
+      {
+        "title": "吃饭的速度",
+        "content": "吃饭太快容易噎着还消化不好，吃饭太慢耽误时间，细嚼慢咽速度适中最合适。总结：训练初期学习率可以大一点，后期慢慢减小，效果通常更好。"
+      }
+    ],
+    "aiExample": "学习率是最关键的超参数之一，合适的学习率能让模型又快又稳地收敛，取得更好的效果。",
+    "relatedTerms": ["超参数", "梯度下降", "损失函数", "Fine-tuning"]
+  },
+  {
+    "id": "246",
+    "term": "批次大小",
+    "aliases": ["Batch Size", "批量大小", "批大小"],
+    "category": "AI基础概念",
+    "translation": {
+      "english": "Batch Size",
+      "chinese": "批次大小"
+    },
+    "professionalExplanation": "批次大小是训练时一次送入模型的数据量，越大训练越稳但占用显存越多，越小训练越快但波动大。",
+    "lifeExamples": [
+      {
+        "title": "批发货物的批量",
+        "content": "一次进货越多，均价越便宜，但占资金、占仓库；一次进得少灵活，但单价高、麻烦。批次大小就是每次训练的数据量。总结：批次大小影响训练的稳定性和速度，也影响显存占用。"
+      },
+      {
+        "title": "吃饭的碗大小",
+        "content": "用大碗吃，吃的次数少，一次管饱；用小碗吃，次数多，灵活好控制。总结：大batch训练更平稳，小batch训练更灵活，泛化可能更好。"
+      },
+      {
+        "title": "公交车的载客量",
+        "content": "大巴车载客多，效率高，但调度不灵活；小巴车载客少，灵活，周转快。总结：批次大小要根据显存和任务来选择，兼顾速度和效果。"
+      }
+    ],
+    "aiExample": "Batch Size是重要的训练超参数，通常显存够的话选大一点，训练更稳定；显存不足就调小一点。",
+    "relatedTerms": ["超参数", "学习率", "Pre-training", "GPU"]
+  },
+  {
+    "id": "247",
+    "term": "训练轮数",
+    "aliases": ["Epoch", "训练轮次", "世代数"],
+    "category": "AI基础概念",
+    "translation": {
+      "english": "Epoch",
+      "chinese": "训练轮数"
+    },
+    "professionalExplanation": "训练轮数是所有训练数据都过一遍算一轮，轮数太少学不充分，轮数太多容易过拟合。",
+    "lifeExamples": [
+      {
+        "title": "复习的遍数",
+        "content": "书只看一遍记不住，看太多遍又浪费时间还容易背题，合适的复习遍数效果最好。训练轮数就是模型看数据的遍数。总结：轮数太少模型欠拟合，太多容易过拟合，要选合适的停止时机。"
+      },
+      {
+        "title": "刷题库的次数",
+        "content": "题刷少了知识点掌握不牢，刷太多就背答案了，不会举一反三。总结：训练轮数要适中，通常配合早停策略防止过拟合。"
+      },
+      {
+        "title": "揉面的次数",
+        "content": "揉面揉不够，面筋没形成，做出来不好吃；揉太久，面又揉过头了。合适的揉面次数最好。总结：训练轮数是训练的重要超参数，影响模型的最终效果和泛化能力。"
+      }
+    ],
+    "aiExample": "一个Epoch表示所有训练数据都被模型学习过一遍，训练时通常会跑多个Epoch，配合验证集判断何时停止。",
+    "relatedTerms": ["超参数", "训练集", "验证集", "早停"]
+  },
+  {
+    "id": "248",
+    "term": "早停",
+    "aliases": ["Early Stopping", "提前停止"],
+    "category": "AI基础概念",
+    "translation": {
+      "english": "Early Stopping",
+      "chinese": "早停 / 提前停止"
+    },
+    "professionalExplanation": "早停是防止过拟合的常用方法，验证集效果不再提升时就停止训练，避免模型把训练数据背死。",
+    "lifeExamples": [
+      {
+        "title": "见好就收的复习",
+        "content": "复习到模拟考分数不再提升了，就别再死磕刷题了，再刷就容易背题，反而不利于考试。早停就是见好就收。总结：早停在验证集效果不再提升时停止训练，防止过拟合，节省时间。"
+      },
+      {
+        "title": "做饭及时关火",
+        "content": "饭煮熟了就关火，再煮就糊了，口感反而不好。早停就是在效果最好的时候停下。总结：早停是简单有效的防过拟合方法，训练中广泛使用。"
+      },
+      {
+        "title": "健身适度休息",
+        "content": "不是练越久越好，练到身体适应了就休息，过度训练反而会受伤、效果下降。总结：早停通过监控验证集表现，及时停止训练，获得泛化更好的模型。"
+      }
+    ],
+    "aiExample": "早停是训练模型的常用技巧，监控验证集指标，连续不提升就停止训练，防止过拟合，同时节省训练时间。",
+    "relatedTerms": ["Overfitting", "验证集", "训练轮数", "Fine-tuning"]
+  },
+  {
+    "id": "249",
+    "term": "dropout",
+    "aliases": ["随机失活", "Dropout层"],
+    "category": "AI基础概念",
+    "translation": {
+      "english": "Dropout",
+      "chinese": "随机失活"
+    },
+    "professionalExplanation": "Dropout是防止过拟合的技术，训练时随机关掉一部分神经元，强迫模型学习更通用的规律，而不是依赖个别神经元。",
+    "lifeExamples": [
+      {
+        "title": "随机抽查考试",
+        "content": "如果每次都考固定的题，学生就会背答案；随机抽题考，学生就得全面学习，不能只背重点。Dropout就是随机“关掉”部分神经元。总结：Dropout随机让部分神经元不工作，迫使模型学习更通用的特征，防止过拟合。"
+      },
+      {
+        "title": "轮岗制度",
+        "content": "如果一个岗位只有一个人会干，那人走了就瘫痪；轮岗让大家都学会，整体更稳健。Dropout类似轮岗，每个神经元都要学会通用能力。总结：Dropout让模型不过度依赖少数神经元，提升泛化能力。"
+      },
+      {
+        "title": "盲打练习打字",
+        "content": "看着键盘打字容易依赖视觉，蒙住眼睛练，手指就能记住键位，能力更通用。总结：Dropout是深度学习中常用的正则化手段，有效缓解过拟合问题。"
+      }
+    ],
+    "aiExample": "Dropout是经典的正则化方法，训练时随机失活部分神经元，提升模型的泛化能力，减少过拟合。",
+    "relatedTerms": ["Overfitting", "泛化能力", "正则化", "Neural Network"]
+  },
+  {
+    "id": "250",
+    "term": "正则化",
+    "aliases": ["Regularization", "规则化", "正则项"],
+    "category": "AI基础概念",
+    "translation": {
+      "english": "Regularization",
+      "chinese": "正则化"
+    },
+    "professionalExplanation": "正则化是一类防止过拟合的技术，通过给模型加约束，让它不要太复杂，从而在新数据上表现更好。",
+    "lifeExamples": [
+      {
+        "title": "考试不划重点",
+        "content": "老师划重点，学生就只背重点，换题就不会；不划重点，学生就得全面学习，能力更全面。正则化就是不给模型“划重点”的机会。总结：正则化给模型加约束，不让它过度拟合训练数据，提升泛化能力。"
+      },
+      {
+        "title": "花钱做预算约束",
+        "content": "不限制预算就容易乱买没用的东西，有预算约束就会把钱花在真正重要的地方。正则化就是给模型加预算约束。总结：正则化让模型更简洁，把注意力放在真正重要的特征上。"
+      },
+      {
+        "title": "交通规则约束驾驶",
+        "content": "开车没有规则容易乱开，有交通规则约束，整体通行更有序、更安全。正则化就是给模型加规则约束。总结：正则化是防止过拟合的核心手段，常见的有L1、L2正则、Dropout、早停等。"
+      }
+    ],
+    "aiExample": "正则化是深度学习中防止过拟合、提升泛化能力的重要手段，包含L1/L2正则、Dropout、早停等多种方法。",
+    "relatedTerms": ["Overfitting", "泛化能力", "dropout", "早停"]
+  }
+]

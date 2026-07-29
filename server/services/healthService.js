@@ -1,5 +1,4 @@
 const env = require('../../config/env.js')
-const connection = require('../database/connection.js')
 const knowledgeService = require('./knowledgeService.js')
 const hunyuanService = require('./hunyuanService.js')
 
@@ -10,7 +9,7 @@ function getHealth() {
     status: 'ok',
     version: version.version || '',
     services: {
-      database: connection.isConfigured() ? 'configured' : 'mock',
+      database: env.DATABASE_URL ? 'configured' : 'mock',
       hunyuan: env.CLOUDBASE_AI_API_KEY ? 'configured' : 'mock',
       cache: hunyuanService.resultCache ? 'memory' : 'unknown'
     }

@@ -1,0 +1,1352 @@
+﻿[
+  {
+    "id": "151",
+    "term": "Hugging Face",
+    "aliases": ["抱抱脸", "HF", "HuggingFace社区"],
+    "category": "AI工具和产品",
+    "translation": {
+      "english": "Hugging Face",
+      "chinese": "Hugging Face AI社区"
+    },
+    "professionalExplanation": "Hugging Face是全球最大的开源AI社区，上面有海量免费的模型、数据集和工具，开发者可以直接下载使用，不用从零训练模型。",
+    "lifeExamples": [
+      {
+        "title": "手机应用商店下载APP",
+        "content": "普通人想用新软件，不用自己写代码开发，打开手机应用商店，搜索想要的功能，下载安装就能直接用。Hugging Face就像AI领域的应用商店，里面有大量现成的AI模型。总结：Hugging Face汇集了海量开源AI资源，开发者直接拿来就能用，大幅降低了AI开发门槛。"
+      },
+      {
+        "title": "图书馆借参考资料",
+        "content": "学生写论文不用自己从零做实验攒数据，去图书馆借现成的参考书和资料，就能用来做研究、写文章。Hugging Face就像AI领域的公共图书馆。总结：Hugging Face共享了大量模型和数据集，方便开发者站在别人的成果上继续开发。"
+      },
+      {
+        "title": "美食社区分享菜谱",
+        "content": "做饭不用自己摸索配方，去美食社区找别人分享的成熟菜谱，照着步骤做就能做出好吃的菜。Hugging Face就是AI模型的分享交流社区。总结：全球开发者在Hugging Face上共享模型和技术，互相借鉴，共同提升AI效果。"
+      }
+    ],
+    "aiExample": "开发者常用Hugging Face下载开源大模型、绘画模型、语音模型，快速搭建自己的AI应用，不用从零开始训练模型。",
+    "relatedTerms": ["开源模型", "Llama", "Stable Diffusion", "Transformers"]
+  },
+  {
+    "id": "152",
+    "term": "ControlNet",
+    "aliases": ["控制网", "ControlNet控制网络"],
+    "category": "AI开发技术",
+    "translation": {
+      "english": "ControlNet",
+      "chinese": "ControlNet控制网络"
+    },
+    "professionalExplanation": "ControlNet是控制AI绘画的技术，可以让AI参考线稿、姿态图等生成图片，保证画面结构符合要求，不会画得形状崩坏。",
+    "lifeExamples": [
+      {
+        "title": "小朋友描红画画",
+        "content": "小朋友学画画，先有印好的线稿描红，再填颜色和细节，画出来的形状就不会走样。ControlNet就像给AI绘画的线稿，控制画面的整体结构。总结：ControlNet给AI提供结构参考，让生成的图片构图、形状更符合预期。"
+      },
+      {
+        "title": "按施工图盖房子",
+        "content": "工人盖房子不能随便乱盖，要按照设计师画的施工图纸来，保证结构、尺寸都正确。ControlNet就像AI画图时参考的施工图纸。总结：ControlNet可以约束AI生成的画面结构，避免出现人物畸形、建筑崩坏的问题。"
+      },
+      {
+        "title": "用模具做月饼",
+        "content": "手工捏月饼形状容易歪，用模具压出来的月饼，花纹和形状都整齐一致，不会走样。ControlNet就像AI绘画的模具，固定画面结构。总结：ControlNet能精准控制AI生图的结构，适合做有固定构图要求的设计工作。"
+      }
+    ],
+    "aiExample": "AI绘画中用ControlNet可以控制线稿、人体姿态、建筑深度，生成的图片更可控，是专业设计师常用的辅助技术。",
+    "relatedTerms": ["Stable Diffusion", "LoRA", "ComfyUI", "AI绘画"]
+  },
+  {
+    "id": "153",
+    "term": "Stable Diffusion WebUI",
+    "aliases": ["SD WebUI", "秋叶整合包", "SD网页版"],
+    "category": "AI工具和产品",
+    "translation": {
+      "english": "Stable Diffusion WebUI",
+      "chinese": "Stable Diffusion网页版界面"
+    },
+    "professionalExplanation": "Stable Diffusion WebUI是最流行的SD可视化操作工具，不用写代码，点按钮就能画图，还有大量插件可以扩展功能。",
+    "lifeExamples": [
+      {
+        "title": "傻瓜式数码相机",
+        "content": "专业相机要调光圈、快门、感光度，新手很难上手；傻瓜相机按快门就能拍照，普通人也能拍出清晰照片。SD WebUI就像AI绘画里的傻瓜相机。总结：SD WebUI把复杂的AI绘画做成了可视化界面，不用写代码，新手也能快速上手。"
+      },
+      {
+        "title": "带预设按钮的烤箱",
+        "content": "专业烤箱要自己调温度、时间、模式，很麻烦；普通烤箱有现成的烘焙预设，选对应模式就能用。SD WebUI就像带预设面板的AI绘画工具。总结：SD WebUI界面友好、功能齐全，是新手入门本地AI绘画最常用的工具。"
+      },
+      {
+        "title": "组装好的品牌电脑",
+        "content": "散件电脑要自己买配件、组装、装系统，门槛很高；品牌机装好一切，开机就能直接用。SD WebUI就像装好的AI绘画工具。总结：SD WebUI整合了运行环境和基础功能，解压就能用，部署门槛很低。"
+      }
+    ],
+    "aiExample": "很多人本地部署AI绘画都会选择Stable Diffusion WebUI，安装简单，插件生态丰富，能满足大部分日常生图需求。",
+    "relatedTerms": ["Stable Diffusion", "ComfyUI", "ControlNet", "LoRA"]
+  },
+  {
+    "id": "154",
+    "term": "Diffusion Model",
+    "aliases": ["扩散模型", "扩散生成模型"],
+    "category": "AI基础概念",
+    "translation": {
+      "english": "Diffusion Model",
+      "chinese": "扩散模型"
+    },
+    "professionalExplanation": "扩散模型是AI生成图片的核心技术，通过先给图片加噪点、再一步步去噪的方式，生成清晰的全新图片。",
+    "lifeExamples": [
+      {
+        "title": "雾天风景慢慢清晰",
+        "content": "大雾天看远处的风景，一开始白茫茫一片看不清，随着雾慢慢散去，景物一点点变得清晰。扩散模型生成图片就是从模糊噪点慢慢变清晰的过程。总结：扩散模型生成图片的过程，就像雾气逐渐散开、画面慢慢显现的过程。"
+      },
+      {
+        "title": "揉面团做造型",
+        "content": "一开始是一团乱糟糟的面团，慢慢揉、慢慢捏，最后变成想要的馒头、包子造型。扩散模型从随机噪点开始，慢慢修正成目标图片。总结：扩散模型从随机混乱的噪点起步，一步步调整，最终生成清晰完整的图片。"
+      },
+      {
+        "title": "铅笔画慢慢显形",
+        "content": "一开始纸上只有黑乎乎的铅笔印，慢慢擦掉多余部分、细化细节，图案就一点点清晰显现出来。扩散模型的生成过程和这个很像。总结：扩散模型通过逐步去噪、修正细节的方式生成图片，是当前AI绘画的主流技术。"
+      }
+    ],
+    "aiExample": "Stable Diffusion、Midjourney等主流AI绘画工具，底层都是基于扩散模型技术实现图像生成的。",
+    "relatedTerms": ["Stable Diffusion", "AI绘画", "Deep Learning", "生成式AI"]
+  },
+  {
+    "id": "155",
+    "term": "Reinforcement Learning",
+    "aliases": ["强化学习", "RL", "增强学习"],
+    "category": "AI基础概念",
+    "translation": {
+      "english": "Reinforcement Learning",
+      "chinese": "强化学习"
+    },
+    "professionalExplanation": "强化学习是AI的一种学习方式，通过奖励和惩罚机制，让AI在不断试错中学会完成任务的最优策略。",
+    "lifeExamples": [
+      {
+        "title": "训练小狗做动作",
+        "content": "训练小狗握手，做对了就给零食奖励，做错了就不给，练得多了小狗就知道怎么做能拿到奖励。强化学习用的就是类似的奖励机制。总结：强化学习通过奖励正确行为、惩罚错误行为，让AI自己学会完成任务的方法。"
+      },
+      {
+        "title": "小朋友学骑自行车",
+        "content": "小朋友学骑车，摔几次就知道怎么保持平衡，骑得越久技术越好，每次平稳骑行就是正向反馈。强化学习也是在试错中不断优化策略。总结：强化学习就像人在试错中积累经验，做得好有奖励，慢慢就掌握了正确方法。"
+      },
+      {
+        "title": "玩游戏闯关升级",
+        "content": "玩闯关游戏，走错路就掉血重来，走对了就得分通关，玩得多了就知道最优路线。强化学习的AI也是这样玩游戏学策略的。总结：强化学习适合有明确奖惩规则的场景，比如游戏、机器人控制等。"
+      }
+    ],
+    "aiExample": "AlphaGo下围棋、大模型的RLHF对齐，都用到了强化学习技术，让AI在反馈中不断优化表现。",
+    "relatedTerms": ["RLHF", "Deep Learning", "Machine Learning", "Agent"]
+  },
+  {
+    "id": "156",
+    "term": "Overfitting",
+    "aliases": ["过拟合", "过度拟合"],
+    "category": "AI基础概念",
+    "translation": {
+      "english": "Overfitting",
+      "chinese": "过拟合"
+    },
+    "professionalExplanation": "过拟合就是AI把训练数据背得太死，碰到没见过的新数据就表现很差，只会死记硬背，不会举一反三。",
+    "lifeExamples": [
+      {
+        "title": "死记硬背的学生",
+        "content": "有的学生背题背得特别熟，考试考原题能考满分，但是题目稍微变个样子就不会做了，只会背不会理解。过拟合的AI就像死记硬背的学生。总结：过拟合的AI只记得训练过的内容，碰到新情况就表现很差，泛化能力弱。"
+      },
+      {
+        "title": "只认自家路的认路",
+        "content": "天天走同一条路回家，闭着眼都能走，但是换一条相似的路就完全不认得了，只会死记路线不会认方向。过拟合就是这个状态。总结：过拟合的AI对训练数据过度适应，换了新数据就容易出错。"
+      },
+      {
+        "title": "按菜谱做菜不会变通",
+        "content": "照着菜谱能把菜做好，但是少一样调料就完全不知道怎么替换，做出来的菜就没法吃。过拟合的AI就不会灵活变通。总结：过拟合会导致AI泛化能力差，实际使用时效果大打折扣。"
+      }
+    ],
+    "aiExample": "训练AI模型时，如果数据太少或者训练轮次太多，就容易出现过拟合，导致模型在真实场景中表现不佳。",
+    "relatedTerms": ["Underfitting", "Fine-tuning", "训练集", "测试集"]
+  },
+  {
+    "id": "157",
+    "term": "Underfitting",
+    "aliases": ["欠拟合", "拟合不足"],
+    "category": "AI基础概念",
+    "translation": {
+      "english": "Underfitting",
+      "chinese": "欠拟合"
+    },
+    "professionalExplanation": "欠拟合就是AI学得不够充分，连训练过的数据都没掌握好，简单的任务也做不对，模型能力还没达标。",
+    "lifeExamples": [
+      {
+        "title": "没学好的学生考试",
+        "content": "学生上课没认真听，知识点都没学会，不仅新题不会做，连做过的原题也答不对，成绩很差。欠拟合的AI就像没学好的学生。总结：欠拟合的模型连基础的训练数据都没学好，整体能力不足。"
+      },
+      {
+        "title": "刚学车的新手司机",
+        "content": "刚学车的新手，连直线都开不稳，经常熄火，简单的路况也应付不了，还没掌握开车的基本技能。欠拟合的AI就像新手司机。总结：欠拟合说明模型训练得还不够，连基础规律都没学会。"
+      },
+      {
+        "title": "刚学做饭的新手",
+        "content": "刚学做饭的人，连最简单的番茄炒蛋都做不好，不是咸了就是糊了，还没掌握做饭的基本技巧。总结：欠拟合是模型能力不足，需要增加训练、提升模型复杂度来解决。"
+      }
+    ],
+    "aiExample": "模型太小、训练数据太少、训练时间太短，都容易出现欠拟合，导致AI连基础任务都完成不好。",
+    "relatedTerms": ["Overfitting", "Fine-tuning", "Parameters", "Pre-training"]
+  },
+  {
+    "id": "158",
+    "term": "数据标注",
+    "aliases": ["Data Annotation", "数据打标", "标注数据"],
+    "category": "企业AI",
+    "translation": {
+      "english": "Data Annotation",
+      "chinese": "数据标注"
+    },
+    "professionalExplanation": "数据标注就是给图片、文字、语音等数据打上标签，告诉AI这是什么，是训练AI模型的基础前置工作。",
+    "lifeExamples": [
+      {
+        "title": "老师给作业批改打分",
+        "content": "学生做完作业，老师批改对错、打上分数和评语，学生就知道什么是对、什么是错。数据标注就像老师给数据批改打标签。总结：数据标注就是给原始数据打上正确答案，让AI知道学习的标准是什么。"
+      },
+      {
+        "title": "给识字卡片配图",
+        "content": "幼儿识字卡片，一边是图片一边是汉字，小朋友看着卡片就知道这个字对应什么东西。标注数据就是给AI做这样的识字卡片。总结：标注好的数据就像带答案的习题，AI靠这些数据学习识别规律。"
+      },
+      {
+        "title": "超市给商品贴价签",
+        "content": "超市的商品都要贴上价格标签和分类标签，顾客和收银员才知道是什么、多少钱。数据标注就是给数据贴标签。总结：没有标注好的数据，AI就不知道该学什么，数据标注是AI训练的基础环节。"
+      }
+    ],
+    "aiExample": "训练人脸识别、自动驾驶、大语言模型都需要大量标注数据，数据标注质量直接决定了AI模型的最终效果。",
+    "relatedTerms": ["训练集", "Fine-tuning", "Pre-training", "数据增强"]
+  },
+  {
+    "id": "159",
+    "term": "Data Augmentation",
+    "aliases": ["数据增强", "数据增广"],
+    "category": "AI开发技术",
+    "translation": {
+      "english": "Data Augmentation",
+      "chinese": "数据增强"
+    },
+    "professionalExplanation": "数据增强是在原有数据基础上，通过裁剪、翻转、改颜色等方式生成更多新数据，扩充数据集，避免模型过拟合。",
+    "lifeExamples": [
+      {
+        "title": "同一道菜换做法",
+        "content": "只有一份番茄炒蛋的菜谱，可以改成加糖版、加醋版、加木耳版，变出好几种做法，丰富菜谱库。数据增强就是类似的思路。总结：数据增强在原始数据基础上做小改动，生成更多新数据，扩充数据集。"
+      },
+      {
+        "title": "同一道题换数字",
+        "content": "一道数学题，把里面的数字换一换，就变成一道新的练习题，学生能练习更多同类型题目。数据增强也是同理生成更多训练数据。总结：数据增强用少量原始数据就能变出更多训练样本，节省标注成本。"
+      },
+      {
+        "title": "同一件衣服换搭配",
+        "content": "一件上衣可以搭配不同的裤子、鞋子、配饰，穿出不同的风格，相当于变出很多套穿搭。数据增强就是给数据换“搭配”。总结：数据增强能丰富数据集，让AI见过更多变化，泛化能力更强。"
+      }
+    ],
+    "aiExample": "训练AI图像模型时，常用翻转、裁剪、调色等数据增强方式扩充数据集，提升模型的泛化能力，减少过拟合。",
+    "relatedTerms": ["训练集", "Overfitting", "Fine-tuning", "数据标注"]
+  },
+  {
+    "id": "160",
+    "term": "Gradio",
+    "aliases": ["Gradio界面", "Gradio框架"],
+    "category": "AI开发技术",
+    "translation": {
+      "english": "Gradio",
+      "chinese": "Gradio界面框架"
+    },
+    "professionalExplanation": "Gradio是快速搭建AI演示界面的工具，写几行代码就能生成网页版交互界面，方便展示和测试AI模型。",
+    "lifeExamples": [
+      {
+        "title": "摆摊用的折叠货架",
+        "content": "展示商品不用专门装修店铺，摆个折叠货架，把商品放上去就能给路人展示，收摊也方便。Gradio就像AI模型的折叠展示架。总结：Gradio能快速给AI模型做一个网页界面，方便展示和测试效果。"
+      },
+      {
+        "title": "产品样品展示盒",
+        "content": "给客户看产品不用搬整个工厂，拿个样品展示盒，客户就能直观看到产品效果。Gradio就是AI模型的展示盒。总结：Gradio用很少的代码就能做出交互界面，适合快速演示AI功能。"
+      },
+      {
+        "title": "临时试吃台",
+        "content": "超市做新品试吃，不用租店面，摆个临时试吃台，顾客就能直接体验产品。Gradio就像AI的临时体验台。总结：Gradio搭建速度快、简单易用，是AI开发者做演示的常用工具。"
+      }
+    ],
+    "aiExample": "开发者做AI模型Demo时，常用Gradio快速生成网页界面，让用户可以直接上传图片、输入文字体验模型效果。",
+    "relatedTerms": ["Streamlit", "FastAPI", "Python", "大模型应用开发"]
+  },
+  {
+    "id": "161",
+    "term": "Streamlit",
+    "aliases": ["Streamlit框架", "Streamlit工具"],
+    "category": "AI开发技术",
+    "translation": {
+      "english": "Streamlit",
+      "chinese": "Streamlit网页应用框架"
+    },
+    "professionalExplanation": "Streamlit是用Python快速做数据网页的工具，不用写前端代码，几行代码就能做出带图表、交互的AI数据应用。",
+    "lifeExamples": [
+      {
+        "title": "模块化置物架",
+        "content": "打柜子要找木匠、刷油漆，很麻烦；模块化置物架照着说明书拼，很快就能装好，还能随时调整。Streamlit就像网页版的模块化置物架。总结：Streamlit不用写复杂的前端代码，用Python就能快速做出交互网页。"
+      },
+      {
+        "title": "PPT模板做演示",
+        "content": "做演示不用从零设计排版，用现成的PPT模板，填内容进去就能做出好看的演示文稿。Streamlit就像网页版的PPT模板。总结：Streamlit封装了很多现成的组件，开发者专注写逻辑就行，不用管前端样式。"
+      },
+      {
+        "title": "自助点餐机",
+        "content": "开餐厅不用专门雇收银员，放几台自助点餐机，顾客自己选餐付款，简单又高效。Streamlit就是做AI自助体验界面的工具。总结：Streamlit适合快速搭建数据展示、AI交互类的内部工具和Demo。"
+      }
+    ],
+    "aiExample": "很多AI数据分析、模型演示的内部工具，都是用Streamlit快速开发的，开发周期短，迭代方便。",
+    "relatedTerms": ["Gradio", "Python", "FastAPI", "大模型应用开发"]
+  },
+  {
+    "id": "162",
+    "term": "FastAPI",
+    "aliases": ["FastAPI框架", "Fast API"],
+    "category": "软件开发",
+    "translation": {
+      "english": "FastAPI",
+      "chinese": "FastAPI后端框架"
+    },
+    "professionalExplanation": "FastAPI是高性能的Python后端框架，写接口速度快、性能好，是做AI服务接口最常用的框架之一。",
+    "lifeExamples": [
+      {
+        "title": "高速快餐店",
+        "content": "普通饭店出餐慢，快餐店出餐速度快、标准化程度高，高峰期也能接待很多客人。FastAPI就像后端框架里的快餐店。总结：FastAPI性能高、开发快，适合做高性能的API接口服务。"
+      },
+      {
+        "title": "智能快递柜",
+        "content": "普通快递点要人工取件，速度慢；智能快递柜自助取件，效率高，同时能处理很多取件请求。FastAPI就像高效的智能快递柜。总结：FastAPI并发能力强，适合做AI模型的对外服务接口。"
+      },
+      {
+        "title": "自动售货机",
+        "content": "自动售货机不用店员，用户选商品付款就出货，响应快、24小时都能服务。FastAPI做的接口也是类似的高效服务。总结：FastAPI开发简单、运行高效，是AI服务接口开发的首选框架之一。"
+      }
+    ],
+    "aiExample": "部署AI模型接口时，很多开发者会选用FastAPI，开发速度快、接口性能高，还自带接口文档。",
+    "relatedTerms": ["Python", "Flask", "API", "大模型应用开发"]
+  },
+  {
+    "id": "163",
+    "term": "Flask",
+    "aliases": ["Flask框架", "Python Flask"],
+    "category": "软件开发",
+    "translation": {
+      "english": "Flask",
+      "chinese": "Flask轻量后端框架"
+    },
+    "professionalExplanation": "Flask是轻量级的Python后端框架，简单灵活、上手容易，适合做小型网站和简单的API接口服务。",
+    "lifeExamples": [
+      {
+        "title": "轻便折叠小桌子",
+        "content": "大书桌笨重占地方，折叠小桌子轻便灵活，小户型、临时用都很合适，搬起来也方便。Flask就像后端框架里的小桌子。总结：Flask轻量灵活，上手简单，适合小型项目和快速原型开发。"
+      },
+      {
+        "title": "社区便利店",
+        "content": "大超市品类全但是大而笨重，便利店小巧灵活，满足日常需求足够，开起来也很简单。Flask就像编程界的便利店。总结：Flask足够轻量，简单项目用它不用复杂配置，开发很灵活。"
+      },
+      {
+        "title": "家用小电锅",
+        "content": "大灶台适合做宴席，家用小电锅煮面、涮锅都够用，操作简单、占地小，很适合日常用。总结：Flask适合小型项目，学习成本低，灵活度高，新手也能快速上手。"
+      }
+    ],
+    "aiExample": "小型AI工具、简单的模型演示接口，常用Flask快速开发，配置少、上手快，满足基础需求足够用。",
+    "relatedTerms": ["Python", "FastAPI", "API", "大模型应用开发"]
+  },
+  {
+    "id": "164",
+    "term": "RESTful API",
+    "aliases": ["REST接口", "RESTful接口", "REST风格接口"],
+    "category": "软件开发",
+    "translation": {
+      "english": "Representational State Transfer API",
+      "chinese": "RESTful风格接口"
+    },
+    "professionalExplanation": "RESTful是一种通用的API设计规范，按照统一的规则设计接口，不同系统之间都能方便地互相调用。",
+    "lifeExamples": [
+      {
+        "title": "统一规格的快递面单",
+        "content": "快递面单有统一的格式，都写收件人、电话、地址、物品，所有快递公司都能看懂、都能用。RESTful就像接口界的统一面单格式。总结：RESTful是通用的接口设计规范，不同系统、不同语言都能互相调用。"
+      },
+      {
+        "title": "普通话作为通用语言",
+        "content": "中国各地有不同方言，大家都说普通话就能互相沟通，不用学对方的方言。RESTful就像接口界的普通话。总结：遵循RESTful规范的接口，通用性强，不同技术栈都能对接。"
+      },
+      {
+        "title": "标准电源插座",
+        "content": "国内的插座都是统一规格，不管什么电器，插头符合标准就能插上去用。RESTful就像接口界的统一插座标准。总结：RESTful是最主流的API设计规范，大部分开放接口都遵循这个标准。"
+      }
+    ],
+    "aiExample": "绝大多数大模型厂商的API接口都遵循RESTful规范，开发者用任何编程语言都能方便调用。",
+    "relatedTerms": ["API", "GraphQL", "Python", "后端开发"]
+  },
+  {
+    "id": "165",
+    "term": "Elasticsearch",
+    "aliases": ["ES", "ES搜索引擎", "弹性搜索"],
+    "category": "数据库和云计算",
+    "translation": {
+      "english": "Elasticsearch",
+      "chinese": "Elasticsearch搜索引擎"
+    },
+    "professionalExplanation": "Elasticsearch是分布式搜索引擎，能快速检索海量文本数据，支持全文搜索、模糊匹配，常用于站内搜索和日志分析。",
+    "lifeExamples": [
+      {
+        "title": "图书馆的检索系统",
+        "content": "图书馆书很多，找书不能一本本翻，用检索系统输入关键词，很快就能找到书的位置。Elasticsearch就像系统里的全文搜索引擎。总结：Elasticsearch能在海量数据里快速搜到相关内容，比普通数据库搜索快很多。"
+      },
+      {
+        "title": "超市的导购查询机",
+        "content": "超市商品很多，顾客不知道在哪，查导购机输入商品名，立刻就能知道在哪个货架。ES就像大数据的导购查询机。总结：Elasticsearch适合做海量数据的模糊搜索、关键词搜索，响应速度很快。"
+      },
+      {
+        "title": "百度谷歌搜索引擎",
+        "content": "互联网网页那么多，搜索引擎输入关键词，瞬间就能找出相关的网页。ES就是做站内版搜索引擎的工具。总结：Elasticsearch是做站内搜索、日志检索最常用的搜索引擎工具。"
+      }
+    ],
+    "aiExample": "很多AI知识库、文档搜索系统会用Elasticsearch做关键词检索，再结合向量数据库做语义检索，提升搜索效果。",
+    "relatedTerms": ["Vector Database", "RAG", "语义搜索", "Database"]
+  },
+  {
+    "id": "166",
+    "term": "Bing Copilot",
+    "aliases": ["必应AI", "必应Copilot", "Bing AI"],
+    "category": "AI工具和产品",
+    "translation": {
+      "english": "Bing Copilot",
+      "chinese": "必应Copilot AI助手"
+    },
+    "professionalExplanation": "Bing Copilot是微软推出的AI搜索引擎，结合了大模型和必应搜索，能联网查最新信息，给出带来源的答案。",
+    "lifeExamples": [
+      {
+        "title": "带调研助理的搜索",
+        "content": "普通搜索引擎只给你一堆网页链接，必应AI先帮你搜遍全网，再整理成清晰的答案，还标注信息来源。总结：Bing Copilot能联网获取实时信息，回答不会过时，还能追溯信息来源。"
+      },
+      {
+        "title": "会查资料的家教",
+        "content": "普通家教只会脑子里的知识，会查资料的家教碰到新问题，会先查最新资料再给你准确解答。总结：Bing Copilot结合了搜索能力，适合查新闻、最新资讯、实时数据类问题。"
+      },
+      {
+        "title": "带参考文献的报告",
+        "content": "普通回答只有结论，靠谱的报告会列出参考文献，告诉你信息来自哪里，方便核实。总结：Bing Copilot的回答会标注来源链接，方便用户验证信息的真实性。"
+      }
+    ],
+    "aiExample": "Bing Copilot内置在Edge浏览器和必应搜索中，可以免费使用，支持文字、图片搜索和AI创作，是常用的AI搜索工具。",
+    "relatedTerms": ["Perplexity", "ChatGPT", "Microsoft Copilot", "AI搜索"]
+  },
+  {
+    "id": "167",
+    "term": "LangSmith",
+    "aliases": ["LangSmith调试工具", "朗史密斯"],
+    "category": "AI开发技术",
+    "translation": {
+      "english": "LangSmith",
+      "chinese": "LangSmith开发调试平台"
+    },
+    "professionalExplanation": "LangSmith是LangChain官方的调试平台，可以追踪AI应用的运行过程、查看每一步输出，方便排查问题和优化效果。",
+    "lifeExamples": [
+      {
+        "title": "工厂的质检监控",
+        "content": "生产线出了次品，有监控就能回看每一步工序，找到是哪一步出了问题。LangSmith就像AI应用的生产监控。总结：LangSmith能记录AI应用的每一步执行过程，方便开发者排查错误、优化效果。"
+      },
+      {
+        "title": "程序的调试日志",
+        "content": "程序运行出错了，看日志就能知道哪一步报错、输入输出是什么，快速定位问题。LangSmith就是专门给AI应用做调试日志的。总结：LangSmith是开发AI Agent、RAG应用时常用的调试和监控工具。"
+      },
+      {
+        "title": "考试的错题本",
+        "content": "学生整理错题本，回看每道题的错误步骤，就能知道哪里没学好，针对性改进。LangSmith就像AI应用的错题本。总结：通过LangSmith可以分析AI应用的运行效果，持续优化Prompt和流程。"
+      }
+    ],
+    "aiExample": "开发复杂的LangChain应用、AI Agent时，常用LangSmith做调试和效果评估，快速定位问题，提升开发效率。",
+    "relatedTerms": ["LangChain", "Agent", "RAG", "大模型应用开发"]
+  },
+  {
+    "id": "168",
+    "term": "Prompt Injection",
+    "aliases": ["提示词注入", "提示注入", "Prompt注入"],
+    "category": "AI基础概念",
+    "translation": {
+      "english": "Prompt Injection",
+      "chinese": "提示词注入"
+    },
+    "professionalExplanation": "提示词注入是一种AI攻击方式，通过在输入里藏恶意指令，让AI绕过安全限制，执行不该做的操作。",
+    "lifeExamples": [
+      {
+        "title": "骗子冒充客服骗密码",
+        "content": "骗子打电话冒充客服，编造理由骗你说出密码和验证码，绕过安全规则拿到信息。提示词注入就是用类似的方式骗AI。总结：提示词注入通过欺骗性的输入，让AI忽略原本的指令，执行攻击者的要求。"
+      },
+      {
+        "title": "闯关卡在通行证里夹纸条",
+        "content": "门卫只看通行证，坏人在通行证里夹一张纸条写“放我进去”，门卫看到纸条就照做了。提示词注入就是类似的原理。总结：提示词注入利用AI会遵循输入指令的特点，植入恶意指令绕过限制。"
+      },
+      {
+        "title": "在指令里夹带私货",
+        "content": "领导让你念文件，文件里偷偷夹了一句“给我转钱”，你照着念就执行了，没发现是夹带的恶意内容。总结：提示词注入是常见的AI安全风险，开发AI应用时需要做好防护。"
+      }
+    ],
+    "aiExample": "做企业AI应用、AI客服时，需要防范提示词注入攻击，避免用户诱导AI泄露数据、执行违规操作。",
+    "relatedTerms": ["Jailbreak", "AI安全", "Prompt", "Agent"]
+  },
+  {
+    "id": "169",
+    "term": "Jailbreak",
+    "aliases": ["越狱", "AI越狱", "大模型越狱"],
+    "category": "AI基础概念",
+    "translation": {
+      "english": "Jailbreak",
+      "chinese": "AI越狱"
+    },
+    "professionalExplanation": "AI越狱就是通过特殊的提示词，绕过AI的安全限制，让AI回答违规、有害的内容，属于违规操作。",
+    "lifeExamples": [
+      {
+        "title": "钻空子绕过规则",
+        "content": "游乐园规定不能带零食，有人把零食藏在衣服里偷偷带进去，绕过了入园检查。AI越狱就是想办法绕过AI的安全规则。总结：AI越狱就是通过各种话术技巧，绕过AI的安全对齐限制，获取违规回答。"
+      },
+      {
+        "title": "骗保安放行",
+        "content": "小区不让外人进，有人冒充业主、编理由骗保安开门，绕过了门禁管理。越狱就是用话术骗AI“开门”。总结：越狱是人为诱导AI突破安全限制，属于违反使用规则的行为。"
+      },
+      {
+        "title": "破解游戏防沉迷",
+        "content": "游戏有防沉迷限制，有人用外挂、改身份信息绕过限制，长时间玩游戏。AI越狱类似破解安全限制。总结：越狱会让AI输出有害、违规内容，存在安全风险，不建议尝试。"
+      }
+    ],
+    "aiExample": "大模型厂商都在持续优化安全机制，封堵越狱方式，同时越狱行为也违反产品使用协议，存在合规风险。",
+    "relatedTerms": ["Prompt Injection", "Alignment", "AI安全", "RLHF"]
+  },
+  {
+    "id": "170",
+    "term": "涌现能力",
+    "aliases": ["Emergent Ability", "涌现现象", "模型涌现"],
+    "category": "AI基础概念",
+    "translation": {
+      "english": "Emergent Ability",
+      "chinese": "涌现能力"
+    },
+    "professionalExplanation": "涌现能力是指大模型参数量大到一定程度后，突然具备了小模型没有的复杂能力，比如推理、翻译、做数学题。",
+    "lifeExamples": [
+      {
+        "title": "沙子堆成沙丘",
+        "content": "一粒两粒沙子没什么特别的，沙子越堆越多，堆到一定程度就会形成沙丘，还会出现滑坡等新现象。模型能力涌现也是类似的量变到质变。总结：模型参数量积累到一定阈值，就会突然出现很多新能力，这就是涌现现象。"
+      },
+      {
+        "title": "人长大突然开窍",
+        "content": "小朋友小时候很多题都不会做，长到一定年龄，知识积累够了，突然就开窍了，很多复杂问题都能想明白。总结：涌现能力就是模型规模大到一定程度，从量变产生质变，解锁了很多新能力。"
+      },
+      {
+        "title": "蚂蚁群体筑巢",
+        "content": "一只蚂蚁只会简单爬动，成千上万只蚂蚁聚在一起，就能协作筑巢、觅食，表现出复杂的群体智慧。总结：大模型的涌现能力，是规模变大后自然产生的复杂智慧现象。"
+      }
+    ],
+    "aiExample": "大模型的很多复杂推理能力、多步解题能力都是涌现出来的，这也是大模型参数越做越大的原因之一。",
+    "relatedTerms": ["Parameters", "Scaling Law", "LLM", "Chain of Thought"]
+  },
+  {
+    "id": "171",
+    "term": "缩放法则",
+    "aliases": ["Scaling Law", "规模定律", "缩放定律"],
+    "category": "AI基础概念",
+    "translation": {
+      "english": "Scaling Law",
+      "chinese": "缩放法则"
+    },
+    "professionalExplanation": "缩放法则是指大模型的效果和参数量、数据量、计算量正相关，规模越大效果越好，呈现出可预测的规律。",
+    "lifeExamples": [
+      {
+        "title": "图书馆藏书越多越好用",
+        "content": "图书馆的书越多、覆盖越广，能解答的问题就越多，读者体验就越好，整体能力和藏书量成正比。总结：缩放法则就是模型越大、数据越多，AI的整体能力就越强，有明确的正相关规律。"
+      },
+      {
+        "title": "仓库越大备货越全",
+        "content": "超市仓库越大，能放的货物种类就越多，顾客想买的东西基本都有，服务能力就越强。总结：按照缩放法则，持续加大模型规模和数据量，AI能力还能持续提升。"
+      },
+      {
+        "title": "大脑细胞越多越聪明",
+        "content": "生物的大脑神经元越多，通常智力水平就越高，能处理更复杂的问题，这是生物界的普遍规律。总结：缩放法则指导了大模型的发展方向，推动模型规模不断变大。"
+      }
+    ],
+    "aiExample": "缩放法则是大模型发展的核心规律之一，很多大模型厂商都按照这个规律，持续投入算力和数据来提升模型效果。",
+    "relatedTerms": ["Parameters", "涌现能力", "Pre-training", "LLM"]
+  },
+  {
+    "id": "172",
+    "term": "上下文学习",
+    "aliases": ["In-context Learning", "语境学习", "ICL"],
+    "category": "AI基础概念",
+    "translation": {
+      "english": "In-context Learning",
+      "chinese": "上下文学习"
+    },
+    "professionalExplanation": "上下文学习是大模型的一种能力，不用重新训练，只要在对话里给几个示例，它就能学会完成对应任务。",
+    "lifeExamples": [
+      {
+        "title": "看样例就会做新题",
+        "content": "老师给学生讲两道例题，学生看懂了例题的做法，就能用同样的方法做同类型的新题目。上下文学习就是AI看示例就学会新任务。总结：上下文学习不用改模型，只要在输入里给几个例子，AI就能照着完成任务。"
+      },
+      {
+        "title": "看模板就会填表格",
+        "content": "给你一张填好的表格当模板，你照着模板的格式，就能把新内容正确填进空表格里。总结：上下文学习让大模型可以通过示例快速适配新任务，不用重新训练。"
+      },
+      {
+        "title": "看示范就学会干活",
+        "content": "新员工上岗，师傅示范做一遍，员工看懂了操作流程，就能自己照着做同样的工作。总结：上下文学习是大模型的核心能力之一，也是少样本学习的基础。"
+      }
+    ],
+    "aiExample": "使用大模型时，在提示词里给几个示例，就能让AI按指定格式输出内容，这就是利用了上下文学习能力。",
+    "relatedTerms": ["Few-shot", "Prompt", "Context Window", "LLM"]
+  },
+  {
+    "id": "173",
+    "term": "Multi-Agent",
+    "aliases": ["多智能体", "多Agent", "多代理"],
+    "category": "AI基础概念",
+    "translation": {
+      "english": "Multi-Agent",
+      "chinese": "多智能体"
+    },
+    "professionalExplanation": "多智能体就是让多个AI角色分工协作，各自负责擅长的部分，一起完成更复杂的任务，模拟团队协作的模式。",
+    "lifeExamples": [
+      {
+        "title": "项目团队分工协作",
+        "content": "做一个项目，不是一个人干完所有事，而是产品、设计、开发、测试分工合作，各干各擅长的，效率更高。多智能体就是AI版的项目团队。总结：多智能体让多个AI角色分工配合，各自发挥优势，一起完成复杂任务。"
+      },
+      {
+        "title": "足球队不同位置配合",
+        "content": "足球比赛不是一个人踢，有前锋、中场、后卫、门将，各司其职，配合起来才能赢得比赛。多智能体就是AI足球队。总结：多智能体系统里，每个AI有不同的角色和能力，协作完成复杂任务。"
+      },
+      {
+        "title": "餐厅各岗位配合",
+        "content": "餐厅有后厨、服务员、收银、采购，大家分工明确，配合起来才能正常营业，服务好客人。总结：多智能体模拟人类团队协作模式，能处理比单个Agent更复杂的工作。"
+      }
+    ],
+    "aiExample": "复杂的AI办公、研发场景会用多智能体架构，让不同的AI分别做策划、写作、审核、执行，提升任务完成质量。",
+    "relatedTerms": ["Agent", "MCP", "LangChain", "企业AI"]
+  },
+  {
+    "id": "174",
+    "term": "Leonardo AI",
+    "aliases": ["Leonardo", "莱昂纳多AI"],
+    "category": "AI工具和产品",
+    "translation": {
+      "english": "Leonardo AI",
+      "chinese": "Leonardo AI绘画工具"
+    },
+    "professionalExplanation": "Leonardo AI是一款专业级AI绘画工具，在游戏原画、概念设计、素材生成方面表现突出，适合设计师使用。",
+    "lifeExamples": [
+      {
+        "title": "专业设计工作室",
+        "content": "普通照相馆拍日常照片，专业设计工作室专门做商业设计、原画创作，效果更专业。Leonardo AI就像AI绘画里的专业设计工作室。总结：Leonardo AI偏专业设计方向，生成游戏、影视概念图效果出色。"
+      },
+      {
+        "title": "高端画材套装",
+        "content": "普通蜡笔适合小朋友涂鸦，专业画材套装适合美术生画画，细节和质感更好。Leonardo AI就像AI绘画里的高端画材。总结：Leonardo AI在画面质感、细节把控上更优，适合专业创作者使用。"
+      },
+      {
+        "title": "定制服装工作室",
+        "content": "普通服装店卖成衣，定制工作室可以按需求设计款式、调整细节，更贴合专业需求。Leonardo AI就是偏向定制化的AI绘画工具。总结：Leonardo AI支持精细的参数控制和风格调整，适合专业设计场景。"
+      }
+    ],
+    "aiExample": "游戏设计师、原画师常用Leonardo AI生成概念图、素材，它在游戏资产、奇幻风格画面上表现优异。",
+    "relatedTerms": ["Midjourney", "Stable Diffusion", "AI绘画", "ControlNet"]
+  },
+  {
+    "id": "175",
+    "term": "SeaArt AI",
+    "aliases": ["SeaArt", "海艺AI"],
+    "category": "AI工具和产品",
+    "translation": {
+      "english": "SeaArt AI",
+      "chinese": "SeaArt AI绘画平台"
+    },
+    "professionalExplanation": "SeaArt是国内常用的AI绘画平台，有大量现成的模型和作品参考，不用本地部署，网页直接就能用。",
+    "lifeExamples": [
+      {
+        "title": "线上绘画素材超市",
+        "content": "自己买画材、调颜料很麻烦，线上素材超市有各种现成的风格、模板，选好就能直接出图。SeaArt就像AI绘画的素材超市。总结：SeaArt上有大量现成的模型和风格，不用自己部署，直接在线就能画图。"
+      },
+      {
+        "title": "共享画室",
+        "content": "自己买画具、租画室成本高，共享画室设备齐全，还有很多作品可以参考，按次付费就行。总结：SeaArt平台作品和模型丰富，新手也能快速找到合适的风格出图。"
+      },
+      {
+        "title": "模板化照相馆",
+        "content": "照相馆有很多现成的背景、风格模板，选好模板拍张照，很快就能出成片。SeaArt就是AI版的模板照相馆。总结：SeaArt门槛低、资源多，适合不想折腾本地部署的普通用户。"
+      }
+    ],
+    "aiExample": "很多国内普通用户和新手用SeaArt玩AI绘画，不用配置环境，网页端直接操作，模型和素材资源丰富。",
+    "relatedTerms": ["Midjourney", "Stable Diffusion", "AI绘画", "文心一格"]
+  },
+  {
+    "id": "176",
+    "term": "文心一格",
+    "aliases": ["百度文心一格", "一格AI绘画"],
+    "category": "AI工具和产品",
+    "translation": {
+      "english": "Wenxin Yige",
+      "chinese": "文心一格AI绘画平台"
+    },
+    "professionalExplanation": "文心一格是百度推出的AI绘画平台，支持中文提示词，生成国风、商业类图片效果好，国内访问速度快。",
+    "lifeExamples": [
+      {
+        "title": "本土照相馆",
+        "content": "国外照相馆不懂国人审美，本土照相馆更懂中国人喜欢的风格，拍出来的照片更合心意。文心一格就是本土化的AI绘画平台。总结：文心一格对中文理解更好，国风、国内商业场景的生成效果更贴合需求。"
+      },
+      {
+        "title": "中式影楼",
+        "content": "普通影楼拍西式写真，中式影楼专门拍古装、国风写真，风格更地道。文心一格在国风绘画上有优势。总结：文心一格擅长生成中国风、水墨风等本土化风格的图片。"
+      },
+      {
+        "title": "社区打印店",
+        "content": "家门口的打印店访问方便、价格亲民，日常打印、做海报都能满足，不用跑很远。总结：文心一格国内访问快、操作简单，适合普通用户做日常配图、设计。"
+      }
+    ],
+    "aiExample": "文心一格支持多种风格和尺寸，适合做公众号配图、电商海报、国风插画，是国内主流的AI绘画平台之一。",
+    "relatedTerms": ["通义万相", "Midjourney", "AI绘画", "文心一言"]
+  },
+  {
+    "id": "177",
+    "term": "通义万相",
+    "aliases": ["阿里通义万相", "万相AI绘画"],
+    "category": "AI工具和产品",
+    "translation": {
+      "english": "Tongyi Wanxiang",
+      "chinese": "通义万相AI绘画平台"
+    },
+    "professionalExplanation": "通义万相是阿里巴巴推出的AI绘画平台，支持文生图、图生图、人像生成，电商、办公场景适配好。",
+    "lifeExamples": [
+      {
+        "title": "电商设计工作室",
+        "content": "普通画室只画画，电商设计工作室专门做主图、详情页、海报，更贴合商家的使用需求。通义万相就偏电商设计方向。总结：通义万相在电商商品图、营销海报等场景优化较好，适合商家使用。"
+      },
+      {
+        "title": "企业设计外包",
+        "content": "小公司没有设计岗，找外包工作室做图，专业又便宜，满足日常设计需求。通义万相就是企业级的AI设计工具。总结：通义万相支持商业授权，企业做宣传图、产品图可以放心用。"
+      },
+      {
+        "title": "办公配图工具",
+        "content": "做PPT、写方案需要配图，专门找设计师太慢，用在线设计工具自己就能快速出图。总结：通义万相和阿里办公生态结合紧密，企业办公使用很方便。"
+      }
+    ],
+    "aiExample": "通义万相在电商主图、营销海报、人像写真等场景表现突出，支持商业授权，适合企业和商家使用。",
+    "relatedTerms": ["文心一格", "Midjourney", "AI绘画", "通义千问"]
+  },
+  {
+    "id": "178",
+    "term": "Photoshop 生成式填充",
+    "aliases": ["PS AI填充", "Generative Fill", "PS生成式AI"],
+    "category": "AI工具和产品",
+    "translation": {
+      "english": "Photoshop Generative Fill",
+      "chinese": "Photoshop生成式填充"
+    },
+    "professionalExplanation": "生成式填充是Photoshop内置的AI功能，框选区域输入描述，就能自动补充、修改图片内容，修图非常方便。",
+    "lifeExamples": [
+      {
+        "title": "照片一键修补",
+        "content": "旅游照片里有路人乱入，以前要一点点抠掉，用AI填充框选一下，路人就消失了，背景还很自然。总结：生成式填充可以快速删除、补充图片内容，修图效率提升很多。"
+      },
+      {
+        "title": "画布智能扩展",
+        "content": "照片构图太小，想扩展背景，以前只能拉伸模糊，用AI填充能自动延伸出合理的背景，毫无违和感。总结：生成式填充可以智能扩展图片，补全画面外的内容。"
+      },
+      {
+        "title": "一键更换物品",
+        "content": "产品照片想换个颜色、加个配件，以前要重拍，用AI填充输入描述，就能改成想要的样子。总结：生成式填充让PS修图从手工操作变成了指令式操作，简单高效。"
+      }
+    ],
+    "aiExample": "设计师修图、做创意合成时，常用PS生成式填充快速完成抠图、补全、改内容等工作，大幅提升修图效率。",
+    "relatedTerms": ["AI修图", "AI绘画", "Figma AI", "美图AI"]
+  },
+  {
+    "id": "179",
+    "term": "Figma AI",
+    "aliases": ["Figma人工智能", "Figma设计AI"],
+    "category": "AI工具和产品",
+    "translation": {
+      "english": "Figma AI",
+      "chinese": "Figma AI设计助手"
+    },
+    "professionalExplanation": "Figma AI是设计工具Figma内置的AI功能，能自动生成界面、生成文案、做设计变体，提升UI设计效率。",
+    "lifeExamples": [
+      {
+        "title": "UI设计助理",
+        "content": "资深设计师做核心设计，助理帮忙画基础组件、写文案、做多版本变体，节省设计师的时间。Figma AI就像设计师的AI助理。总结：Figma AI可以帮设计师完成重复性的设计工作，提升设计效率。"
+      },
+      {
+        "title": "快速出原型图",
+        "content": "做产品原型，以前要一个个画组件，用AI输入描述，就能自动生成完整的界面原型，再微调就行。总结：Figma AI可以快速生成界面初稿，让设计师专注在创意和体验上。"
+      },
+      {
+        "title": "设计模板生成器",
+        "content": "做活动页设计，有很多相似的版式，用AI可以一键生成多种风格的变体，选合适的再细化。总结：Figma AI能生成多种设计方案，帮助设计师拓宽思路、提升产出速度。"
+      }
+    ],
+    "aiExample": "UI/UX设计师常用Figma AI快速生成界面原型、做设计变体、生成占位文案，大幅提升设计工作的效率。",
+    "relatedTerms": ["Canva AI", "AI绘画", "AI设计", "Photoshop AI"]
+  },
+  {
+    "id": "180",
+    "term": "美图AI",
+    "aliases": ["美图秀秀AI", "美图人工智能"],
+    "category": "AI工具和产品",
+    "translation": {
+      "english": "Meitu AI",
+      "chinese": "美图AI修图工具"
+    },
+    "professionalExplanation": "美图AI是美图秀秀内置的AI功能，支持AI修图、AI绘画、AI扩图、人像美化，普通人也能轻松修出好看的照片。",
+    "lifeExamples": [
+      {
+        "title": "一键美颜修图",
+        "content": "以前修人像要慢慢磨皮、祛痘、调参数，用美图AI一键就能生成自然好看的人像照片，不用手动调。总结：美图AI把复杂的修图步骤自动化，普通人也能轻松修出专业效果。"
+      },
+      {
+        "title": "照片AI扩图",
+        "content": "照片拍小了、构图不好，用AI扩图自动延伸背景，变成更大画幅的照片，自然又好看。总结：美图AI功能丰富，贴近普通人的修图需求，操作简单易上手。"
+      },
+      {
+        "title": "AI生成头像",
+        "content": "想做专属头像，不用找画师，上传自己的照片，AI就能生成各种风格的动漫、写实头像。总结：美图AI主打人像和日常修图，是普通用户最常用的AI修图工具之一。"
+      }
+    ],
+    "aiExample": "美图AI在人像美化、日常修图方面优化很深，手机端就能用，是普通用户修图发圈的常用工具。",
+    "relatedTerms": ["AI修图", "Photoshop AI", "AI绘画", "AI换背景"]
+  },
+  {
+    "id": "181",
+    "term": "AI修图",
+    "aliases": ["人工智能修图", "AI图片处理", "智能修图"],
+    "category": "普通用户AI应用",
+    "translation": {
+      "english": "AI Photo Editing",
+      "chinese": "AI智能修图"
+    },
+    "professionalExplanation": "AI修图就是用AI自动处理图片，比如祛痘、磨皮、去水印、扩图、调色，不用手动一点点修，效果自然效率高。",
+    "lifeExamples": [
+      {
+        "title": "自拍一键美化",
+        "content": "女生自拍完，用AI修图一键磨皮、祛痘、调肤色，几秒钟就得到好看的照片，不用手动调半小时。总结：AI修图能自动完成人像美化，普通人也能修出专业效果。"
+      },
+      {
+        "title": "老照片修复",
+        "content": "家里的老照片模糊、有划痕，用AI修图可以自动修复清晰、补上颜色，变成清晰的彩色照片。总结：AI修图可以修复老照片、模糊图片，还原画面细节。"
+      },
+      {
+        "title": "去掉照片里的杂物",
+        "content": "风景照里有电线、路人影响美观，用AI修图涂抹一下，杂物就消失了，背景还很自然。总结：AI修图可以智能去除图片里不需要的内容，修补画面。"
+      }
+    ],
+    "aiExample": "现在的修图软件基本都内置了AI修图功能，覆盖人像美化、去水印、老照片修复等多种日常需求。",
+    "relatedTerms": ["美图AI", "Photoshop AI", "AI换背景", "图像超分辨率"]
+  },
+  {
+    "id": "182",
+    "term": "AI换背景",
+    "aliases": ["智能换背景", "AI抠图换背景"],
+    "category": "普通用户AI应用",
+    "translation": {
+      "english": "AI Background Replacement",
+      "chinese": "AI智能换背景"
+    },
+    "professionalExplanation": "AI换背景就是用AI自动抠出主体，替换成新的背景，不用手动抠图，边缘自然，普通人也能操作。",
+    "lifeExamples": [
+      {
+        "title": "证件照换底色",
+        "content": "报名需要不同底色的证件照，不用重新去照相馆拍，用AI换背景一键换成红底、蓝底、白底。总结：AI换背景可以快速更换证件照底色，方便又省钱。"
+      },
+      {
+        "title": "人像换场景",
+        "content": "在家拍的自拍，用AI换背景，就能变成在海边、在景区、在办公室的照片，像真的去了一样。总结：AI换背景可以随意更换照片场景，不用实地拍摄。"
+      },
+      {
+        "title": "产品图换背景",
+        "content": "电商产品图，随便拍的白底图，用AI换背景，就能生成带场景的主图，提升商品质感。总结：AI换背景不用专业摄影棚，普通人也能做出好看的商品图。"
+      }
+    ],
+    "aiExample": "AI换背景基于图像分割技术，能精准识别主体，边缘过渡自然，是电商、自媒体常用的AI功能。",
+    "relatedTerms": ["AI修图", "美图AI", "Photoshop AI", "AI绘画"]
+  },
+  {
+    "id": "183",
+    "term": "声音克隆",
+    "aliases": ["Voice Cloning", "音色克隆", "AI复刻声音"],
+    "category": "音视频工具",
+    "translation": {
+      "english": "Voice Cloning",
+      "chinese": "声音克隆"
+    },
+    "professionalExplanation": "声音克隆就是录一小段人的声音，AI就能复刻出同款音色，输入文字就能用这个人的声音朗读出来。",
+    "lifeExamples": [
+      {
+        "title": "给家人录有声书",
+        "content": "老人视力不好想看小说，用自己子女的声音克隆，让AI用子女的声音读小说，听着更亲切。总结：声音克隆可以复刻亲人的音色，用来做有声内容很有温度。"
+      },
+      {
+        "title": "配音不用本人到场",
+        "content": "视频需要补配音，主播没时间，用之前的声音克隆一下，输入文案就能生成同款声音的配音。总结：声音克隆可以快速生成指定音色的语音，不用本人重新录制。"
+      },
+      {
+        "title": "给动画配方言",
+        "content": "想做方言版的动画配音，找不到合适的主播，录一段方言样本，AI就能克隆音色生成完整配音。总结：声音克隆能低成本生成各种音色的语音内容，但使用时要注意合规。"
+      }
+    ],
+    "aiExample": "AI配音、数字人语音很多都支持声音克隆，但使用他人声音需要获得授权，避免侵权风险。",
+    "relatedTerms": ["TTS", "AI配音", "数字人", "Whisper"]
+  },
+  {
+    "id": "184",
+    "term": "唇形同步",
+    "aliases": ["Lip-sync", "对口型", "AI唇形对齐"],
+    "category": "音视频工具",
+    "translation": {
+      "english": "Lip Synchronization",
+      "chinese": "唇形同步"
+    },
+    "professionalExplanation": "唇形同步就是让视频里人物的嘴型和配音对应上，看起来像真的在说话，常用于数字人和视频翻译。",
+    "lifeExamples": [
+      {
+        "title": "外语视频对口型",
+        "content": "把外国视频翻译成中文，光有配音嘴型不对看着很假，用唇形同步技术，人物嘴型就和中文对上了。总结：唇形同步可以让视频人物的嘴型和新配音匹配，看起来更自然真实。"
+      },
+      {
+        "title": "数字人说话对口型",
+        "content": "数字人光有声音不行，嘴型要和说话内容对应，看起来才像真人在说话，不会很违和。总结：唇形同步是数字人视频的关键技术，让虚拟人物说话更逼真。"
+      },
+      {
+        "title": "配音后改嘴型",
+        "content": "视频拍完要改台词，重新拍成本高，用AI改配音再同步唇形，就能不用重拍完成修改。总结：唇形同步可以大幅降低视频修改和翻译的成本，提升制作效率。"
+      }
+    ],
+    "aiExample": "AI视频翻译、数字人口播视频都会用到唇形同步技术，让人物口型和语音自然匹配，提升真实感。",
+    "relatedTerms": ["数字人", "HeyGen", "AI视频", "TTS"]
+  },
+  {
+    "id": "185",
+    "term": "智能客服",
+    "aliases": ["AI客服", "智能客服机器人"],
+    "category": "普通用户AI应用",
+    "translation": {
+      "english": "Intelligent Customer Service",
+      "chinese": "智能客服"
+    },
+    "professionalExplanation": "智能客服是用AI做的自动客服系统，能听懂用户的自然语言问题，自动解答常见问题，解决不了再转人工。",
+    "lifeExamples": [
+      {
+        "title": "查快递物流",
+        "content": "半夜想查快递到哪了，人工客服下班了，发消息给智能客服，立刻就能查到物流信息和退换货规则。总结：智能客服24小时在线，常见问题随时都能解答，不用等人工上班。"
+      },
+      {
+        "title": "查话费办业务",
+        "content": "打运营商电话查话费，首先是智能语音客服，报号码就能查余额、办简单套餐，不用等人工坐席。总结：智能客服能处理大量简单重复的问题，提升办事效率，减少用户等待。"
+      },
+      {
+        "title": "网店自动答疑",
+        "content": "网店咨询的人太多，人工客服忙不过来，智能客服先自动回答发货时间、运费、尺码这些常见问题。总结：智能客服能分担大部分常规咨询，减轻人工客服的压力，降低企业成本。"
+      }
+    ],
+    "aiExample": "现在的智能客服大多基于大模型+RAG技术，能理解自然语言，回答更灵活，比传统按键式客服体验好很多。",
+    "relatedTerms": ["RAG", "LLM", "数字员工", "企业AI"]
+  },
+  {
+    "id": "186",
+    "term": "数字孪生",
+    "aliases": ["Digital Twin", "数字双胞胎"],
+    "category": "企业AI",
+    "translation": {
+      "english": "Digital Twin",
+      "chinese": "数字孪生"
+    },
+    "professionalExplanation": "数字孪生就是在数字世界里建一个和真实物体一模一样的虚拟版本，模拟运行状态，用来做测试和优化。",
+    "lifeExamples": [
+      {
+        "title": "飞机模拟驾驶",
+        "content": "飞行员不用开真飞机练习，在模拟器里练，各种故障、天气都能模拟，安全又省钱。数字孪生就是更全面的虚拟模拟器。总结：数字孪生在虚拟世界复刻真实物体，模拟各种情况，用来测试和优化。"
+      },
+      {
+        "title": "楼盘沙盘模拟",
+        "content": "建小区前先做沙盘，能看到整体布局、采光、交通，提前发现问题，不用建好了再改。数字孪生就是数字化的精准沙盘。总结：数字孪生可以提前模拟运行效果，降低实体试错的成本和风险。"
+      },
+      {
+        "title": "手术前模拟演练",
+        "content": "复杂手术前，医生先在虚拟模型上模拟操作一遍，确认手术方案，提升真实手术的成功率。总结：数字孪生在工业、医疗、城市管理中都有广泛应用，能降本增效。"
+      }
+    ],
+    "aiExample": "工厂、城市、桥梁、风电设备都可以做数字孪生，结合AI模拟运行、预测故障，提升运维效率。",
+    "relatedTerms": ["工业AI", "企业AI", "AI仿真", "物联网"]
+  },
+  {
+    "id": "187",
+    "term": "工业AI",
+    "aliases": ["工业人工智能", "Industrial AI"],
+    "category": "企业AI",
+    "translation": {
+      "english": "Industrial AI",
+      "chinese": "工业人工智能"
+    },
+    "professionalExplanation": "工业AI就是把AI用到工业生产里，做质检、预测故障、优化流程，提升生产效率，降低成本和事故率。",
+    "lifeExamples": [
+      {
+        "title": "生产线自动质检",
+        "content": "工厂生产零件，以前工人用眼睛查瑕疵，速度慢还容易漏，用工业AI摄像头扫一下，瞬间就能找出次品。总结：工业AI能做高速、高精度的质检，比人工效率高、准确率稳定。"
+      },
+      {
+        "title": "设备故障预测",
+        "content": "机器坏了再修会耽误生产，工业AI通过传感器数据分析，提前预判哪里要坏，提前维修，减少停机。总结：工业AI可以预测设备故障，做预防性维护，减少停产损失。"
+      },
+      {
+        "title": "生产流程优化",
+        "content": "生产线哪个环节慢、哪里浪费材料，人工很难算准，工业AI分析数据，自动优化参数，提升良品率。总结：工业AI能持续优化生产流程，帮工厂降本增效、提升质量。"
+      }
+    ],
+    "aiExample": "工业AI结合计算机视觉、物联网、大数据分析，是制造业智能化升级的核心技术方向之一。",
+    "relatedTerms": ["智能质检", "数字孪生", "企业AI", "CV"]
+  },
+  {
+    "id": "188",
+    "term": "AI教育",
+    "aliases": ["人工智能教育", "智能教育", "AI助学"],
+    "category": "普通用户AI应用",
+    "translation": {
+      "english": "AI in Education",
+      "chinese": "AI智能教育"
+    },
+    "professionalExplanation": "AI教育就是用AI辅助学习，比如讲题、批改作业、定制学习计划，因材施教，提升学习效率。",
+    "lifeExamples": [
+      {
+        "title": "AI家教讲题",
+        "content": "孩子做作业碰到不会的题，不用等家长下班教，AI家教能一步步讲解题思路，还能出同类题练习。总结：AI教育可以随时辅导孩子学习，讲解题目，减轻家长辅导压力。"
+      },
+      {
+        "title": "定制学习计划",
+        "content": "每个学生薄弱点不一样，AI分析学生的错题，找出知识漏洞，定制专属的学习和复习计划。总结：AI教育可以因材施教，针对每个学生的情况做个性化辅导。"
+      },
+      {
+        "title": "自动批改作业",
+        "content": "老师批改全班作业要花很久，AI可以自动批改选择、填空甚至作文，快速给出反馈，减轻老师负担。总结：AI教育能提升教学效率，让老师有更多精力关注学生的成长。"
+      }
+    ],
+    "aiExample": "现在很多学习软件都内置了AI讲题、AI批改、AI背诵等功能，是学生和老师常用的辅助学习工具。",
+    "relatedTerms": ["LLM", "AI写作", "智能教育", "知识图谱"]
+  },
+  {
+    "id": "189",
+    "term": "AI医疗",
+    "aliases": ["人工智能医疗", "医疗AI", "智能医疗"],
+    "category": "普通用户AI应用",
+    "translation": {
+      "english": "AI in Healthcare",
+      "chinese": "AI智能医疗"
+    },
+    "professionalExplanation": "AI医疗是把AI用在医疗场景，比如辅助看影像、分析病历、研发新药，帮助医生提升诊断效率和准确率。",
+    "lifeExamples": [
+      {
+        "title": "AI辅助看CT片",
+        "content": "医生看CT片要一张张仔细找病灶，容易累，AI先快速筛查一遍，标出可疑的地方，医生再重点确认。总结：AI医疗可以辅助医生读片，提升诊断效率，减少漏诊。"
+      },
+      {
+        "title": "AI辅助病历整理",
+        "content": "医生写病历要花很多时间，AI可以自动把问诊语音整理成规范的病历，医生只需要确认修改。总结：AI医疗可以帮医生处理文书工作，节省时间留给患者。"
+      },
+      {
+        "title": "AI辅助药物研发",
+        "content": "研发新药要试很多分子，以前靠人工慢慢试，AI可以快速筛选候选分子，缩短研发周期，降低成本。总结：AI在药物研发、影像诊断、健康管理等领域都有重要的辅助作用。"
+      }
+    ],
+    "aiExample": "AI医疗主要起辅助作用，最终诊断和治疗方案还是需要专业医生来确定，不能替代医生执业。",
+    "relatedTerms": ["CV", "NLP", "企业AI", "知识图谱"]
+  },
+  {
+    "id": "190",
+    "term": "算力",
+    "aliases": ["Computing Power", "计算力", "AI算力"],
+    "category": "AI基础概念",
+    "translation": {
+      "english": "Computing Power",
+      "chinese": "算力"
+    },
+    "professionalExplanation": "算力就是AI计算的能力，主要靠GPU提供，算力越强，训练大模型、生成内容的速度就越快。",
+    "lifeExamples": [
+      {
+        "title": "汽车的马力",
+        "content": "汽车马力越大，提速越快、载重能力越强，跑高速也更轻松。算力就像AI领域的汽车马力，决定了计算速度。总结：算力是AI的核心基础，算力越强，模型训练和推理的速度就越快。"
+      },
+      {
+        "title": "工厂的生产线数量",
+        "content": "工厂生产线越多，一天能生产的产品就越多，产能就越高。算力就像AI的生产线数量，决定了计算产能。总结：大模型训练需要巨大的算力，算力是AI发展的核心基础设施。"
+      },
+      {
+        "title": "水管的粗细",
+        "content": "水管越粗，单位时间流出的水量就越大，供水能力越强。算力就像数字世界的水管粗细，决定计算效率。总结：算力的大小直接影响AI模型的训练速度和推理成本。"
+      }
+    ],
+    "aiExample": "训练大模型需要海量的GPU算力，算力资源是当前AI行业的核心资源之一，也是重要的成本项。",
+    "relatedTerms": ["GPU", "CUDA", "推理成本", "云计算"]
+  },
+  {
+    "id": "191",
+    "term": "推理成本",
+    "aliases": ["推理花费", "Inference Cost", "模型推理成本"],
+    "category": "AI开发技术",
+    "translation": {
+      "english": "Inference Cost",
+      "chinese": "推理成本"
+    },
+    "professionalExplanation": "推理成本就是AI模型实际运行时产生的成本，主要是算力费用，调用次数越多、模型越大，成本就越高。",
+    "lifeExamples": [
+      {
+        "title": "打车的里程费",
+        "content": "打车不是一次性买断，是按里程和时长计费，坐得越远费用越高。AI推理成本就像打车费，用多少次算多少次的钱。总结：推理成本是AI实际使用时产生的费用，按调用量和模型大小计费。"
+      },
+      {
+        "title": "电费按用量算",
+        "content": "家电不是买了就完了，用的时候要交电费，用得越多电费越高。推理成本就像AI运行时的“电费”。总结：AI服务每响应用户一次请求，就会产生一次推理成本。"
+      },
+      {
+        "title": "打印按张收费",
+        "content": "打印店不是买机器就免费打，是按打印的张数收费，打得越多费用越高。推理成本也是按调用量收费。总结：推理成本是AI产品的主要运营成本之一，用量越大成本越高。"
+      }
+    ],
+    "aiExample": "AI产品的运营成本主要就是推理成本，所以很多产品会做模型量化、缓存来降低推理成本。",
+    "relatedTerms": ["Inference", "算力", "Quantization", "MaaS"]
+  },
+  {
+    "id": "192",
+    "term": "开源模型",
+    "aliases": ["Open Source Model", "开源大模型"],
+    "category": "AI基础概念",
+    "translation": {
+      "english": "Open Source Model",
+      "chinese": "开源模型"
+    },
+    "professionalExplanation": "开源模型就是代码和权重都公开免费的AI模型，任何人都可以下载、修改、二次开发，不用付授权费。",
+    "lifeExamples": [
+      {
+        "title": "公开的菜谱配方",
+        "content": "保密配方只有店家能用，公开菜谱所有人都能照着做，还能自己改配料、调整口味。开源模型就像公开的AI配方。总结：开源模型免费公开，任何人都可以下载使用和二次修改。"
+      },
+      {
+        "title": "开源的装修图纸",
+        "content": "付费设计图只能自己用，开源图纸大家都能免费用，还能根据自己家户型修改。总结：开源模型自由度高，企业可以基于它做定制化开发。"
+      },
+      {
+        "title": "免费共享的种子",
+        "content": "农民自己留的种子，大家可以互相分享、培育新品种，不用每年买种子。开源模型就像共享的技术种子。总结：开源模型降低了AI开发的门槛，推动了AI技术的普及和发展。"
+      }
+    ],
+    "aiExample": "Llama、Qwen、ChatGLM都是主流的开源大模型，企业可以基于它们做私有化部署和定制化开发。",
+    "relatedTerms": ["闭源模型", "Llama", "Qwen", "私有化部署"]
+  },
+  {
+    "id": "193",
+    "term": "闭源模型",
+    "aliases": ["Closed Source Model", "商用模型", "闭源大模型"],
+    "category": "AI基础概念",
+    "translation": {
+      "english": "Closed Source Model",
+      "chinese": "闭源模型"
+    },
+    "professionalExplanation": "闭源模型就是不公开内部代码和权重的AI模型，用户只能通过API或产品调用，不能下载修改，一般由厂商运营。",
+    "lifeExamples": [
+      {
+        "title": "连锁品牌的秘方菜品",
+        "content": "老字号的秘方菜不公开配方，顾客只能到店里吃，不能自己回家做，也不能随便改配方。闭源模型就像秘方菜。总结：闭源模型不公开内部细节，用户只能通过官方服务调用，不能自行修改。"
+      },
+      {
+        "title": "付费订阅的视频网站",
+        "content": "视频网站的片源不提供下载，用户只能在线观看，按会员付费，不能拿来二次剪辑售卖。总结：闭源模型通常按调用量或会员收费，使用简单但定制化受限。"
+      },
+      {
+        "title": "品牌成品家电",
+        "content": "品牌家电做好了直接卖，用户插电就能用，但是不能自己拆开改内部结构，售后由厂家负责。总结：闭源模型使用门槛低、效果稳定，适合普通用户和不想折腾的企业。"
+      }
+    ],
+    "aiExample": "GPT系列、Claude、文心一言都属于闭源模型，用户通过API或官方产品使用，由厂商持续维护升级。",
+    "relatedTerms": ["开源模型", "MaaS", "GPT", "Claude"]
+  },
+  {
+    "id": "194",
+    "term": "语义搜索",
+    "aliases": ["语义检索", "智能搜索", "语义查询"],
+    "category": "普通用户AI应用",
+    "translation": {
+      "english": "Semantic Search",
+      "chinese": "语义搜索"
+    },
+    "professionalExplanation": "语义搜索是按意思搜索，不用关键词完全匹配，能理解你搜索的意图，找出含义相关的内容，比传统搜索更智能。",
+    "lifeExamples": [
+      {
+        "title": "找东西说意思就行",
+        "content": "去商店买东西，不用说 exact 商品名，描述“下雨天穿的鞋”，店员就能给你拿雨鞋。语义搜索就是按意思找内容。总结：语义搜索理解搜索的真实含义，不用关键词完全对应也能找到相关内容。"
+      },
+      {
+        "title": "图书馆找相关主题的书",
+        "content": "普通检索只能按书名找，语义检索能帮你找同一主题、相关知识的书，哪怕书名里没有关键词。总结：语义搜索按内容含义匹配，能找到更多相关的优质结果。"
+      },
+      {
+        "title": "问问题式搜索",
+        "content": "传统搜索要输精准关键词，语义搜索可以直接问问题，比如“怎么给猫洗澡”，就能找到对应的教程。总结：语义搜索更贴近人的说话方式，搜索体验更自然、更精准。"
+      }
+    ],
+    "aiExample": "AI知识库、智能客服大多用语义搜索技术，结合向量数据库，能准确理解用户问题，匹配最相关的答案。",
+    "relatedTerms": ["Vector Database", "Embedding", "RAG", "Elasticsearch"]
+  },
+  {
+    "id": "195",
+    "term": "AI插件",
+    "aliases": ["AI Plugins", "大模型插件", "智能插件"],
+    "category": "AI基础概念",
+    "translation": {
+      "english": "AI Plugins",
+      "chinese": "AI插件"
+    },
+    "professionalExplanation": "AI插件是给大模型扩展能力的小程序，装上之后AI就能联网、查数据、操作软件，从聊天工具变成全能助手。",
+    "lifeExamples": [
+      {
+        "title": "手机装APP扩展功能",
+        "content": "手机本身只有基础功能，装了导航APP就能带路，装了外卖APP就能点餐，装什么就有什么功能。AI插件就像大模型的APP。总结：AI插件可以给大模型扩展各种能力，让它能做更多专业的事情。"
+      },
+      {
+        "title": "工具头替换的螺丝刀",
+        "content": "普通螺丝刀只能拧一种螺丝，多功能螺丝刀换不同的批头，就能拧一字、十字、六角各种螺丝。AI插件就像不同的批头。总结：通过安装不同的AI插件，大模型就能适配不同的场景和任务。"
+      },
+      {
+        "title": "游戏机插卡带",
+        "content": "游戏机本身只是机器，插不同的游戏卡带就能玩不同的游戏。AI插件就像大模型的功能卡带。总结：AI插件让大模型的能力可以无限扩展，连接更多工具和服务。"
+      }
+    ],
+    "aiExample": "ChatGPT、文心一言等大模型都支持插件系统，可以安装联网、查资料、订机票等各种插件，扩展使用场景。",
+    "relatedTerms": ["Agent", "Function Calling", "MCP", "ChatGPT"]
+  },
+  {
+    "id": "196",
+    "term": "云端部署",
+    "aliases": ["云部署", "云上部署", "云端部署模型"],
+    "category": "数据库和云计算",
+    "translation": {
+      "english": "Cloud Deployment",
+      "chinese": "云端部署"
+    },
+    "professionalExplanation": "云端部署就是把AI模型和服务放在云服务器上，用户通过网络调用，不用自己买硬件，按需付费更灵活。",
+    "lifeExamples": [
+      {
+        "title": "租写字楼办公",
+        "content": "开公司不用自己买地盖楼，租写字楼的办公室，按需选大小，物业还管维修，省心又灵活。云端部署就像租云服务器。总结：云端部署不用自己买硬件，按需租用云资源，灵活又省心。"
+      },
+      {
+        "title": "共享充电宝",
+        "content": "不用自己买充电宝随身带，出门用共享充电宝，按使用时长付费，方便又不用维护。总结：云端部署按使用量付费，前期投入少，扩容也很方便。"
+      },
+      {
+        "title": "自来水供水",
+        "content": "不用自己家打井，接自来水管道，用多少交多少水费，停水维修都由水厂负责。总结：云端部署是目前AI服务最主流的部署方式，门槛低、弹性好。"
+      }
+    ],
+    "aiExample": "大多数AI产品都采用云端部署的方式，用户通过网络访问服务，厂商在云端统一维护和升级模型。",
+    "relatedTerms": ["私有化部署", "Cloud", "阿里云", "MaaS"]
+  },
+  {
+    "id": "197",
+    "term": "判别式模型",
+    "aliases": ["Discriminative Model", "区分模型"],
+    "category": "AI基础概念",
+    "translation": {
+      "english": "Discriminative Model",
+      "chinese": "判别式模型"
+    },
+    "professionalExplanation": "判别式模型是用来判断、分类的AI模型，比如识别图片里是什么、判断是不是垃圾邮件，只做判断不生成新内容。",
+    "lifeExamples": [
+      {
+        "title": "安检员判断违禁品",
+        "content": "安检员的工作是判断行李里有没有违禁品、是什么东西，只做识别判断，不用创造新东西。判别式模型就像AI安检员。总结：判别式模型主要做分类、识别、判断任务，是传统AI最常见的类型。"
+      },
+      {
+        "title": "老师批改作业判对错",
+        "content": "老师批改作业，判断答案是对还是错、属于哪类题型，只做判断打分，不会自己写新作业。总结：判别式模型的核心是“判断”，用来做识别、分类、预测等任务。"
+      },
+      {
+        "title": "质检员检查产品",
+        "content": "质检员检查产品合不合格、属于哪个等级，只做判别分类，不生产新的产品。总结：生成式AI负责创造内容，判别式AI负责判断识别，二者各有分工。"
+      }
+    ],
+    "aiExample": "人脸识别、垃圾邮件过滤、商品分类都属于判别式模型的应用，它也是早期AI最主要的形态。",
+    "relatedTerms": ["生成式AI", "Diffusion Model", "Deep Learning", "CV"]
+  },
+  {
+    "id": "198",
+    "term": "风格迁移",
+    "aliases": ["Style Transfer", "AI风格迁移"],
+    "category": "AI基础概念",
+    "translation": {
+      "english": "Style Transfer",
+      "chinese": "风格迁移"
+    },
+    "professionalExplanation": "风格迁移就是把一张图片的画风，迁移到另一张图片上，比如把照片变成梵高画风、动漫风、水墨风。",
+    "lifeExamples": [
+      {
+        "title": "照片转成漫画风格",
+        "content": "拍了一张普通的风景照，用风格迁移，就能变成宫崎骏动漫风格的画面，像动漫里的场景一样。总结：风格迁移可以把普通照片转换成指定的艺术风格，保留内容换画风。"
+      },
+      {
+        "title": "照片变成水墨画",
+        "content": "拍的山水照片，用风格迁移处理一下，就能变成中国风水墨画的效果，很有艺术感。总结：风格迁移能保留图片内容，只改变画面的艺术风格。"
+      },
+      {
+        "title": "作文换文风",
+        "content": "一篇普通的记叙文，改成鲁迅文风、朱自清文风，内容还是那件事，但是语言风格完全变了。总结：图像风格迁移就是给图片“换画风”，内容不变风格变。"
+      }
+    ],
+    "aiExample": "早期AI绘画最火的应用就是风格迁移，现在很多滤镜、动漫头像功能底层都是风格迁移技术。",
+    "relatedTerms": ["AI绘画", "Stable Diffusion", "Deep Learning", "CV"]
+  },
+  {
+    "id": "199",
+    "term": "图像超分辨率",
+    "aliases": ["超分", "Super Resolution", "AI高清修复"],
+    "category": "AI基础概念",
+    "translation": {
+      "english": "Super Resolution",
+      "chinese": "图像超分辨率"
+    },
+    "professionalExplanation": "图像超分辨率就是用AI把模糊的小图变清晰、变大，补充细节，让低清图片变成高清图片。",
+    "lifeExamples": [
+      {
+        "title": "老照片变清晰",
+        "content": "小时候的老照片分辨率低、很模糊，用AI超分辨率处理一下，就变清晰了，细节也更丰富。总结：超分辨率可以把模糊的图片变高清，修复老照片、低质图都很好用。"
+      },
+      {
+        "title": "马赛克变清晰",
+        "content": "截图放大后都是马赛克，看不清细节，用AI超分处理，就能还原出更清晰的画面和细节。总结：超分辨率技术可以提升图片分辨率，让模糊的图片变得清晰。"
+      },
+      {
+        "title": "视频提升画质",
+        "content": "老电影、旧视频画质差，用AI超分辨率逐帧处理，就能变成高清版本，重映效果更好。总结：图像超分辨率广泛用于老照片修复、视频画质提升、图片放大等场景。"
+      }
+    ],
+    "aiExample": "很多修图软件、视频修复工具都内置了AI超分辨率功能，可以一键提升图片和视频的清晰度。",
+    "relatedTerms": ["AI修图", "老照片修复", "CV", "Deep Learning"]
+  },
+  {
+    "id": "200",
+    "term": "AI去水印",
+    "aliases": ["智能去水印", "AI去除水印"],
+    "category": "普通用户AI应用",
+    "translation": {
+      "english": "AI Watermark Removal",
+      "chinese": "AI去水印"
+    },
+    "professionalExplanation": "AI去水印就是用AI自动去掉图片、视频里的水印、字幕、杂物，自动补全背景，效果自然，不用手动一点点修。",
+    "lifeExamples": [
+      {
+        "title": "图片去logo水印",
+        "content": "找的素材图上有水印logo，以前要一点点用修图工具擦，用AI去水印一键就能去掉，背景还很自然。总结：AI去水印可以快速去除图片上的水印、文字，节省修图时间。"
+      },
+      {
+        "title": "视频去台标字幕",
+        "content": "下载的视频有台标、字幕影响观感，用AI去水印可以自动抹掉，还能补上对应的背景画面。总结：AI去水印能自动识别并移除画面里的遮挡物，补全合理的背景。"
+      },
+      {
+        "title": "照片去多余文字",
+        "content": "风景照上有路人、广告牌文字，用AI去水印涂抹一下，就能去掉多余元素，画面更干净。总结：AI去水印使用简单、效果自然，是修图时常用的AI功能。"
+      }
+    ],
+    "aiExample": "很多修图、剪视频的软件都有AI去水印功能，但使用时要注意版权，不能随意去除他人的版权标识。",
+    "relatedTerms": ["AI修图", "Photoshop AI", "美图AI", "图像超分辨率"]
+  }
+]

@@ -3,13 +3,9 @@ const explainPrompt = require('../prompts/explainPrompt.js')
 const comparePrompt = require('../prompts/comparePrompt.js')
 const businessPrompt = require('../prompts/businessPrompt.js')
 const developerPrompt = require('../prompts/developerPrompt.js')
-const modelUsageService = require('./modelUsageService.js')
 const explainModeService = require('./explainModeService.js')
-const evaluationService = require('./evaluationService.js')
-const performanceService = require('./performanceService.js')
 
 const CACHE_TTL = 24 * 60 * 60 * 1000
-const PROMPT_VERSION = 'v1'
 const resultCache = {}
 const inFlightRequests = {}
 
@@ -211,26 +207,6 @@ function callHunyuanAPI(promptConfig, keyword, mode) {
   })
 }
 
-function recordInternalMetrics(keyword, mode, promptConfig, result, usage) {
-  modelUsageService.recordUsage({
-    model: env.HUNYUAN_MODEL,
-    keyword,
-    prompt: promptConfig.content,
-    output: JSON.stringify(result),
-    inputTokens: usage && (usage.prompt_tokens || usage.input_tokens),
-    outputTokens: usage && (usage.completion_tokens || usage.output_tokens)
-  })
-
-  evaluationService.saveEvaluation({
-    keyword,
-    mode,
-    answer: result,
-    promptName: promptConfig.name,
-    promptVersion: PROMPT_VERSION,
-    source: 'llm'
-  })
-}
-
 function explain(input) {
   const parsed = explainModeService.parseExplainInput(input)
   const keyword = parsed.keyword
@@ -250,11 +226,8 @@ function explain(input) {
 
   const promptConfig = getPromptConfig(keyword, mode)
 
-  inFlightRequests[cacheKey] = performanceService.measure('hunyuan', 'hunyuan.explain', () => (
-    callHunyuanAPI(promptConfig, keyword, mode)
-  )).then(response => {
+  inFlightRequests[cacheKey] = callHunyuanAPI(promptConfig, keyword, mode).then(response => {
     const result = response.data
-    recordInternalMetrics(keyword, mode, promptConfig, result, response.usage)
     setCachedResult(cacheKey, result)
 
     return result
