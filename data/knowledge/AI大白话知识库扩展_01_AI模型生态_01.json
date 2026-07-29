@@ -1,0 +1,72 @@
+[
+  {
+    "id": "deepseek-v3",
+    "term": "DeepSeek-V3",
+    "aliases": [
+      "DeepSeek V3",
+      "深度求索V3"
+    ],
+    "category": "AI模型生态",
+    "priority": "P0",
+    "translation": {
+      "english": "DeepSeek-V3",
+      "chinese": "DeepSeek第三代模型"
+    },
+    "professionalExplanation": "DeepSeek-V3是一种人工智能大模型，可以理解文字、生成内容，并帮助用户完成问答、写作和分析任务。",
+    "lifeExamples": [
+      {
+        "title": "请朋友帮忙整理想法",
+        "content": "生活里，小王准备开一家小店，但是不知道应该从哪里开始。他把自己的想法告诉DeepSeek-V3，让AI帮助整理计划。这个过程像找一个有经验的朋友一起分析问题，把杂乱的想法变得清晰。这就像DeepSeek-V3的作用：不是让人研究复杂原理，而是把能力放到具体场景里，帮助普通人更快完成判断和表达。"
+      },
+      {
+        "title": "帮助写文章",
+        "content": "生活里，小李需要写一篇活动介绍，但是不知道怎么表达。他可以告诉DeepSeek-V3活动内容，让AI帮助整理语言。这个过程像请一个会写作的人帮你修改文章。这就像DeepSeek-V3的作用：不是让人研究复杂原理，而是把能力放到具体场景里，帮助普通人更快完成判断和表达。"
+      },
+      {
+        "title": "分析工作资料",
+        "content": "生活里，员工每天会收到很多资料，需要快速找到重点。DeepSeek-V3可以帮助总结内容。这个过程像让同事先帮你阅读文件，然后告诉你重要信息。这就像DeepSeek-V3的作用：不是让人研究复杂原理，而是把能力放到具体场景里，帮助普通人更快完成判断和表达。"
+      }
+    ],
+    "aiExample": "DeepSeek-V3可以用于AI聊天助手、内容生成、企业知识问答和代码辅助等场景。",
+    "relatedTerms": [
+      "DeepSeek",
+      "Large Language Model",
+      "AI Assistant"
+    ]
+  },
+  {
+    "id": "deepseek-r1",
+    "term": "DeepSeek-R1",
+    "aliases": [
+      "R1模型",
+      "DeepSeek推理模型"
+    ],
+    "category": "AI模型生态",
+    "priority": "P0",
+    "translation": {
+      "english": "DeepSeek-R1",
+      "chinese": "DeepSeek推理模型"
+    },
+    "professionalExplanation": "DeepSeek-R1是一种更擅长分析复杂问题的AI模型，可以帮助解决需要思考和推理的问题。",
+    "lifeExamples": [
+      {
+        "title": "解决复杂问题",
+        "content": "生活里，小王遇到一个复杂的工作计划问题，不知道应该先做什么。他把情况告诉DeepSeek-R1，让AI帮助分析步骤。这个过程像找一个善于思考的人一起拆解问题。这就像DeepSeek-R1的作用：不是让人研究复杂原理，而是把能力放到具体场景里，帮助普通人更快完成判断和表达。"
+      },
+      {
+        "title": "学习一道难题",
+        "content": "生活里，学生遇到一道很难的数学题，DeepSeek-R1可以帮助分析解题思路。这个过程像老师一步一步带你理解为什么这样做。这就像DeepSeek-R1的作用：不是让人研究复杂原理，而是把能力放到具体场景里，帮助普通人更快完成判断和表达。一句话总结：把它当成一个能帮忙处理具体任务的助手，会更容易理解。"
+      },
+      {
+        "title": "分析代码问题",
+        "content": "生活里，程序员发现代码出现错误，但是不知道原因。他可以让DeepSeek-R1帮助分析逻辑。这个过程像请经验丰富的同事一起检查问题。这就像DeepSeek-R1的作用：不是让人研究复杂原理，而是把能力放到具体场景里，帮助普通人更快完成判断和表达。一句话总结：把它当成一个能帮忙处理具体任务的助手。"
+      }
+    ],
+    "aiExample": "DeepSeek-R1主要用于复杂问答、数学分析、代码辅助和研究任务。",
+    "relatedTerms": [
+      "DeepSeek",
+      "Reasoning Model",
+      "Inference"
+    ]
+  }
+]

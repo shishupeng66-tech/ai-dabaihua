@@ -1,0 +1,172 @@
+[
+  {
+    "id": "mistral-large",
+    "term": "Mistral Large",
+    "aliases": [
+      "Mistral Large模型"
+    ],
+    "category": "AI模型生态",
+    "priority": "P0",
+    "translation": {
+      "english": "Mistral Large",
+      "chinese": "Mistral大型人工智能模型"
+    },
+    "professionalExplanation": "Mistral Large是一种能力较强的人工智能模型，可以帮助用户处理复杂问题、生成内容和分析信息。",
+    "lifeExamples": [
+      {
+        "title": "请高手帮忙分析",
+        "content": "生活里，小王遇到一个复杂决定，比如选择工作方向，不知道如何判断。他可以让AI帮助整理不同因素。这个过程像找一个经验丰富的人一起分析问题。这就像Mistral Large的作用：不是让人研究复杂原理，而是把能力放到具体场景里，帮助普通人更快完成判断和表达。"
+      },
+      {
+        "title": "整理大量资料",
+        "content": "生活里，工作人员需要查看很多文件，但是时间有限。AI可以帮助提取重点。这个过程像请助手先阅读资料，再告诉你重要内容。这就像Mistral Large的作用：不是让人研究复杂原理，而是把能力放到具体场景里，帮助普通人更快完成判断和表达。一句话总结：把它当成一个能帮忙处理具体任务的助手，会更容易理解。"
+      },
+      {
+        "title": "学习陌生领域",
+        "content": "生活里，一个人想学习新的知识，但是不知道从哪里开始。AI可以帮助梳理基础内容。这个过程像请老师带你入门。这就像Mistral Large的作用：不是让人研究复杂原理，而是把能力放到具体场景里，帮助普通人更快完成判断和表达。一句话总结：把它当成一个能帮忙处理具体任务的助手，会更容易理解。"
+      }
+    ],
+    "aiExample": "Mistral Large可以用于企业助手、复杂问答和内容生成。",
+    "relatedTerms": [
+      "Mistral",
+      "Large Language Model",
+      "AI Assistant"
+    ]
+  },
+  {
+    "id": "mistral-small",
+    "term": "Mistral Small",
+    "aliases": [
+      "Mistral Small模型"
+    ],
+    "category": "AI模型生态",
+    "priority": "P0",
+    "translation": {
+      "english": "Mistral Small",
+      "chinese": "Mistral轻量模型"
+    },
+    "professionalExplanation": "Mistral Small是一种较轻量的人工智能模型，可以快速完成一些常见的文字处理任务。",
+    "lifeExamples": [
+      {
+        "title": "快速回复消息",
+        "content": "生活里，朋友发来一些简单问题，不需要复杂思考，只需要快速回复。轻量AI模型就像帮忙处理简单沟通的小助手。这就像Mistral Small的作用：不是让人研究复杂原理，而是把能力放到具体场景里，帮助普通人更快完成判断和表达。一句话总结：把它当成一个能帮忙处理具体任务的助手，会更容易理解。"
+      },
+      {
+        "title": "整理简单信息",
+        "content": "生活里，每天收到很多通知，需要分类整理。AI可以帮助把信息归类。这个过程像有人帮你整理桌面文件。这就像Mistral Small的作用：不是让人研究复杂原理，而是把能力放到具体场景里，帮助普通人更快完成判断和表达。一句话总结：把它当成一个能帮忙处理具体任务的助手，会更容易理解。"
+      },
+      {
+        "title": "完成固定工作",
+        "content": "生活里，有些工作每天重复进行，比如整理表格。AI可以帮助完成这些固定任务。这个过程像请助手处理重复劳动。这就像Mistral Small的作用：不是让人研究复杂原理，而是把能力放到具体场景里，帮助普通人更快完成判断和表达。一句话总结：把它当成一个能帮忙处理具体任务的助手，会更容易理解。"
+      }
+    ],
+    "aiExample": "Mistral Small适合快速响应、成本较低的AI应用。",
+    "relatedTerms": [
+      "Mistral",
+      "Small Language Model",
+      "AI Automation"
+    ]
+  },
+  {
+    "id": "ai21-jamba",
+    "term": "Jamba",
+    "aliases": [
+      "AI21 Jamba"
+    ],
+    "category": "AI模型生态",
+    "priority": "P0",
+    "translation": {
+      "english": "Jamba",
+      "chinese": "AI21推出的人工智能模型"
+    },
+    "professionalExplanation": "Jamba是一种人工智能模型，可以帮助处理长文字内容和复杂的信息任务。",
+    "lifeExamples": [
+      {
+        "title": "阅读长文章",
+        "content": "生活里，一个人需要阅读很长的报告，但是没有足够时间。AI可以帮助总结重点。这个过程像朋友先帮你读完，再告诉你重要内容。这就像Jamba的作用：不是让人研究复杂原理，而是把能力放到具体场景里，帮助普通人更快完成判断和表达。一句话总结：把它当成一个能帮忙处理具体任务的助手，会更容易理解。"
+      },
+      {
+        "title": "整理会议记录",
+        "content": "生活里，会议结束后有大量讨论内容，需要整理重点。AI可以帮助提取主要信息。这个过程像秘书帮你整理会议笔记。这就像Jamba的作用：不是让人研究复杂原理，而是把能力放到具体场景里，帮助普通人更快完成判断和表达。一句话总结：把它当成一个能帮忙处理具体任务的助手，会更容易理解。"
+      },
+      {
+        "title": "查看合同内容",
+        "content": "生活里，普通人看到合同可能不知道重点在哪里。AI可以帮助解释内容。这个过程像请懂的人帮你快速阅读。这就像Jamba的作用：不是让人研究复杂原理，而是把能力放到具体场景里，帮助普通人更快完成判断和表达。一句话总结：把它当成一个能帮忙处理具体任务的助手，会更容易理解。"
+      }
+    ],
+    "aiExample": "Jamba可以用于长文本分析、企业资料处理和智能助手。",
+    "relatedTerms": [
+      "Large Language Model",
+      "AI Assistant",
+      "Context Window"
+    ]
+  },
+  {
+    "id": "command-model",
+    "term": "Command Model",
+    "aliases": [
+      "Command模型"
+    ],
+    "category": "AI模型生态",
+    "priority": "P0",
+    "translation": {
+      "english": "Command Model",
+      "chinese": "命令模型"
+    },
+    "professionalExplanation": "Command Model是一类人工智能语言模型，可以根据用户要求理解指令并生成对应内容。",
+    "lifeExamples": [
+      {
+        "title": "告诉助手完成任务",
+        "content": "生活里，你让家人帮忙买东西，需要说清楚买什么、多少、什么时候需要。AI模型也是类似，需要理解你的要求后完成任务。这就像Command Model的作用：不是让人研究复杂原理，而是把能力放到具体场景里，帮助普通人更快完成判断和表达。一句话总结：把它当成一个能帮忙处理具体任务的助手，会更容易理解。"
+      },
+      {
+        "title": "安排家庭事务",
+        "content": "生活里，家庭中有人负责安排事情，比如提醒大家出门时间。AI助手也可以根据指令帮助安排任务。这就像Command Model的作用：不是让人研究复杂原理，而是把能力放到具体场景里，帮助普通人更快完成判断和表达。一句话总结：把它当成一个能帮忙处理具体任务的助手，会更容易理解。"
+      },
+      {
+        "title": "学习按照要求完成作业",
+        "content": "生活里，学生写作文时，老师会提出要求。AI也是根据用户给出的要求生成内容。这就像Command Model的作用：不是让人研究复杂原理，而是把能力放到具体场景里，帮助普通人更快完成判断和表达。一句话总结：把它当成一个能帮忙处理具体任务的助手，会更容易理解。"
+      }
+    ],
+    "aiExample": "Command类模型常用于聊天助手、企业应用和自动化任务。",
+    "relatedTerms": [
+      "Cohere",
+      "Prompt",
+      "AI Assistant"
+    ]
+  },
+  {
+    "id": "command-lightning",
+    "term": "Command Lightning",
+    "aliases": [
+      "Cohere Command Lightning"
+    ],
+    "category": "AI模型生态",
+    "priority": "P0",
+    "translation": {
+      "english": "Command Lightning",
+      "chinese": "Command系列快速响应模型"
+    },
+    "professionalExplanation": "Command Lightning是一类偏向快速响应的人工智能模型，可以帮助用户快速完成文字处理和简单任务。",
+    "lifeExamples": [
+      {
+        "title": "快速查询信息",
+        "content": "生活里，小王出门前想知道天气和路线，不需要复杂分析，只需要快速得到答案。AI可以马上提供信息。这个过程像问朋友一个简单问题，很快得到回复。这就像Command Lightning的作用：不是让人研究复杂原理，而是把能力放到具体场景里，帮助普通人更快完成判断和表达。"
+      },
+      {
+        "title": "整理简单消息",
+        "content": "生活里，工作群里每天有很多通知，有些内容需要快速分类。AI可以帮助整理信息。这个过程像有人帮你把重要消息挑出来。这就像Command Lightning的作用：不是让人研究复杂原理，而是把能力放到具体场景里，帮助普通人更快完成判断和表达。一句话总结：把它当成一个能帮忙处理具体任务的助手。"
+      },
+      {
+        "title": "处理重复工作",
+        "content": "生活里，公司每天需要填写一些固定内容的表格。AI可以帮助完成简单重复任务。这个过程像请助手帮忙处理机械工作。这就像Command Lightning的作用：不是让人研究复杂原理，而是把能力放到具体场景里，帮助普通人更快完成判断和表达。一句话总结：把它当成一个能帮忙处理具体任务的助手，会更容易理解。"
+      }
+    ],
+    "aiExample": "Command Lightning适用于需要快速响应的聊天助手和自动化应用。",
+    "relatedTerms": [
+      "Command Model",
+      "AI Automation",
+      "AI Assistant"
+    ]
+  }
+]
