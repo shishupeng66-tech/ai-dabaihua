@@ -1,0 +1,926 @@
+﻿# AI大白话知识库全量质量检查报告 v2
+
+## 数量统计
+
+总词条数量：474
+
+## Schema检查
+
+问题数量：0
+
+无
+
+## 生活案例检查
+
+问题数量：700
+
+- Embedding：第 2 个案例 content 长度 79 字，要求 80-150 字
+- Embedding：第 3 个案例 content 长度 76 字，要求 80-150 字
+- ComfyUI：第 2 个案例 content 长度 76 字，要求 80-150 字
+- Runway：第 2 个案例 content 长度 78 字，要求 80-150 字
+- Runway：第 3 个案例 content 长度 75 字，要求 80-150 字
+- Whisper：第 2 个案例 content 长度 77 字，要求 80-150 字
+- Whisper：第 3 个案例 content 长度 67 字，要求 80-150 字
+- Notion AI：第 2 个案例 content 长度 75 字，要求 80-150 字
+- Notion AI：第 3 个案例 content 长度 77 字，要求 80-150 字
+- Vector Database：第 3 个案例 content 长度 79 字，要求 80-150 字
+- Node.js：第 2 个案例 content 长度 79 字，要求 80-150 字
+- Node.js：第 3 个案例 content 长度 77 字，要求 80-150 字
+- Database：第 2 个案例 content 长度 72 字，要求 80-150 字
+- Database：第 3 个案例 content 长度 78 字，要求 80-150 字
+- SQL：第 3 个案例 content 长度 69 字，要求 80-150 字
+- Cloud：第 2 个案例 content 长度 76 字，要求 80-150 字
+- Cloud：第 3 个案例 content 长度 79 字，要求 80-150 字
+- AWS：第 2 个案例 content 长度 67 字，要求 80-150 字
+- AI写作：第 1 个案例 content 长度 68 字，要求 80-150 字
+- AI写作：第 2 个案例 content 长度 70 字，要求 80-150 字
+- AI写作：第 3 个案例 content 长度 71 字，要求 80-150 字
+- AI绘画：第 1 个案例 content 长度 72 字，要求 80-150 字
+- AI绘画：第 2 个案例 content 长度 71 字，要求 80-150 字
+- AI绘画：第 3 个案例 content 长度 77 字，要求 80-150 字
+- AI客服：第 1 个案例 content 长度 73 字，要求 80-150 字
+- AI客服：第 2 个案例 content 长度 70 字，要求 80-150 字
+- AI客服：第 3 个案例 content 长度 77 字，要求 80-150 字
+- AGI：第 3 个案例 content 长度 75 字，要求 80-150 字
+- OCR：第 2 个案例 content 长度 78 字，要求 80-150 字
+- GitHub Copilot：第 2 个案例 content 长度 73 字，要求 80-150 字
+- FFmpeg：第 2 个案例 content 长度 71 字，要求 80-150 字
+- FFmpeg：第 3 个案例 content 长度 69 字，要求 80-150 字
+- Llama：第 3 个案例 content 长度 67 字，要求 80-150 字
+- 通义千问：第 1 个案例 content 长度 75 字，要求 80-150 字
+- 通义千问：第 2 个案例 content 长度 66 字，要求 80-150 字
+- 通义千问：第 3 个案例 content 长度 70 字，要求 80-150 字
+- 文心一言：第 1 个案例 content 长度 77 字，要求 80-150 字
+- 文心一言：第 2 个案例 content 长度 70 字，要求 80-150 字
+- 文心一言：第 3 个案例 content 长度 68 字，要求 80-150 字
+- 豆包：第 2 个案例 content 长度 73 字，要求 80-150 字
+- 豆包：第 3 个案例 content 长度 77 字，要求 80-150 字
+- Kimi：第 2 个案例 content 长度 75 字，要求 80-150 字
+- Kimi：第 3 个案例 content 长度 68 字，要求 80-150 字
+- Luma AI：第 3 个案例 content 长度 74 字，要求 80-150 字
+- Character.AI：第 3 个案例 content 长度 79 字，要求 80-150 字
+- LangChain：第 2 个案例 content 长度 78 字，要求 80-150 字
+- Quantization：第 3 个案例 content 长度 73 字，要求 80-150 字
+- CUDA：第 2 个案例 content 长度 78 字，要求 80-150 字
+- TensorRT：第 2 个案例 content 长度 64 字，要求 80-150 字
+- npm：第 2 个案例 content 长度 77 字，要求 80-150 字
+- JSON：第 2 个案例 content 长度 78 字，要求 80-150 字
+- JSON：第 3 个案例 content 长度 77 字，要求 80-150 字
+- HTML：第 1 个案例 content 长度 77 字，要求 80-150 字
+- HTML：第 2 个案例 content 长度 68 字，要求 80-150 字
+- HTML：第 3 个案例 content 长度 78 字，要求 80-150 字
+- CSS：第 1 个案例 content 长度 69 字，要求 80-150 字
+- CSS：第 2 个案例 content 长度 71 字，要求 80-150 字
+- MongoDB：第 3 个案例 content 长度 76 字，要求 80-150 字
+- 阿里云：第 1 个案例 content 长度 79 字，要求 80-150 字
+- AI配音：第 2 个案例 content 长度 76 字，要求 80-150 字
+- AI配音：第 3 个案例 content 长度 64 字，要求 80-150 字
+- RPA：第 2 个案例 content 长度 79 字，要求 80-150 字
+- RPA：第 3 个案例 content 长度 79 字，要求 80-150 字
+- Attention：第 3 个案例 content 长度 75 字，要求 80-150 字
+- 讯飞星火：第 2 个案例 content 长度 76 字，要求 80-150 字
+- 讯飞星火：第 3 个案例 content 长度 77 字，要求 80-150 字
+- Suno：第 3 个案例 content 长度 79 字，要求 80-150 字
+- Udio：第 1 个案例 content 长度 79 字，要求 80-150 字
+- Udio：第 3 个案例 content 长度 73 字，要求 80-150 字
+- HeyGen：第 2 个案例 content 长度 79 字，要求 80-150 字
+- 剪映AI：第 1 个案例 content 长度 77 字，要求 80-150 字
+- 剪映AI：第 3 个案例 content 长度 77 字，要求 80-150 字
+- WPS AI：第 3 个案例 content 长度 74 字，要求 80-150 字
+- Pinecone：第 2 个案例 content 长度 77 字，要求 80-150 字
+- Pinecone：第 3 个案例 content 长度 77 字，要求 80-150 字
+- Milvus：第 2 个案例 content 长度 79 字，要求 80-150 字
+- Milvus：第 3 个案例 content 长度 78 字，要求 80-150 字
+- Chroma：第 2 个案例 content 长度 72 字，要求 80-150 字
+- Chroma：第 3 个案例 content 长度 66 字，要求 80-150 字
+- Function Calling：第 2 个案例 content 长度 78 字，要求 80-150 字
+- Linux：第 2 个案例 content 长度 79 字，要求 80-150 字
+- 微服务：第 2 个案例 content 长度 79 字，要求 80-150 字
+- 微服务：第 3 个案例 content 长度 79 字，要求 80-150 字
+- PostgreSQL：第 2 个案例 content 长度 76 字，要求 80-150 字
+- 腾讯云：第 1 个案例 content 长度 74 字，要求 80-150 字
+- 腾讯云：第 2 个案例 content 长度 77 字，要求 80-150 字
+- 腾讯云：第 3 个案例 content 长度 75 字，要求 80-150 字
+- 华为云：第 1 个案例 content 长度 76 字，要求 80-150 字
+- 华为云：第 2 个案例 content 长度 72 字，要求 80-150 字
+- 华为云：第 3 个案例 content 长度 72 字，要求 80-150 字
+- 对象存储：第 3 个案例 content 长度 77 字，要求 80-150 字
+- AI翻译：第 1 个案例 content 长度 78 字，要求 80-150 字
+- AI翻译：第 2 个案例 content 长度 70 字，要求 80-150 字
+- AI翻译：第 3 个案例 content 长度 66 字，要求 80-150 字
+- AI编程：第 1 个案例 content 长度 77 字，要求 80-150 字
+- AI编程：第 3 个案例 content 长度 70 字，要求 80-150 字
+- AI数字人：第 1 个案例 content 长度 79 字，要求 80-150 字
+- AI数字人：第 2 个案例 content 长度 76 字，要求 80-150 字
+- AI数字人：第 3 个案例 content 长度 63 字，要求 80-150 字
+- AI换脸：第 1 个案例 content 长度 69 字，要求 80-150 字
+- AI换脸：第 2 个案例 content 长度 71 字，要求 80-150 字
+- AI换脸：第 3 个案例 content 长度 65 字，要求 80-150 字
+- AI办公：第 1 个案例 content 长度 70 字，要求 80-150 字
+- AI办公：第 2 个案例 content 长度 73 字，要求 80-150 字
+- AI办公：第 3 个案例 content 长度 74 字，要求 80-150 字
+- AI营销：第 1 个案例 content 长度 68 字，要求 80-150 字
+- AI营销：第 2 个案例 content 长度 73 字，要求 80-150 字
+- AI营销：第 3 个案例 content 长度 69 字，要求 80-150 字
+- 知识库：第 1 个案例 content 长度 68 字，要求 80-150 字
+- 知识库：第 2 个案例 content 长度 66 字，要求 80-150 字
+- 知识库：第 3 个案例 content 长度 68 字，要求 80-150 字
+- 数字员工：第 1 个案例 content 长度 71 字，要求 80-150 字
+- 数字员工：第 2 个案例 content 长度 69 字，要求 80-150 字
+- 数字员工：第 3 个案例 content 长度 65 字，要求 80-150 字
+- 智能质检：第 1 个案例 content 长度 78 字，要求 80-150 字
+- 智能质检：第 2 个案例 content 长度 75 字，要求 80-150 字
+- 智能质检：第 3 个案例 content 长度 68 字，要求 80-150 字
+- 知识图谱：第 3 个案例 content 长度 71 字，要求 80-150 字
+- Automation：第 1 个案例 content 长度 70 字，要求 80-150 字
+- Automation：第 2 个案例 content 长度 67 字，要求 80-150 字
+- Automation：第 3 个案例 content 长度 69 字，要求 80-150 字
+- TTS：第 2 个案例 content 长度 68 字，要求 80-150 字
+- TTS：第 3 个案例 content 长度 64 字，要求 80-150 字
+- STT：第 1 个案例 content 长度 79 字，要求 80-150 字
+- STT：第 2 个案例 content 长度 67 字，要求 80-150 字
+- STT：第 3 个案例 content 长度 61 字，要求 80-150 字
+- 转录：第 1 个案例 content 长度 72 字，要求 80-150 字
+- 转录：第 2 个案例 content 长度 66 字，要求 80-150 字
+- 转录：第 3 个案例 content 长度 71 字，要求 80-150 字
+- 字幕：第 1 个案例 content 长度 72 字，要求 80-150 字
+- 字幕：第 2 个案例 content 长度 71 字，要求 80-150 字
+- 字幕：第 3 个案例 content 长度 72 字，要求 80-150 字
+- AIGC：第 2 个案例 content 长度 79 字，要求 80-150 字
+- AIGC：第 3 个案例 content 长度 77 字，要求 80-150 字
+- 生成式AI：第 1 个案例 content 长度 71 字，要求 80-150 字
+- 生成式AI：第 2 个案例 content 长度 75 字，要求 80-150 字
+- 大模型应用开发：第 2 个案例 content 长度 71 字，要求 80-150 字
+- 大模型应用开发：第 3 个案例 content 长度 66 字，要求 80-150 字
+- 私有化部署：第 1 个案例 content 长度 75 字，要求 80-150 字
+- 私有化部署：第 2 个案例 content 长度 66 字，要求 80-150 字
+- 私有化部署：第 3 个案例 content 长度 73 字，要求 80-150 字
+- 模型即服务：第 2 个案例 content 长度 78 字，要求 80-150 字
+- Stable Diffusion WebUI：第 2 个案例 content 长度 75 字，要求 80-150 字
+- Underfitting：第 3 个案例 content 长度 74 字，要求 80-150 字
+- 数据标注：第 1 个案例 content 长度 78 字，要求 80-150 字
+- 数据标注：第 2 个案例 content 长度 68 字，要求 80-150 字
+- 数据标注：第 3 个案例 content 长度 65 字，要求 80-150 字
+- Flask：第 3 个案例 content 长度 74 字，要求 80-150 字
+- Bing Copilot：第 3 个案例 content 长度 76 字，要求 80-150 字
+- Prompt Injection：第 3 个案例 content 长度 78 字，要求 80-150 字
+- Jailbreak：第 2 个案例 content 长度 78 字，要求 80-150 字
+- Jailbreak：第 3 个案例 content 长度 77 字，要求 80-150 字
+- 涌现能力：第 3 个案例 content 长度 74 字，要求 80-150 字
+- 缩放法则：第 2 个案例 content 长度 72 字，要求 80-150 字
+- 缩放法则：第 3 个案例 content 长度 72 字，要求 80-150 字
+- 上下文学习：第 2 个案例 content 长度 64 字，要求 80-150 字
+- 上下文学习：第 3 个案例 content 长度 60 字，要求 80-150 字
+- Multi-Agent：第 3 个案例 content 长度 76 字，要求 80-150 字
+- SeaArt AI：第 2 个案例 content 长度 75 字，要求 80-150 字
+- 文心一格：第 1 个案例 content 长度 71 字，要求 80-150 字
+- 文心一格：第 2 个案例 content 长度 65 字，要求 80-150 字
+- 文心一格：第 3 个案例 content 长度 61 字，要求 80-150 字
+- 通义万相：第 1 个案例 content 长度 70 字，要求 80-150 字
+- 通义万相：第 2 个案例 content 长度 68 字，要求 80-150 字
+- 通义万相：第 3 个案例 content 长度 56 字，要求 80-150 字
+- Photoshop 生成式填充：第 1 个案例 content 长度 75 字，要求 80-150 字
+- Photoshop 生成式填充：第 2 个案例 content 长度 71 字，要求 80-150 字
+- Photoshop 生成式填充：第 3 个案例 content 长度 73 字，要求 80-150 字
+- Figma AI：第 3 个案例 content 长度 79 字，要求 80-150 字
+- 美图AI：第 1 个案例 content 长度 78 字，要求 80-150 字
+- 美图AI：第 2 个案例 content 长度 70 字，要求 80-150 字
+- 美图AI：第 3 个案例 content 长度 75 字，要求 80-150 字
+- AI修图：第 1 个案例 content 长度 73 字，要求 80-150 字
+- AI修图：第 2 个案例 content 长度 69 字，要求 80-150 字
+- AI修图：第 3 个案例 content 长度 67 字，要求 80-150 字
+- AI换背景：第 1 个案例 content 长度 68 字，要求 80-150 字
+- AI换背景：第 2 个案例 content 长度 68 字，要求 80-150 字
+- AI换背景：第 3 个案例 content 长度 69 字，要求 80-150 字
+- 声音克隆：第 2 个案例 content 长度 68 字，要求 80-150 字
+- 声音克隆：第 3 个案例 content 长度 65 字，要求 80-150 字
+- 唇形同步：第 2 个案例 content 长度 66 字，要求 80-150 字
+- 唇形同步：第 3 个案例 content 长度 58 字，要求 80-150 字
+- 智能客服：第 1 个案例 content 长度 77 字，要求 80-150 字
+- 智能客服：第 2 个案例 content 长度 71 字，要求 80-150 字
+- 智能客服：第 3 个案例 content 长度 72 字，要求 80-150 字
+- 数字孪生：第 3 个案例 content 长度 72 字，要求 80-150 字
+- 工业AI：第 1 个案例 content 长度 79 字，要求 80-150 字
+- 工业AI：第 2 个案例 content 长度 75 字，要求 80-150 字
+- 工业AI：第 3 个案例 content 长度 75 字，要求 80-150 字
+- AI教育：第 1 个案例 content 长度 76 字，要求 80-150 字
+- AI教育：第 2 个案例 content 长度 71 字，要求 80-150 字
+- AI教育：第 3 个案例 content 长度 76 字，要求 80-150 字
+- AI医疗：第 1 个案例 content 长度 74 字，要求 80-150 字
+- AI医疗：第 2 个案例 content 长度 70 字，要求 80-150 字
+- AI医疗：第 3 个案例 content 长度 78 字，要求 80-150 字
+- 算力：第 2 个案例 content 长度 78 字，要求 80-150 字
+- 算力：第 3 个案例 content 长度 73 字，要求 80-150 字
+- 推理成本：第 2 个案例 content 长度 73 字，要求 80-150 字
+- 推理成本：第 3 个案例 content 长度 76 字，要求 80-150 字
+- 开源模型：第 1 个案例 content 长度 79 字，要求 80-150 字
+- 开源模型：第 2 个案例 content 长度 61 字，要求 80-150 字
+- 开源模型：第 3 个案例 content 长度 78 字，要求 80-150 字
+- 闭源模型：第 2 个案例 content 长度 69 字，要求 80-150 字
+- 闭源模型：第 3 个案例 content 长度 74 字，要求 80-150 字
+- 语义搜索：第 2 个案例 content 长度 70 字，要求 80-150 字
+- 语义搜索：第 3 个案例 content 长度 74 字，要求 80-150 字
+- AI插件：第 3 个案例 content 长度 73 字，要求 80-150 字
+- 云端部署：第 2 个案例 content 长度 64 字，要求 80-150 字
+- 云端部署：第 3 个案例 content 长度 66 字，要求 80-150 字
+- 判别式模型：第 2 个案例 content 长度 72 字，要求 80-150 字
+- 判别式模型：第 3 个案例 content 长度 68 字，要求 80-150 字
+- 风格迁移：第 1 个案例 content 长度 75 字，要求 80-150 字
+- 风格迁移：第 2 个案例 content 长度 63 字，要求 80-150 字
+- 风格迁移：第 3 个案例 content 长度 69 字，要求 80-150 字
+- 图像超分辨率：第 1 个案例 content 长度 78 字，要求 80-150 字
+- 图像超分辨率：第 2 个案例 content 长度 65 字，要求 80-150 字
+- 图像超分辨率：第 3 个案例 content 长度 68 字，要求 80-150 字
+- AI去水印：第 1 个案例 content 长度 78 字，要求 80-150 字
+- AI去水印：第 2 个案例 content 长度 73 字，要求 80-150 字
+- AI去水印：第 3 个案例 content 长度 70 字，要求 80-150 字
+- MoE：第 3 个案例 content 长度 79 字，要求 80-150 字
+- Gamma：第 2 个案例 content 长度 72 字，要求 80-150 字
+- GPT-4o：第 3 个案例 content 长度 72 字，要求 80-150 字
+- Claude 3：第 2 个案例 content 长度 75 字，要求 80-150 字
+- Claude 3：第 3 个案例 content 长度 78 字，要求 80-150 字
+- DSPy：第 3 个案例 content 长度 79 字，要求 80-150 字
+- RabbitMQ：第 2 个案例 content 长度 75 字，要求 80-150 字
+- RabbitMQ：第 3 个案例 content 长度 71 字，要求 80-150 字
+- DevOps：第 2 个案例 content 长度 78 字，要求 80-150 字
+- DevOps：第 3 个案例 content 长度 74 字，要求 80-150 字
+- GraphQL：第 2 个案例 content 长度 78 字，要求 80-150 字
+- GraphQL：第 3 个案例 content 长度 68 字，要求 80-150 字
+- gRPC：第 3 个案例 content 长度 74 字，要求 80-150 字
+- 智能审核：第 1 个案例 content 长度 79 字，要求 80-150 字
+- 智能审核：第 2 个案例 content 长度 66 字，要求 80-150 字
+- 智能审核：第 3 个案例 content 长度 64 字，要求 80-150 字
+- 内容风控：第 2 个案例 content 长度 76 字，要求 80-150 字
+- 智能外呼：第 1 个案例 content 长度 78 字，要求 80-150 字
+- 智能外呼：第 2 个案例 content 长度 70 字，要求 80-150 字
+- 智能外呼：第 3 个案例 content 长度 75 字，要求 80-150 字
+- AI法律助手：第 1 个案例 content 长度 70 字，要求 80-150 字
+- AI法律助手：第 2 个案例 content 长度 73 字，要求 80-150 字
+- AI法律助手：第 3 个案例 content 长度 74 字，要求 80-150 字
+- AI招聘：第 1 个案例 content 长度 74 字，要求 80-150 字
+- AI招聘：第 2 个案例 content 长度 70 字，要求 80-150 字
+- AI招聘：第 3 个案例 content 长度 75 字，要求 80-150 字
+- 音频降噪：第 1 个案例 content 长度 77 字，要求 80-150 字
+- 音频降噪：第 2 个案例 content 长度 69 字，要求 80-150 字
+- 音频降噪：第 3 个案例 content 长度 66 字，要求 80-150 字
+- SRT字幕：第 1 个案例 content 长度 75 字，要求 80-150 字
+- SRT字幕：第 2 个案例 content 长度 76 字，要求 80-150 字
+- SRT字幕：第 3 个案例 content 长度 72 字，要求 80-150 字
+- 向量检索：第 2 个案例 content 长度 74 字，要求 80-150 字
+- 向量检索：第 3 个案例 content 长度 65 字，要求 80-150 字
+- 近似最近邻：第 1 个案例 content 长度 76 字，要求 80-150 字
+- 近似最近邻：第 2 个案例 content 长度 71 字，要求 80-150 字
+- 近似最近邻：第 3 个案例 content 长度 63 字，要求 80-150 字
+- HNSW：第 2 个案例 content 长度 61 字，要求 80-150 字
+- HNSW：第 3 个案例 content 长度 71 字，要求 80-150 字
+- BERT：第 2 个案例 content 长度 74 字，要求 80-150 字
+- BERT：第 3 个案例 content 长度 78 字，要求 80-150 字
+- 梯度下降：第 2 个案例 content 长度 62 字，要求 80-150 字
+- 梯度下降：第 3 个案例 content 长度 59 字，要求 80-150 字
+- 损失函数：第 2 个案例 content 长度 78 字，要求 80-150 字
+- 损失函数：第 3 个案例 content 长度 73 字，要求 80-150 字
+- 反向传播：第 1 个案例 content 长度 73 字，要求 80-150 字
+- 反向传播：第 2 个案例 content 长度 69 字，要求 80-150 字
+- 反向传播：第 3 个案例 content 长度 64 字，要求 80-150 字
+- 泛化能力：第 2 个案例 content 长度 68 字，要求 80-150 字
+- 泛化能力：第 3 个案例 content 长度 76 字，要求 80-150 字
+- 训练集：第 1 个案例 content 长度 79 字，要求 80-150 字
+- 训练集：第 2 个案例 content 长度 58 字，要求 80-150 字
+- 训练集：第 3 个案例 content 长度 57 字，要求 80-150 字
+- 测试集：第 2 个案例 content 长度 75 字，要求 80-150 字
+- 测试集：第 3 个案例 content 长度 67 字，要求 80-150 字
+- 验证集：第 2 个案例 content 长度 65 字，要求 80-150 字
+- 验证集：第 3 个案例 content 长度 62 字，要求 80-150 字
+- 超参数：第 1 个案例 content 长度 78 字，要求 80-150 字
+- 超参数：第 2 个案例 content 长度 67 字，要求 80-150 字
+- 超参数：第 3 个案例 content 长度 61 字，要求 80-150 字
+- 学习率：第 1 个案例 content 长度 76 字，要求 80-150 字
+- 学习率：第 2 个案例 content 长度 66 字，要求 80-150 字
+- 学习率：第 3 个案例 content 长度 63 字，要求 80-150 字
+- 批次大小：第 1 个案例 content 长度 77 字，要求 80-150 字
+- 批次大小：第 2 个案例 content 长度 64 字，要求 80-150 字
+- 批次大小：第 3 个案例 content 长度 65 字，要求 80-150 字
+- 训练轮数：第 2 个案例 content 长度 63 字，要求 80-150 字
+- 训练轮数：第 3 个案例 content 长度 70 字，要求 80-150 字
+- 早停：第 2 个案例 content 长度 62 字，要求 80-150 字
+- 早停：第 3 个案例 content 长度 66 字，要求 80-150 字
+- dropout：第 3 个案例 content 长度 69 字，要求 80-150 字
+- 正则化：第 1 个案例 content 长度 74 字，要求 80-150 字
+- 正则化：第 2 个案例 content 长度 62 字，要求 80-150 字
+- 正则化：第 3 个案例 content 长度 65 字，要求 80-150 字
+- 幻觉：第 2 个案例 content 长度 68 字，要求 80-150 字
+- 幻觉：第 3 个案例 content 长度 72 字，要求 80-150 字
+- 上下文窗口：第 3 个案例 content 长度 70 字，要求 80-150 字
+- 思维链：第 3 个案例 content 长度 69 字，要求 80-150 字
+- 零样本学习：第 3 个案例 content 长度 61 字，要求 80-150 字
+- 少样本学习：第 1 个案例 content 长度 79 字，要求 80-150 字
+- 仅展示前 300 条，共 700 条。
+
+## 大白话质量检查
+
+问题数量：308
+
+- API：可能有技术文档表达
+- Artificial Intelligence：可能有百科式表达；可能有技术文档表达
+- Machine Learning：可能有技术文档表达
+- Deep Learning：可能有技术文档表达；专业术语较多（约 8 次）
+- Agent：可能有技术文档表达
+- MCP：可能有技术文档表达
+- Transformer：可能有百科式表达；可能有技术文档表达；专业术语较多（约 25 次）
+- Inference：可能有技术文档表达；专业术语较多（约 19 次）
+- Embedding：可能有技术文档表达
+- Fine-tuning：可能有百科式表达；可能有技术文档表达；专业术语较多（约 10 次）
+- ComfyUI：可能有技术文档表达
+- Stable Diffusion：可能有技术文档表达；专业术语较多（约 9 次）
+- Notion AI：可能有技术文档表达
+- SDK：可能有技术文档表达
+- Vector Database：可能有技术文档表达；专业术语较多（约 20 次）
+- Python：可能有百科式表达
+- Docker：可能有技术文档表达
+- Database：可能有技术文档表达；专业术语较多（约 8 次）
+- SQL：可能有技术文档表达；专业术语较多（约 10 次）
+- MySQL：可能有技术文档表达
+- Cloud：可能有技术文档表达
+- AWS：可能有技术文档表达
+- Neural Network：可能有技术文档表达；专业术语较多（约 14 次）
+- Parameters：可能有技术文档表达；专业术语较多（约 24 次）
+- Pre-training：可能有技术文档表达；专业术语较多（约 20 次）
+- Chain of Thought：可能有技术文档表达
+- AGI：可能有百科式表达
+- NLP：可能有百科式表达
+- Faster Whisper：可能有技术文档表达
+- Llama：可能有技术文档表达；专业术语较多（约 14 次）
+- Qwen：可能有技术文档表达；专业术语较多（约 8 次）
+- 文心一言：可能有技术文档表达
+- Luma AI：可能有百科式表达
+- LangChain：可能有技术文档表达；专业术语较多（约 12 次）
+- LoRA：可能有技术文档表达；专业术语较多（约 18 次）
+- Quantization：可能有技术文档表达；专业术语较多（约 16 次）
+- GPU：可能有技术文档表达；专业术语较多（约 10 次）
+- CUDA：可能有技术文档表达；专业术语较多（约 8 次）
+- TensorRT：可能有技术文档表达；专业术语较多（约 14 次）
+- Go：可能有技术文档表达
+- Rust：可能有技术文档表达
+- JSON：可能有技术文档表达
+- Redis：可能有技术文档表达
+- MongoDB：可能有技术文档表达
+- 阿里云：可能有技术文档表达
+- RLHF：可能有技术文档表达
+- Temperature：可能有技术文档表达
+- Top-p：可能有技术文档表达
+- Attention：可能有百科式表达；可能有技术文档表达
+- Tokenizer：可能有技术文档表达
+- 智谱清言：可能有技术文档表达
+- DeepSeek：可能有技术文档表达；专业术语较多（约 8 次）
+- Microsoft Copilot：可能有技术文档表达
+- Pinecone：可能有技术文档表达；专业术语较多（约 14 次）
+- Milvus：可能有技术文档表达；专业术语较多（约 15 次）
+- Chroma：可能有技术文档表达；专业术语较多（约 11 次）
+- Function Calling：可能有技术文档表达
+- Embedding Model：可能有技术文档表达；专业术语较多（约 14 次）
+- Linux：可能有技术文档表达
+- Nginx：可能有技术文档表达
+- Kubernetes：可能有技术文档表达
+- 微服务：可能有技术文档表达
+- PostgreSQL：可能有技术文档表达；存在营销夸张词
+- 腾讯云：可能有百科式表达；可能有技术文档表达
+- Serverless：可能有技术文档表达
+- AI换脸：可能有百科式表达
+- 知识图谱：可能有百科式表达
+- STT：可能有百科式表达
+- 大模型应用开发：可能有技术文档表达；专业术语较多（约 14 次）
+- 私有化部署：可能有技术文档表达；专业术语较多（约 9 次）
+- 模型即服务：可能有技术文档表达；专业术语较多（约 15 次）
+- Hugging Face：可能有技术文档表达；专业术语较多（约 12 次）
+- Stable Diffusion WebUI：可能有技术文档表达
+- Diffusion Model：可能有百科式表达；专业术语较多（约 8 次）
+- Reinforcement Learning：可能有技术文档表达
+- Overfitting：可能有技术文档表达
+- Underfitting：可能有技术文档表达；专业术语较多（约 12 次）
+- 数据标注：可能有技术文档表达；专业术语较多（约 10 次）
+- Data Augmentation：可能有技术文档表达
+- FastAPI：可能有技术文档表达；专业术语较多（约 16 次）
+- Flask：可能有技术文档表达
+- RESTful API：可能有技术文档表达
+- Elasticsearch：可能有技术文档表达
+- Jailbreak：可能有技术文档表达
+- 涌现能力：可能有百科式表达；可能有技术文档表达；专业术语较多（约 13 次）
+- 缩放法则：可能有百科式表达；可能有技术文档表达；专业术语较多（约 9 次）
+- 上下文学习：可能有技术文档表达；专业术语较多（约 11 次）
+- Multi-Agent：可能有技术文档表达
+- Leonardo AI：可能有技术文档表达
+- SeaArt AI：可能有技术文档表达
+- 文心一格：可能有技术文档表达
+- 通义万相：可能有技术文档表达
+- 美图AI：可能有技术文档表达
+- 唇形同步：可能有百科式表达
+- 工业AI：可能有百科式表达；可能有技术文档表达
+- AI医疗：可能有百科式表达
+- 算力：可能有技术文档表达；专业术语较多（约 12 次）
+- 推理成本：可能有技术文档表达；专业术语较多（约 13 次）
+- 开源模型：可能有技术文档表达；专业术语较多（约 9 次）
+- 闭源模型：可能有技术文档表达；专业术语较多（约 9 次）
+- 语义搜索：可能有技术文档表达
+- 云端部署：可能有技术文档表达；专业术语较多（约 9 次）
+- SFT：可能有技术文档表达；专业术语较多（约 16 次）
+- DPO：可能有技术文档表达；专业术语较多（约 13 次）
+- MoE：可能有技术文档表达；专业术语较多（约 21 次）
+- Rerank：可能有技术文档表达
+- GPT-4o：可能有技术文档表达；存在营销夸张词
+- Claude 3：可能有技术文档表达
+- ONNX：可能有技术文档表达；专业术语较多（约 27 次）
+- DSPy：可能有技术文档表达
+- RabbitMQ：可能有技术文档表达
+- CI/CD：可能有技术文档表达
+- DevOps：可能有技术文档表达
+- GraphQL：可能有技术文档表达
+- gRPC：可能有技术文档表达
+- 向量检索：可能有百科式表达；可能有技术文档表达；专业术语较多（约 14 次）
+- 近似最近邻：可能有技术文档表达；专业术语较多（约 12 次）
+- HNSW：可能有技术文档表达；专业术语较多（约 12 次）
+- BERT：可能有百科式表达；可能有技术文档表达
+- 梯度下降：可能有技术文档表达；专业术语较多（约 19 次）
+- 损失函数：可能有技术文档表达；专业术语较多（约 16 次）
+- 反向传播：可能有技术文档表达；专业术语较多（约 17 次）
+- 泛化能力：可能有百科式表达；可能有技术文档表达；专业术语较多（约 11 次）
+- 训练集：可能有技术文档表达；专业术语较多（约 24 次）
+- 测试集：可能有技术文档表达；专业术语较多（约 13 次）
+- 验证集：可能有技术文档表达；专业术语较多（约 16 次）
+- 超参数：可能有技术文档表达；专业术语较多（约 21 次）
+- 学习率：可能有技术文档表达；专业术语较多（约 16 次）
+- 批次大小：可能有技术文档表达；专业术语较多（约 13 次）
+- 训练轮数：可能有技术文档表达；专业术语较多（约 16 次）
+- 早停：可能有技术文档表达；专业术语较多（约 12 次）
+- dropout：可能有技术文档表达
+- 正则化：可能有百科式表达；可能有技术文档表达；专业术语较多（约 10 次）；存在营销夸张词
+- 上下文窗口：可能有技术文档表达
+- 思维链：可能有技术文档表达
+- 少样本学习：可能有技术文档表达
+- 指令微调：可能有技术文档表达；专业术语较多（约 9 次）
+- 量化：可能有技术文档表达；专业术语较多（约 15 次）
+- 知识蒸馏：可能有技术文档表达；专业术语较多（约 23 次）
+- 模型剪枝：可能有技术文档表达；专业术语较多（约 16 次）
+- 自监督学习：可能有技术文档表达；专业术语较多（约 10 次）
+- 监督学习：可能有技术文档表达
+- 无监督学习：可能有技术文档表达
+- 半监督学习：可能有技术文档表达
+- 可解释性AI：可能有百科式表达
+- AI伦理：可能有技术文档表达
+- 数据偏见：可能有技术文档表达
+- 模型漂移：可能有百科式表达；可能有技术文档表达；专业术语较多（约 14 次）
+- 联邦学习：可能有技术文档表达；专业术语较多（约 14 次）
+- 端侧AI：可能有技术文档表达
+- 边缘计算：可能有技术文档表达
+- 基准测试：可能有技术文档表达
+- MMLU：可能有技术文档表达；专业术语较多（约 10 次）
+- GLUE：可能有技术文档表达；专业术语较多（约 8 次）
+- ROUGE：可能有百科式表达
+- 合成数据：可能有技术文档表达；专业术语较多（约 8 次）
+- 数据清洗：可能有技术文档表达；专业术语较多（约 8 次）
+- 表示学习：专业术语较多（约 8 次）
+- 黑箱模型：可能有技术文档表达；专业术语较多（约 11 次）
+- 白箱模型：专业术语较多（约 9 次）
+- 模型压缩：可能有技术文档表达；专业术语较多（约 14 次）
+- 模型部署：可能有技术文档表达；专业术语较多（约 23 次）
+- 推理引擎：可能有技术文档表达；专业术语较多（约 22 次）
+- 提示词工程：可能有技术文档表达；专业术语较多（约 9 次）
+- 角色提示词：可能有百科式表达
+- 灾难性遗忘：可能有技术文档表达
+- MLOps：可能有技术文档表达
+- 智能体：可能有技术文档表达
+- 工具调用：可能有技术文档表达
+- 检索增强生成：可能有技术文档表达；专业术语较多（约 9 次）
+- 生成对抗网络：可能有百科式表达；可能有技术文档表达
+- 变分自编码器：可能有百科式表达；可能有技术文档表达；专业术语较多（约 8 次）
+- 自注意力机制：可能有百科式表达；可能有技术文档表达；专业术语较多（约 10 次）
+- 残差连接：可能有百科式表达；可能有技术文档表达；专业术语较多（约 17 次）
+- 层归一化：可能有技术文档表达；专业术语较多（约 13 次）
+- 激活函数：可能有技术文档表达；专业术语较多（约 10 次）
+- 思维树：可能有技术文档表达
+- 混合检索：可能有技术文档表达
+- 文本分块：可能有技术文档表达
+- Flash Attention：可能有技术文档表达；专业术语较多（约 12 次）
+- 参数高效微调：可能有技术文档表达；专业术语较多（约 20 次）
+- PyTorch：可能有技术文档表达；专业术语较多（约 12 次）
+- TensorFlow：可能有技术文档表达；专业术语较多（约 12 次）
+- 飞桨：可能有百科式表达；可能有技术文档表达；专业术语较多（约 13 次）
+- 魔搭社区：可能有技术文档表达；专业术语较多（约 10 次）
+- OpenCV：可能有技术文档表达
+- cuDNN：可能有技术文档表达；专业术语较多（约 14 次）
+- TensorBoard：可能有技术文档表达；专业术语较多（约 16 次）
+- 情感分析：可能有百科式表达
+- 命名实体识别：可能有百科式表达
+- 光学字符识别：可能有百科式表达
+- 计算机视觉：可能有技术文档表达
+- 自动驾驶：可能有百科式表达；可能有技术文档表达
+- 大语言模型：可能有百科式表达；可能有技术文档表达；专业术语较多（约 15 次）
+- 人类反馈强化学习：可能有技术文档表达；专业术语较多（约 16 次）
+- 温度系数：可能有技术文档表达
+- 波束搜索：可能有百科式表达；可能有技术文档表达
+- 目标检测：可能有技术文档表达
+- 扩散模型：可能有百科式表达；可能有技术文档表达；专业术语较多（约 13 次）
+- 提示词注入：专业术语较多（约 9 次）
+- 越狱攻击：专业术语较多（约 8 次）
+- 数据增强：可能有技术文档表达
+- 数据治理：可能有技术文档表达
+- 函数调用：可能有技术文档表达；专业术语较多（约 10 次）
+- 插件生态：可能有技术文档表达；专业术语较多（约 11 次）
+- 迁移学习：可能有百科式表达；可能有技术文档表达
+- 单样本学习：可能有技术文档表达
+- Mistral：可能有技术文档表达；专业术语较多（约 17 次）
+- Gemma：可能有百科式表达；可能有技术文档表达；专业术语较多（约 10 次）；存在营销夸张词
+- 推理延迟：可能有技术文档表达；专业术语较多（约 10 次）
+- 吞吐量：可能有技术文档表达
+- 显存：可能有百科式表达；可能有技术文档表达；专业术语较多（约 18 次）
+- GPU集群：可能有技术文档表达；专业术语较多（约 14 次）
+- 端侧大模型：可能有技术文档表达
+- 搜索排序：可能有百科式表达
+- 领域自适应：可能有百科式表达；可能有技术文档表达
+- 基线模型：可能有技术文档表达
+- 过拟合：可能有技术文档表达；专业术语较多（约 14 次）
+- 欠拟合：可能有技术文档表达；专业术语较多（约 16 次）
+- 工业质检：可能有百科式表达
+- 代码大模型：可能有技术文档表达；专业术语较多（约 8 次）
+- 具身智能：可能有百科式表达
+- 多模态融合：可能有百科式表达
+- 重排序：可能有技术文档表达
+- 语义检索：可能有百科式表达；可能有技术文档表达
+- 向量数据库：可能有技术文档表达；专业术语较多（约 21 次）
+- 多路召回：可能有技术文档表达
+- 粗排：可能有技术文档表达
+- 精排：可能有技术文档表达
+- AI工作流：可能有技术文档表达
+- 混合专家模型：可能有百科式表达；可能有技术文档表达；专业术语较多（约 15 次）
+- 稀疏激活：可能有技术文档表达；专业术语较多（约 11 次）
+- 旋转位置编码：可能有技术文档表达；专业术语较多（约 9 次）
+- 位置插值：可能有技术文档表达
+- RMSNorm：可能有技术文档表达
+- SwiGLU：可能有技术文档表达；专业术语较多（约 8 次）
+- 直接偏好优化：可能有技术文档表达；专业术语较多（约 10 次）
+- 奖励模型：可能有技术文档表达；专业术语较多（约 17 次）
+- 红队测试：专业术语较多（约 8 次）
+- 数据投毒：可能有技术文档表达；专业术语较多（约 10 次）
+- 差分隐私：可能有百科式表达；可能有技术文档表达
+- 模型卡：可能有技术文档表达；专业术语较多（约 22 次）
+- 自我一致性：可能有技术文档表达；专业术语较多（约 13 次）
+- 文本分类：可能有百科式表达
+- 信息抽取：可能有百科式表达
+- 关系抽取：可能有百科式表达
+- 事件抽取：可能有百科式表达
+- 序列标注：可能有百科式表达
+- 闭域问答：可能有百科式表达
+- 句法分析：可能有百科式表达
+- 小样本学习：可能有技术文档表达
+- 领域大模型：可能有百科式表达；可能有技术文档表达；专业术语较多（约 15 次）
+- 思维图：可能有技术文档表达；专业术语较多（约 8 次）
+- ReAct框架：可能有技术文档表达；专业术语较多（约 11 次）
+- 规划执行架构：可能有技术文档表达
+- 模型评估：专业术语较多（约 13 次）
+- MMLU评测：可能有技术文档表达；专业术语较多（约 12 次）
+- GLUE评测：可能有技术文档表达
+- 嵌入向量：可能有技术文档表达；专业术语较多（约 11 次）
+- 策略梯度：可能有百科式表达；可能有技术文档表达
+- 早停法：可能有技术文档表达；专业术语较多（约 9 次）
+- 随机失活：可能有技术文档表达；专业术语较多（约 9 次）
+- 梯度消失：可能有技术文档表达；专业术语较多（约 9 次）
+- 梯度爆炸：可能有技术文档表达；专业术语较多（约 10 次）
+- 预训练模型：可能有百科式表达；可能有技术文档表达；专业术语较多（约 15 次）
+- 微调：可能有百科式表达；可能有技术文档表达；专业术语较多（约 14 次）
+- 编码器：可能有百科式表达；可能有技术文档表达
+- 解码器：可能有技术文档表达；专业术语较多（约 8 次）
+- BERT模型：可能有技术文档表达；专业术语较多（约 20 次）
+- 生成式预训练：可能有百科式表达；可能有技术文档表达；专业术语较多（约 13 次）
+- 端到端学习：可能有技术文档表达
+- 批归一化：可能有技术文档表达；专业术语较多（约 12 次）
+- 过采样：可能有技术文档表达
+- 弱监督学习：可能有百科式表达；可能有技术文档表达
+- DeepSeek-R1：可能有百科式表达；可能有技术文档表达
+- Qwen-Max：可能有百科式表达
+- Moonshot AI：可能有百科式表达
+- Grok：可能有百科式表达
+- Phi：可能有百科式表达
+- Cohere：可能有百科式表达
+- Command R：可能有百科式表达
+- Command R+：可能有百科式表达
+- Llama 3：可能有百科式表达
+- Llama 3.1：可能有百科式表达
+- Llama 3.2：可能有百科式表达
+- Llama 4：可能有百科式表达
+- Phi-3：可能有百科式表达
+- Mistral Large：可能有百科式表达
+- Jamba：可能有百科式表达
+- Command Model：可能有百科式表达
+- Command Lightning：可能有百科式表达
+- Falcon：可能有百科式表达
+- StableLM：可能有百科式表达
+- Nemotron：可能有百科式表达
+- Aya：可能有百科式表达
+- OLMo：可能有百科式表达
+- BLOOM：可能有百科式表达
+- Granite：可能有百科式表达
+- watsonx：可能有百科式表达；可能有技术文档表达
+- Gemma 2：可能有百科式表达
+- 仅展示前 300 条，共 308 条。
+
+## 重复检查
+
+### term重复
+
+问题数量：0
+
+无
+
+### aliases重复
+
+问题数量：52
+
+- 人工智能：AI / Artificial Intelligence
+- 提示词工程：Prompt / Prompt Engineering
+- Copilot：GitHub Copilot / Microsoft Copilot
+- 多模态大模型：Multi-modal / 多模态
+- AI幻觉：Hallucination / 幻觉
+- 模型幻觉：Hallucination / 幻觉
+- 上下文长度：Context Window / 上下文窗口
+- CoT：Chain of Thought / 思维链
+- 零样本：Zero-shot / 零样本学习
+- 少样本：Few-shot / 少样本学习
+- 模型量化：Quantization / 量化
+- 提示工程：Prompt Engineering / 提示词工程
+- AI智能体：Agent / 智能体
+- 检索增强：RAG / 检索增强生成
+- Self-Attention：Attention / 自注意力机制
+- 自注意力：Attention / 自注意力机制
+- 虚拟数字人：AI数字人 / 数字人
+- 文字识别：OCR / 光学字符识别
+- 图片转文字：OCR / 光学字符识别
+- 机器视觉：CV / 计算机视觉
+- Large Language Model：LLM / 大语言模型
+- 人类对齐：Alignment / 对齐
+- 采样温度：Temperature / 温度系数
+- 核采样：Top-p / Top-p采样
+- 扩散生成模型：Diffusion Model / 扩散模型
+- AI越狱：Jailbreak / 越狱攻击
+- 数据增广：Data Augmentation / 数据增强
+- 大模型插件：AI插件 / 插件生态
+- 过度拟合：Overfitting / 过拟合
+- 拟合不足：Underfitting / 欠拟合
+- AI质检：智能质检 / 工业质检
+- 矢量数据库：Vector Database / 向量数据库
+- Mixture of Experts：MoE / 混合专家模型
+- 专家混合模型：MoE / 混合专家模型
+- Direct Preference Optimization：DPO / 直接偏好优化
+- Deepfake：AI换脸 / 深度伪造
+- Few-shot Learning：少样本学习 / 小样本学习
+- 少样本学习：Few-shot / 小样本学习
+- BLEU值：BLEU / BLEU评分
+- 双语评估替补：BLEU / BLEU评分
+- ROUGE值：ROUGE / ROUGE评分
+- 召回导向评估：ROUGE / ROUGE评分
+- Benchmark：基准测试 / 基准测试集
+- 大规模多任务语言理解：MMLU / MMLU评测
+- 通用语言理解评估：GLUE / GLUE评测
+- 向量嵌入：Embedding / 嵌入向量
+- RL：Reinforcement Learning / 强化学习
+- 增强学习：Reinforcement Learning / 强化学习
+- Early Stopping：早停 / 早停法
+- 提前停止：早停 / 早停法
+- 精调：Fine-tuning / 微调
+- 模型微调：Fine-tuning / 微调
+
+### 同义词重复
+
+问题数量：225
+
+- Artificial Intelligence：AI / Artificial Intelligence
+- AI：AI / Artificial Intelligence
+- 人工智能：AI / Artificial Intelligence
+- Artificial Intelligence：AI / Artificial Intelligence
+- 人工智能：AI / Artificial Intelligence
+- 提示词工程：Prompt / Prompt Engineering
+- 提示词工程：Prompt / Prompt Engineering
+- Qwen：Qwen / 通义千问
+- Copilot：GitHub Copilot / Microsoft Copilot
+- 生成式AI：AIGC / 生成式AI
+- 智能客服：AI客服 / 智能客服
+- AI客服：AI客服 / 智能客服
+- AI Customer Service：AI客服 / 智能客服
+- 智能客服：AI客服 / 智能客服
+- 近似最近邻搜索：向量检索 / 近似最近邻
+- 多模态：Multi-modal / 多模态
+- 多模态大模型：Multi-modal / 多模态
+- 多模态：Multi-modal / 多模态
+- 幻觉：Hallucination / 幻觉
+- AI幻觉：Hallucination / 幻觉
+- 模型幻觉：Hallucination / 幻觉
+- Hallucination：Hallucination / 幻觉
+- Hallucination：Hallucination / 幻觉
+- 上下文窗口：Context Window / 上下文窗口
+- Context Window：Context Window / 上下文窗口
+- 上下文长度：Context Window / 上下文窗口
+- Context Window：Context Window / 上下文窗口
+- 上下文窗口：Context Window / 上下文窗口
+- 思维链：Chain of Thought / 思维链
+- Chain of Thought：Chain of Thought / 思维链
+- CoT：Chain of Thought / 思维链
+- Chain of Thought：Chain of Thought / 思维链
+- 思维链：Chain of Thought / 思维链
+- 零样本学习：Zero-shot / 零样本学习
+- Zero-shot Learning：Zero-shot / 零样本学习
+- 零样本：Zero-shot / 零样本学习
+- Zero-shot Learning：Zero-shot / 零样本学习
+- 零样本学习：Zero-shot / 零样本学习
+- 少样本学习：Few-shot / 少样本学习
+- Few-shot Learning：Few-shot / 少样本学习
+- 少样本：Few-shot / 少样本学习
+- Few-shot Learning：Few-shot / 少样本学习
+- 少样本学习：Few-shot / 少样本学习
+- 量化：Quantization / 量化
+- Quantization：Quantization / 量化
+- 模型量化：Quantization / 量化
+- Quantization：Quantization / 量化
+- 量化：Quantization / 量化
+- Perplexity：Perplexity / 困惑度
+- Perplexity：Perplexity / 困惑度
+- 提示词工程：Prompt / 提示词工程
+- Prompt Engineering：Prompt Engineering / 提示词工程
+- 提示工程：Prompt Engineering / 提示词工程
+- Prompt Engineering：Prompt Engineering / 提示词工程
+- 提示词工程：Prompt / 提示词工程
+- 智能体：Agent / 智能体
+- Agent：Agent / 智能体
+- AI智能体：Agent / 智能体
+- Agent：Agent / 智能体
+- 智能体：Agent / 智能体
+- 工具调用：Function Calling / 工具调用
+- 工具调用：Function Calling / 工具调用
+- 检索增强生成：RAG / 检索增强生成
+- RAG：RAG / 检索增强生成
+- Retrieval-Augmented Generation：RAG / 检索增强生成
+- 检索增强：RAG / 检索增强生成
+- Retrieval-Augmented Generation：RAG / 检索增强生成
+- 检索增强生成：RAG / 检索增强生成
+- Self-Attention：Attention / 自注意力机制
+- 自注意力：Attention / 自注意力机制
+- Self-Attention：Attention / 自注意力机制
+- 数字人：AI数字人 / 数字人
+- 虚拟数字人：AI数字人 / 数字人
+- AI数字人：AI数字人 / 数字人
+- 数字人：AI数字人 / 数字人
+- 机器翻译：AI翻译 / 机器翻译
+- AI翻译：AI翻译 / 机器翻译
+- 机器翻译：AI翻译 / 机器翻译
+- 光学字符识别：OCR / 光学字符识别
+- OCR：OCR / 光学字符识别
+- 文字识别：OCR / 光学字符识别
+- 图片转文字：OCR / 光学字符识别
+- Optical Character Recognition：OCR / 光学字符识别
+- 光学字符识别：OCR / 光学字符识别
+- 计算机视觉：CV / 计算机视觉
+- CV：CV / 计算机视觉
+- 机器视觉：CV / 计算机视觉
+- Computer Vision：CV / 计算机视觉
+- 计算机视觉：CV / 计算机视觉
+- 自然语言处理：NLP / 自然语言处理
+- NLP：NLP / 自然语言处理
+- Natural Language Processing：NLP / 自然语言处理
+- 自然语言处理：NLP / 自然语言处理
+- 大语言模型：LLM / 大语言模型
+- LLM：LLM / 大语言模型
+- Large Language Model：LLM / 大语言模型
+- Large Language Model：LLM / 大语言模型
+- 大语言模型：LLM / 大语言模型
+- 对齐：Alignment / 对齐
+- Alignment：Alignment / 对齐
+- 人类对齐：Alignment / 对齐
+- Alignment：Alignment / 对齐
+- 对齐：Alignment / 对齐
+- 人类反馈强化学习：RLHF / 人类反馈强化学习
+- RLHF：RLHF / 人类反馈强化学习
+- Reinforcement Learning from Human Feedback：RLHF / 人类反馈强化学习
+- Reinforcement Learning from Human Feedback：RLHF / 人类反馈强化学习
+- 人类反馈强化学习：RLHF / 人类反馈强化学习
+- Temperature：Temperature / 温度系数
+- 温度参数：Temperature / 温度系数
+- 采样温度：Temperature / 温度系数
+- Temperature：Temperature / 温度系数
+- 核采样：Top-p / Top-p采样
+- 扩散模型：Diffusion Model / 扩散模型
+- Diffusion Model：Diffusion Model / 扩散模型
+- 扩散生成模型：Diffusion Model / 扩散模型
+- Diffusion Model：Diffusion Model / 扩散模型
+- 扩散模型：Diffusion Model / 扩散模型
+- 提示词注入：Prompt Injection / 提示词注入
+- Prompt Injection：Prompt Injection / 提示词注入
+- Prompt Injection：Prompt Injection / 提示词注入
+- 提示词注入：Prompt Injection / 提示词注入
+- Jailbreak：Jailbreak / 越狱攻击
+- AI越狱：Jailbreak / 越狱攻击
+- Jailbreak：Jailbreak / 越狱攻击
+- 数据增强：Data Augmentation / 数据增强
+- Data Augmentation：Data Augmentation / 数据增强
+- 数据增广：Data Augmentation / 数据增强
+- Data Augmentation：Data Augmentation / 数据增强
+- 数据增强：Data Augmentation / 数据增强
+- 函数调用：Function Calling / 函数调用
+- Function Calling：Function Calling / 函数调用
+- Function Calling：Function Calling / 函数调用
+- 函数调用：Function Calling / 函数调用
+- AI插件：AI插件 / 插件生态
+- 大模型插件：AI插件 / 插件生态
+- Multi-Agent：Multi-Agent / 多智能体系统
+- 过拟合：Overfitting / 过拟合
+- Overfitting：Overfitting / 过拟合
+- 过度拟合：Overfitting / 过拟合
+- Overfitting：Overfitting / 过拟合
+- 过拟合：Overfitting / 过拟合
+- 欠拟合：Underfitting / 欠拟合
+- Underfitting：Underfitting / 欠拟合
+- 拟合不足：Underfitting / 欠拟合
+- Underfitting：Underfitting / 欠拟合
+- 欠拟合：Underfitting / 欠拟合
+- AI质检：智能质检 / 工业质检
+- 重排序：Rerank / 重排序
+- Rerank：Rerank / 重排序
+- 重排序：Rerank / 重排序
+- 语义检索：语义搜索 / 语义检索
+- 语义搜索：语义搜索 / 语义检索
+- Semantic Search：语义搜索 / 语义检索
+- 语义检索：语义搜索 / 语义检索
+- 向量数据库：Vector Database / 向量数据库
+- 矢量数据库：Vector Database / 向量数据库
+- Vector Database：Vector Database / 向量数据库
+- Vector Database：Vector Database / 向量数据库
+- 向量数据库：Vector Database / 向量数据库
+- 精排：Rerank / 精排
+- 精排：Rerank / 精排
+- 混合专家模型：MoE / 混合专家模型
+- MoE：MoE / 混合专家模型
+- Mixture of Experts：MoE / 混合专家模型
+- 专家混合模型：MoE / 混合专家模型
+- Mixture of Experts：MoE / 混合专家模型
+- 混合专家模型：MoE / 混合专家模型
+- 直接偏好优化：DPO / 直接偏好优化
+- DPO：DPO / 直接偏好优化
+- Direct Preference Optimization：DPO / 直接偏好优化
+- Direct Preference Optimization：DPO / 直接偏好优化
+- 直接偏好优化：DPO / 直接偏好优化
+- Deepfake：AI换脸 / 深度伪造
+- AI换脸：AI换脸 / 深度伪造
+- Deepfake：AI换脸 / 深度伪造
+- 小样本学习：少样本学习 / 小样本学习
+- Few-shot Learning：Few-shot / 小样本学习
+- 少样本学习：Few-shot / 小样本学习
+- Few-shot Learning：Few-shot / 小样本学习
+- 小样本学习：少样本学习 / 小样本学习
+- ReAct框架：React / ReAct框架
+- ReAct：React / ReAct框架
+- ReAct：React / ReAct框架
+- BLEU：BLEU / BLEU评分
+- BLEU值：BLEU / BLEU评分
+- 双语评估替补：BLEU / BLEU评分
+- Bilingual Evaluation Understudy：BLEU / BLEU评分
+- ROUGE：ROUGE / ROUGE评分
+- ROUGE值：ROUGE / ROUGE评分
+- 召回导向评估：ROUGE / ROUGE评分
+- Recall-Oriented Understudy for Gisting Evaluation：ROUGE / ROUGE评分
+- Benchmark：基准测试 / 基准测试集
+- Benchmark：基准测试 / 基准测试集
+- MMLU评测：MMLU / MMLU评测
+- MMLU：MMLU / MMLU评测
+- 大规模多任务语言理解：MMLU / MMLU评测
+- Massive Multitask Language Understanding：MMLU / MMLU评测
+- GLUE：GLUE / GLUE评测
+- 通用语言理解评估：GLUE / GLUE评测
+- General Language Understanding Evaluation：GLUE / GLUE评测
+- Embedding：Embedding / 嵌入向量
+- 向量嵌入：Embedding / 嵌入向量
+- Embedding：Embedding / 嵌入向量
+- 强化学习：Reinforcement Learning / 强化学习
+- Reinforcement Learning：Reinforcement Learning / 强化学习
+- RL：Reinforcement Learning / 强化学习
+- 增强学习：Reinforcement Learning / 强化学习
+- Reinforcement Learning：Reinforcement Learning / 强化学习
+- 强化学习：Reinforcement Learning / 强化学习
+- Early Stopping：早停 / 早停法
+- 提前停止：早停 / 早停法
+- Early Stopping：早停 / 早停法
+- 随机失活：dropout / 随机失活
+- Dropout：dropout / 随机失活
+- Dropout：dropout / 随机失活
+- 微调：Fine-tuning / 微调
+- Fine-tuning：Fine-tuning / 微调
+- 精调：Fine-tuning / 微调
+- 模型微调：Fine-tuning / 微调
+- Fine-tuning：Fine-tuning / 微调
+- 微调：Fine-tuning / 微调
+- BERT模型：BERT / BERT模型
+- BERT：BERT / BERT模型
+- GPT：GPT / 生成式预训练
+
+## 检查结论
+
+- JSON读取：通过
+- Schema：通过
+- 生活案例：存在问题
+- 大白话表达：需要人工复核
+- 重复项：存在疑似重复
