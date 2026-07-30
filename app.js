@@ -1,8 +1,12 @@
 // app.js
 App({
   onLaunch() {
-    console.log('AI大白话小程序启动')
-    
+    if (wx.cloud) {
+      wx.cloud.init({
+        traceUser: true
+      })
+    }
+
     // 初始化本地存储数据
     this.initStorage()
   },

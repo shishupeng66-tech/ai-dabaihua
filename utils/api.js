@@ -1,11 +1,25 @@
-const serverApi = require('../server/api.js')
+const CLOUD_FUNCTION_NAME = 'api'
+
+function callCloudApi(action, data) {
+  if (typeof wx === 'undefined' || !wx.cloud || !wx.cloud.callFunction) {
+    return Promise.reject(new Error('CloudBase cloud function is not available.'))
+  }
+
+  return wx.cloud.callFunction({
+    name: CLOUD_FUNCTION_NAME,
+    data: {
+      action,
+      data: data || {}
+    }
+  }).then(res => res.result)
+}
 
 function explainTerm(term) {
   if (!term || !term.trim()) {
     return Promise.reject(new Error('Please enter a keyword to explain.'))
   }
 
-  return serverApi.postExplain({
+  return callCloudApi('explain', {
     keyword: term.trim()
   })
 }
@@ -18,7 +32,7 @@ function getHotTerms() {
 }
 
 function search(keyword) {
-  return serverApi.getSearch({ keyword })
+  return callCloudApi('search', { keyword })
 }
 
 function sendFeedback(action, term) {
@@ -32,7 +46,7 @@ function sendFeedback(action, term) {
 }
 
 function sendKnowledgeFeedback(payload) {
-  return serverApi.postKnowledgeFeedback(payload)
+  return callCloudApi('knowledgeFeedback', payload)
 }
 
 function updateFavorite(action, term) {
@@ -46,7 +60,7 @@ function updateFavorite(action, term) {
 }
 
 function getKnowledgeVersion() {
-  return serverApi.getKnowledgeVersion()
+  return callCloudApi('knowledgeVersion')
 }
 
 function getAdminQuality() {
@@ -58,7 +72,7 @@ function getAdminDashboard() {
 }
 
 function getHealth() {
-  return serverApi.getHealth()
+  return callCloudApi('health')
 }
 
 function createBatchContent() {
@@ -75,23 +89,23 @@ function request(options) {
   const data = options.data || {}
 
   if (method === 'POST' && url === '/api/explain') {
-    return serverApi.postExplain(data)
+    return callCloudApi('explain', data)
   }
 
   if (method === 'GET' && url === '/api/search') {
-    return serverApi.getSearch(data)
+    return callCloudApi('search', data)
   }
 
   if (method === 'GET' && url === '/api/knowledge/version') {
-    return serverApi.getKnowledgeVersion()
+    return callCloudApi('knowledgeVersion')
   }
 
   if (method === 'GET' && url === '/api/health') {
-    return serverApi.getHealth()
+    return callCloudApi('health')
   }
 
   if (method === 'POST' && url === '/api/knowledge/feedback') {
-    return serverApi.postKnowledgeFeedback(data)
+    return callCloudApi('knowledgeFeedback', data)
   }
 
   return Promise.reject(new Error('API has been removed.'))

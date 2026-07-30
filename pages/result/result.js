@@ -220,9 +220,7 @@ Page({
   },
 
   onLoad(options) {
-    console.log('[result:onLoad] options =', options)
     const term = decodeURIComponent(options.term || '')
-    console.log('[result:onLoad] keyword =', term)
 
     this.setData({ term })
     wx.setNavigationBarTitle({ title: 'AI大白话' })
@@ -230,8 +228,6 @@ Page({
   },
 
   loadExplanation(term) {
-    console.log('[result:loadExplanation:start] term =', term)
-
     if (!term || term.trim().length < 2) {
       this.setData({
         isLoading: false,
@@ -254,7 +250,6 @@ Page({
         }
 
         const viewModel = normalizeResultData(res, term)
-        console.log('[result:loadExplanation:success] resultData =', viewModel)
 
         if (!hasRenderableResult(viewModel)) {
           throw new Error(EMPTY_RESULT_TEXT)
@@ -265,8 +260,6 @@ Page({
           relatedTerms: viewModel.relatedTerms.length ? viewModel.relatedTerms : this.data.relatedTerms,
           errorText: '',
           isLoading: false
-        }, () => {
-          console.log('[result:loadExplanation:final] this.data.resultData =', this.data.resultData)
         })
       })
       .catch(err => {
@@ -277,9 +270,6 @@ Page({
           isLoading: false,
           resultData: null,
           errorText: message || EMPTY_RESULT_TEXT
-        }, () => {
-          console.log('[result:loadExplanation:final] this.data.resultData =', this.data.resultData)
-          console.log('[result:loadExplanation:final] this.data.errorText =', this.data.errorText)
         })
 
         wx.showToast({

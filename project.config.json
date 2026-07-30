@@ -1,5 +1,6 @@
 {
   "description": "AI大白话微信小程序项目配置文件",
+  "cloudfunctionRoot": "cloudfunctions/",
   "packOptions": {
     "ignore": [
       {
@@ -45,6 +46,34 @@
       {
         "type": "folder",
         "value": "tools"
+      },
+      {
+        "type": "folder",
+        "value": "server"
+      },
+      {
+        "type": "folder",
+        "value": "config"
+      },
+      {
+        "type": "file",
+        "value": "utils/knowledge.js"
+      },
+      {
+        "type": "file",
+        "value": "utils/knowledgeLoader.js"
+      },
+      {
+        "type": "file",
+        "value": "utils/knowledgeData.js"
+      },
+      {
+        "type": "file",
+        "value": "utils/knowledgeVersionData.js"
+      },
+      {
+        "type": "folder",
+        "value": "data/knowledge"
       },
       {
         "type": "folder",
