@@ -4,13 +4,8 @@ const DEFAULT_RELATED_TERMS = ['大模型', 'Prompt', 'Agent', 'Token']
 const EMPTY_RESULT_TEXT = '暂时没有找到解释，请换一个问题试试'
 const RESULT_ASSETS = {
   robot: '/assets/home/hero-robot.png',
-  woman: '/assets/home/hero-woman.png',
-  orangeBubble: '/assets/home/hero-bubble-orange.png',
-  whiteBubble: '/assets/home/hero-bubble-white.png',
-  shelfPlant: '/assets/home/hero-shelf-plant.png',
-  coffee: '/assets/home/hero-coffee.png'
+  orangeBubble: '/assets/home/hero-bubble-orange.png'
 }
-const FAVORITES_KEY = 'favorite_terms'
 const FEEDBACK_KEY = 'local_feedback'
 
 function compactList(items) {
@@ -32,22 +27,6 @@ function getContent(data) {
 function getStoredList(key) {
   const list = wx.getStorageSync(key)
   return Array.isArray(list) ? list : []
-}
-
-function isFavoriteTerm(term) {
-  return getStoredList(FAVORITES_KEY).indexOf(term) > -1
-}
-
-function addFavoriteTerm(term) {
-  const list = getStoredList(FAVORITES_KEY)
-  if (list.indexOf(term) === -1) {
-    list.unshift(term)
-    wx.setStorageSync(FAVORITES_KEY, list)
-  }
-}
-
-function removeFavoriteTerm(term) {
-  wx.setStorageSync(FAVORITES_KEY, getStoredList(FAVORITES_KEY).filter(item => item !== term))
 }
 
 function recordFeedback(action, term) {
@@ -156,8 +135,7 @@ function createSections(data, content, lifeExamples) {
     createSection('translation', '中文翻译', translationText),
     createSection('professionalExplanation', '大白话解释', summary),
     createSection('lifeExamples', '生活中的理解', lifeExamples, 'life-examples'),
-    createSection('aiExample', 'AI里面怎么用', firstText(data.aiExample, data.usage, content.importance)),
-    createSection('relatedTerms', '继续学习', data.relatedTerms || content.relatedConcepts || DEFAULT_RELATED_TERMS, 'tags')
+    createSection('aiExample', 'AI里面怎么用', firstText(data.aiExample, data.usage, content.importance))
   ])
 }
 
@@ -228,8 +206,7 @@ function buildCopyText(viewModel) {
     viewModel.title,
     `大白话解释\n${viewModel.summary || viewModel.professionalExplanation || ''}`,
     viewModel.currentLifeExample ? `生活中的例子\n${formatLifeExample(viewModel.currentLifeExample)}` : '',
-    viewModel.aiExample ? `AI里面怎么用\n${viewModel.aiExample}` : '',
-    viewModel.relatedTerms && viewModel.relatedTerms.length ? `继续学习\n${viewModel.relatedTerms.join('、')}` : ''
+    viewModel.aiExample ? `AI里面怎么用\n${viewModel.aiExample}` : ''
   ]).join('\n\n')
 }
 
@@ -239,7 +216,6 @@ Page({
     isLoading: true,
     resultData: null,
     errorText: '',
-    isFavorite: false,
     relatedTerms: DEFAULT_RELATED_TERMS
   },
 
@@ -287,7 +263,6 @@ Page({
         this.setData({
           resultData: viewModel,
           relatedTerms: viewModel.relatedTerms.length ? viewModel.relatedTerms : this.data.relatedTerms,
-          isFavorite: isFavoriteTerm(viewModel.favoriteKey),
           errorText: '',
           isLoading: false
         }, () => {
@@ -330,27 +305,6 @@ Page({
     })
   },
 
-  onFavoriteTap() {
-    const { resultData } = this.data
-    if (!resultData) return
-
-    const favoriteKey = resultData.favoriteKey || resultData.term
-    const newState = !this.data.isFavorite
-    if (newState) {
-      addFavoriteTerm(favoriteKey)
-    } else {
-      removeFavoriteTerm(favoriteKey)
-    }
-
-    this.setData({ isFavorite: newState })
-
-    wx.showToast({
-      title: newState ? '已收藏' : '已取消',
-      icon: newState ? 'success' : 'none',
-      duration: 1500
-    })
-  },
-
   onCopyTap() {
     const { resultData } = this.data
     if (!resultData) return
@@ -380,14 +334,11 @@ Page({
 
   onReExplainTap() {
     const { term, resultData } = this.data
-    recordFeedback('re_explain', resultData && resultData.favoriteKey)
-    this.loadExplanation(term)
-  },
+    const keyword = resultData ? (resultData.term || term) : term
+    recordFeedback('re_explain_child_friendly', keyword)
 
-  onRelatedTap(e) {
-    const term = e.currentTarget.dataset.term
-    wx.redirectTo({
-      url: `/pages/result/result?term=${encodeURIComponent(term)}`
+    wx.navigateTo({
+      url: `/pages/simpleExplain/simpleExplain?term=${encodeURIComponent(keyword)}`
     })
   },
 

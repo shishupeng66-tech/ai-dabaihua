@@ -12,7 +12,7 @@
       <image class="error-robot" src="/assets/home/hero-robot.png" mode="aspectFit" />
       <text class="error-title">暂时没有找到解释</text>
       <text class="error-text">{{errorText}}</text>
-      <button class="error-action" bindtap="onReExplainTap">重新解释</button>
+      <button class="error-action" bindtap="onReExplainTap">换个更简单的说法</button>
     </view>
   </view>
 
@@ -22,10 +22,6 @@
         <text class="title-kicker">AI 已为你生成解释</text>
         <text class="title-text">{{resultData.title}}</text>
       </view>
-      <view class="title-visual">
-        <image class="title-bubble" src="{{resultData.assets.orangeBubble}}" mode="aspectFit" />
-        <image class="title-robot" src="{{resultData.assets.robot}}" mode="aspectFit" />
-      </view>
     </view>
 
     <view class="explain-card main-card">
@@ -34,7 +30,6 @@
           <text class="section-label">01</text>
           <text class="section-title">大白话解释</text>
         </view>
-        <button class="icon-action {{isFavorite ? 'active' : ''}}" bindtap="onFavoriteTap">{{isFavorite ? '已收藏' : '收藏'}}</button>
       </view>
       <text class="main-answer">{{resultData.professionalExplanation || resultData.summary}}</text>
       <view class="translation-box" wx:if="{{resultData.translation}}">
@@ -50,14 +45,6 @@
           <text class="section-title">生活中的理解</text>
         </view>
         <button class="switch-example" wx:if="{{resultData.canSwitchExample}}" bindtap="onSwitchExampleTap">换一个例子</button>
-      </view>
-
-      <view class="life-illustration">
-        <image class="life-woman" src="{{resultData.assets.woman}}" mode="aspectFit" />
-        <image class="life-bubble-orange" src="{{resultData.assets.orangeBubble}}" mode="aspectFit" />
-        <image class="life-bubble-white" src="{{resultData.assets.whiteBubble}}" mode="aspectFit" />
-        <image class="life-robot" src="{{resultData.assets.robot}}" mode="aspectFit" />
-        <image class="life-coffee" src="{{resultData.assets.coffee}}" mode="aspectFit" />
       </view>
 
       <view class="story-box">
@@ -80,35 +67,14 @@
           <text class="section-label">03</text>
           <text class="section-title">AI里面怎么用</text>
         </view>
-        <image class="small-robot" src="{{resultData.assets.robot}}" mode="aspectFit" />
       </view>
       <text class="section-text">{{resultData.aiExample}}</text>
-    </view>
-
-    <view class="learn-card" wx:if="{{relatedTerms && relatedTerms.length}}">
-      <view class="card-header compact">
-        <view>
-          <text class="section-label">04</text>
-          <text class="section-title">继续学习</text>
-        </view>
-      </view>
-      <view class="related-tags">
-        <button
-          class="related-tag"
-          wx:for="{{relatedTerms}}"
-          wx:key="*this"
-          bindtap="onRelatedTap"
-          data-term="{{item}}"
-        >
-          {{item}}
-        </button>
-      </view>
     </view>
 
     <view class="bottom-actions">
       <button class="bottom-btn secondary" bindtap="onHelpfulTap">有帮助</button>
       <button class="bottom-btn secondary" bindtap="onCopyTap">复制解释</button>
-      <button class="bottom-btn primary" bindtap="onReExplainTap">重新解释</button>
+      <button class="bottom-btn primary" bindtap="onReExplainTap">换个更简单的说法</button>
     </view>
   </view>
 

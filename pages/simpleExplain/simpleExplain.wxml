@@ -1,0 +1,19 @@
+<view class="page">
+  <view class="loading-container" wx:if="{{isLoading}}">
+    <view class="loading-spinner"></view>
+    <text class="loading-text">正在换成更简单的说法...</text>
+  </view>
+
+  <view class="error-state" wx:elif="{{errorText}}">
+    <text class="error-title">暂时解释不了</text>
+    <text class="error-text">{{errorText}}</text>
+  </view>
+
+  <view class="simple-content" wx:else>
+    <text class="kicker">换个更简单的说法</text>
+    <text class="title">{{title}}</text>
+    <view class="note-card">
+      <text class="note-text">{{note}}</text>
+    </view>
+  </view>
+</view>
