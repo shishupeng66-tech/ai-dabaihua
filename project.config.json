@@ -20,6 +20,14 @@
       },
       {
         "type": "folder",
+        "value": "AI大白话前端插图组件素材包"
+      },
+      {
+        "type": "file",
+        "value": "AI大白话前端插图组件素材包.zip"
+      },
+      {
+        "type": "folder",
         "value": "docs"
       },
       {
@@ -33,6 +41,22 @@
       {
         "type": "folder",
         "value": "database"
+      },
+      {
+        "type": "folder",
+        "value": "tools"
+      },
+      {
+        "type": "folder",
+        "value": "data/knowledge/imports"
+      },
+      {
+        "type": "file",
+        "value": "data/knowledge/terms.backup-before-AI-model-import.json"
+      },
+      {
+        "type": "file",
+        "value": "data/knowledge/AI大白话知识库扩展_01_AI模型生态_10.json"
       },
       {
         "type": "file",

@@ -1,106 +1,99 @@
 <view class="page">
   <view class="loading-container" wx:if="{{isLoading}}">
-    <view class="loading-spinner"></view>
-    <text class="loading-text">正在生成解释...</text>
+    <view class="loading-card">
+      <image class="loading-robot" src="/assets/home/hero-robot.png" mode="aspectFit" />
+      <view class="loading-spinner"></view>
+      <text class="loading-text">正在把它整理成大白话...</text>
+    </view>
   </view>
 
   <view class="error-state" wx:elif="{{errorText}}">
     <view class="error-card">
-      <text class="error-title">解释失败</text>
+      <image class="error-robot" src="/assets/home/hero-robot.png" mode="aspectFit" />
+      <text class="error-title">暂时没有找到解释</text>
       <text class="error-text">{{errorText}}</text>
-      <view class="error-action" bindtap="onReExplainTap">重新解释</view>
+      <button class="error-action" bindtap="onReExplainTap">重新解释</button>
     </view>
   </view>
 
   <view class="result-content" wx:elif="{{resultData}}">
-    <view class="result-header">
-      <view class="header-main">
-        <text class="source-badge">{{sourceText}}</text>
-        <text class="result-title">{{resultData.title}}</text>
+    <view class="title-card">
+      <view class="title-copy">
+        <text class="title-kicker">AI 已为你生成解释</text>
+        <text class="title-text">{{resultData.title}}</text>
       </view>
-      <view class="header-actions">
-        <view class="icon-action" bindtap="onFavoriteTap">
-          <text>{{isFavorite ? '已藏' : '收藏'}}</text>
-        </view>
-        <view class="icon-action primary" bindtap="onCopyTap">
-          <text>复制</text>
-        </view>
+      <view class="title-visual">
+        <image class="title-bubble" src="{{resultData.assets.orangeBubble}}" mode="aspectFit" />
+        <image class="title-robot" src="{{resultData.assets.robot}}" mode="aspectFit" />
       </view>
     </view>
 
-    <view class="summary-card">
-      <text class="summary-label">核心理解</text>
-      <text class="summary-text">{{resultData.summary || resultData.explanation}}</text>
-    </view>
-
-    <view class="dynamic-area">
-      <view class="type-label" wx:if="{{resultData.type === 'term_explain'}}">概念解释</view>
-      <view class="type-label" wx:elif="{{resultData.type === 'principle_explain'}}">原理解释</view>
-      <view class="type-label" wx:elif="{{resultData.type === 'industry_explain'}}">行业解释</view>
-      <view class="type-label" wx:elif="{{resultData.type === 'compare'}}">对比解释</view>
-      <view class="type-label" wx:elif="{{resultData.type === 'value_explain'}}">价值解释</view>
-      <view class="type-label" wx:elif="{{resultData.type === 'learning_plan'}}">学习规划</view>
-
-      <view class="section-card {{section.type === 'warning-list' ? 'warning-card' : ''}}" wx:for="{{resultData.sections}}" wx:for-item="section" wx:key="key">
-        <view class="section-head">
-          <text class="section-title">{{section.title}}</text>
+    <view class="explain-card main-card">
+      <view class="card-header">
+        <view>
+          <text class="section-label">01</text>
+          <text class="section-title">大白话解释</text>
         </view>
-
-        <text class="section-text" wx:if="{{section.type === 'text'}}">{{section.value}}</text>
-
-        <view class="simple-list" wx:elif="{{section.type === 'list' || section.type === 'steps' || section.type === 'warning-list'}}">
-          <view class="list-item {{section.type === 'steps' ? 'step-item' : ''}}" wx:for="{{section.value}}" wx:for-item="item" wx:key="*this">
-            <view class="list-marker">{{index + 1}}</view>
-            <text class="list-text">{{item}}</text>
-          </view>
-        </view>
-
-        <view class="object-list" wx:elif="{{section.type === 'object-list'}}">
-          <view class="object-item" wx:for="{{section.value}}" wx:for-item="item" wx:key="index">
-            <text class="object-title">{{item.title || item.aiConcept || item.name || item.dimension || item.stage}}</text>
-            <text class="object-subtitle" wx:if="{{item.industryRole}}">{{item.industryRole}}</text>
-            <text class="object-desc" wx:if="{{item.detail}}">{{item.detail}}</text>
-            <text class="object-desc" wx:if="{{item.description}}">{{item.description}}</text>
-            <text class="object-desc" wx:if="{{item.shortDefinition}}">{{item.shortDefinition}}</text>
-          </view>
-        </view>
-
-        <view class="comparison-table" wx:elif="{{section.type === 'comparison'}}">
-          <view class="comparison-row" wx:for="{{section.value}}" wx:for-item="item" wx:key="index">
-            <text class="comparison-dimension">{{item.dimension}}</text>
-            <view class="comparison-cols">
-              <view class="comparison-col">
-                <text>{{item.left}}</text>
-              </view>
-              <view class="comparison-col">
-                <text>{{item.right}}</text>
-              </view>
-            </view>
-            <text class="comparison-conclusion">{{item.conclusion}}</text>
-          </view>
-        </view>
-
-        <view class="roadmap" wx:elif="{{section.type === 'roadmap'}}">
-          <view class="roadmap-item" wx:for="{{section.value}}" wx:for-item="item" wx:key="index">
-            <view class="roadmap-index">{{item.stage || ('阶段' + (index + 1))}}</view>
-            <view class="roadmap-body">
-              <text class="roadmap-title">{{item.title}}</text>
-              <text class="roadmap-text" wx:if="{{item.learningGoal}}">学习目标：{{item.learningGoal}}</text>
-              <text class="roadmap-text" wx:if="{{item.practiceGoal}}">实践目标：{{item.practiceGoal}}</text>
-              <view class="roadmap-tasks" wx:if="{{item.tasks && item.tasks.length}}">
-                <text class="roadmap-task" wx:for="{{item.tasks}}" wx:for-item="task" wx:key="*this">{{task}}</text>
-              </view>
-              <text class="roadmap-output" wx:if="{{item.output}}">产出：{{item.output}}</text>
-            </view>
-          </view>
-        </view>
+        <button class="icon-action {{isFavorite ? 'active' : ''}}" bindtap="onFavoriteTap">{{isFavorite ? '已收藏' : '收藏'}}</button>
+      </view>
+      <text class="main-answer">{{resultData.professionalExplanation || resultData.summary}}</text>
+      <view class="translation-box" wx:if="{{resultData.translation}}">
+        <text class="translation-line" wx:if="{{resultData.translation.english}}">英文全称：{{resultData.translation.english}}</text>
+        <text class="translation-line" wx:if="{{resultData.translation.chinese}}">中文翻译：{{resultData.translation.chinese}}</text>
       </view>
     </view>
 
-    <view class="related-section" wx:if="{{relatedTerms && relatedTerms.length > 0}}">
-      <text class="related-title">相关词</text>
-      <view class="related-tags">
+    <view class="explain-card life-card" wx:if="{{resultData.currentLifeExample}}">
+      <view class="card-header">
+        <view>
+          <text class="section-label">02</text>
+          <text class="section-title">生活中的理解</text>
+        </view>
+        <button class="switch-example" wx:if="{{resultData.canSwitchExample}}" bindtap="onSwitchExampleTap">换一个例子</button>
+      </view>
+
+      <view class="life-illustration">
+        <image class="life-woman" src="{{resultData.assets.woman}}" mode="aspectFit" />
+        <image class="life-bubble-orange" src="{{resultData.assets.orangeBubble}}" mode="aspectFit" />
+        <image class="life-bubble-white" src="{{resultData.assets.whiteBubble}}" mode="aspectFit" />
+        <image class="life-robot" src="{{resultData.assets.robot}}" mode="aspectFit" />
+        <image class="life-coffee" src="{{resultData.assets.coffee}}" mode="aspectFit" />
+      </view>
+
+      <view class="story-box">
+        <text class="story-title">{{resultData.currentLifeExample.title}}</text>
+        <text class="story-content">{{resultData.currentLifeExample.content}}</text>
+      </view>
+
+      <view class="example-dots" wx:if="{{resultData.lifeExamples.length > 1}}">
         <view
+          class="example-dot {{index === resultData.currentExampleIndex ? 'active' : ''}}"
+          wx:for="{{resultData.lifeExamples}}"
+          wx:key="index"
+        ></view>
+      </view>
+    </view>
+
+    <view class="explain-card ai-card" wx:if="{{resultData.aiExample}}">
+      <view class="card-header">
+        <view>
+          <text class="section-label">03</text>
+          <text class="section-title">AI里面怎么用</text>
+        </view>
+        <image class="small-robot" src="{{resultData.assets.robot}}" mode="aspectFit" />
+      </view>
+      <text class="section-text">{{resultData.aiExample}}</text>
+    </view>
+
+    <view class="learn-card" wx:if="{{relatedTerms && relatedTerms.length}}">
+      <view class="card-header compact">
+        <view>
+          <text class="section-label">04</text>
+          <text class="section-title">继续学习</text>
+        </view>
+      </view>
+      <view class="related-tags">
+        <button
           class="related-tag"
           wx:for="{{relatedTerms}}"
           wx:key="*this"
@@ -108,13 +101,22 @@
           data-term="{{item}}"
         >
           {{item}}
-        </view>
+        </button>
       </view>
     </view>
 
     <view class="bottom-actions">
-      <view class="bottom-btn subtle" bindtap="onHelpfulTap">解释有帮助</view>
-      <view class="bottom-btn" bindtap="onReExplainTap">重新解释</view>
+      <button class="bottom-btn secondary" bindtap="onHelpfulTap">有帮助</button>
+      <button class="bottom-btn secondary" bindtap="onCopyTap">复制解释</button>
+      <button class="bottom-btn primary" bindtap="onReExplainTap">重新解释</button>
+    </view>
+  </view>
+
+  <view class="error-state" wx:else>
+    <view class="error-card">
+      <image class="error-robot" src="/assets/home/hero-robot.png" mode="aspectFit" />
+      <text class="error-title">暂时没有找到解释</text>
+      <text class="error-text">请换一个问题试试</text>
     </view>
   </view>
 

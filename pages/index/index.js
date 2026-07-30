@@ -1,5 +1,3 @@
-// pages/index/index.js - SaaS Product Home
-
 Page({
   data: {
     searchText: '',
@@ -30,7 +28,15 @@ Page({
 
     if (!searchText) {
       wx.showToast({
-        title: '请输入要解释的AI术语',
+        title: '请输入要解释的AI关键词',
+        icon: 'none'
+      })
+      return
+    }
+
+    if (searchText.length < 2) {
+      wx.showToast({
+        title: '请输入更完整的AI关键词或问题',
         icon: 'none'
       })
       return

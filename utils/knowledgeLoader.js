@@ -1,5 +1,5 @@
-const knowledgeData = require('../data/knowledge/terms.json')
-const versionData = require('../data/knowledge/version.json')
+const knowledgeData = require('./knowledgeData.js')
+const versionData = require('./knowledgeVersionData.js')
 
 function normalizeKnowledgeData(data) {
   if (Array.isArray(data)) return data

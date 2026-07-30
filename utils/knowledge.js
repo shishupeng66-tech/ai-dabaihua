@@ -4,27 +4,45 @@ function normalizeKeyword(keyword) {
   return String(keyword || '')
     .trim()
     .toLowerCase()
-    .replace(/[？?。！!，,\s]/g, '')
-    .replace(/^(请|帮我|帮忙|能不能|可以)?(解释一下|解释|讲讲|说说)/, '')
+    .replace(/[，。！？!?\s]/g, '')
+    .replace(/^(请|请帮我|帮我|能不能|可以)?(解释一下|解释|介绍一下|介绍|讲讲|说说)/, '')
     .replace(/^什么是/, '')
-    .replace(/是什么$/, '')
+    .replace(/是什么/g, '')
+    .replace(/是什么意思/g, '')
     .replace(/^啥是/, '')
     .replace(/是啥$/, '')
     .replace(/^何为/, '')
 }
 
+function normalizeLifeExamples(entry) {
+  const source = Array.isArray(entry.lifeExamples)
+    ? entry.lifeExamples
+    : (entry.lifeExample && typeof entry.lifeExample === 'object' ? [entry.lifeExample] : [])
+
+  return source
+    .filter(item => item && typeof item === 'object')
+    .map(item => ({
+      title: item.title || '',
+      content: item.content || ''
+    }))
+    .filter(item => item.title || item.content)
+}
+
+function formatLifeExample(example) {
+  if (!example || typeof example !== 'object') return ''
+  return [example.title, example.content].filter(Boolean).join('：')
+}
+
 function normalizeEntry(entry) {
   const term = entry.term || entry.name
   const professionalExplanation = entry.professionalExplanation || entry.summary || entry.explanation || ''
-  const lifeExample = entry.lifeExample && typeof entry.lifeExample === 'object'
-    ? entry.lifeExample
-    : null
-  const lifeExampleText = lifeExample
-    ? [lifeExample.title, lifeExample.content].filter(Boolean).join('：')
-    : entry.analogy || ''
+  const lifeExamples = normalizeLifeExamples(entry)
+  const lifeExample = lifeExamples[0] || null
+  const lifeExampleText = lifeExamples.map(formatLifeExample).filter(Boolean).join('\n') || entry.analogy || ''
   const examples = []
 
-  if (lifeExampleText) examples.push(lifeExampleText)
+  lifeExamples.map(formatLifeExample).filter(Boolean).forEach(item => examples.push(item))
+  if (!examples.length && lifeExampleText) examples.push(lifeExampleText)
   if (entry.aiExample) examples.push(entry.aiExample)
 
   return Object.assign({}, entry, {
@@ -32,6 +50,7 @@ function normalizeEntry(entry) {
     aliases: entry.aliases || [],
     translation: entry.translation || null,
     professionalExplanation,
+    lifeExamples,
     lifeExample,
     aiExample: entry.aiExample || '',
     relatedTerms: entry.relatedTerms || [],
@@ -69,12 +88,19 @@ function calculateMatchScore(keyword, entry) {
     }
   }
 
+  const canUseKeywordMatch = normalizedTerm.length >= 3 && normalizedKeyword.length >= 3
+  const hasAliasKeywordMatch = normalizedAliases.some(alias =>
+    alias.length >= 3 &&
+    normalizedKeyword.length >= 3 &&
+    (normalizedKeyword.includes(alias) || alias.includes(normalizedKeyword))
+  )
+
   if (
-    normalizedKeyword.includes(normalizedTerm) ||
-    normalizedTerm.includes(normalizedKeyword) ||
-    normalizedAliases.some(alias =>
-      normalizedKeyword.includes(alias) || alias.includes(normalizedKeyword)
-    )
+    canUseKeywordMatch && (
+      normalizedKeyword.includes(normalizedTerm) ||
+      normalizedTerm.includes(normalizedKeyword)
+    ) ||
+    hasAliasKeywordMatch
   ) {
     return {
       score: 60,
@@ -159,5 +185,7 @@ module.exports = {
   normalizeKeyword,
   calculateMatchScore,
   searchKnowledge,
-  searchSuggestions
+  searchSuggestions,
+  normalizeEntry,
+  normalizeLifeExamples
 }
