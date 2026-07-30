@@ -31,6 +31,10 @@ function sendFeedback(action, term) {
   })
 }
 
+function sendKnowledgeFeedback(payload) {
+  return serverApi.postKnowledgeFeedback(payload)
+}
+
 function updateFavorite(action, term) {
   return Promise.resolve({
     success: true,
@@ -86,6 +90,10 @@ function request(options) {
     return serverApi.getHealth()
   }
 
+  if (method === 'POST' && url === '/api/knowledge/feedback') {
+    return serverApi.postKnowledgeFeedback(data)
+  }
+
   return Promise.reject(new Error('API has been removed.'))
 }
 
@@ -113,6 +121,7 @@ module.exports = {
   explainTerm,
   search,
   sendFeedback,
+  sendKnowledgeFeedback,
   updateFavorite,
   getKnowledgeVersion,
   getAdminQuality,

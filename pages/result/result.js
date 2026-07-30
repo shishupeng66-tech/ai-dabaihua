@@ -332,6 +332,34 @@ Page({
     })
   },
 
+  onLifeExampleFeedbackTap(e) {
+    const { resultData } = this.data
+    if (!resultData) return
+
+    const feedbackType = e.currentTarget.dataset.type
+    const term = resultData.term || this.data.term
+
+    api.sendKnowledgeFeedback({
+      term,
+      section: 'lifeExample',
+      exampleIndex: resultData.currentExampleIndex || 0,
+      feedbackType
+    }).then(() => {
+      wx.showToast({
+        title: feedbackType === 'understood' ? '已记录：看懂了' : '已记录：没看懂',
+        icon: 'none',
+        duration: 1500
+      })
+    }).catch(err => {
+      console.error('[result:lifeExampleFeedback:error]', err)
+      wx.showToast({
+        title: '反馈提交失败',
+        icon: 'none',
+        duration: 1500
+      })
+    })
+  },
+
   onReExplainTap() {
     const { term, resultData } = this.data
     const keyword = resultData ? (resultData.term || term) : term

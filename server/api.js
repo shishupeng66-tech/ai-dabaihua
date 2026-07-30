@@ -2,6 +2,7 @@ const explainService = require('./services/explainService.js')
 const knowledgeService = require('./services/knowledgeService.js')
 const loggerService = require('./services/loggerService.js')
 const healthService = require('./services/healthService.js')
+const knowledgeFeedbackService = require('./services/knowledgeFeedbackService.js')
 
 function observeApi(api, payload, handler) {
   const requestId = payload && payload.requestId ? payload.requestId : loggerService.createRequestId()
@@ -88,9 +89,17 @@ function getHealth() {
   return Promise.resolve(healthService.getHealth())
 }
 
+function postKnowledgeFeedback(payload) {
+  return observeApi('/api/knowledge/feedback', payload || {}, () => Promise.resolve({
+    success: true,
+    data: knowledgeFeedbackService.submitFeedback(payload || {})
+  }))
+}
+
 module.exports = {
   postExplain,
   getSearch,
   getKnowledgeVersion,
-  getHealth
+  getHealth,
+  postKnowledgeFeedback
 }

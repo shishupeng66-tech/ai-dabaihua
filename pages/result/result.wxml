@@ -59,6 +59,14 @@
           wx:key="index"
         ></view>
       </view>
+
+      <view class="example-feedback">
+        <text class="feedback-title">这个例子容易理解吗？</text>
+        <view class="feedback-actions">
+          <button class="feedback-btn" data-type="understood" bindtap="onLifeExampleFeedbackTap">👍 看懂了</button>
+          <button class="feedback-btn" data-type="not_understood" bindtap="onLifeExampleFeedbackTap">👎 没看懂</button>
+        </view>
+      </view>
     </view>
 
     <view class="explain-card ai-card" wx:if="{{resultData.aiExample}}">
@@ -72,8 +80,6 @@
     </view>
 
     <view class="bottom-actions">
-      <button class="bottom-btn secondary" bindtap="onHelpfulTap">有帮助</button>
-      <button class="bottom-btn secondary" bindtap="onCopyTap">复制解释</button>
       <button class="bottom-btn primary" bindtap="onReExplainTap">换个更简单的说法</button>
     </view>
   </view>
