@@ -63,7 +63,7 @@ async function dispatch(event) {
   }
 }
 
-exports.main = async function main(event) {
+exports.main = async function main(event, context) {
   try {
     return await dispatch(event || {})
   } catch (err) {

@@ -2,7 +2,7 @@
 <view class="page">
   <view class="hero-section">
     <view class="hero-copy">
-      <text class="brand-title">AI大白话</text>
+      <text class="brand-title">AI黑话翻译器</text>
       <text class="brand-subtitle">让复杂AI知识，变得简单易懂</text>
     </view>
 
