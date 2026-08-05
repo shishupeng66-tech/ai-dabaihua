@@ -17,6 +17,23 @@
   </view>
 
   <view class="result-content" wx:elif="{{resultData}}">
+    <view class="safety-content" wx:if="{{resultData.type === 'safety_notice'}}">
+      <view class="safety-card">
+        <image class="safety-robot" src="/assets/home/hero-robot.png" mode="aspectFit" />
+        <text class="safety-kicker">内容安全提示</text>
+        <text class="safety-title">这个问题暂时不能解释</text>
+        <text class="safety-desc">{{resultData.summary}}</text>
+        <view class="safety-suggestions">
+          <text class="safety-suggestion-title">你可以换成这些问法：</text>
+          <text class="safety-suggestion">什么是 Token？</text>
+          <text class="safety-suggestion">API 是什么意思？</text>
+          <text class="safety-suggestion">AI 安全是什么意思？</text>
+        </view>
+        <button class="safety-action" bindtap="onBackHomeTap">换个问题</button>
+      </view>
+    </view>
+
+    <block wx:else>
     <view class="title-card">
       <view class="title-copy">
         <text class="title-kicker">AI 已为你生成解释</text>
@@ -82,6 +99,7 @@
     <view class="bottom-actions">
       <button class="bottom-btn primary" bindtap="onReExplainTap">换个更简单的说法</button>
     </view>
+    </block>
   </view>
 
   <view class="error-state" wx:else>

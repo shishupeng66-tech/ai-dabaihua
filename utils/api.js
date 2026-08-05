@@ -11,7 +11,15 @@ function callCloudApi(action, data) {
       action,
       data: data || {}
     }
-  }).then(res => res.result)
+  }).then(res => {
+    const result = res.result
+    if (result && result.success === false) {
+      const error = result.error || {}
+      throw new Error(error.message || 'Cloud function request failed.')
+    }
+
+    return result
+  })
 }
 
 function explainTerm(term) {

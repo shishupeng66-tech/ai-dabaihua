@@ -3,6 +3,7 @@ const knowledgeService = require('./services/knowledgeService.js')
 const loggerService = require('./services/loggerService.js')
 const healthService = require('./services/healthService.js')
 const knowledgeFeedbackService = require('./services/knowledgeFeedbackService.js')
+const contentSafetyService = require('./services/contentSafetyService.js')
 
 function observeApi(api, payload, handler) {
   const requestId = payload && payload.requestId ? payload.requestId : loggerService.createRequestId()
@@ -50,12 +51,24 @@ function validateKeyword(keyword) {
 function postExplain(payload) {
   try {
     const keyword = validateKeyword(payload && payload.keyword)
-    return observeApi('/api/explain', Object.assign({}, payload, { keyword }), () => (
-      explainService.explain({
+    return observeApi('/api/explain', Object.assign({}, payload, { keyword }), () => {
+      const inputSafety = contentSafetyService.checkInput(keyword)
+      if (!inputSafety.allowed) {
+        return Promise.resolve(contentSafetyService.createSafeResponse(keyword, inputSafety, 'input'))
+      }
+
+      return explainService.explain({
         keyword,
         mode: payload && payload.mode
+      }).then(result => {
+        const outputSafety = contentSafetyService.checkOutput(result)
+        if (!outputSafety.allowed) {
+          return contentSafetyService.createSafeResponse(keyword, outputSafety, 'output')
+        }
+
+        return result
       })
-    ))
+    })
   } catch (err) {
     return Promise.reject(err)
   }

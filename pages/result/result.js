@@ -322,6 +322,17 @@ Page({
     })
   },
 
+  onBackHomeTap() {
+    wx.navigateBack({
+      delta: 1,
+      fail: () => {
+        wx.redirectTo({
+          url: '/pages/index/index'
+        })
+      }
+    })
+  },
+
   onLifeExampleFeedbackTap(e) {
     const { resultData } = this.data
     if (!resultData) return

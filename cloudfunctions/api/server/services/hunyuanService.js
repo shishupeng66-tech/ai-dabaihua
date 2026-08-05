@@ -1,4 +1,5 @@
 const env = require('../../config/env.js')
+const https = require('https')
 const explainPrompt = require('../prompts/explainPrompt.js')
 const comparePrompt = require('../prompts/comparePrompt.js')
 const businessPrompt = require('../prompts/businessPrompt.js')
@@ -126,10 +127,23 @@ function parseHunyuanContent(content, keyword, mode) {
   }
 }
 
-function requestWithWx(payload) {
+function getModelUrls() {
+  const envId = env.CLOUDBASE_ENV_ID
+  const urls = [
+    env.MODEL_API_URL,
+    envId ? `https://${envId}.api.tcloudbasegateway.com/v1/ai/cloudbase/chat/completions` : '',
+    envId ? `https://${envId}.api.tcloudbasegateway.com/v1/ai/cloudbase/chat/completion` : '',
+    envId ? `https://${envId}.api.tcloudbasegateway.com/v1/ai/hunyuan-v3/chat/completions` : '',
+    envId ? `https://${envId}.api.tcloudbasegateway.com/v1/ai/hunyuan-v3/chat/completion` : ''
+  ]
+
+  return Array.from(new Set(urls.filter(Boolean)))
+}
+
+function requestWithWx(url, payload) {
   return new Promise((resolve, reject) => {
     wx.request({
-      url: env.MODEL_API_URL,
+      url,
       method: 'POST',
       header: {
         Authorization: `Bearer ${env.CLOUDBASE_AI_API_KEY}`,
@@ -142,8 +156,8 @@ function requestWithWx(payload) {
   })
 }
 
-function requestWithFetch(payload) {
-  return fetch(env.MODEL_API_URL, {
+function requestWithFetch(url, payload) {
+  return fetch(url, {
     method: 'POST',
     headers: {
       Authorization: `Bearer ${env.CLOUDBASE_AI_API_KEY}`,
@@ -157,6 +171,75 @@ function requestWithFetch(payload) {
 
     return res.json()
   })
+}
+
+function requestWithHttps(urlString, payload) {
+  return new Promise((resolve, reject) => {
+    const url = new URL(urlString)
+    const body = JSON.stringify(payload)
+    const req = https.request({
+      method: 'POST',
+      hostname: url.hostname,
+      path: `${url.pathname}${url.search}`,
+      headers: {
+        Authorization: `Bearer ${env.CLOUDBASE_AI_API_KEY}`,
+        'Content-Type': 'application/json',
+        'Content-Length': Buffer.byteLength(body)
+      }
+    }, res => {
+      let raw = ''
+      res.setEncoding('utf8')
+      res.on('data', chunk => {
+        raw += chunk
+      })
+      res.on('end', () => {
+        if (res.statusCode < 200 || res.statusCode >= 300) {
+          reject(new Error(`Hunyuan API request failed: ${res.statusCode} ${raw}`))
+          return
+        }
+
+        try {
+          resolve(JSON.parse(raw))
+        } catch (err) {
+          reject(err)
+        }
+      })
+    })
+
+    req.on('error', reject)
+    req.setTimeout(25000, () => {
+      req.destroy(new Error('Hunyuan API request timeout.'))
+    })
+    req.write(body)
+    req.end()
+  })
+}
+
+function shouldTryNextEndpoint(err) {
+  const message = err && err.message ? err.message : ''
+  return /404|INVALID_ENV|NOT_FOUND|Cannot POST/i.test(message)
+}
+
+function requestModelWithFallback(request, payload) {
+  const urls = getModelUrls()
+  let lastError = null
+
+  function tryAt(index) {
+    if (index >= urls.length) {
+      return Promise.reject(lastError || new Error('No Hunyuan endpoint available.'))
+    }
+
+    return request(urls[index], payload).catch(err => {
+      lastError = err
+      if (shouldTryNextEndpoint(err)) {
+        return tryAt(index + 1)
+      }
+
+      return Promise.reject(err)
+    })
+  }
+
+  return tryAt(0)
 }
 
 function callHunyuanAPI(promptConfig, keyword, mode) {
@@ -184,7 +267,7 @@ function callHunyuanAPI(promptConfig, keyword, mode) {
     ? requestWithWx
     : typeof fetch !== 'undefined'
       ? requestWithFetch
-      : null
+      : requestWithHttps
 
   if (!request) {
     return Promise.resolve({
@@ -194,7 +277,7 @@ function callHunyuanAPI(promptConfig, keyword, mode) {
     })
   }
 
-  return request(payload).then(res => {
+  return requestModelWithFallback(request, payload).then(res => {
     const content = res && res.choices && res.choices[0] && res.choices[0].message
       ? res.choices[0].message.content
       : ''
